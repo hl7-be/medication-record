@@ -36,7 +36,7 @@
       }
     });
     var a=document.getElementById('dockerLine').innerHTML;
-    document.getElementById('dockerLine').innerHTML=a.replace("--spring.config.location=","--spring.config.location="+location.href.replace(/[^/]*$/, ''));
+    document.getElementById('dockerLine').innerHTML= 'docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location='+ a +'application.yaml'
 
     document.getElementById('localDockerLine').innerHTML = 'docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location='+location.href.replace(/[^/]*$/, '')+'application.yaml'
     
