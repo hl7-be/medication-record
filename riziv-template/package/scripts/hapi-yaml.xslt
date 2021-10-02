@@ -46,9 +46,10 @@ hapi:
 
     install_transitive_ig_dependencies: true
     implementationguides:
-      <xsl:value-of select="f:id/@value" disable-output-escaping="no"/>:
+      <xsl:value-of select="translate(f:id/@value, '.', '')" disable-output-escaping="no"/>:
         name: <xsl:value-of select="f:packageId/@value" disable-output-escaping="no"/>
         version: <xsl:value-of select="f:version/@value" disable-output-escaping="no"/> 
+        url: <xsl:value-of select="substring-before(f:url/@value, '/ImplementationGuide/')"/>/package.tgz
     cors:
       allow_Credentials: true
       # These are allowed_origin patterns, see: https://docs.spring.io/spring-framework/docs/current/javadoc-api/org/springframework/web/cors/CorsConfiguration.html#setAllowedOriginPatterns-java.util.List-
