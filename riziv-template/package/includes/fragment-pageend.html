@@ -35,9 +35,6 @@
           $('a[href="' + window.location.hash + '"]').click()
       }
     });
-    var a=document.getElementById('dockerLine').innerHTML;
-    document.getElementById('dockerLine').innerHTML=a.replace("--spring.config.location=","--spring.config.location="+location.href.replace(/[^/]*$/, ''));
-
   </script>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->

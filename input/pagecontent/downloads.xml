@@ -45,14 +45,4 @@
 			</tr>
 		</tbody>
 	</table>
-
-<p>Run this Docker command line to get your own running server:</p> 
-<code id="dockerLine">docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location=application.yaml" hapiproject/hapi:latest</code>
-<p></p>
-
-<p>
-{% capture url_path %}{{site.url}}{{page.url}}{% endcapture %}
-</p>
-
-
 </div>
