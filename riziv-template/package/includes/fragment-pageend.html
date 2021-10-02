@@ -38,6 +38,9 @@
     var a=document.getElementById('dockerLine').innerHTML;
     document.getElementById('dockerLine').innerHTML=a.replace("--spring.config.location=","--spring.config.location="+location.href.replace(/[^/]*$/, ''));
 
+    document.getElementById('localDockerLine').innerHTML = 'docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location='+location.href.replace(/[^/]*$/, '')+'application.yaml'
+    
+
   </script>
   <div id="segment-footer" igtool="footer" class="segment">  <!-- segment-footer -->
     <div class="container">  <!-- container -->

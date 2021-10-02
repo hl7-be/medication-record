@@ -47,11 +47,17 @@
 	</table>
 
 <p>Run this Docker command line to get your own running server:</p> 
-<code id="dockerLine">docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location=application.yaml" hapiproject/hapi:latest</code>
-<p></p>
+<code style="white-space:normal;" id="dockerLine">docker run -p 8080:8080 -e hapi.fhir.default_encoding=json -e "--spring.config.location=application.yaml" hapiproject/hapi:latest</code>
+<p>Local line:</p>
+<code style="white-space:normal;" id="localDockerLine"></code>
 
 <p>
+url path: 
 {% capture url_path %}{{site.url}}{{page.url}}{% endcapture %}
+{{ url_path }}
+<br/>
+yaml path: 
+{{site.data.application.hapi.fhir.fhir_version}}
 </p>
 
 

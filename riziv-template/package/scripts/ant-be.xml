@@ -56,6 +56,7 @@
    <target name="createIGyaml" depends="onGenerate.igQa,onGenerate.setup">
     <xslt in="${onGenerate.ig.source}xml" out="temp/pages/application.yaml" style="${ig.scripts}/hapi-yaml.xslt"/>
 
+    <copy file="temp/pages/application.yaml" tofile="temp/pages/_data/application.yaml"/>
     <fileset id="onGenerate.hapi.yaml" dir="${ig.root}">
       <include name="temp/pages/application.yaml"/>
     </fileset>

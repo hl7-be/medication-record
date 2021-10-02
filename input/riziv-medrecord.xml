@@ -7,6 +7,7 @@
     <valueString value="resources-spreadsheet.xml"/>
   </extension>-->
   <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/riziv-medicationrecord"/>
+
   <!-- This version will propagate to all artifacts unless the "propagate-version" extension is overridden -->
   <version value="0.1.0-test"/>
   <name value="MedicationRecord"/>
