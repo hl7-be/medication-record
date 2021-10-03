@@ -46,20 +46,16 @@
 		</tbody>
 	</table>
 
-<p>Run this Docker command line to get your own running server:</p> 
-<code style="white-space:normal;" id="dockerLine"></code>
-<p>Local line:</p>
-<code style="white-space:normal;" id="localDockerLine"></code>
-<p></p>
-
-<p>
-yaml path: 
+<a name="deployment"> </a>
+<h3>Deployment </h3>
+<p>Using <a href="https://www.docker.com/">Docker</a>, run these commands to deploy a server:</p> 
 {% assign igId = site.data.fhir.igId | replace: ".", "" %}
-{% assign packUrlPos = 'hapi.fhir.implementationguides.' | append: igId | append: '.url' %}
-<h2>{{ packUrlPos }}</h2>
+<p><b>Official Release:</b></p> 
+<code style="white-space:normal;" id="dockerLine">{{ site.data.application.hapi.fhir.implementationguides[igId].url | remove: "/package.tgz"| append: "/" }}</code>
+<p></p>
+<p><b>To use this current build:</b></p>
+<code style="white-space:normal;" id="localDockerLine"></code>
 
-
-
-</p>
+<p></p>
 
 </div>
