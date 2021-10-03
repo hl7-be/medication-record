@@ -47,14 +47,19 @@
 	</table>
 
 <p>Run this Docker command line to get your own running server:</p> 
-<code style="white-space:normal;" id="dockerLine">{{site.data.application.hapi.fhir.implementationguides[0].url}}</code>
+<code style="white-space:normal;" id="dockerLine"></code>
 <p>Local line:</p>
 <code style="white-space:normal;" id="localDockerLine"></code>
 <p></p>
 
 <p>
 yaml path: 
-{{site.data.application.hapi.fhir.implementationguides[0].url}}
+{% assign igId = site.data.fhir.igId | replace: ".", "" %}
+{% assign packUrlPos = 'hapi.fhir.implementationguides.' | append: igId | append: '.url' %}
+<h2>{{ packUrlPos }}</h2>
+
+
+
 </p>
 
 </div>
