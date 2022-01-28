@@ -15,4 +15,3 @@ Issues and change requests are managed here:
 
 Issues:  __https://github.com/hl7-be/riziv-medication-record/issues__  
 Kanban board:  __https://github.com/hl7-be/riziv-medication-record/projects/1__  
-
