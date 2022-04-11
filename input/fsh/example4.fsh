@@ -185,3 +185,58 @@ Title:    ""
 * intent = #plan
 * title = "Treatment for Toothache"
 * addresses = Reference(toothache-condition)
+
+Instance: 4-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 4 - Provenance 1"
+
+
+* target = Reference(4-1-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(4-1-treatmentLine)
+* entity[0].role = #source
+
+
+Instance: 4-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 4 - Provenance 2"
+
+
+* target = Reference(4-1-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(4-1-treatmentLine)
+* entity[0].role = #source
+
+Instance: 4-3-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 4 - Provenance 3"
+
+
+* target = Reference(4-2-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(4-2-treatmentLine)
+* entity[0].role = #source

@@ -30,7 +30,7 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
 
 * instance[+].resourceId = "7-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New prescription"
+* instance[=].name = "Ciprofloxacine prescription"
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -46,11 +46,24 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
 
 * instance[+].resourceId = "7-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Dispense"
+* instance[=].name = "Ciprofloxacine Dispense"
 
 * instance[+].resourceId = "7-usage"
 * instance[=].resourceType = #MedicationStatement
-* instance[=].name = "Usage report"
+* instance[=].name = "Ciprofloxacine Usage report"
+
+* instance[+].resourceId = "7-1-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Prescription and treatmentLine"
+
+* instance[+].resourceId = "7-2-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Dispense and treatmentLine"
+
+
+* instance[+].resourceId = "7-3-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Usage and treatmentLine"
 
 
 * process[+]
@@ -69,8 +82,8 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
       * step[+]
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
@@ -78,6 +91,8 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
         * operation.initiator = "GP"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "7-prescription"
+
+
   * step[+]
     * process[+]
       * title = "Treatment resources Creation"
@@ -94,38 +109,43 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "7-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "7-1-provenance"
+
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
-        * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.response.resourceId = "EB"
       * step[+]
 
         * operation.name = "Dispense"
-        * operation.number = "7"
+        * operation.number = "8"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "7-dispense"
+
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linking"
       * step[+]
-        * operation.name = "Update treatment"
-        * operation.number = "8"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "7-treatment"
-      * step[+]
-
-        * operation.name = "Update treatment Line"
+        * operation.name = "Resource Linking"
         * operation.number = "9"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "7-treatmentLine"
+        * operation.request.resourceId = "7-2-provenance"
+
+  * step[+]
+    * process[+]
+      * title = "Report"
       * step[+]
         * operation.name = "Usage Report of non-usage"
         * operation.number = "10"
@@ -135,18 +155,10 @@ Title: "Dispense of medication that was prescribed to take if needed, but was no
 
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linking"
       * step[+]
-
-        * operation.name = "Update treatment"
+        * operation.name = "Resource Linking"
         * operation.number = "11"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "7-treatment"
-      * step[+]
-
-        * operation.name = "Update treatment Line"
-        * operation.number = "12"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "7-treatmentLine"
+        * operation.request.resourceId = "7-3-provenance"

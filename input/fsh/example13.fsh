@@ -1,4 +1,4 @@
-Instance: 13-dispense 
+Instance: 13-1-dispense 
 InstanceOf: MedRecordDispense
 Usage: #example
 Description: ""
@@ -34,7 +34,7 @@ Title:    ""
 * extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
 
-Instance: 13-dispense-2 
+Instance: 13-2-dispense 
 InstanceOf: MedRecordDispense
 Usage: #example
 Description: ""
@@ -71,7 +71,7 @@ Title:    ""
 * extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
 
-Instance: 13-dispense-3 
+Instance: 13-3-dispense 
 InstanceOf: MedRecordDispense
 Usage: #example
 Description: ""
@@ -108,7 +108,7 @@ Title:    ""
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
 
 
-Instance: 13-treatmentLine
+Instance: 13-1-treatmentLine
 InstanceOf: MedRecordTreatmentLine
 Usage: #example
 Description: ""
@@ -127,7 +127,7 @@ Title:    ""
 * extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
 
-Instance: 13-treatmentLine-2
+Instance: 13-2-treatmentLine
 InstanceOf: MedRecordTreatmentLine
 Usage: #example
 Description: ""
@@ -145,6 +145,8 @@ Title:    ""
 
 * extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
+
+
 
 Instance: 13-treatment
 InstanceOf: MedRecordTreatment
@@ -164,3 +166,61 @@ Title:    ""
 * intent = #plan
 * title = "Headache"
 * addresses = Reference(headache-condition)
+
+
+Instance: 13-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 13 - Provenance 1"
+
+
+* target = Reference(13-1-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(13-1-treatmentLine)
+* entity[0].role = #source
+
+
+Instance: 13-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 13 - Provenance 2"
+
+
+* target = Reference(13-2-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(13-2-treatmentLine)
+* entity[0].role = #source
+
+
+
+Instance: 13-3-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 13 - Provenance 3"
+
+
+* target = Reference(13-3-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(13-1-treatmentLine)
+* entity[0].role = #source

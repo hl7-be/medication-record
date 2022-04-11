@@ -113,3 +113,39 @@ Title:    ""
 * intent = #plan
 * title = "Treatment for Hyperlipidemia"
 * addresses = Reference(headache-condition)
+
+Instance: 6-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 6 - Provenance 1"
+
+
+* target = Reference(6-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(6-treatmentLine)
+* entity[0].role = #source
+
+Instance: 6-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 6 - Provenance 2"
+
+
+* target = Reference(6-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(6-treatmentLine)
+* entity[0].role = #source

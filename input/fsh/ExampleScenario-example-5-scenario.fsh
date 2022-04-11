@@ -29,12 +29,12 @@ Title: "Dispense of new brand medication that is given because the old is unavai
 
 * instance[+].resourceId = "5-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Dispense for Prescription"
+* instance[=].name = "Paracetabs Dispense"
 
 
 * instance[+].resourceId = "5-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New prescription"
+* instance[=].name = "dafalgan prescription"
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -47,6 +47,15 @@ Title: "Dispense of new brand medication that is given because the old is unavai
 * instance[+].resourceId = "5-treatment"
 * instance[=].resourceType = #CarePlan
 * instance[=].name = "New Treatment based on prescription"
+
+
+* instance[+].resourceId = "5-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Prescription and treatmentLine"
+
+* instance[+].resourceId = "5-2-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Dispense and treatmentLine"
 
 
 * process[+]
@@ -65,8 +74,8 @@ Title: "Dispense of new brand medication that is given because the old is unavai
       * step[+]
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
@@ -89,33 +98,37 @@ Title: "Dispense of new brand medication that is given because the old is unavai
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "5-treatmentLine"
+              
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "5-provenance"
+
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
-        * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Dispense new product"
-        * operation.number = "7"
+        * operation.number = "8"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "5-dispense"
+
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linkage"
       * step[+]
-        * operation.name = "Update treatment"
+        * operation.name = "Resource Linking"
         * operation.number = "8"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "5-treatment"
-      * step[+]
-        * operation.name = "Update treatment Line"
-        * operation.number = "9"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "5-treatmentLine"
+        * operation.request.resourceId = "5-2-provenance"
+

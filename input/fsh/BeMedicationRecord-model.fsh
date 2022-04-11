@@ -232,3 +232,23 @@ Description: "A model for a structure collection of a patient's medication histo
   * administrations 0..*  BeModelMedicationRecordAdministration "Registered or reported single administrations" "Registered or reported single administrations"
   * usageReports 0..*  BeModelMedicationRecordUsage "Reported statements of medication usage" "Reported statements of medication usage"
 * changeRecord 0..* Provenance  "Change records and provenance for the medication record components" "Change records and provenance for the medication record components" 
+
+
+
+Logical: BeModelMedicationView
+Title: "Medication View logical model"
+Description: "A model for a visualization of the patient's medication"
+
+* identifier 0..1 Identifier "The business identifier(s) for the Medication View" "The business identifier(s) for the Medication View" 
+* patient 1..1 Reference "The subject of the medication record" "The subject of the medication record"
+* treatments 0..* BackboneElement "The treaments that are included in this record" "The treaments that are included in this record"
+  * indication 0..* CodeableConcept "Why the treatment exists" "Why the treatment exists"  
+  * treatmentLines 0..* BackboneElement "The treatment lines that are included in this record" "The treatment lines that are included in this record"
+    * product[x] 1..1 Reference(Medication) or CodeableConcept "Product for which the treatment line refers to" "Product for which the treatment line refers to"
+    * detailedRecords 0..* BackboneElement  "Detailed records" "Detailed records - the most granular interactions" 
+      * orders 0..* BeModelMedicationRecordOrder  "Explicit or implicit order for medication use or changes" "Explicit or implicit order for medication use or changes" 
+      * schedule 0..* BeModelMedicationScheduledAdministration  "Scheduled administrations of the medication" "Scheduled administrations of the medication" 
+      * dispenses 0..*  BeModelMedicationRecordDispense "Registered or reported dispenses" "Registered or reported dispenses"
+      * administrations 0..*  BeModelMedicationRecordAdministration "Registered or reported single administrations" "Registered or reported single administrations"
+      * usageReports 0..*  BeModelMedicationRecordUsage "Reported statements of medication usage" "Reported statements of medication usage"
+* changeRecord 0..* Provenance  "Change records and provenance for the medication record components" "Change records and provenance for the medication record components" 

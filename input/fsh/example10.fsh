@@ -31,9 +31,7 @@ Title: "The recording of non-medication aka pharmaceutical products"
 * performer[=].actor.display = "Pharmacy X"
 * performer[=].function.coding = #dispensingOrg
 
-//extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
-//extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
-//treatmentLine?
+
 
 Instance: 10-2-dispense 
 InstanceOf: MedRecordDispense
@@ -69,9 +67,6 @@ Title: "The recording of non-medication aka pharmaceutical products"
 * performer[=].actor.display = "Pharmacy X"
 * performer[=].function.coding = #dispensingOrg
 
-//extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
-//extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
-//treatmentLine?
 
 Instance: 10-3-dispense 
 InstanceOf: MedRecordDispense
@@ -106,6 +101,4 @@ Title: "The recording of non-medication aka pharmaceutical products"
 * performer[=].actor.display = "Pharmacy X"
 * performer[=].function.coding = #dispensingOrg
 
-//extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
-//extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
-//treatmentLine?
+

@@ -74,7 +74,7 @@ Description: "This example shows a prescription that is made by brand name and t
 Instance: 1-treatmentLine 
 InstanceOf: MedRecordTreatmentLine
 Usage: #example
-Description: ""
+Description: "Original Treatment Line, created with a prescription"
 Title:    ""
 
 * identifier[0].system = "http://treatmentLines-identifiers.com"
@@ -89,7 +89,6 @@ Title:    ""
 
 * extension[treatmentPlan].valueReference.identifier.value = "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
 * extension[treatmentPlan].valueReference.identifier.system = "http://treatment-identifiers.com"
-
 
 Instance: 1-treatment 
 InstanceOf: MedRecordTreatment
@@ -109,3 +108,127 @@ Title:    ""
 * intent = #plan
 * title = "Treatment for Hypertension"
 * addresses = Reference(hypertension-condition)
+
+
+Instance: 1-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 1 - Provenance 1"
+
+
+* target = Reference(1-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(1-treatmentLine)
+* entity[0].role = #source
+
+Instance: 1-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 1 - Provenance 2"
+
+
+* target = Reference(1-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(1-treatmentLine)
+* entity[0].role = #source
+
+
+Instance: 1-summary-view
+InstanceOf: MedicationView
+Usage: #example
+Description: "Summary view for a Physician"
+Title: "Example 1 - Summary view"
+
+* status = #active
+* date = "2021-08-15T13:00:00+02:00"
+* author = Reference(BeOrganization)
+* title = "Summary View for Patient X"
+
+* section[MedRecordTreatment].title = "Treatments"
+* section[MedRecordTreatment].entry = Reference(1-treatment)
+
+* section[MedRecordTreatmentLine].title = "Treatment Lines"
+* section[MedRecordTreatmentLine].entry = Reference(1-treatmentLine)
+
+* section[detailsRecord].entry[0] = Reference(1-prescription)
+* section[detailsRecord].entry[1] = Reference(1-dispense)
+
+
+Instance: 1-scheduled-view
+InstanceOf: scheduledView
+Usage: #example
+Description: "Summary view for a Patient or Care Taker"
+Title:    "Example 1 - Scheduled Takes view"
+
+* status = #active
+* date = "2021-08-15T13:00:00+02:00"
+* author = Reference(BeOrganization)
+* title = "Scheduled View for Patient X"
+* section[MedRecordTreatment].title = "Treatments"
+* section[MedRecordTreatment].entry = Reference(1-treatment)
+
+* section[MedRecordTreatmentLine].title = "Treatment Lines"
+* section[MedRecordTreatmentLine].entry = Reference(1-treatmentLine)
+
+* section[detailsRecord].title = "Scheduled Takes"
+* section[detailsRecord].entry[0] = Reference(1-scheduledadministration1)
+* section[detailsRecord].entry[1] = Reference(1-scheduledadministration2)
+
+
+Instance: 1-scheduledadministration1 
+InstanceOf: MedRecordMedicationScheduledAdministration
+Usage: #example
+Title: "Scheduled Administration Example - Prescribed branded medication is changed by another branded medication from the same VOS-cluster"
+Description: "This example shows a Scheduled Administration for a prescription that is made by brand name and the pharmacist changes the brand name for another brand name in the same VOS - Cluster."
+
+
+* identifier[0].system = "http://prescription-identifiers.com"
+* identifier[0].value = "f56b6358-6eb6-40e4-972f-33d22c3392768"
+
+* subject.identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"
+* subject.identifier.value = "64110219106"
+
+* status = #active
+
+* medicationCodeableConcept = https://cnk.apb.be/codings/cnk_product_codes#2399640  "Amlodipin Sandoz tabl. (deelb.) Besilaat 100x 5mg"
+
+* authoredOn = "2021-07-19T09:00:00+02:00"
+
+
+* dosageInstruction.timing.event = "2021-07-19T10:00:00+02:00"
+
+Instance: 1-scheduledadministration2 
+InstanceOf: MedRecordMedicationScheduledAdministration
+Usage: #example
+Title: "Scheduled Administration Example - Prescribed branded medication is changed by another branded medication from the same VOS-cluster"
+Description: "This example shows a Scheduled Administration for a prescription that is made by brand name and the pharmacist changes the brand name for another brand name in the same VOS - Cluster."
+
+
+* identifier[0].system = "http://prescription-identifiers.com"
+* identifier[0].value = "f56b6358-6eb6-40e4-972f-33d22c3392768"
+
+* subject.identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"
+* subject.identifier.value = "64110219106"
+
+* status = #active
+
+* medicationCodeableConcept = https://cnk.apb.be/codings/cnk_product_codes#2399640  "Amlodipin Sandoz tabl. (deelb.) Besilaat 100x 5mg"
+
+* authoredOn = "2021-07-19T09:00:00+02:00"
+
+
+* dosageInstruction.timing.event = "2021-07-20T10:00:00+02:00"

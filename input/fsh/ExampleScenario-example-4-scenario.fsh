@@ -29,16 +29,15 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
 
 * instance[+].resourceId = "4-1-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Dispense for Prescription"
-
+* instance[=].name = "Rosuvastatin Dispense"
 
 * instance[+].resourceId = "4-1-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New prescription"
+* instance[=].name = "Rosuvastatin prescription"
 
 * instance[+].resourceId = "4-2-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Isolated dispense"
+* instance[=].name = "Dafalgan dispense (non-prescription)"
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -60,6 +59,19 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
 * instance[=].resourceType = #CarePlan
 * instance[=].name = "New Treatment based on dispense"
 
+* instance[+].resourceId = "4-1-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Prescription and treatmentLine"
+
+* instance[+].resourceId = "4-2-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Dispense and treatmentLine"
+
+* instance[+].resourceId = "4-3-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link second Dispense and treatmentLine"
+
+
 
 
 * process[+].
@@ -80,15 +92,15 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
 
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
         * operation.number = "3"
         * operation.initiator = "GP"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "4-prescription"
+        * operation.request.resourceId = "4-1-prescription"
   * step[+]
     * process[+]
       * title = "Treatment resources Creation"
@@ -105,14 +117,21 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "4-1-treatmentLine"
+
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "4-1-provenance"
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
         * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Dispense new product"
@@ -122,25 +141,20 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
         * operation.request.resourceId = "4-1-dispense"
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linking"
       * step[+]
-        * operation.name = "Update treatment"
+        * operation.name = "Resource Linking"
         * operation.number = "8"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "4-1-treatment"
-      * step[+]
-        * operation.name = "Update treatment Line"
-        * operation.number = "9"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "4-1-treatmentLine"
+        * operation.request.resourceId = "4-2-provenance"
+
   * step[+]
     * process[+]
       * title = "Second dispense"
       * step[+]
         * operation.name = "Additional dispense"
-        * operation.number = "10"
+        * operation.number = "9"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "4-2-dispense"
@@ -149,14 +163,20 @@ Title: "Dispense of prescribed medication, and dispense of a product that can be
     * process[+]
       * title = "New Treatment resources Creation"
       * step[+]
-        * operation.name = "Additional treatment"
-        * operation.number = "11"
+        * operation.name = "Additional treatment Creation"
+        * operation.number = "10"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "4-2-treatment"
       * step[+]
-        * operation.name = "Additional Treatment Line"
-        * operation.number = "12"
+        * operation.name = "Additional Treatment Line Creation"
+        * operation.number = "11"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "4-2-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "12"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "4-3-provenance"

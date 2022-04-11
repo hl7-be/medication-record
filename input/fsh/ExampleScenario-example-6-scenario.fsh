@@ -29,7 +29,7 @@ Title: "Refuse the dispense prescribed medication"
 
 * instance[+].resourceId = "6-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New prescription"
+* instance[=].name = "ibuprofen prescription"
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -47,6 +47,17 @@ Title: "Refuse the dispense prescribed medication"
 * instance[=].resourceType = #MedicationDispense
 * instance[=].name = "Refused Dispense"
 
+
+* instance[+].resourceId = "6-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Prescription and treatmentLine"
+
+* instance[+].resourceId = "6-2-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link refused dispense and treatmentLine"
+
+
+
 * process[+]
   * title = "Refuse the dispense prescribed medication"
   * description = "description"
@@ -63,8 +74,8 @@ Title: "Refuse the dispense prescribed medication"
       * step[+]
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
@@ -87,15 +98,22 @@ Title: "Refuse the dispense prescribed medication"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "6-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "6-provenance"
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
-        * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.response.resourceId = "EB"
+
       * step[+]
         * operation.name = "Refuse Dispense"
         * operation.number = "7"
@@ -104,16 +122,10 @@ Title: "Refuse the dispense prescribed medication"
         * operation.request.resourceId = "6-dispense"
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linking"
       * step[+]
-        * operation.name = "Update treatment"
+        * operation.name = "Resource Linking"
         * operation.number = "8"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "6-treatment"
-      * step[+]
-        * operation.name = "Update treatment Line"
-        * operation.number = "9"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "6-treatmentLine"
+        * operation.request.resourceId = "6-2-provenance"

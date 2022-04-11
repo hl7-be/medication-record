@@ -16,39 +16,40 @@ actor "Pharmacist" as PHARM
 group Initial Contact
 
 PATIENT -> GP : Goes to appointment\n
-GP -> VAULT : Get Patient's Medication\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
-GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-prescription Original Prescription]]
+VAULT -> GP : Get Patient's Medication\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-prescription Diclofenac Prescription]]
 end
     
 group Treatment resources Creation
 
 VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-3-scenario-resources.html#3-treatment New Treatment]]
 VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-1-provenance Link first Prescription and treatmentLine]]
 end
     
 group Dispense
 
-PHARM -> VAULT : Get patient's Prescriptions\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
-PHARM -> VAULT : Dispense original dispense\n[[ExampleScenario-example-3-scenario-resources.html#3-dispense Dispense of product prescribed]]
-PHARM -> VAULT : Dispense ancilliary product\n[[ExampleScenario-example-3-scenario-resources.html#3-2-dispense Ancilliary Dispense of a product]]
+VAULT -> PHARM : Get patient's Prescriptions\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
+PHARM -> VAULT : Dispense original dispense\n[[ExampleScenario-example-3-scenario-resources.html#3-dispense Diclofenac Dispense ]]
+PHARM -> VAULT : Dispense ancilliary product\n[[ExampleScenario-example-3-scenario-resources.html#3-2-dispense Pantoprazole Dispense [ancilliary product]]]
 end
     
-group Treatment Resources Update
+group Treatment Line Creation and resource Linking
 
-VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-3-scenario-resources.html#3-treatment New Treatment]]
-VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : New Treatment Line for anciiliary product\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-2-provenance Link first dispense and treatmentLine]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-3-provenance Link second dispense and treatmentLine]]
 end
     
-group group 5
+group Reporting and new dispense
 
-PHARM -> GP : Report of situation\n
-GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-2-prescription New Prescription]]
+PHARM -> GP : Notification of a dispense\n
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-2-prescription Pantoprazole Prescription]]
 end
     
-group group 6
+group Linking
 
-VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-3-scenario-resources.html#3-treatment New Treatment]]
-VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-4-provenance Link second Prescription and treatmentLine]]
 end
   
 

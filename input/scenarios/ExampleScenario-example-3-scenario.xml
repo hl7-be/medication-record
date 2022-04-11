@@ -29,7 +29,7 @@
   <instance>
     <resourceId value="3-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value="Dispense of product prescribed"/>
+    <name value="Diclofenac Dispense "/>
   </instance>
   <instance>
     <resourceId value="EB"/>
@@ -49,22 +49,42 @@
   <instance>
     <resourceId value="3-prescription"/>
     <resourceType value="MedicationRequest"/>
-    <name value="Original Prescription"/>
+    <name value="Diclofenac Prescription"/>
   </instance>
   <instance>
     <resourceId value="3-2-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value="Ancilliary Dispense of a product"/>
+    <name value="Pantoprazole Dispense [ancilliary product]"/>
   </instance>
   <instance>
     <resourceId value="3-2-prescription"/>
     <resourceType value="MedicationRequest"/>
-    <name value="New Prescription"/>
+    <name value="Pantoprazole Prescription"/>
+  </instance>
+  <instance>
+    <resourceId value="3-1-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link first Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-2-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link first dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-3-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link second dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-4-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link second Prescription and treatmentLine"/>
   </instance>
   <process>
     <title value="Dispense of medication before a existing prescription"/>
     <description value="description"/>
-    <preConditions value="After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis.While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP."/>
+    <preConditions value="After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP."/>
     <postConditions value="A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each."/>
     <step>
       <process>
@@ -80,9 +100,9 @@
         <step>
           <operation>
             <number value="2"/>
-            <name value="Get Patient&#39;s Medication"/>
-            <initiator value="GP"/>
-            <receiver value="VAULT"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -126,6 +146,17 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-1-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
@@ -133,10 +164,10 @@
         <title value="Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
-            <name value="Get patient&#39;s Prescriptions"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <number value="7"/>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -144,7 +175,7 @@
         </step>
         <step>
           <operation>
-            <number value="7"/>
+            <number value="8"/>
             <name value="Dispense original dispense"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -155,7 +186,7 @@
         </step>
         <step>
           <operation>
-            <number value="8"/>
+            <number value="9"/>
             <name value="Dispense ancilliary product"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -168,22 +199,11 @@
     </step>
     <step>
       <process>
-        <title value="Treatment Resources Update"/>
-        <step>
-          <operation>
-            <number value="9"/>
-            <name value="Create new treatment"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="3-treatment"/>
-            </request>
-          </operation>
-        </step>
+        <title value="Treatment Line Creation and resource Linking"/>
         <step>
           <operation>
             <number value="10"/>
-            <name value="Create new treatment Line"/>
+            <name value="New Treatment Line for anciiliary product"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
@@ -191,22 +211,44 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="11"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-2-provenance"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="12"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-3-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
       <process>
-        <title value="group 5"/>
+        <title value="Reporting and new dispense"/>
         <step>
           <operation>
-            <number value="11"/>
-            <name value="Report of situation"/>
+            <number value="13"/>
+            <name value="Notification of a dispense"/>
             <initiator value="PHARM"/>
             <receiver value="GP"/>
           </operation>
         </step>
         <step>
           <operation>
-            <number value="14"/>
+            <number value="16"/>
             <name value="Create new prescription"/>
             <initiator value="GP"/>
             <receiver value="VAULT"/>
@@ -219,26 +261,15 @@
     </step>
     <step>
       <process>
-        <title value="group 6"/>
+        <title value="Linking"/>
         <step>
           <operation>
-            <number value="15"/>
-            <name value="Create new treatment"/>
+            <number value="17"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="3-treatment"/>
-            </request>
-          </operation>
-        </step>
-        <step>
-          <operation>
-            <number value="16"/>
-            <name value="Create new treatment Line"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="3-treatmentLine"/>
+              <resourceId value="3-4-provenance"/>
             </request>
           </operation>
         </step>
