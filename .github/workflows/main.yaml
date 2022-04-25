@@ -39,7 +39,9 @@ jobs:
      - name: ls
        run: ls
      - name: transform exampleScenarios
-       run: ./fromfsh_to_xml.sh ExampleScenario input/scenarios/
+       run: | 
+          chmod +x ./fromfsh_to_xml.sh
+          ./fromfsh_to_xml.sh ExampleScenario input/scenarios/
 
      - name: commit files
        run: |
