@@ -29,7 +29,7 @@
   <instance>
     <resourceId value="2a-prescription"/>
     <resourceType value="MedicationRequest"/>
-    <name value="New Prescription"/>
+    <name value="Paracetamol 1000 mg Prescription"/>
   </instance>
   <instance>
     <resourceId value="EB"/>
@@ -49,7 +49,17 @@
   <instance>
     <resourceId value="2a-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value="New dispense"/>
+    <name value="paracetamol 500 mg dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="2-1-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="2-2-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Dispense and treatmentLine"/>
   </instance>
   <process>
     <title value="Change VOS from prescription on dispense"/>
@@ -70,9 +80,9 @@
         <step>
           <operation>
             <number value="2"/>
-            <name value="Get Patient&#39;s Medication"/>
-            <initiator value="GP"/>
-            <receiver value="VAULT"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -116,6 +126,17 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="2-1-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
@@ -123,10 +144,10 @@
         <title value="Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
-            <name value="Get patient&#39;s Prescriptions"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <number value="7"/>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <request>
               <resourceId value="EB"/>
             </request>
@@ -134,7 +155,7 @@
         </step>
         <step>
           <operation>
-            <number value="7"/>
+            <number value="8"/>
             <name value="Create new dispense"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -147,26 +168,15 @@
     </step>
     <step>
       <process>
-        <title value="Treatment Resources Update"/>
+        <title value="Resource Linkage"/>
         <step>
           <operation>
             <number value="8"/>
-            <name value="Create new treatment"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="2a-treatment"/>
-            </request>
-          </operation>
-        </step>
-        <step>
-          <operation>
-            <number value="9"/>
-            <name value="Create new treatment Line"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="2a-treatmentLine"/>
+              <resourceId value="2-2-provenance"/>
             </request>
           </operation>
         </step>

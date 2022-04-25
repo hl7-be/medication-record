@@ -4,8 +4,8 @@
 Title Dispense of OTC medication on the community pharmacy
 
 actor "Pia Peters" as PATIENT
-participant "Vault" as VAULT
 actor "Pharmacist" as PHARM
+participant "Vault" as VAULT
 
     
     
@@ -15,40 +15,40 @@ actor "Pharmacist" as PHARM
 group Initial Contact
 
 PATIENT -> PHARM : Goes to Pharmacy\n
-PHARM -> VAULT : Get Patient's Medication\n[[ExampleScenario-example-13-scenario-resources.html#EB Empty Bundle]]
+VAULT -> PHARM : Get Patient's Medication\n[[ExampleScenario-example-13-scenario-resources.html#EB Empty Bundle]]
 end
     
 group First Dispense
 
-PHARM -> VAULT : Dispense a product\n[[ExampleScenario-example-13-scenario-resources.html#13-dispense Dispense]]
+PHARM -> VAULT : Dispense a product\n[[ExampleScenario-example-13-scenario-resources.html#13-1-dispense ibruprofen Dispense]]
 end
     
 group Treatment resources Creation
 
-VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-13-scenario-resources.html#8-treatment ]]
-VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-13-scenario-resources.html#8-treatmentLine ]]
+VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-13-scenario-resources.html#13-treatment New Treatment based on ibuprofen dispense]]
+VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-13-scenario-resources.html#13-1-treatmentLine New Treatment Line based on ibuprofen dispense]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-13-scenario-resources.html#13-1-provenance Link first ibuprofen dispense and treatmentLine]]
 end
     
 group Second Dispense
 
-PHARM -> VAULT : Dispense another product\n[[ExampleScenario-example-13-scenario-resources.html#13-dispense-2  Dispense 2]]
+PHARM -> VAULT : Dispense another product\n[[ExampleScenario-example-13-scenario-resources.html#13-2-dispense parecetamol Dispense]]
 end
     
-group New Treatment resources Creation
+group New Resources Creation
 
-VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-13-scenario-resources.html#8-treatment ]]
-VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-13-scenario-resources.html#8-treatmentLine ]]
+VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-13-scenario-resources.html#13-2-treatmentLine New Treatment Line based on paracetamol dispense]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-13-scenario-resources.html#13-2-provenance Link paracetamol dispense and treatmentLine]]
 end
     
 group Third Dispense
 
-PHARM -> VAULT : Dispense another product\n[[ExampleScenario-example-13-scenario-resources.html#13-dispense-3  Dispense 3]]
+PHARM -> VAULT : Dispense another product\n[[ExampleScenario-example-13-scenario-resources.html#13-3-dispense ibruprofen Dispense]]
 end
     
-group Treatment resources Creation
+group Resource Linkage
 
-VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-13-scenario-resources.html#8-treatment ]]
-VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-13-scenario-resources.html#8-treatmentLine ]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-13-scenario-resources.html#13-3-provenance Link second ibuprofen dispense and treatmentLine]]
 end
   
 

@@ -179,3 +179,76 @@ Title:    ""
 * intent = #plan
 * title = "Treatment for Arthritis"
 * addresses = Reference(arthritis-condition)
+
+
+Instance: 3-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 3 - Provenance 1"
+
+
+* target = Reference(3-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(3-treatmentLine)
+* entity[0].role = #source
+
+Instance: 3-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and first dispense"
+Title:    "Example 3 - Provenance 2"
+
+
+* target = Reference(3-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(3-treatmentLine)
+* entity[0].role = #source
+
+Instance: 3-3-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and second dispense"
+Title:    "Example 3 - Provenance 3"
+
+
+* target = Reference(3-2-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(3-treatmentLine)
+* entity[0].role = #source
+
+Instance: 3-4-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and second prescription"
+Title:    "Example 3 - Provenance 4"
+
+
+* target = Reference(3-2-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(3-treatmentLine)
+* entity[0].role = #source

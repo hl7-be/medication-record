@@ -55,84 +55,129 @@ Title: "Dispense of medication that was prescribed, but not taken till the end"
 * instance[=].resourceType = #MedicationStatement
 * instance[=].name = "Report of non taking drug"
 
-* process[+].title = "Dispense of medication that was prescribed, but not taken till the end"
-* process[=].description = "description"
-* process[=].preConditions = "After a GP visit, the patient Pia Peters is prescribed amoxicillin + clavulanic acid 875 mg + 125 mg for a pharyngitis for the conclusion of the package. The pharmacist, dispensed Amoxiclav Sandoz 875/125.  However, after 1 take, the patient stopped doing the medication because the patient had an alergic reaction.  "
-* process[=].postConditions = "A grouping of the prescription, dispense, and administration are coupled together within a treatment line, the new prescription should start a new treatment line under the same treatment."
+* instance[+].resourceId = "8-1-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Prescription and treatmentLine"
+
+* instance[+].resourceId = "8-2-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Dispense and treatmentLine"
+
+* instance[+].resourceId = "8-3-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Adminsitration and treatmentLine"
+
+* instance[+].resourceId = "8-4-provenance"
+* instance[=].resourceType = #MedicationStatement
+* instance[=].name = "Link Usage and treatmentLine"
 
 
 
-* process[=].step[+].process[+].title = "Initial Contact"
-* process[=].step[=].process[=].step[+].operation.name = "Goes to appointment"
-* process[=].step[=].process[=].step[=].operation.number = "1"
-* process[=].step[=].process[=].step[=].operation.initiator = "PATIENT"
-* process[=].step[=].process[=].step[=].operation.receiver = "GP"
-
-* process[=].step[=].process[=].step[+].operation.name = "Get Patient's Medication"
-* process[=].step[=].process[=].step[=].operation.number = "2"
-* process[=].step[=].process[=].step[=].operation.initiator = "GP"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.response.resourceId = "EB"
-
-* process[=].step[=].process[=].step[+].operation.name = "Create new prescription"
-* process[=].step[=].process[=].step[=].operation.number = "3"
-* process[=].step[=].process[=].step[=].operation.initiator = "GP"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-prescription"
 
 
+* process[+]
+  * title = "Dispense of medication that was prescribed, but not taken till the end"
+  * description = "description"
+  * preConditions = "After a GP visit, the patient Pia Peters is prescribed amoxicillin + clavulanic acid 875 mg + 125 mg for a pharyngitis for the conclusion of the package. The pharmacist, dispensed Amoxiclav Sandoz 875/125.  However, after 1 take, the patient stopped doing the medication because the patient had an alergic reaction.  "
+  * postConditions = "A grouping of the prescription, dispense, and administration are coupled together within a treatment line, the new prescription should start a new treatment line under the same treatment."
+  * step[+]
+    * process[+]
+      * title = "Initial contact"
+      * step[+]
+        * operation.name = "Goes to appointment"
+        * operation.number = "1"
+        * operation.initiator = "PATIENT"
+        * operation.receiver = "GP"
+      * step[+]
+        * operation.name = "Get Patient's Medication"
+        * operation.number = "2"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
+        * operation.response.resourceId = "EB"
+      * step[+]
+        * operation.name = "Create new prescription"
+        * operation.number = "3"
+        * operation.initiator = "GP"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-prescription"
 
-* process[=].step[+].process[+].title = "Treatment resources Creation"
-* process[=].step[=].process[=].step[+].operation.name = "Create new treatment"
-* process[=].step[=].process[=].step[=].operation.number = "4"
-* process[=].step[=].process[=].step[=].operation.initiator = "VAULT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-treatment"
+  * step[+]
+    * process[+]
+      * title = "Treatment resources Creation"
+      * step[+]
+        * operation.name = "Create new treatment"
+        * operation.number = "4"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-treatment"
+      * step[+]
 
-* process[=].step[=].process[=].step[+].operation.name = "Create new treatment Line"
-* process[=].step[=].process[=].step[=].operation.number = "5"
-* process[=].step[=].process[=].step[=].operation.initiator = "VAULT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-treatmentLine"
+        * operation.name = "Create new treatment Line"
+        * operation.number = "5"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-1-provenance"
 
+  * step[+]
+    * process[+]
+      * title = "Dispense"
+      * step[+]
+        * operation.name = "Get patient's Prescriptions"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
+        * operation.response.resourceId = "EB"
+      * step[+]
 
+        * operation.name = "Dispense"
+        * operation.number = "8"
+        * operation.initiator = "PHARM"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-dispense"
 
-* process[=].step[+].process[+].title = "Dispense"
-* process[=].step[=].process[=].step[+].operation.name = "Get patient's Prescriptions"
-* process[=].step[=].process[=].step[=].operation.number = "6"
-* process[=].step[=].process[=].step[=].operation.initiator = "PHARM"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.response.resourceId = "EB"
+  * step[+]
+    * process[+]
+      * title = "Resource Linking"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "9"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-2-provenance"
+  * step[+]
+    * process[+]
+      * title = "Stop Usage"     
+      * step[+]
+        * operation.name = "Stopping the taking of drug due to an adverse event"
+        * operation.number = "10"
+        * operation.initiator = "PATIENT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-administration"
+      * step[+]
+        * operation.name = "Report the stopage of the taking"
+        * operation.number = "11"
+        * operation.initiator = "PATIENT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-usage"
 
-* process[=].step[=].process[=].step[+].operation.name = "Dispense"
-* process[=].step[=].process[=].step[=].operation.number = "7"
-* process[=].step[=].process[=].step[=].operation.initiator = "PHARM"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-dispense"
-
-* process[=].step[=].process[=].step[+].operation.name = "Stopping the taking of drug due to an adverse event"
-* process[=].step[=].process[=].step[=].operation.number = "8"
-* process[=].step[=].process[=].step[=].operation.initiator = "PATIENT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-administration"
-
-* process[=].step[=].process[=].step[+].operation.name = "Report the stopage of the taking"
-* process[=].step[=].process[=].step[=].operation.number = "9"
-* process[=].step[=].process[=].step[=].operation.initiator = "PATIENT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-usage"
-
-
-
-* process[=].step[+].process[+].title = "Treatment Resources Update"
-* process[=].step[=].process[=].step[+].operation.name = "Update treatment"
-* process[=].step[=].process[=].step[=].operation.number = "10"
-* process[=].step[=].process[=].step[=].operation.initiator = "VAULT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-treatment"
-
-* process[=].step[=].process[=].step[+].operation.name = "Update treatment Line"
-* process[=].step[=].process[=].step[=].operation.number = "11"
-* process[=].step[=].process[=].step[=].operation.initiator = "VAULT"
-* process[=].step[=].process[=].step[=].operation.receiver = "VAULT"
-* process[=].step[=].process[=].step[=].operation.request.resourceId = "8-treatmentLine"
+  * step[+]
+    * process[+]
+      * title = "Resource Linking"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "12"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-3-provenance"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "13"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "8-4-provenance"

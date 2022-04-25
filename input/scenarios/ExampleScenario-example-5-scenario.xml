@@ -29,12 +29,12 @@
   <instance>
     <resourceId value="5-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value="Dispense for Prescription"/>
+    <name value="Paracetabs Dispense"/>
   </instance>
   <instance>
     <resourceId value="5-prescription"/>
     <resourceType value="MedicationRequest"/>
-    <name value="New prescription"/>
+    <name value="dafalgan prescription"/>
   </instance>
   <instance>
     <resourceId value="EB"/>
@@ -50,6 +50,16 @@
     <resourceId value="5-treatment"/>
     <resourceType value="CarePlan"/>
     <name value="New Treatment based on prescription"/>
+  </instance>
+  <instance>
+    <resourceId value="5-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="5-2-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Dispense and treatmentLine"/>
   </instance>
   <process>
     <title value="Change brand from prescription on dispense because of out of stock"/>
@@ -70,9 +80,9 @@
         <step>
           <operation>
             <number value="2"/>
-            <name value="Get Patient&#39;s Medication"/>
-            <initiator value="GP"/>
-            <receiver value="VAULT"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -116,6 +126,17 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="5-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
@@ -123,10 +144,10 @@
         <title value="Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
-            <name value="Get patient&#39;s Prescriptions"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <number value="7"/>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -134,7 +155,7 @@
         </step>
         <step>
           <operation>
-            <number value="7"/>
+            <number value="8"/>
             <name value="Dispense new product"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -147,26 +168,15 @@
     </step>
     <step>
       <process>
-        <title value="Treatment Resources Update"/>
+        <title value="Resource Linkage"/>
         <step>
           <operation>
             <number value="8"/>
-            <name value="Update treatment"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="5-treatment"/>
-            </request>
-          </operation>
-        </step>
-        <step>
-          <operation>
-            <number value="9"/>
-            <name value="Update treatment Line"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="5-treatmentLine"/>
+              <resourceId value="5-2-provenance"/>
             </request>
           </operation>
         </step>

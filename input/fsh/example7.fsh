@@ -133,3 +133,57 @@ Title:    ""
 * intent = #plan
 * title = "Diarrhea Prevention"
 * addresses = Reference(diarrhea-condition)
+
+Instance: 7-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 7 - Provenance 1"
+
+
+* target = Reference(7-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(7-treatmentLine)
+* entity[0].role = #source
+
+Instance: 7-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and dispense"
+Title:    "Example 7 - Provenance 1"
+
+
+* target = Reference(7-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(7-treatmentLine)
+* entity[0].role = #source
+
+Instance: 7-3-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and usage"
+Title:    "Example 7 - Provenance 3"
+
+
+* target = Reference(7-usage)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(7-treatmentLine)
+* entity[0].role = #source

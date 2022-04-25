@@ -26,10 +26,15 @@
     <type value="person"/>
     <name value="Pharmacist"/>
   </actor>
+  <actor>
+    <actorId value="GP2"/>
+    <type value="person"/>
+    <name value="Dr. Omar"/>
+  </actor>
   <instance>
     <resourceId value="1-prescription"/>
     <resourceType value="MedicationRequest"/>
-    <name value="New Prescription"/>
+    <name value="Amlor Prescription"/>
   </instance>
   <instance>
     <resourceId value="EB"/>
@@ -49,13 +54,33 @@
   <instance>
     <resourceId value="1-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value="New dispense"/>
+    <name value="Amlodipin Sandoz dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="1-1-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="1-2-provenance"/>
+    <resourceType value="Provenance"/>
+    <name value="Link Dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="1-summary-view"/>
+    <resourceType value="Composition"/>
+    <name value="Summary view for a Physician"/>
+  </instance>
+  <instance>
+    <resourceId value="1-scheduled-view"/>
+    <resourceType value="Composition"/>
+    <name value="Scheduled Administrations view for a Patient"/>
   </instance>
   <process>
     <title value="Change Branded Prescription"/>
-    <description value="description"/>
+    <description value="A different product than the one prescribed does not link a dispense to the same treatment line."/>
     <preConditions value="The patient visits their GP and is prescribed Amlor for hypertension. The GP prescribes Amlor, but at the pharmacy there is no Amlor and amlodipin Sandoz is dispensed."/>
-    <postConditions value="A new treatment and treatment line are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each."/>
+    <postConditions value="When the prescription is made, a new treatment and treatment line are created. For linking the prescription to them, a provenance is created. It enables to see which prescriptions and dispenses are associated to each treatment."/>
     <step>
       <process>
         <title value="Initial Contact"/>
@@ -69,6 +94,17 @@
         </step>
         <step>
           <operation>
+            <number value="2"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
+            <response>
+              <resourceId value="EB"/>
+            </response>
+          </operation>
+        </step>
+        <step>
+          <operation>
             <number value="3"/>
             <name value="Create new prescription"/>
             <initiator value="GP"/>
@@ -76,9 +112,6 @@
             <request>
               <resourceId value="1-prescription"/>
             </request>
-            <response>
-              <resourceId value="EB"/>
-            </response>
           </operation>
         </step>
       </process>
@@ -108,6 +141,17 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-1-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
@@ -115,10 +159,10 @@
         <title value="Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
-            <name value="Get patient&#39;s Prescriptions"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <number value="7"/>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <request>
               <resourceId value="EB"/>
             </request>
@@ -126,7 +170,7 @@
         </step>
         <step>
           <operation>
-            <number value="7"/>
+            <number value="8"/>
             <name value="Create new dispense"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -139,26 +183,79 @@
     </step>
     <step>
       <process>
-        <title value="Treatment Resources Update"/>
+        <title value="Resource Linkage"/>
         <step>
           <operation>
             <number value="8"/>
-            <name value="Create new treatment"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="1-treatment"/>
+              <resourceId value="1-2-provenance"/>
             </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Vizualization Data for physician"/>
+        <step>
+          <operation>
+            <number value="9"/>
+            <name value="Requiring Visualization"/>
+            <initiator value="GP2"/>
+            <receiver value="VAULT"/>
           </operation>
         </step>
         <step>
           <operation>
-            <number value="9"/>
-            <name value="Create new treatment Line"/>
+            <number value="10"/>
+            <name value="Creating Visualization"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="11"/>
+            <name value="Displaying Visualization"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP2"/>
             <request>
-              <resourceId value="1-treatmentLine"/>
+              <resourceId value="1-summary-view"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Vizualization Data for patient (scheduled Administrations)"/>
+        <step>
+          <operation>
+            <number value="12"/>
+            <name value="Requiring Visualization"/>
+            <initiator value="PATIENT"/>
+            <receiver value="VAULT"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="13"/>
+            <name value="Creating Visualization"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="14"/>
+            <name value="Displaying Visualization"/>
+            <initiator value="VAULT"/>
+            <receiver value="PATIENT"/>
+            <request>
+              <resourceId value="1-scheduled-view"/>
             </request>
           </operation>
         </step>

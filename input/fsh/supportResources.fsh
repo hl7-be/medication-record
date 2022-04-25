@@ -97,3 +97,15 @@ Title: "Hyperlipidemia"
 * subject.identifier.value = "64110219106"
 
 * code = http://snomed.ct#55822004 "Hyperlipidemia (disorder)"
+
+
+Profile: BePatient
+Parent: Patient
+
+
+Profile: BeOrganization
+Parent: Organization
+
+
+Profile: BePractitioner
+Parent: Practitioner

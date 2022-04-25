@@ -12,14 +12,14 @@
     <name value="Pia Peters"/>
   </actor>
   <actor>
-    <actorId value="VAULT"/>
-    <type value="entity"/>
-    <name value="Vault"/>
-  </actor>
-  <actor>
     <actorId value="PHARM"/>
     <type value="person"/>
     <name value="Pharmacist"/>
+  </actor>
+  <actor>
+    <actorId value="VAULT"/>
+    <type value="entity"/>
+    <name value="Vault"/>
   </actor>
   <instance>
     <resourceId value="EB"/>
@@ -27,29 +27,49 @@
     <name value="Empty Bundle"/>
   </instance>
   <instance>
-    <resourceId value="13-treatmentLine"/>
+    <resourceId value="13-1-treatmentLine"/>
     <resourceType value="MedicationStatement"/>
-    <name value="New Treatment Line based on prescription"/>
+    <name value="New Treatment Line based on ibuprofen dispense"/>
   </instance>
   <instance>
     <resourceId value="13-treatment"/>
     <resourceType value="CarePlan"/>
-    <name value="New Treatment based on prescription"/>
+    <name value="New Treatment based on ibuprofen dispense"/>
   </instance>
   <instance>
-    <resourceId value="13-dispense"/>
-    <resourceType value="MedicationDispense"/>
-    <name value="Dispense"/>
+    <resourceId value="13-1-provenance"/>
+    <resourceType value="CarePlan"/>
+    <name value="Link first ibuprofen dispense and treatmentLine"/>
   </instance>
   <instance>
-    <resourceId value="13-dispense-2"/>
-    <resourceType value="MedicationDispense"/>
-    <name value=" Dispense 2"/>
+    <resourceId value="13-2-treatmentLine"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="New Treatment Line based on paracetamol dispense"/>
   </instance>
   <instance>
-    <resourceId value="13-dispense-3"/>
+    <resourceId value="13-2-provenance"/>
+    <resourceType value="CarePlan"/>
+    <name value="Link paracetamol dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="13-3-provenance"/>
+    <resourceType value="CarePlan"/>
+    <name value="Link second ibuprofen dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="13-1-dispense"/>
     <resourceType value="MedicationDispense"/>
-    <name value=" Dispense 3"/>
+    <name value="ibruprofen Dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-2-dispense"/>
+    <resourceType value="MedicationDispense"/>
+    <name value="parecetamol Dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-3-dispense"/>
+    <resourceType value="MedicationDispense"/>
+    <name value="ibruprofen Dispense"/>
   </instance>
   <process>
     <title value="Dispense of OTC medication on the community pharmacy"/>
@@ -70,9 +90,9 @@
         <step>
           <operation>
             <number value="2"/>
-            <name value="Get Patient&#39;s Medication"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -90,7 +110,7 @@
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="13-dispense"/>
+              <resourceId value="13-1-dispense"/>
             </request>
           </operation>
         </step>
@@ -106,7 +126,7 @@
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatment"/>
+              <resourceId value="13-treatment"/>
             </request>
           </operation>
         </step>
@@ -117,7 +137,18 @@
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatmentLine"/>
+              <resourceId value="13-1-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-1-provenance"/>
             </request>
           </operation>
         </step>
@@ -128,12 +159,12 @@
         <title value="Second Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
+            <number value="7"/>
             <name value="Dispense another product"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="13-dispense-2"/>
+              <resourceId value="13-2-dispense"/>
             </request>
           </operation>
         </step>
@@ -141,18 +172,7 @@
     </step>
     <step>
       <process>
-        <title value="New Treatment resources Creation"/>
-        <step>
-          <operation>
-            <number value="7"/>
-            <name value="Create new treatment"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="8-treatment"/>
-            </request>
-          </operation>
-        </step>
+        <title value="New Resources Creation"/>
         <step>
           <operation>
             <number value="8"/>
@@ -160,7 +180,18 @@
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatmentLine"/>
+              <resourceId value="13-2-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="9"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-2-provenance"/>
             </request>
           </operation>
         </step>
@@ -171,12 +202,12 @@
         <title value="Third Dispense"/>
         <step>
           <operation>
-            <number value="9"/>
+            <number value="10"/>
             <name value="Dispense another product"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="13-dispense-3"/>
+              <resourceId value="13-3-dispense"/>
             </request>
           </operation>
         </step>
@@ -184,26 +215,15 @@
     </step>
     <step>
       <process>
-        <title value="Treatment resources Creation"/>
-        <step>
-          <operation>
-            <number value="10"/>
-            <name value="Create new treatment"/>
-            <initiator value="VAULT"/>
-            <receiver value="VAULT"/>
-            <request>
-              <resourceId value="8-treatment"/>
-            </request>
-          </operation>
-        </step>
+        <title value="Resource Linkage"/>
         <step>
           <operation>
             <number value="11"/>
-            <name value="Create new treatment Line"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatmentLine"/>
+              <resourceId value="13-3-provenance"/>
             </request>
           </operation>
         </step>

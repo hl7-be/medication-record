@@ -29,7 +29,7 @@ Title: "Prescribed medication is changed by another medication from a different 
 
 * instance[+].resourceId = "2a-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New Prescription"
+* instance[=].name = "Paracetamol 1000 mg Prescription"
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -45,8 +45,16 @@ Title: "Prescribed medication is changed by another medication from a different 
 
 * instance[+].resourceId = "2a-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "New dispense"
+* instance[=].name = "paracetamol 500 mg dispense"
 
+* instance[+].resourceId = "2-1-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Prescription and treatmentLine"
+
+
+* instance[+].resourceId = "2-2-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link Dispense and treatmentLine"
 
 * process[+]
   * title = "Change VOS from prescription on dispense"
@@ -65,8 +73,8 @@ Title: "Prescribed medication is changed by another medication from a different 
       * step[+]
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
@@ -74,6 +82,7 @@ Title: "Prescribed medication is changed by another medication from a different 
         * operation.initiator = "GP"
         * operation.receiver = "VAULT"
         * operation.response.resourceId = "2a-prescription"
+        
 
   * step[+]
     * process[+]
@@ -90,36 +99,35 @@ Title: "Prescribed medication is changed by another medication from a different 
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "2a-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "2-1-provenance"
 
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
-        * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.request.resourceId = "EB"
       * step[+]
         * operation.name = "Create new dispense"
-        * operation.number = "7"
+        * operation.number = "8"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "2a-dispense"
-
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Resource Linkage"
       * step[+]
-        * operation.name = "Create new treatment"
+        * operation.name = "Resource Linking"
         * operation.number = "8"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "2a-treatment"
-      * step[+]
-        * operation.name = "Create new treatment Line"
-        * operation.number = "9"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "2a-treatmentLine"
+        * operation.request.resourceId = "2-2-provenance"
 

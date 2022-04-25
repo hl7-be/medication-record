@@ -2,29 +2,10 @@
 
 <ExampleScenario xmlns="http://hl7.org/fhir">
   <id value="example-8-scenario"/>
-  <text>
-    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><p><b>url</b>: <code>https://www.hl7belgium.be/fhir/ExampleScenario/example-8-scenario</code></p><p><b>version</b>: 0.2.0</p><p><b>name</b>: MedicationStopped</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 11 Sep 2019, 01:00:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href="http://hl7belgium.org">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: <span title="Codes: {http://unstats.un.org/unsd/methods/m49/m49.htm 056}">Belgium</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-prescription</p><p><b>resourceType</b>: MedicationRequest</p><p><b>name</b>: New prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-administration</p><p><b>resourceType</b>: MedicationAdministration</p><p><b>name</b>: Drug administration</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 8-usage</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: Report of non taking drug</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of medication that was prescribed, but not taken till the end</p><p><b>description</b>: description</p><p><b>preConditions</b>: After a GP visit, the patient Pia Peters is prescribed amoxicillin + clavulanic acid 875 mg + 125 mg for a pharyngitis for the conclusion of the package. The pharmacist, dispensed Amoxiclav Sandoz 875/125.  However, after 1 take, the patient stopped doing the medication because the patient had an alergic reaction.  </p><p><b>postConditions</b>: A grouping of the prescription, dispense, and administration are coupled together within a treatment line, the new prescription should start a new treatment line under the same treatment.</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p><h3>Steps</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p><h3>Steps</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p><h3>Steps</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Resources Update</p><h3>Steps</h3><table class="grid"><tr><td>-</td></tr><tr><td>*</td></tr><tr><td>*</td></tr></table></blockquote></blockquote></blockquote></div>
-  </text>
-  <url value="https://www.hl7belgium.be/fhir/ExampleScenario/example-8-scenario"/>
-  <version value="0.2.0"/>
   <name value="MedicationStopped"/>
   <status value="draft"/>
   <experimental value="false"/>
   <date value="2019-09-11T00:00:00.000+01:00"/>
-  <publisher value="HL7 Belgium"/>
-  <contact>
-    <telecom>
-      <system value="url"/>
-      <value value="http://hl7belgium.org"/>
-    </telecom>
-  </contact>
-  <jurisdiction>
-    <coding>
-      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
-      <code value="056"/>
-    </coding>
-    <text value="Belgium"/>
-  </jurisdiction>
   <actor>
     <actorId value="PATIENT"/>
     <type value="person"/>
@@ -80,6 +61,26 @@
     <resourceType value="MedicationStatement"/>
     <name value="Report of non taking drug"/>
   </instance>
+  <instance>
+    <resourceId value="8-1-provenance"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="Link Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="8-2-provenance"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="Link Dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="8-3-provenance"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="Link Adminsitration and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="8-4-provenance"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="Link Usage and treatmentLine"/>
+  </instance>
   <process>
     <title value="Dispense of medication that was prescribed, but not taken till the end"/>
     <description value="description"/>
@@ -87,7 +88,7 @@
     <postConditions value="A grouping of the prescription, dispense, and administration are coupled together within a treatment line, the new prescription should start a new treatment line under the same treatment."/>
     <step>
       <process>
-        <title value="Initial Contact"/>
+        <title value="Initial contact"/>
         <step>
           <operation>
             <number value="1"/>
@@ -99,9 +100,9 @@
         <step>
           <operation>
             <number value="2"/>
-            <name value="Get Patient&#39;s Medication"/>
-            <initiator value="GP"/>
-            <receiver value="VAULT"/>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -145,6 +146,17 @@
             </request>
           </operation>
         </step>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="8-1-provenance"/>
+            </request>
+          </operation>
+        </step>
       </process>
     </step>
     <step>
@@ -152,10 +164,10 @@
         <title value="Dispense"/>
         <step>
           <operation>
-            <number value="6"/>
-            <name value="Get patient&#39;s Prescriptions"/>
-            <initiator value="PHARM"/>
-            <receiver value="VAULT"/>
+            <number value="7"/>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
             <response>
               <resourceId value="EB"/>
             </response>
@@ -163,7 +175,7 @@
         </step>
         <step>
           <operation>
-            <number value="7"/>
+            <number value="8"/>
             <name value="Dispense"/>
             <initiator value="PHARM"/>
             <receiver value="VAULT"/>
@@ -172,9 +184,30 @@
             </request>
           </operation>
         </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Resource Linking"/>
         <step>
           <operation>
-            <number value="8"/>
+            <number value="9"/>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="8-2-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Stop Usage"/>
+        <step>
+          <operation>
+            <number value="10"/>
             <name value="Stopping the taking of drug due to an adverse event"/>
             <initiator value="PATIENT"/>
             <receiver value="VAULT"/>
@@ -185,7 +218,7 @@
         </step>
         <step>
           <operation>
-            <number value="9"/>
+            <number value="11"/>
             <name value="Report the stopage of the taking"/>
             <initiator value="PATIENT"/>
             <receiver value="VAULT"/>
@@ -198,26 +231,26 @@
     </step>
     <step>
       <process>
-        <title value="Treatment Resources Update"/>
+        <title value="Resource Linking"/>
         <step>
           <operation>
-            <number value="10"/>
-            <name value="Update treatment"/>
+            <number value="12"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatment"/>
+              <resourceId value="8-3-provenance"/>
             </request>
           </operation>
         </step>
         <step>
           <operation>
-            <number value="11"/>
-            <name value="Update treatment Line"/>
+            <number value="13"/>
+            <name value="Resource Linking"/>
             <initiator value="VAULT"/>
             <receiver value="VAULT"/>
             <request>
-              <resourceId value="8-treatmentLine"/>
+              <resourceId value="8-4-provenance"/>
             </request>
           </operation>
         </step>

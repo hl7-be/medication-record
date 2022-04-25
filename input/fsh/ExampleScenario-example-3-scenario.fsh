@@ -29,7 +29,7 @@ Title: "Dispense medication before the prescription is available"
 
 * instance[+].resourceId = "3-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Dispense of product prescribed"
+* instance[=].name = "Diclofenac Dispense "
 
 * instance[+].resourceId = "EB"
 * instance[=].resourceType = #Bundle
@@ -45,21 +45,38 @@ Title: "Dispense medication before the prescription is available"
 
 * instance[+].resourceId = "3-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "Original Prescription"
+* instance[=].name = "Diclofenac Prescription"
 
 * instance[+].resourceId = "3-2-dispense"
 * instance[=].resourceType = #MedicationDispense
-* instance[=].name = "Ancilliary Dispense of a product"
+* instance[=].name = "Pantoprazole Dispense [ancilliary product]"
 
 * instance[+].resourceId = "3-2-prescription"
 * instance[=].resourceType = #MedicationRequest
-* instance[=].name = "New Prescription"
+* instance[=].name = "Pantoprazole Prescription"
+
+* instance[+].resourceId = "3-1-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link first Prescription and treatmentLine"
+
+* instance[+].resourceId = "3-2-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link first dispense and treatmentLine"
+
+* instance[+].resourceId = "3-3-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link second dispense and treatmentLine"
+
+
+* instance[+].resourceId = "3-4-provenance"
+* instance[=].resourceType = #Provenance
+* instance[=].name = "Link second Prescription and treatmentLine"
 
 
 * process[+]
   * title = "Dispense of medication before a existing prescription"
   * description = "description"
-  * preConditions = "After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis.While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP."
+  * preConditions = "After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP."
   * postConditions = "A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each."
 
   * step[+]
@@ -73,8 +90,8 @@ Title: "Dispense medication before the prescription is available"
       * step[+]
         * operation.name = "Get Patient's Medication"
         * operation.number = "2"
-        * operation.initiator = "GP"
-        * operation.receiver = "VAULT"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "GP"
         * operation.response.resourceId = "EB"
       * step[+]
         * operation.name = "Create new prescription"
@@ -98,85 +115,90 @@ Title: "Dispense medication before the prescription is available"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "3-treatmentLine"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "6"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "3-1-provenance"
 
   * step[+]
     * process[+]
       * title = "Dispense"
       * step[+]
         * operation.name = "Get patient's Prescriptions"
-        * operation.number = "6"
-        * operation.initiator = "PHARM"
-        * operation.receiver = "VAULT"
+        * operation.number = "7"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "PHARM"
         * operation.response.resourceId = "EB"
 
       * step[+]
         * operation.name = "Dispense original dispense"
-        * operation.number = "7"
+        * operation.number = "8"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "3-dispense"
       * step[+]
         * operation.name = "Dispense ancilliary product"
-        * operation.number = "8"
+        * operation.number = "9"
         * operation.initiator = "PHARM"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "3-2-dispense"
 
   * step[+]
     * process[+]
-      * title = "Treatment Resources Update"
+      * title = "Treatment Line Creation and resource Linking"
       * step[+]
-        * operation.name = "Create new treatment"
-        * operation.number = "9"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "3-treatment"
-      * step[+]
-        * operation.name = "Create new treatment Line"
+        * operation.name = "New Treatment Line for anciiliary product"
         * operation.number = "10"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
         * operation.request.resourceId = "3-treatmentLine"
-
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "11"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "3-2-provenance"
+      * step[+]
+        * operation.name = "Resource Linking"
+        * operation.number = "12"
+        * operation.initiator = "VAULT"
+        * operation.receiver = "VAULT"
+        * operation.request.resourceId = "3-3-provenance"
   * step[+]
     * process[+]
-      * title = "group 5"
+      * title = "Reporting and new dispense"
       * step[+]
-        * operation.name = "Report of situation"
-        * operation.number = "11"
+        * operation.name = "Notification of a dispense"
+        * operation.number = "13"
         * operation.initiator = "PHARM"
         * operation.receiver = "GP"
-
       * step[+]
         * operation.name = "Goes to new appointment"
-        * operation.number = "12"
+        * operation.number = "14"
         * operation.initiator = "PATIENT"
         * operation.receiver = "GP"
 
         * operation.name = "Get Patient's Medication"
-        * operation.number = "13"
+        * operation.number = "15"
         * operation.initiator = "GP"
         * operation.receiver = "VAULT"
         * operation.response.resourceId = "EB"
 
         * operation.name = "Create new prescription"
-        * operation.number = "14"
+        * operation.number = "16"
         * operation.initiator = "GP"
         * operation.receiver = "VAULT"
         * operation.response.resourceId = "3-2-prescription"
 
   * step[+]
     * process[+]
-      * title = "group 6"
+      * title = "Linking"
       * step[+]
-        * operation.name = "Create new treatment"
-        * operation.number = "15"
+        * operation.name = "Resource Linking"
+        * operation.number = "17"
         * operation.initiator = "VAULT"
         * operation.receiver = "VAULT"
-        * operation.request.resourceId = "3-treatment"
-      * step[+]
-        * operation.name = "Create new treatment Line"
-        * operation.number = "16"
-        * operation.initiator = "VAULT"
-        * operation.receiver = "VAULT"
-        * operation.request.resourceId = "3-treatmentLine"
+        * operation.request.resourceId = "3-4-provenance"
+

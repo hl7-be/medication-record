@@ -16,26 +16,26 @@ actor "Pharmacist" as PHARM
 group Initial contact
 
 PATIENT -> GP : Goes to appointment\n
-GP -> VAULT : Get Patient's Medication\n[[ExampleScenario-example-5-scenario-resources.html#EB Empty Bundle]]
-GP -> VAULT : Create new prescription\n[[ExampleScenario-example-5-scenario-resources.html#5-prescription New prescription]]
+VAULT -> GP : Get Patient's Medication\n[[ExampleScenario-example-5-scenario-resources.html#EB Empty Bundle]]
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-5-scenario-resources.html#5-prescription dafalgan prescription]]
 end
     
 group Treatment resources Creation
 
 VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-5-scenario-resources.html#5-treatment New Treatment based on prescription]]
 VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-5-scenario-resources.html#5-treatmentLine New Treatment Line based on prescription]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-5-scenario-resources.html#5-provenance Link Prescription and treatmentLine]]
 end
     
 group Dispense
 
-PHARM -> VAULT : Get patient's Prescriptions\n[[ExampleScenario-example-5-scenario-resources.html#EB Empty Bundle]]
-PHARM -> VAULT : Dispense new product\n[[ExampleScenario-example-5-scenario-resources.html#5-dispense Dispense for Prescription]]
+VAULT -> PHARM : Get patient's Prescriptions\n[[ExampleScenario-example-5-scenario-resources.html#EB Empty Bundle]]
+PHARM -> VAULT : Dispense new product\n[[ExampleScenario-example-5-scenario-resources.html#5-dispense Paracetabs Dispense]]
 end
     
-group Treatment Resources Update
+group Resource Linkage
 
-VAULT -> VAULT : Update treatment\n[[ExampleScenario-example-5-scenario-resources.html#5-treatment New Treatment based on prescription]]
-VAULT -> VAULT : Update treatment Line\n[[ExampleScenario-example-5-scenario-resources.html#5-treatmentLine New Treatment Line based on prescription]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-5-scenario-resources.html#5-2-provenance Link Dispense and treatmentLine]]
 end
   
 

@@ -161,3 +161,75 @@ Title:    ""
 * intent = #plan
 * title = "Treament of pharyngitis"
 * addresses = Reference(pharyngitis-condition)
+
+Instance: 8-1-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 8 - Provenance 1"
+
+
+* target = Reference(8-prescription)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(8-treatmentLine)
+* entity[0].role = #source
+
+Instance: 8-2-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and prescription"
+Title:    "Example 8 - Provenance 2"
+
+
+* target = Reference(8-dispense)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(8-treatmentLine)
+* entity[0].role = #source
+
+Instance: 8-3-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and administration"
+Title:    "Example 8 - Provenance 3"
+
+
+* target = Reference(8-administration)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(8-treatmentLine)
+* entity[0].role = #source
+
+Instance: 8-4-provenance 
+InstanceOf: Provenance
+Usage: #example
+Description: "Provenance linking treatment line and usage"
+Title:    "Example 8 - Provenance 4"
+
+
+* target = Reference(8-usage)
+
+* recorded = "2021-07-19T13:00:00+02:00"
+
+* agent.who.identifier.value = "7c121778-5b2b-442d-9314-0a73995ab3dd"
+* agent.who.identifier.system = "http://physician-identifiers.com"
+* agent.role = #PRIMAUTH
+
+* entity[0].what = Reference(8-treatmentLine)
+* entity[0].role = #source
