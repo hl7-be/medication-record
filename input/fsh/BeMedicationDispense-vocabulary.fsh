@@ -1,3 +1,5 @@
+Alias: $hcparty = https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty
+
 Instance: be-ns-cnk-codes
 InstanceOf: NamingSystem
 Usage: #definition
