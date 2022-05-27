@@ -5,11 +5,25 @@ Title:          "BeMedicationDispense"
 Description:    """ 
  Defines constraints and extensions on the Medication Dispense resource for a record of a dispensation in Belgium.
  """
-// NOTE: MS can also be done in multiple lines:
-// * identifier MS
-// * identifier.system MS
-// ...
+* ^version = "0.2.0"
+* ^status = #active
+* . ^short = "The medication dispense entry"
+* . ^definition = "A register of a medication dispense, describing the medication that has been dispensed by a professional or by an organization, including the medication, the patient, some prescription and treatment information."
 * identifier MS
+* identifier ^slicing.discriminator.type = #value
+* identifier ^slicing.discriminator.path = "system"
+* identifier ^slicing.rules = #open
+* identifier contains DGUID 0..1 MS
+* identifier[DGUID].type.coding.code = #dguid
+* identifier[DGUID] MS
+* identifier[DGUID].system 1..
+* identifier[DGUID].system = "https://www.gfd-dpp.be/fhir/reference/dguid" (exactly)
+
+
+
+
+
+
 * subject MS
 * performer MS
 * whenHandedOver MS
@@ -42,13 +56,6 @@ Description:    """
 * . ^short = "The medication dispense entry"
 * . ^definition = "A register of a medication dispense, describing the medication that has been dispensed by a professional or by an organization, including the medication, the patient, some prescription and treatment information."
 
-* identifier ^slicing.discriminator.type = #value
-* identifier ^slicing.discriminator.path = "system"
-* identifier ^slicing.rules = #open
-* identifier contains DGUID 0..1
-* identifier[DGUID].system = "https://www.gfd-dpp.be/fhir/reference/dguid" (exactly)
-* identifier[DGUID].type.coding.code = #dguid
-* identifier[DGUID] MS
 
 * dosageInstruction.patientInstruction MS
 

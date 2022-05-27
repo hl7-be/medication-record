@@ -14,8 +14,10 @@ Title:    "Dispense entry Example - Community Pharmacy dispense, from prescripti
 * identifier[0].type.coding.code = #dguid
 * identifier[0].value = "a8ca980c-72aa-11e7-8cf7-a6006ad3dba0"
 * status = #completed
-* medicationCodeableConcept.coding.system = "https://cnk.apb.be/codings/cnk_product_codes"
-* medicationCodeableConcept.coding.code = #1439562
+* medicationCodeableConcept.coding[+].system = "https://cnk.apb.be/codings/cnk_product_codes"
+* medicationCodeableConcept.coding[=].code = #1439562
+* medicationCodeableConcept.coding[+].system = "http://www.whocc.no/atc"
+* medicationCodeableConcept.coding[=].code = #N05CD05
 * medicationCodeableConcept.coding.display = "Topazolam tab 50x 1,0mg"
 
 * medicationCodeableConcept.coding.display.extension[0].url = "http://hl7.org/fhir/StructureDefinition/translation"
@@ -52,18 +54,20 @@ Title:    "Dispense entry Example - Community Pharmacy dispense, from prescripti
 
 
 Instance: apotheek-onder-de-toren
-InstanceOf: Organization
+InstanceOf: BeOrganization
 Usage: #inline
+/*
 * extension[0].url = "http://hl7.org/fhir/StructureDefinition/geolocation"
 * extension[0].extension[0].url = "latitude"
 * extension[0].extension[0].valueDecimal = 51.239847
 * extension[0].extension[1].url = "longitude"
 * extension[0].extension[1].valueDecimal = 3.319952
+*/
 * identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi-organization"
 * identifier.value = "27457532"
 * type.coding.system = "https://www.ehealth.fgov.be/standards/fhir/CodeSystem/cd-hcparty"
-* type.coding.code = #pharmacy
-* type.text = "pharmacy"
+* type.coding.code = $hcparty#orgpharmacy
+
 
 
 Instance: medication-dispense-example-2
@@ -112,10 +116,10 @@ Title:    "Dispense entry Example - Community Pharmacy dispense, from prescripti
 
 
 
-Instance: medication-dispense-hospital
+Instance: example-dispense-hospital
 InstanceOf: MedicationDispense
 Usage: #example
-Description: "A dispense from a hospital pharmacy, with a hospital nihii and based on a prescription"
+Description: "A dispense from a hospital pharmacy, with a hospital nihdi and based on a prescription"
 Title: "A dispense from a hospital pharmacy"
 //Created from the concept on http://build.fhir.org/ig/hl7-be/hl7-be-fhir-medication/StructureDefinition-be-medicationdispense.html
 //* id = 
@@ -130,7 +134,8 @@ Title: "A dispense from a hospital pharmacy"
 * identifier[0].system = "https://www.gfd-dpp.be/fhir/reference/dguid" //If this is a local identifier, then constraining this is hard. a hospital presription will NOT have a dguid, we could gen a guid, which is extra
 //* identifier[0].type.coding[0].id =  //Where does this come from? Coding doesn't have an id - https://www.hl7.org/fhir/datatypes.html#Coding, looks to be unique to extensions
 * identifier[0].type.coding[0].system = "https://www.nexuzhealth.be/fhir/prescription/ambulatory"
-* identifier[0].type.coding[0].code = #1000321345
+* identifier[0].type.coding[0].code = #dguid
+* identifier[0].value = "1000321345"
 * identifier[0].type.coding[0].version = "1"
 * status = #completed
 //* category.system = "http://terminology.hl7.org/fhir/CodeSystem/medicationdispense-category"
@@ -150,6 +155,11 @@ Title: "A dispense from a hospital pharmacy"
 
 * subject.identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"
 * subject.identifier.value = "64110219106"
+
+* performer.actor.identifier.system = "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/nihdi-organization"
+* performer.actor.identifier.value = "123123123"
+
+
 
 //* context.identifier = ...
 * authorizingPrescription.display = "Prescription"

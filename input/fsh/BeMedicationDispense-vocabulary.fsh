@@ -47,3 +47,18 @@ Description: "Naming System - Prescription IDs"
 * jurisdiction = http://unstats.un.org/unsd/methods/m49/m49.htm#056
 
 
+ValueSet: DispenserTypes
+Id: be-vs-dispenser-types
+Title: "Dispenser Types"
+Description: "Dispenser Types - from hcparty"
+
+* $hcparty#deptpharmacy
+* $hcparty#perspharmacist
+* $hcparty#orgpharmacy
+* $hcparty#perspharmacyassistant
+* $hcparty#perspharmacistclinicalbiologist
+* $hcparty#persdentist
+* $hcparty#deptdentistry
+
+
+
