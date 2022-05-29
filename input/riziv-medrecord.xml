@@ -1414,6 +1414,11 @@
         <title value="The Belgian Medication Record"/>
         <generation value="markdown"/>
         <page>
+          <nameUrl value="medicationrecord-privacy-access.html"/>
+          <title value="Requirements - Privacy and Access Control"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
           <nameUrl value="medicationrecord-scenarios.html"/>
           <title value="Medication Record Scenarios"/>
           <generation value="markdown"/>
