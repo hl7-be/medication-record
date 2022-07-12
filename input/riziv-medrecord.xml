@@ -1399,15 +1399,20 @@
         <generation value="html"/>
       </page>
       <page>
+        <nameUrl value="glossary.html"/>
+        <title value="Glossary"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
         <nameUrl value="functional-description.html"/>
         <title value="Functional Description"/>
         <generation value="markdown"/>
-      <page>
-        <nameUrl value="usecases-dispense.html"/>
-        <title value="Use Cases - Dispense"/>
-        <generation value="markdown"/>
+        <page>
+          <nameUrl value="usecases-dispense.html"/>
+          <title value="Use Cases - Dispense"/>
+          <generation value="markdown"/>
+        </page>
       </page>
-    </page>
 
       <page>
         <nameUrl value="medicationrecord.html"/>
