@@ -302,7 +302,7 @@ Id: med-view-comp
 * section[MedRecordTreatmentLine].entry only Reference(MedRecordTreatmentLine)
 * section[detailsRecord].entry only Reference(MedRecordUsage or MedRecordOrder or MedRecordDispense or MedRecordAdministration or MedRecordMedicationScheduledAdministration)
 
-Profile: scheduledView
+Profile: ScheduledView
 Title: "Medication View profile -second visualization"
 Description: "The profile for how to organize the information in a medication View 2"
 Parent: Composition
@@ -351,7 +351,7 @@ Id: med-view-comp-two
 * section[MedRecordTreatment].section[MedRecordTreatmentLine].section[detailsRecord].entry only Reference(MedRecordUsage or MedRecordOrder or MedRecordDispense or MedRecordAdministration or MedRecordMedicationScheduledAdministration)
 
 
-Profile: scheduledView
+Profile: ScheduledView
 Title: "Medication View profile 2"
 Description: "The profile for how to organize the information in a medication View 2"
 Parent: Composition
