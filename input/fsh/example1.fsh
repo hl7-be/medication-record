@@ -169,7 +169,7 @@ Title: "Example 1 - Summary view"
 
 
 Instance: 1-scheduled-view
-InstanceOf: scheduledView
+InstanceOf: ScheduledView
 Usage: #example
 Description: "Summary view for a Patient or Care Taker"
 Title:    "Example 1 - Scheduled Takes view"

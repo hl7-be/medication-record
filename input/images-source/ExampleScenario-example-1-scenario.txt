@@ -7,6 +7,7 @@ actor "Pia Peters" as PATIENT
 actor "Dr. Durant" as GP
 participant "Vault" as VAULT
 actor "Pharmacist" as PHARM
+actor "Dr. Omar" as GP2
 
     
     
@@ -38,9 +39,18 @@ group Resource Linkage
 VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-1-scenario-resources.html#1-2-provenance Link Dispense and treatmentLine]]
 end
     
-group Vizualization ...
+group Vizualization Data for physician
 
-VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-1-scenario-resources.html#1-2-provenance Link Dispense and treatmentLine]]
+GP2 -> VAULT : Requiring Visualization\n
+VAULT -> VAULT : Creating Visualization\n
+VAULT -> GP2 : Displaying Visualization\n[[ExampleScenario-example-1-scenario-resources.html#1-summary-view Summary view for a Physician]]
+end
+    
+group Vizualization Data for patient (scheduled Administrations)
+
+PATIENT -> VAULT : Requiring Visualization\n
+VAULT -> VAULT : Creating Visualization\n
+VAULT -> PATIENT : Displaying Visualization\n[[ExampleScenario-example-1-scenario-resources.html#1-scheduled-view Scheduled Administrations view for a Patient]]
 end
   
 
