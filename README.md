@@ -1,4 +1,4 @@
-Empty IG
+Riziv playground for Medication Record
 ---
 This is an empty IG
 <br> </br>
