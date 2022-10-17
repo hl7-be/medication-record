@@ -306,7 +306,7 @@ Title: "View of all medication the patient is taking"
 * subject.identifier.value = "64110219106"
 
 * intent = #plan
-* status = #active 
+* status = #completed 
 
 * created = "2021-08-10T10:00:00+02:00"
 
@@ -357,7 +357,7 @@ Title: "Scheduled medication for the patient for a certain week"
 * subject.identifier.value = "64110219106"
 
 * intent = #plan
-* status = #active 
+* status = #completed 
 
 * title = "Patient scheduled medication for week x"
 * period.start = "2021-08-09T00:00:00+02:00"
