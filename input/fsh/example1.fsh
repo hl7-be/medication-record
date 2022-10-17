@@ -153,7 +153,7 @@ Usage: #example
 Description: "Summary view for a Physician"
 Title: "Example 1 - Summary view"
 
-* status = #active
+* status = #completed
 * date = "2021-08-15T13:00:00+02:00"
 * author = Reference(BeOrganization)
 * title = "Summary View for Patient X"
@@ -174,7 +174,7 @@ Usage: #example
 Description: "Summary view for a Patient or Care Taker"
 Title:    "Example 1 - Scheduled Takes view"
 
-* status = #active
+* status = #completed
 * date = "2021-08-15T13:00:00+02:00"
 * author = Reference(BeOrganization)
 * title = "Scheduled View for Patient X"

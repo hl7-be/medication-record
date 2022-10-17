@@ -314,7 +314,7 @@ Title: "View of all medication the patient is taking"
 * description = "Overview of the patient's medication"
 
 * activity[+].detail.kind = #MedicationRequest //new value set?
-* activity[=].detail.status = #active
+* activity[=].detail.status = #completed
 * activity[=].detail.productCodeableConcept =  https://cnk.apb.be/codings/cnk_product_codes#00  "Aspirine 500 mg (36 effervescent tablets)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
 
@@ -367,7 +367,7 @@ Title: "Scheduled medication for the patient for a certain week"
 
 
 * activity[+].detail.kind = #MedicationRequest //new value set?
-* activity[=].detail.status = #active
+* activity[=].detail.status = #completed
 * activity[=].detail.productCodeableConcept =  https://cnk.apb.be/codings/cnk_product_codes#00  "Aspirine 500 mg (36 effervescent tablets)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
 
