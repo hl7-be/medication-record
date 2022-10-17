@@ -47,7 +47,7 @@ InstanceOf: MedicationStatement
 Instance: Dafalgan500mgDispense
 InstanceOf: MedicationDispense
 
-* status = #active
+* status = #completed
 * medicationCodeableConcept.coding.code = #4185898
 * medicationCodeableConcept.coding.display = "Paracetamol Eg 500mg Filmomh Tabl 120 Blister"
 * subject = Reference(Patient1)
