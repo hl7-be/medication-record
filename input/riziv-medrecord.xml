@@ -41,8 +41,8 @@
   <fhirVersion value="4.0.1"/>
   
   <dependsOn id="fhir">
-    <uri value="https://www.ehealth.fgov.be/standards/fhir"/>
-    <packageId value="ehealthplatform.be.r4.federalprofiles"/>
+    <uri value="https://www.ehealth.fgov.be/standards/fhir/core"/>
+    <packageId value="hl7.fhir.be.core"/>
     <version value="dev"/>
   </dependsOn>
   <definition>
