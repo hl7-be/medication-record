@@ -43,7 +43,7 @@
   <dependsOn id="fhir">
     <uri value="https://www.ehealth.fgov.be/standards/fhir/core"/>
     <packageId value="hl7.fhir.be.core"/>
-    <version value="dev"/>
+    <version value="current"/>
   </dependsOn>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
@@ -91,7 +91,7 @@
 
     <!--  |||||||||||||||||||||||||||||||||||||||||||||    start of Terminology resources    ||||||||||||||||||||||||||||||||||||||||||||| -->
 
-    <resource>
+    <!-- <resource>
       <reference>
         <reference value="NamingSystem/be-ns-nihdi-organization"/>
       </reference>
@@ -99,8 +99,8 @@
       <name value="NamingSystem - NIHDI Organization"/>
       <description value="NIHDI identifier for care organizations"/>
       <groupingId value="terminology"/>
-    </resource>
-    <resource>
+    </resource> -->
+    <!-- <resource>
       <reference>
         <reference value="NamingSystem/be-ns-nihdi-professional"/>
       </reference>
@@ -108,7 +108,7 @@
       <name value="NamingSystem - NIHDI Professional"/>
       <description value="NIHDI identifier for care professionals"/>
       <groupingId value="terminology"/>
-    </resource>
+    </resource> -->
 
     <resource>
       <reference>

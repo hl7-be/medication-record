@@ -40,9 +40,9 @@ Because the medication view line (and medication view) are purpose-specific, the
 
 **Medication data aggregation** The process of combining and linking data about a patient's medication based on existing rules - for example resolving duplicates, linling .
 
-**Medication Reconciliation**: The process of creating and maintaining a single list of medications for a patient, for a specific purpose.
+**Medication Reconciliation**: The process of creating and maintaining a single list of medications for a patient, for a specific purpose, and the necessary adjustments to the treatments / treatment lines that are deemed necessary (for example when finding duplicate medication lines).
 
-**Medication List Creation**: The process of creating a specific representation - for example in list format
+**Medication View Creation**: The process of creating a specific representation - for example in list format
 
 
 
