@@ -298,7 +298,6 @@ Instance: total-view
 InstanceOf: MedRecordMedicationSummaryView
 Title: "View of all medication the patient is taking"
 
-
 * identifier[0].system = "http://summaries-identifiers.com"
 * identifier[0].value = "ba9efa2a-8b0e-4c64-8a35-3e2c059b1899"
 
@@ -306,7 +305,7 @@ Title: "View of all medication the patient is taking"
 * subject.identifier.value = "64110219106"
 
 * intent = #plan
-* status = #completed 
+* status = #active
 
 * created = "2021-08-10T10:00:00+02:00"
 
@@ -314,7 +313,7 @@ Title: "View of all medication the patient is taking"
 * description = "Overview of the patient's medication"
 
 * activity[+].detail.kind = #MedicationRequest //new value set?
-* activity[=].detail.status = #completed
+* activity[=].detail.status = #in-progress
 * activity[=].detail.productCodeableConcept =  https://cnk.apb.be/codings/cnk_product_codes#00  "Aspirine 500 mg (36 effervescent tablets)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
 
@@ -329,7 +328,7 @@ Title: "View of all medication the patient is taking"
 * activity[+].detail.kind = #MedicationRequest //new value set?
 //* activity[=].reference = Reference(example-15-of-medication-treatment2) referencing treatment here? careplan not supported
 
-* activity[=].detail.status = #active
+* activity[=].detail.status = #in-progress
 * activity[=].detail.productCodeableConcept =   https://cnk.apb.be/codings/cnk_product_codes#00  "Acidine 75 mg (20 pieces)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
 
@@ -357,7 +356,7 @@ Title: "Scheduled medication for the patient for a certain week"
 * subject.identifier.value = "64110219106"
 
 * intent = #plan
-* status = #completed 
+* status = #active
 
 * title = "Patient scheduled medication for week x"
 * period.start = "2021-08-09T00:00:00+02:00"
@@ -367,7 +366,7 @@ Title: "Scheduled medication for the patient for a certain week"
 
 
 * activity[+].detail.kind = #MedicationRequest //new value set?
-* activity[=].detail.status = #completed
+* activity[=].detail.status = #in-progress
 * activity[=].detail.productCodeableConcept =  https://cnk.apb.be/codings/cnk_product_codes#00  "Aspirine 500 mg (36 effervescent tablets)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
 
@@ -375,6 +374,6 @@ Title: "Scheduled medication for the patient for a certain week"
 * activity[+].detail.kind = #MedicationRequest //new value set?
 //* activity[=].reference = Reference(example-15-of-medication-treatment2) referencing treatment here? careplan not supported
 
-* activity[=].detail.status = #active
+* activity[=].detail.status = #in-progress
 * activity[=].detail.productCodeableConcept =   https://cnk.apb.be/codings/cnk_product_codes#00  "Acidine 75 mg (20 pieces)"
 //* activity[=].detail.scheduledString = "every day" transform the prescription into string or mantain Timing?
