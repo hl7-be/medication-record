@@ -3,8 +3,7 @@
 # Change log:
 # v0.1.0
 # 2021-06-18: publish default branches to / , other branches branches/<branch>
-# 2021-11-26: reusable workflow 
-# April 2022: Add exampleScenario conversion (temp)
+# 2021-11-26: reusable workflow
 
 name: CI
 
@@ -12,50 +11,13 @@ name: CI
 on:
   # Triggers the workflow on push or pull request events for any main branch
   push:
+    branches-ignore:    
+      - 'gh-pages'
   pull_request:
 
   workflow_dispatch:
 
 jobs:
-  transform_exampleScenarios:
-    runs-on: ubuntu-latest
-    steps:
-     - name: Get branch name
-       run: echo ${GITHUB_REF##*/}
-      # Checks-out your repository under $GITHUB_WORKSPACE, so your job can access it
-     - uses: actions/checkout@v2
-    
-     - name: Setup Node.js
-       uses: actions/setup-node@v2
-       with:
-        node-version: '14'
-     - name: Install dependencies
-       run: |
-        npm install -g fsh-sushi
-        sushi .
-     - name: get validator
-       run: wget https://github.com/hapifhir/org.hl7.fhir.core/releases/latest/download/validator_cli.jar
-
-     - name: ls
-       run: ls
-     - name: transform exampleScenarios
-       run: | 
-          chmod +x ./fromfsh_to_xml.sh
-          ./fromfsh_to_xml.sh ExampleScenario input/scenarios/
-
-     - name: commit files
-       run: |
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git add -A
-          git diff --quiet && git diff --staged --quiet || git commit -m "[Actions] Create exampleScenarios" -a
-          
-     - name: push changes
-       uses: ad-m/github-push-action@v0.6.0
-       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}
-        branch: master  
-
-  call_build:
-    needs: transform_exampleScenarios
+  # This workflow contains a single job called "build"
+  call_build: 
     uses: openhie/empty-fhir-ig/.github/workflows/main.yml@master
