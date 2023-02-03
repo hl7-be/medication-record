@@ -43,7 +43,7 @@
   <dependsOn id="fhir">
     <uri value="https://www.ehealth.fgov.be/standards/fhir/core"/>
     <packageId value="hl7.fhir.be.core"/>
-    <version value="current"/>
+    <version value="2.0.1"/>
   </dependsOn>
   <definition>
     <!-- You don't need to define any groupings.  The IGPublisher will define them for you.  You only need to do so if your IG is 'special' and it's
