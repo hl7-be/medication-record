@@ -3,6 +3,8 @@ Logical: VIDISMedicationSchema
 Description: "VIDIS MedicationSchema Data Model"
 Title: "VIDIS MS"
 
+* text.div 1..1
+
 * identifier 0..* II "Identifier of the schema" "Unique identifier(s) for the schema - can be several, in different unique name spaces"
 * lastUpdated 1..1 DT "Last time the document was updated" "Last time the document was updated"
 * patient 1..1 II "Identifier or reference to the patient" "Identifier or reference to the patient. Should be an NISS or BIS number"
