@@ -1,8 +1,5 @@
 
-// Logical data model for KMEHR MedicationScheme.
-// Documented by Bert Peters, based on implementation and testing results
-// Element names may be changed to follow FHIR documentation convention - namely removing dashes (-)
-// 2023
+
 
 Logical: KMEHRMS
 Title: "KMEHR Medication Schema v5.8"
@@ -23,13 +20,13 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
     * recipient 0..1 Class ""
       * insert hcparties
   * folder 1..1 Class "The only data that matters"
-    * idkmehr 1..1 integer "ID-KMEHR"
+    * id-kmehr 1..1 integer "ID-KMEHR"
       * ^requirements = """
         * Equal to 1
         """
       * ^comment = " To Be checked if always 1"
     * patient 1..1 Class "the patient"
-      * idinss 0..1 string "the Belgian Social Security Number identifier"
+      * id-inss 0..1 string "the Belgian Social Security Number identifier"
         * ^requirements = """
           * S = INSS
           * format = 11 digits
@@ -68,12 +65,12 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
 
     * MSTransaction 1..1 Class "The metadata for the message"
       * ^comment = "here is a comment"
-      // * idkmehr 1..1 integer "the KMEHR identifier for the medication line"
+      // * id-kmehr 1..1 integer "the KMEHR identifier for the medication line"
       // * ^comment = "S-VALUE= ID-KMEHR"
       // * ^requirements = """
       //     * Sequential, starting from 2
       //   """
-      * idothers 0..* integer "Local ID of the medication line" 
+      * id-others 0..* integer "Local ID of the medication line" 
         * ^definition = """
 *Value set*:
   * vitalinkuri
@@ -104,13 +101,13 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
         * ^comment = "Always set to true because it is not used"
       * version 0..1 integer "version of the medication scheme"
 
-    * MSETransactionTreatmentSuspension 0..* Class "The treatment suspension line(s)"
-      * idkmehr 1..1 integer "the KMEHR identifier for the medication line"
+    * MSETransaction-treatmentSuspension 0..* Class "The treatment suspension line(s)"
+      * id-kmehr 1..1 integer "the KMEHR identifier for the medication line"
         * ^comment = "S-VALUE= ID-KMEHR"
         * ^requirements = """
         * Sequential, starting from 2
         """
-      * idother 0..* string "Local ID of the medication line"
+      * id-other 0..* string "Local ID of the medication line"
         * ^requirements = """
         * S-VALUE= LOCAL
         * SL-Value = 'vitalinkuri' - the identifier of the namespace
@@ -134,7 +131,7 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
         * ^comment = "Always set to true because it is not used"
       * isValidated 1..1 boolean "is validated"
         * ^comment = "Always set to true because it is not used"
-      * itemmedication 0..* Class "This describes the medication it is linked to, but has no further relevance"
+      * item-medication 0..* Class "This describes the medication it is linked to, but has no further relevance"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^comment = """
@@ -158,14 +155,14 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
             * URL = link to the ID-KMEHR of the medication this TS relates to
               * format = "//transaction[id[@S='ID-KMEHR']='5']"
           """
-      * itemtransactionreason 0..1 Class "Extra information on the reason of suspention of the linked medication"
+      * item-transactionreason 0..1 Class "Extra information on the reason of suspention of the linked medication"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^requirements = """
             * S = CD-ITEM
             * value = transactionreason
             """
-        * contenttext 0..* Class ""
+        * content-text 0..* Class ""
           * text 1..* string "cardinality to be checked"
             * ^comment = "L-VALUE = [language] fr or nl or ..."
             * ^example.valueString = "Temporairement ne pas prendre en raison de l'interaction avec Y."
@@ -180,13 +177,13 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
 
 
 
-    * MSETransactionmedication 0..* Class "The medication lines"
-      * idkmehr 1..1 integer "the KMEHR identifier for the medication line"
+    * MSETransaction-medication 0..* Class "The medication lines"
+      * id-kmehr 1..1 integer "the KMEHR identifier for the medication line"
         * ^comment = "S-VALUE= ID-KMEHR"
         * ^requirements = """
         * Sequential, starting from 2
         """
-      * idother 0..* string "Local ID of the medication line"
+      * id-other 0..* string "Local ID of the medication line"
         * ^requirements = """
         * S-VALUE= LOCAL
         * SL-Value = 'vitalinkuri' - the identifier of the namespace
@@ -212,61 +209,61 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
         * ^comment = "Always set to true because it is not used"
       * version 0..* string "TO DO"
 
-      * itemmedicationUse 0..1 Class "Extra information on the usage of the medication within this transaction"
+      * item-medicationUse 0..1 Class "Extra information on the usage of the medication within this transaction"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^requirements = """
             * S = CD-ITEM
             * value = healthcareelement
             """
-        * contentcategory 1..* Class ""
+        * content-category 1..* Class ""
           * cd 0..* Class ""
             * ^requirements = """
             * S-VALUE=CD-ITEM-MS
             * value = medicationuse
             """
-        * contenttext 0..* Class ""
+        * content-text 0..* Class ""
           * text 1..* string "cardinality to be checked"
             * ^comment = "L-VALUE = [language] fr or nl or ..."
             * ^example.valueString = "pression artérielle" 
-      * itemendCondition 0..1 Class "Extra information on the endcondition of the medication within this MSE-transaction"
+      * item-endCondition 0..1 Class "Extra information on the endcondition of the medication within this MSE-transaction"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^requirements = """
             * S = CD-ITEM
             * value = healthcareelement
             """
-        * contentcategory 1..* Class ""
+        * content-category 1..* Class ""
           * cd 0..* Class ""
             * ^requirements = """
             * S-VALUE=CD-ITEM-MS
             * value = endcondition
             """
-        * contenttext 0..* Class ""
+        * content-text 0..* Class ""
           * text 1..* string "cardinality to be checked"
             * ^comment = "L-VALUE = [language] fr or nl or ..."
             * ^example.valueString = "pression artérielle" 
-      * itembeginCondition 0..1 Class "Extra information on the begincondition of the medication within this MSE-transaction"
+      * item-beginCondition 0..1 Class "Extra information on the begincondition of the medication within this MSE-transaction"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^requirements = """
             * S = CD-ITEM
             * value = healthcareelement
             """
-        * contentcategory 1..* Class ""
+        * content-category 1..* Class ""
           * cd 0..* Class ""
             * ^requirements = """
             * S-VALUE=CD-ITEM-MS
             * value = begincondition
             """
-        * contenttext 0..* Class ""
+        * content-text 0..* Class ""
           * text 1..* string "cardinality to be checked"
             * ^comment = "L-VALUE = [language] fr or nl or ..."
             * ^example.valueString = "pression artérielle" 
-      * itemorigin 0..0 Class "non-permitted"
-      * itemmedicationType 0..0 Class "non-permitted"
-      * itemadaptationFlag 0..0 Class "non-permitted"
-      * itemmedication 0..* Class "To Do"
+      * item-origin 0..0 Class "non-permitted"
+      * item-medicationType 0..0 Class "non-permitted"
+      * item-adaptationFlag 0..0 Class "non-permitted"
+      * item-medication 0..* Class "To Do"
         * itemId 0..* integer "a sequential unique item ID within the transaction, start=1"
         * cd 0..* ANY "describes the item category"
           * ^comment = """
@@ -279,7 +276,7 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
             The duration is mutually exclusive with endMoment
             """
 //        * obeys duration-xor-endMoment
-        * contentmedicationIdentification 0..* Class "To Do"
+        * content-medicationIdentification 0..* Class "To Do"
           * insert medicationIdentification
         * content 0..* string "Extra content field which can be added if neccessary"
           * ^requirements = """
@@ -394,7 +391,7 @@ Description: "This model represents the Medication Schema KMEHR V5.8. It is show
 
 
 RuleSet: hcparties
-* hcpartyHub 0..1 Class "the identifier of the hub"
+* hcparty-hub 0..1 Class "the identifier of the hub"
   * itemId 1..1 string "the hub identifier"
     * ^comment = "S-VALUE= ID-HCPARTY"
     * ^example.valueString = "1990001916"
@@ -402,21 +399,21 @@ RuleSet: hcparties
     * ^comment = "S-VALUE= CD-HCPARTY"
   * name 0..1 string "the name of the hub"
     * ^comment = "S-VALUE= CD-HCPARTY"
-* hcpartyOrg 0..1 Class "the identifier of the org"
+* hcparty-org 0..1 Class "the identifier of the org"
   * itemId 0..1 string "the org identifier - NIHDII number of the org"
     * ^example.valueString = "1990001916"
   * cd 1..1 code "the type of the hcparty"
     * ^comment = "S-VALUE= CD-HCPARTY"
-  * idencryptionActor 0..1 integer "to be checked: usage & cardinality"
+  * id-encryptionActor 0..1 integer "to be checked: usage & cardinality"
     * ^requirements = """
       * S-VALUE = ID-ENCRYPTION-ACTOR
       * value = [selection of you NIHII nr]
     """
-  * idencryptionApplication 0..1 ANY ""
+  * id-encryptionApplication 0..1 ANY ""
     * ^requirements = """
       * S-VALUE = ID-ENCRYPTION-APPLICATION
     """
-  * cdencryptionActor 0..1 Class "Usage & cardinality"
+  * cd-encryptionActor 0..1 Class "Usage & cardinality"
     * ^requirements = """
       * S-VALUE = CD-ENCRYPTION-ACTOR
       * valueset: 
@@ -426,13 +423,13 @@ RuleSet: hcparties
         *...
     """
   * name 0..1 string "the name of the org"
-* hcpartyindividual 1..1 Class "the identifier of the individual"
-  * idriziv 0..1 string "the RIZIV individual identifier"
+* hcparty-individual 1..1 Class "the identifier of the individual"
+  * id-riziv 0..1 string "the RIZIV individual identifier"
     * ^comment = "S-VALUE= ID-HCPARTY"
-  * idinss 0..1 string "the Belgian Social Security Number identifier"
+  * id-inss 0..1 string "the Belgian Social Security Number identifier"
     * ^comment = "S-VALUE= INSS"
     * ^example.valueString = "69060733632"
-  * idencryptionActor 0..1 integer "to be checked: usage & cardinality"
+  * id-encryptionActor 0..1 integer "to be checked: usage & cardinality"
     * ^requirements = """
       * S-VALUE = ID-ENCRYPTION-ACTOR
       * value = [selection of you NIHII nr]
@@ -440,7 +437,7 @@ RuleSet: hcparties
   * cd 1..1 code "the type of the hcparty"
     * ^example.valueString = "persphysician"
     * ^comment = "S-VALUE= CD-HCPARTY"
-  * cdencryptionActor 0..1 Class "to be checked: usage & cardinality"
+  * cd-encryptionActor 0..1 Class "to be checked: usage & cardinality"
     * ^requirements = """
       * valueset: 
         * EHP
@@ -460,7 +457,7 @@ RuleSet: hcparties
     * nis 0..1 code "explanation: https://nl.wikipedia.org/wiki/NIS-code"
       * ^example.valueString = "24062"
   * telecom 0..* string "Fax, phone, … number(s) of the healthcare party."
-* hcpartyapplication 0..1 Class "the software identifier"
+* hcparty-application 0..1 Class "the software identifier"
   * itemId 0..1 string "the software identifier"
     * ^requirements = """
       * S-VALUE = LOCAL

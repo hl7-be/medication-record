@@ -1,0 +1,56 @@
+@startuml
+title Use Case 3  -  Compile Medication Schema \n
+skinparam actorStyle awesome
+!pragma teoz true
+hide footbox
+
+'!include ./style.iuml
+
+'actor "**Patient**" as P
+actor "**GP**" as GP
+Participant "** GP **\n**  Software  **" as GPS
+Participant "** Vault / other **\n **  System  **" as V
+Participant "** Pharmacy **\n **  System  ** \n**  DPP/GPD  **" as Src
+
+...
+
+group Collect Medication Information - GP
+GPS -> V
+activate GPS
+activate V
+V -> V : Aggregate\nDispense information
+deactivate GPS
+deactivate V
+
+end
+...
+
+group Collect Medication Information - Pharmacy
+Src -> V : Submit Medication\nDispense information
+activate V
+deactivate GPS
+V -> V : Aggregate\nDispense information
+deactivate V
+
+end
+
+...
+
+group Compile Medication Summary
+V -> V : Reconcile \nMedication Information
+end
+
+...
+
+group Request Medication Summary
+GP --> GPS : Request Patient's\nmedication schema 
+activate GPS
+GPS -> V : Query for Medication Summary
+activate V
+GPS <- V : **Return Medication Summary**
+deactivate V
+deactivate GPS
+end
+
+
+@enduml

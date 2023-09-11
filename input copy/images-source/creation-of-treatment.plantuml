@@ -1,0 +1,27 @@
+@startuml
+title Starting new Treatment
+skinparam actorStyle awesome
+
+hide footbox
+
+'!include ./style.iuml
+
+actor "**Patient**" as P
+actor "**Physician**" as PHY
+Participant "** Central **\n**  System  **" as PIS
+
+P --> PHY : Goes to an appointment
+activate PHY
+PHY --> P: Prescription 
+activate PIS
+
+PHY --> PIS: Prescription
+PHY --> PIS: Start New Treament
+deactivate PHY
+
+PIS -> PIS : **Create New Treatment**
+PIS -> PIS : **Create New Treatment Line**
+PIS -> PIS : **Links Prescription to Treatment Line**
+PIS -> PIS : Create New Scheduled Administrations
+
+@enduml

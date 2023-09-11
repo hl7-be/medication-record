@@ -1,0 +1,35 @@
+@startuml
+title Use Case 2 - Update Medication Schema
+skinparam actorStyle awesome
+
+hide footbox
+
+'!include ./style.iuml
+
+actor "**Patient**" as P
+actor "**GP**" as GP
+Participant "** GP **\n**  Software  **" as GPS
+Participant "** Vault / other **\n **  System  **" as V
+
+group Identification
+P -[#A92]-> GPS : Identification / authorization
+end
+...
+
+group Request Medication Summary
+GPS <- V : **Return Medication Summary**
+end
+
+...
+
+group Request Medication Summary
+GP --> GPS : Update Medication Summary
+activate GPS
+GPS -> V : Submit updated\nMedication Summary
+deactivate GPS
+activate V
+V -> V : Update version\nMedication Summary
+deactivate V
+end
+
+@enduml

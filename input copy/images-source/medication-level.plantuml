@@ -1,0 +1,61 @@
+@startuml
+left to right direction
+
+object Substance
+object PharmaceuticalProduct1
+object PharmaceuticalProduct2
+object PharmaceuticalMedicine1
+object PharmaceuticalMedicine2
+object PharmaceuticalMedicine3
+object PharmaceuticalMedicine4
+object PharmaceuticalPackagedProduct1
+object PharmaceuticalPackagedProduct2
+object PharmaceuticalPackagedProduct3
+object PharmaceuticalPackagedProduct4
+object PharmaceuticalPackagedProduct5
+object PharmaceuticalPackagedProduct6
+object PharmaceuticalPackagedProduct7
+object PharmaceuticalPackagedProduct8
+
+Substance : The most generic prescription - > Pantoprazole
+PharmaceuticalProduct1 : Pantroprazole 40 mg tab
+PharmaceuticalProduct2 : Pantroprazole 20 mg tab
+
+PharmaceuticalMedicine1 : Pantoprazole Teva 40 mg tab 
+PharmaceuticalMedicine2 : Pantoprazole Sandoz 40 mg tab 
+
+PharmaceuticalMedicine3 : Pantoprazole Apotex 20 mg tab 
+PharmaceuticalMedicine4 : Pantoprazole Mylan 20 mg tab 
+
+PharmaceuticalPackagedProduct1 : Pantoprazole Teva 40 mg tab box X28
+PharmaceuticalPackagedProduct2 : Pantoprazole Teva 40 mg tab box X56
+
+PharmaceuticalPackagedProduct3 : Pantoprazole Sandoz 40 mg tab box X28
+PharmaceuticalPackagedProduct4 : Pantoprazole Sandoz 40 mg tab box X56
+
+PharmaceuticalPackagedProduct5 : Pantoprazole Apotex 20 mg tab box X28
+PharmaceuticalPackagedProduct6 : Pantoprazole Apotex 20 mg tab box X100
+
+PharmaceuticalPackagedProduct7 : Pantoprazole Mylan 20 mg tab box X28
+PharmaceuticalPackagedProduct8 : Pantoprazole Mylan 20 mg tab box X100
+
+Substance <|--  PharmaceuticalProduct1 
+Substance <|--  PharmaceuticalProduct2 
+
+PharmaceuticalProduct1 <|--  PharmaceuticalMedicine1 
+PharmaceuticalProduct1 <|--  PharmaceuticalMedicine2 
+PharmaceuticalProduct2 <|--  PharmaceuticalMedicine3 
+PharmaceuticalProduct2 <|--  PharmaceuticalMedicine4 
+
+PharmaceuticalMedicine1 <|--  PharmaceuticalPackagedProduct1 
+PharmaceuticalMedicine1 <|--  PharmaceuticalPackagedProduct2 
+PharmaceuticalMedicine2 <|--  PharmaceuticalPackagedProduct3 
+PharmaceuticalMedicine2 <|--  PharmaceuticalPackagedProduct4 
+PharmaceuticalMedicine3 <|--  PharmaceuticalPackagedProduct5 
+PharmaceuticalMedicine3 <|--  PharmaceuticalPackagedProduct6
+PharmaceuticalMedicine4 <|--  PharmaceuticalPackagedProduct7 
+PharmaceuticalMedicine4 <|--  PharmaceuticalPackagedProduct8
+
+
+
+@enduml
