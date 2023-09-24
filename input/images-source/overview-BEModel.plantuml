@@ -53,12 +53,11 @@ file {
 
 
 class "** Medication Schema **" as MS<<TM>> {
-  |_ businessIdentifier 1..*   
-  |_ businessVersion 1..1   
-  |_ patient 1..1   
-  |_ status 1..1   
-  |_ label 1..1   
-  |_ type 0..1   
+|_ Patient
+|_ LastUpdate
+|_ Label
+|_ Version
+'|_ VersionDate
 }
 
 
@@ -72,53 +71,52 @@ class "** Medication Product **" as M<<TM>> {
     }
 
 class "**Medication Line**" as ML<<TM>> {
-  |_ businessIdentifier 1..*   
-  |_ businessVersion 1..1   
-  |_ patient 1..1   
-  |_ status 1..1   
-  |_ statusReason 0..1   
-  |_ authoredOn 0..1   
-  |_ authoredBy 0..1   
-  |_ medication 1..1   
-    |_ medication 1..1   
-    |_ medicationType 1..1   
-  |_ originType 0..1   
-  |_ reason 0..*   
-    |_ reference 0..1   
-    |_ code 0..1   
-  |_ effectivePeriod 0..1   
-    |_ start 0..1   
-    |_ end 0..1   
-  |_ dosage 0..1   
-    |_ dosageDetails 0..1   
-    |_ dosageOverride 0..1   
-    |_ dosageOverrideReason 0..1   
-  |_ adherence 0..1   
-    |_ code 0..1   
-    |_ reason 0..1   
-  |_ orderStatus 1..1   
-  |_ orderStatusReason 0..1   
-  |_ note 0..*   
-  |_ dispenseRequestNeeded 0..1   
-  |_ adviceHistory 0..*
-    |_ adviceRequestId 0..1   
-    |_ adviceGuidanceId 0..1   
-    |_ adviceOverrideReason 0..1   
-  |_ visible 0..1
+  |_ uniqueIdentifier 1..*
+  |_ version
+  |_ status
+  |_ statusReason
+  |_ recordedDate
+  |_ assertedDate
+  |_ recorder
+  |_ exposure
+  |_ patient 0..1
+  |_ medication
+    |_ product/substance
+    |_ type
+  |_ reason
+    |_ reference 
+    |_ code
+  |_ EffectivePeriod
+    |_ start
+    |_ end
+  |_ Dosage
+    |_ dosageOverride
+    |_ dosageOverrideReason
+    |_ dosageDetails
+      |_ text
+      |_ timing
+        |_ event
+        |_ repeat
+          |_ duration
+          |_ period
+          |_ dayOfWeek
+            |_ when
+              |_ BePeriod
+      |_ route
+      |_ doseQuantity
+        |_ value
+        |_ unit
+      |_ patientInstruction
+  |_ Adherence
+    |_ code
+    |_ reason
+  |_ Note
+  |_ <i>originType
+  |_ DispenseRequestNeeded?   
+  |_ Visible
 --
-Identifier NameSpace
+<i>Identifier NameSpace
 }
-
-
-
-'
-'class "**Dosage**" as Dosage<<TM>> {
-'    |_ dosageDetails 0..1   
-'    |_ dosageOverrideReason 0..1   
-'}
-'ML *-l- Dosage 
-'PL *-u- Dosage 
-
 
 
 ML -u-* MS : ""
@@ -133,10 +131,8 @@ class "**Prescription (Group)**" as P<<TM>> {
 }
 
 
-
 'P -u-> ML : supportingInformation
 PL -u-> ML : supportingInformation
-D -u-> ML : supportingInformation
 
 class "**Prescription Line**" as PL<<TM>> {
   |_ identifier 1..* 
@@ -150,9 +146,6 @@ class "**Prescription Line**" as PL<<TM>> {
   |_ Requester
   |_ Reason
   |_ Dosage
-    |_ dosageDetails 0..1   
-    |_ dosageOverride 0..1   
-    |_ dosageOverrideReason 0..1   
   |_ EffectivePeriod
     |_ start
     |_ end
@@ -162,6 +155,9 @@ class "**Prescription Line**" as PL<<TM>> {
     |_ ValidityPeriod
   |_ Visible <&list>
 --
+Effective/Valid?
+Authored/Recorded?
+Recorder?
 Substitution?
 }
 
@@ -184,7 +180,10 @@ class "**Dispense**" as D<<TM>> {
 }
 
 
+'M <-u- ML : medication
 
+
+D .u.> ML : supportingInformation
 
 D -l-> PL :" authorizedBy "
 D -d-> M :" medication "
