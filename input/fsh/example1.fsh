@@ -155,7 +155,7 @@ Title: "Example 1 - Summary view"
 
 * status = #final
 * date = "2021-08-15T13:00:00+02:00"
-* author = Reference(BeOrganization)
+//* author = Reference(BeOrganization)
 * title = "Summary View for Patient X"
 
 * section[MedRecordTreatment].title = "Treatments"
@@ -176,7 +176,7 @@ Title:    "Example 1 - Scheduled Takes view"
 
 * status = #final
 * date = "2021-08-15T13:00:00+02:00"
-* author = Reference(BeOrganization)
+//* author = Reference(BeOrganization)
 * title = "Scheduled View for Patient X"
 * section[MedRecordTreatment].title = "Treatments"
 * section[MedRecordTreatment].entry = Reference(1-treatment)
