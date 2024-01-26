@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExampleScenario xmlns="http://hl7.org/fhir">
+  <id value="example-1-scenario"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative</b></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource "example-1-scenario" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-1-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: ChangedmedicationSameVOSScenario</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11T00:00:00+01:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href="http://hl7belgium.org">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (unknown#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-prescription</p><p><b>resourceType</b>: MedicationRequest</p><p><b>name</b>: New Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: New dispense</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change Branded Prescription</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed Amlor for hypertension. The GP prescribes Amlor, but at the pharmacy there is no Amlor and amlodipin Sandoz is dispensed.</p><p><b>postConditions</b>: A new treatment and treatment line are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each.</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Resources Update</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-1-scenario"/>
+  <version value="0.1.0-test"/>
+  <name value="ChangedmedicationSameVOSScenario"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-09-11T00:00:00.000+01:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BE"/>
+    </coding>
+  </jurisdiction>
+  <actor>
+    <actorId value="PATIENT"/>
+    <type value="person"/>
+    <name value="Pia Peters"/>
+  </actor>
+  <actor>
+    <actorId value="GP"/>
+    <type value="person"/>
+    <name value="Dr. Durant"/>
+  </actor>
+  <actor>
+    <actorId value="VAULT"/>
+    <type value="entity"/>
+    <name value="Vault"/>
+  </actor>
+  <actor>
+    <actorId value="PHARM"/>
+    <type value="person"/>
+    <name value="Pharmacist"/>
+  </actor>
+  <instance>
+    <resourceId value="1-prescription"/>
+    <resourceType value="MedicationRequest"/>
+    <name value="New Prescription"/>
+  </instance>
+  <instance>
+    <resourceId value="EB"/>
+    <resourceType value="Bundle"/>
+    <name value="Empty Bundle"/>
+  </instance>
+  <instance>
+    <resourceId value="1-treatmentLine"/>
+    <resourceType value="MedicationStatement"/>
+    <name value="New Treatment Line"/>
+  </instance>
+  <instance>
+    <resourceId value="1-treatment"/>
+    <resourceType value="CarePlan"/>
+    <name value="New Treatment"/>
+  </instance>
+  <instance>
+    <resourceId value="1-dispense"/>
+    <resourceType value="MedicationDispense"/>
+    <name value="New dispense"/>
+  </instance>
+  <process>
+    <title value="Change Branded Prescription"/>
+    <description value="description"/>
+    <preConditions value="The patient visits their GP and is prescribed Amlor for hypertension. The GP prescribes Amlor, but at the pharmacy there is no Amlor and amlodipin Sandoz is dispensed."/>
+    <postConditions value="A new treatment and treatment line are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each."/>
+    <step>
+      <process>
+        <title value="Initial Contact"/>
+        <step>
+          <operation>
+            <number value="1"/>
+            <name value="Goes to appointment"/>
+            <initiator value="PATIENT"/>
+            <receiver value="GP"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="3"/>
+            <name value="Create new prescription"/>
+            <initiator value="GP"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-prescription"/>
+            </request>
+            <response>
+              <resourceId value="EB"/>
+            </response>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Treatment resources Creation"/>
+        <step>
+          <operation>
+            <number value="4"/>
+            <name value="Create new treatment"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-treatment"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="5"/>
+            <name value="Create new treatment Line"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Dispense"/>
+        <step>
+          <operation>
+            <number value="6"/>
+            <name value="Get patient&#39;s Prescriptions"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="EB"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="7"/>
+            <name value="Create new dispense"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-dispense"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Treatment Resources Update"/>
+        <step>
+          <operation>
+            <number value="8"/>
+            <name value="Create new treatment"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-treatment"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <number value="9"/>
+            <name value="Create new treatment Line"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="1-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+  </process>
+</ExampleScenario>

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BEVSMMedicationLineDayPeriod"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This value set includes codes based on the following rules:</p><ul><li>Include all codes defined in <code>http://hl7.org/fhir/ValueSet/event-timing</code></li><li>Include all codes defined in <a href="CodeSystem-BEMedicationLineDayPeriod.html"><code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMMedicationLineDayPeriod"/>
+  <version value="1.0.0"/>
+  <name value="BEVSMMedicationLineDayPeriod"/>
+  <title value="Medication line - time of day"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Medication line - time of day."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7.org/fhir/ValueSet/event-timing"/>
+    </include>
+    <include>
+      <system value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod"/>
+    </include>
+  </compose>
+</ValueSet>

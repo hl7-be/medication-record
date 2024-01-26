@@ -1,0 +1,84 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BEMedicationProductType",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">magistral<a name=\"BEMedicationProductType-magistral\"> </a></td><td>Magistral preparation</td><td>Magistral preparation - see definitions</td></tr><tr><td style=\"white-space:nowrap\">officinal<a name=\"BEMedicationProductType-officinal\"> </a></td><td>Oficinal preparation</td><td>Oficinal preparation - see definitions</td></tr><tr><td style=\"white-space:nowrap\">medicinalproduct<a name=\"BEMedicationProductType-medicinalproduct\"> </a></td><td>Medicinal product</td><td>Medicinal product - an actual 'branded' product</td></tr><tr><td style=\"white-space:nowrap\">idmp-mp<a name=\"BEMedicationProductType-idmp-mp\"> </a></td><td>IDMP Medicinal Product</td><td>IDMP Medicinal Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">pharmaceuticalproduct<a name=\"BEMedicationProductType-pharmaceuticalproduct\"> </a></td><td>medicinal product - see definitions</td><td/></tr><tr><td style=\"white-space:nowrap\">idmp-php<a name=\"BEMedicationProductType-idmp-php\"> </a></td><td>IDMP Pharmaceutical Product</td><td>IDMP Pharmaceutical Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">package<a name=\"BEMedicationProductType-package\"> </a></td><td>product package</td><td>product package - see definitions</td></tr><tr><td style=\"white-space:nowrap\">idmp-pp<a name=\"BEMedicationProductType-idmp-pp\"> </a></td><td>IDMP Packaged Product</td><td>IDMP Packaged Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">vmp-group<a name=\"BEMedicationProductType-vmp-group\"> </a></td><td>VMP Group</td><td>VMP Group - see definitions</td></tr></table></div>"
+  },
+  "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+  "version" : "1.0.0",
+  "name" : "BEMedicationProductType",
+  "title" : "Medication Product Type",
+  "status" : "active",
+  "date" : "2023-06-27T09:19:14+00:00",
+  "publisher" : "HL7 Belgium",
+  "contact" : [{
+    "name" : "HL7 Belgium",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7belgium.org"
+    }]
+  },
+  {
+    "name" : "Bob Smith",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "bobsmith@example.com",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Type of medication product.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "056",
+      "display" : "Belgium"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 9,
+  "concept" : [{
+    "code" : "magistral",
+    "display" : "Magistral preparation",
+    "definition" : "Magistral preparation - see definitions"
+  },
+  {
+    "code" : "officinal",
+    "display" : "Oficinal preparation",
+    "definition" : "Oficinal preparation - see definitions"
+  },
+  {
+    "code" : "medicinalproduct",
+    "display" : "Medicinal product",
+    "definition" : "Medicinal product - an actual 'branded' product"
+  },
+  {
+    "code" : "idmp-mp",
+    "display" : "IDMP Medicinal Product",
+    "definition" : "IDMP Medicinal Product - see definitions"
+  },
+  {
+    "code" : "pharmaceuticalproduct",
+    "display" : "medicinal product - see definitions"
+  },
+  {
+    "code" : "idmp-php",
+    "display" : "IDMP Pharmaceutical Product",
+    "definition" : "IDMP Pharmaceutical Product - see definitions"
+  },
+  {
+    "code" : "package",
+    "display" : "product package",
+    "definition" : "product package - see definitions"
+  },
+  {
+    "code" : "idmp-pp",
+    "display" : "IDMP Packaged Product",
+    "definition" : "IDMP Packaged Product - see definitions"
+  },
+  {
+    "code" : "vmp-group",
+    "display" : "VMP Group",
+    "definition" : "VMP Group - see definitions"
+  }]
+}

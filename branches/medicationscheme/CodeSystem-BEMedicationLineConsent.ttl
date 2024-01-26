@@ -1,0 +1,57 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BEMedicationLineConsent"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">consent<a name=\"BEMedicationLineConsent-consent\"> </a></td><td>Consent</td><td>Patient consents with sharing the information</td></tr><tr><td style=\"white-space:nowrap\">refuse<a name=\"BEMedicationLineConsent-refuse\"> </a></td><td>Refuse</td><td>Patient doesn't give consent for sharing the information</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "BEMedicationLineConsent"] ; # 
+  fhir:title [ fhir:v "Medication Line consent"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-06-27T09:19:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Belgium" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Bob Smith" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "bobsmith@example.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Medication Line consent."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "056" ] ;
+       fhir:display [ fhir:v "Belgium" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "2"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "consent" ] ;
+     fhir:display [ fhir:v "Consent" ] ;
+     fhir:definition [ fhir:v "Patient consents with sharing the information" ]
+  ] [
+     fhir:code [ fhir:v "refuse" ] ;
+     fhir:display [ fhir:v "Refuse" ] ;
+     fhir:definition [ fhir:v "Patient doesn't give consent for sharing the information" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

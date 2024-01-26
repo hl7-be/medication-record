@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BEMedicationLineConsent"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">consent<a name="BEMedicationLineConsent-consent"> </a></td><td>Consent</td><td>Patient consents with sharing the information</td></tr><tr><td style="white-space:nowrap">refuse<a name="BEMedicationLineConsent-refuse"> </a></td><td>Refuse</td><td>Patient doesn't give consent for sharing the information</td></tr></table></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent"/>
+  <version value="1.0.0"/>
+  <name value="BEMedicationLineConsent"/>
+  <title value="Medication Line consent"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Medication Line consent."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="2"/>
+  <concept>
+    <code value="consent"/>
+    <display value="Consent"/>
+    <definition value="Patient consents with sharing the information"/>
+  </concept>
+  <concept>
+    <code value="refuse"/>
+    <display value="Refuse"/>
+    <definition value="Patient doesn't give consent for sharing the information"/>
+  </concept>
+</CodeSystem>

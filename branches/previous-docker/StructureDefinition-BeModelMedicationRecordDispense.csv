@@ -1,0 +1,42 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecordDispense","","","",0,*,"","","","","Medication Record Dispense logical model","","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecordDispense.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","The business identifier(s) for the medication dispense session","The business identifier(s) for the medication dispense session","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.identifier",0,1,"",""
+"BeModelMedicationRecordDispense.patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","The person for which the medication is dispensed.","The person for which the medication is dispensed.","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.patient",1,1,"",""
+"BeModelMedicationRecordDispense.dispenser","","","",0,*,"","","","BackboneElement {[]} {[]}
+","The dispenser, if known and relevant","The dispenser, if known and relevant","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.dispenser",0,*,"",""
+"BeModelMedicationRecordDispense.dispenser.actor","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner]]}
+","The person that performed the dispense","The person that made the dispense","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.dispenser.actor",1,1,"",""
+"BeModelMedicationRecordDispense.dispenser.organization","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","The organzation from which the dispenser belongs","The organzation from which the dispenser belongs","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.dispenser.organization",1,1,"",""
+"BeModelMedicationRecordDispense.date","","","",1,1,"","","","dateTime {[]} {[]}
+","The date when the dispense ocurred (or not)","The date when the dispense ocurred (or not)","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.date",1,1,"",""
+"BeModelMedicationRecordDispense.prescription","","","",0,1,"","","","BackboneElement {[]} {[]}
+","The information about a prescription related to the dispense","The information about a prescription related to the dispense","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.prescription",0,1,"",""
+"BeModelMedicationRecordDispense.prescription.isprescribed","","","",0,1,"","","","boolean {[]} {[]}
+","Whether this dispense was performed against a prescription","Whether this dispense was performed against a prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.prescription.isprescribed",0,1,"",""
+"BeModelMedicationRecordDispense.prescription.prescription","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest]]}
+","The prescription identification","The prescription identification","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.prescription.prescription",0,1,"",""
+"BeModelMedicationRecordDispense.status","","","",1,1,"","","","code {[]} {[]}
+","Status of the dispense","Status of the dispense","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.status",1,1,"",""
+"BeModelMedicationRecordDispense.statusReason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason for a dispense status","Reason for a dispense status","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.statusReason",0,*,"",""
+"BeModelMedicationRecordDispense.product[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medication]]}","The product that was dispensed","The product that was dispensed - coded or not (e.g. for magistral preparations)","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.product[x]",1,1,"",""
+"BeModelMedicationRecordDispense.quantitydispensed","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
+","The amound of product that was dispensed","The amound of product that was dispensed","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.quantitydispensed",0,1,"",""
+"BeModelMedicationRecordDispense.dosageInstruction","","","",0,1,"","","","Dosage {[]} {[]}
+","The instructions for using the product","The instructions for using the product","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.dosageInstruction",0,1,"",""
+"BeModelMedicationRecordDispense.note","","","",0,*,"","","","Annotation {[]} {[]}
+","Additional information about the dispensed product","Additional information about the dispensed product","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.note",0,*,"",""
+"BeModelMedicationRecordDispense.substitutionReason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Why was substitution made","Why was substitution made","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.substitutionReason",0,1,"",""
+"BeModelMedicationRecordDispense.type","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Type of dispense","Type of dispense","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.type",0,1,"",""
+"BeModelMedicationRecordDispense.location","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/openEHR-location]]}
+","Location where the dispense was made","Location where the dispense was made","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.location",0,1,"",""
+"BeModelMedicationRecordDispense.treatmentPlan","","","",0,1,"","","","Reference {[]} {[]}
+","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.treatmentPlan",0,1,"",""
+"BeModelMedicationRecordDispense.basedOn","","","",0,1,"","","","Reference {[]} {[]}
+","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordDispense.basedOn",0,1,"",""

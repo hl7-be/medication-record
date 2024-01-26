@@ -1,0 +1,323 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>Medication Levels - MedicationRecord v0.1.0-test</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7-be.css"/>
+  <!-- Placeholder for child template CSS declarations -->
+  <!-- HL7 Belgium -->
+  <!-- draft -->
+
+<link rel="stylesheet" href="assets/css/colors.css"/>
+
+<link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="fhir-logo" href="assets/ico/icon-fhir-144.png"/>
+    <link sizes="114x114" rel="fhir-logo" href="assets/ico/icon-fhir-114.png"/>
+    <link sizes="72x72" rel="fhir-logo" href="assets/ico/icon-fhir-72.png"/>
+    <link rel="fhir-logo" href="assets/ico/icon-fhir-57.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"5.4.1"}
+    h3,h4,h5,h6{--heading-prefix:"5.4.1"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        
+  <!-- HL7 Belgium -->
+  <!-- draft -->
+
+<div id="ig-nav">
+  <a no-external="true" id="hl7-logo" href="https://hl7belgium.org">
+    <img src="assets/images/hl7be-logo-header.png" alt="HL7 Belgium" height="65"/>
+  </a>
+</div>
+<div id="fhir-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+<div id="ig-search">
+  <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir/search.cfm"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+</div>
+
+
+  <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a no-external="true" id="project-logo" href="http://hl7belgium.org">
+            <img src="assets/images/meds.png" alt="Project home" height="71"/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MedicationRecord</span>
+            <br/>
+            <span style="display:inline-block;">0.1.0-test - CI Build
+
+
+
+  <img src="assets/images/bel.svg" alt="Belgium flag" title="Belgium" height="16"/>
+
+
+            </span>
+          </p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://hl7.org/fhir/R5/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="howto.html">How to use this Publication</a>
+			</li>
+			<li>
+				<a href="http://hl7.org/fhir/R5/index.html" target="_blank">FHIR Spec
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="functional-description.html">Description</a>
+			</li>
+			<li><a name="l228">​</a>
+				<a href="usecases.html">Use Cases</a>
+			</li>
+			<li>
+				<a href="logical-models.html">Logical Models</a>
+			</li>
+  <!-- <li>
+				<a target="_blank" href="#">Services &amp; Transactions</a>
+			</li> -->
+		</ul>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Detailed Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Project-specific
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="#">Core Profiles</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#">DZOP</a>
+			</li>
+            <li>
+				<a href="#">EFRO</a>
+			</li>
+		</ul>
+	</li> -->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+  <!-- <li><a target="_blank" href="openapi.html">OpenAPI</a></li>
+			<li><a href="testservers.html">Test Servers</a></li> -->
+			<li><a href="downloads.html">Downloads</a></li>
+		</ul>
+	</li>
+</ul>      
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="medicationrecord.html"><b>The Belgian Medication Record</b></a></li><li><a href="medicationrecord-requirements.html"><b>Requirements - Medication Record</b></a></li><li><b>Medication Levels</b></li>
+
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<style type="text/css">
+h2:before{color:silver;counter-increment:section;content:var(--heading-prefix) " ";}
+h3:before{color:silver;counter-increment:sub-section;content:var(--heading-prefix) "." counter(sub-section) " ";}
+h4:before{color:silver;counter-increment:composite;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) " ";}
+h5:before{color:silver;counter-increment:detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) " ";}
+h6:before{color:silver;counter-increment:more-detail;content:var(--heading-prefix) "." counter(sub-section) "." counter(composite) "." counter(detail) "." counter(more-detail)" ";}
+</style>
+<div class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">MedicationRecord, published by HL7 Belgium. This guide is not an authorized publication; it is the continuous build for version 0.1.0-test built by the FHIR (HL7&reg; FHIR&reg; Standard) CI Build. This version is based on the current content of <a href="https://github.com/hl7-be/medication-record">https://github.com/hl7-be/medication-record</a> and changes regularly. See the <a href="http://hl7belgium.org/fhir/riziv-medicationrecord/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  <h2>Medication Levels</h2>
+  
+
+
+
+
+
+
+
+
+
+
+
+
+    <p>  <!-- white space is critical inside of capture --></p>
+<div>
+  <!-- do not remove - needed to prevent Jekyll from adding a p tag to any non block level element in the markdown. -->
+</div>
+<h1 id="medication-levels">Medication Levels</h1>
+
+<p>For an adequate usage of medication throughout the scenarios referred to in this implementation guide, we should first understand that different levels of granularity regarding medication are often used in clinical practice.</p>
+
+<p>We may want to refer to some medications as only the active principle - i.e, Pantoprazole. But sometimes we want to refer to a <strong>truly</strong> generic drug, only stating the drug, strength, pharmaceutical form and (maybe) route -&gt; Pantoprazole 40 mg tab oral. This one is especially important when referring to something like treatment and/or treatmentLine, since we can have a prescription and most importantly dispenses of very different brands of medication, but all different forms of the very same entity stated above.</p>
+
+<p>Additionally, we may want to refer to some brand medication in a more specific way - Pantogastrix (or any other). This third level of description is a child of the second one, like many others. In this case, we want to refer to the drug, but not necessarily the packaged form (number of tabs per box), which is interesting for example for medication summary. We may want to check the brand, but we do not care about the more specific details like the number of elements. Additionally, we may want to use this level of description regarding scheduled takes as well.</p>
+
+<p>Finally, we have the most specific form, which is the packaged form, this could be specifically important for community dispenses since this will be the product delivered to the patient and situations where a batch number is important.</p>
+
+<p>Following this rationale, we should engage with medication with different levels, all connected between them, so it is possible to select the right level of product and information for every situation.</p>
+
+<p>An example is stated below.</p>
+
+<div>
+  <!-- ?xml version="1.0" encoding="us-ascii" standalone="no"? --><svg xmlns="http://www.w3.org/2000/svg" contentStyleType="text/css" viewBox="0 0 1247 618" zoomAndPan="magnify" preserveAspectRatio="none" width="1247px" xmlns:xlink="http://www.w3.org/1999/xlink" style="width:1247px;height:618px;background:#FFFFFF;" version="1.1" height="618px"><defs/><g><g id="elem_Substance"><rect width="340" x="7" y="247" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="140" font-size="14" textLength="74" y="261.9951" font-family="sans-serif" fill="#000000">Substance</text><line y1="267.2969" x1="8" y2="267.2969" style="stroke:#181818;stroke-width:0.5;" x2="346"/><text lengthAdjust="spacing" x="13" font-size="14" textLength="328" y="284.292" font-family="sans-serif" fill="#000000">The most generic prescription - &gt; Pantoprazole</text></g><g id="elem_PharmaceuticalProduct1"><rect width="182" x="407" y="207" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="414" font-size="14" textLength="168" y="221.9951" font-family="sans-serif" fill="#000000">PharmaceuticalProduct1</text><line y1="227.2969" x1="408" y2="227.2969" style="stroke:#181818;stroke-width:0.5;" x2="588"/><text lengthAdjust="spacing" x="413" font-size="14" textLength="170" y="244.292" font-family="sans-serif" fill="#000000">Pantroprazole 40 mg tab</text></g><g id="elem_PharmaceuticalProduct2"><rect width="182" x="407" y="367" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="414" font-size="14" textLength="168" y="381.9951" font-family="sans-serif" fill="#000000">PharmaceuticalProduct2</text><line y1="387.2969" x1="408" y2="387.2969" style="stroke:#181818;stroke-width:0.5;" x2="588"/><text lengthAdjust="spacing" x="413" font-size="14" textLength="170" y="404.292" font-family="sans-serif" fill="#000000">Pantroprazole 20 mg tab</text></g><g id="elem_PharmaceuticalMedicine1"><rect width="214" x="658.5" y="87" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="677.5" font-size="14" textLength="176" y="101.9951" font-family="sans-serif" fill="#000000">PharmaceuticalMedicine1</text><line y1="107.2969" x1="659.5" y2="107.2969" style="stroke:#181818;stroke-width:0.5;" x2="871.5"/><text lengthAdjust="spacing" x="664.5" font-size="14" textLength="202" y="124.292" font-family="sans-serif" fill="#000000">Pantoprazole Teva 40 mg tab</text></g><g id="elem_PharmaceuticalMedicine2"><rect width="233" x="649" y="207" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="677.5" font-size="14" textLength="176" y="221.9951" font-family="sans-serif" fill="#000000">PharmaceuticalMedicine2</text><line y1="227.2969" x1="650" y2="227.2969" style="stroke:#181818;stroke-width:0.5;" x2="881"/><text lengthAdjust="spacing" x="655" font-size="14" textLength="221" y="244.292" font-family="sans-serif" fill="#000000">Pantoprazole Sandoz 40 mg tab</text></g><g id="elem_PharmaceuticalMedicine3"><rect width="229" x="651" y="367" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="677.5" font-size="14" textLength="176" y="381.9951" font-family="sans-serif" fill="#000000">PharmaceuticalMedicine3</text><line y1="387.2969" x1="652" y2="387.2969" style="stroke:#181818;stroke-width:0.5;" x2="879"/><text lengthAdjust="spacing" x="657" font-size="14" textLength="217" y="404.292" font-family="sans-serif" fill="#000000">Pantoprazole Apotex 20 mg tab</text></g><g id="elem_PharmaceuticalMedicine4"><rect width="220" x="655.5" y="487" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="677.5" font-size="14" textLength="176" y="501.9951" font-family="sans-serif" fill="#000000">PharmaceuticalMedicine4</text><line y1="507.2969" x1="656.5" y2="507.2969" style="stroke:#181818;stroke-width:0.5;" x2="874.5"/><text lengthAdjust="spacing" x="661.5" font-size="14" textLength="208" y="524.292" font-family="sans-serif" fill="#000000">Pantoprazole Mylan 20 mg tab</text></g><g id="elem_PharmaceuticalPackagedProduct1"><rect width="274" x="954" y="7" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="21.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct1</text><line y1="27.2969" x1="955" y2="27.2969" style="stroke:#181818;stroke-width:0.5;" x2="1227"/><text lengthAdjust="spacing" x="960" font-size="14" textLength="262" y="44.292" font-family="sans-serif" fill="#000000">Pantoprazole Teva 40 mg tab box X28</text></g><g id="elem_PharmaceuticalPackagedProduct2"><rect width="274" x="954" y="87" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="101.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct2</text><line y1="107.2969" x1="955" y2="107.2969" style="stroke:#181818;stroke-width:0.5;" x2="1227"/><text lengthAdjust="spacing" x="960" font-size="14" textLength="262" y="124.292" font-family="sans-serif" fill="#000000">Pantoprazole Teva 40 mg tab box X56</text></g><g id="elem_PharmaceuticalPackagedProduct3"><rect width="293" x="944.5" y="167" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="181.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct3</text><line y1="187.2969" x1="945.5" y2="187.2969" style="stroke:#181818;stroke-width:0.5;" x2="1236.5"/><text lengthAdjust="spacing" x="950.5" font-size="14" textLength="281" y="204.292" font-family="sans-serif" fill="#000000">Pantoprazole Sandoz 40 mg tab box X28</text></g><g id="elem_PharmaceuticalPackagedProduct4"><rect width="293" x="944.5" y="247" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="261.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct4</text><line y1="267.2969" x1="945.5" y2="267.2969" style="stroke:#181818;stroke-width:0.5;" x2="1236.5"/><text lengthAdjust="spacing" x="950.5" font-size="14" textLength="281" y="284.292" font-family="sans-serif" fill="#000000">Pantoprazole Sandoz 40 mg tab box X56</text></g><g id="elem_PharmaceuticalPackagedProduct5"><rect width="289" x="946.5" y="327" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="341.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct5</text><line y1="347.2969" x1="947.5" y2="347.2969" style="stroke:#181818;stroke-width:0.5;" x2="1234.5"/><text lengthAdjust="spacing" x="952.5" font-size="14" textLength="277" y="364.292" font-family="sans-serif" fill="#000000">Pantoprazole Apotex 20 mg tab box X28</text></g><g id="elem_PharmaceuticalPackagedProduct6"><rect width="298" x="942" y="407" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="421.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct6</text><line y1="427.2969" x1="943" y2="427.2969" style="stroke:#181818;stroke-width:0.5;" x2="1239"/><text lengthAdjust="spacing" x="948" font-size="14" textLength="286" y="444.292" font-family="sans-serif" fill="#000000">Pantoprazole Apotex 20 mg tab box X100</text></g><g id="elem_PharmaceuticalPackagedProduct7"><rect width="280" x="951" y="487" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="501.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct7</text><line y1="507.2969" x1="952" y2="507.2969" style="stroke:#181818;stroke-width:0.5;" x2="1230"/><text lengthAdjust="spacing" x="957" font-size="14" textLength="268" y="524.292" font-family="sans-serif" fill="#000000">Pantoprazole Mylan 20 mg tab box X28</text></g><g id="elem_PharmaceuticalPackagedProduct8"><rect width="289" x="946.5" y="567" style="stroke:#181818;stroke-width:0.5;" fill="#F1F1F1" height="44.5938"/><text lengthAdjust="spacing" x="973" font-size="14" textLength="236" y="581.9951" font-family="sans-serif" fill="#000000">PharmaceuticalPackagedProduct8</text><line y1="587.2969" x1="947.5" y2="587.2969" style="stroke:#181818;stroke-width:0.5;" x2="1234.5"/><text lengthAdjust="spacing" x="952.5" font-size="14" textLength="277" y="604.292" font-family="sans-serif" fill="#000000">Pantoprazole Mylan 20 mg tab box X100</text></g>  <!-- reverse link Substance to PharmaceuticalProduct1 --><g id="link_Substance_PharmaceuticalProduct1"><path codeLine="41" d="M367.3,245.76 C380.83,244.07 394.07,242.41 406.6,240.84 " style="stroke:#181818;stroke-width:1.0;" id="Substance-backto-PharmaceuticalProduct1" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="368.02,252.73,347.31,248.27,366.28,238.84,368.02,252.73"/></g>  <!-- reverse link Substance to PharmaceuticalProduct2 --><g id="link_Substance_PharmaceuticalProduct2"><path codeLine="42" d="M256.89,299.18 C312.58,320.13 386.06,347.77 437,366.93 " style="stroke:#181818;stroke-width:1.0;" id="Substance-backto-PharmaceuticalProduct2" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="254.26,305.66,238,292.07,259.19,292.56,254.26,305.66"/></g>  <!-- reverse link PharmaceuticalProduct1 to PharmaceuticalMedicine1 --><g id="link_PharmaceuticalProduct1_PharmaceuticalMedicine1"><path codeLine="44" d="M567.38,198.59 C613.3,177.84 672.77,150.96 714.33,132.17 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalProduct1-backto-PharmaceuticalMedicine1" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="570.05,205.07,548.94,206.93,564.28,192.31,570.05,205.07"/></g>  <!-- reverse link PharmaceuticalProduct1 to PharmaceuticalMedicine2 --><g id="link_PharmaceuticalProduct1_PharmaceuticalMedicine2"><path codeLine="45" d="M609.34,229.5 C622.31,229.5 635.59,229.5 648.64,229.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalProduct1-backto-PharmaceuticalMedicine2" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="609.26,236.5,589.26,229.5,609.26,222.5,609.26,236.5"/></g>  <!-- reverse link PharmaceuticalProduct2 to PharmaceuticalMedicine3 --><g id="link_PharmaceuticalProduct2_PharmaceuticalMedicine3"><path codeLine="46" d="M609.66,389.5 C623.31,389.5 637.29,389.5 650.99,389.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalProduct2-backto-PharmaceuticalMedicine3" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="609.26,396.5,589.26,389.5,609.26,382.5,609.26,396.5"/></g>  <!-- reverse link PharmaceuticalProduct2 to PharmaceuticalMedicine4 --><g id="link_PharmaceuticalProduct2_PharmaceuticalMedicine4"><path codeLine="47" d="M567.38,420.41 C613.3,441.16 672.77,468.04 714.33,486.83 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalProduct2-backto-PharmaceuticalMedicine4" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="564.28,426.69,548.94,412.07,570.05,413.93,564.28,426.69"/></g>  <!-- reverse link PharmaceuticalMedicine1 to PharmaceuticalPackagedProduct1 --><g id="link_PharmaceuticalMedicine1_PharmaceuticalPackagedProduct1"><path codeLine="49" d="M877.51,82.05 C917.07,72.27 961.12,61.37 998.82,52.05 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine1-backto-PharmaceuticalPackagedProduct1" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="879,88.89,857.9,86.9,875.64,75.3,879,88.89"/></g>  <!-- reverse link PharmaceuticalMedicine1 to PharmaceuticalPackagedProduct2 --><g id="link_PharmaceuticalMedicine1_PharmaceuticalPackagedProduct2"><path codeLine="50" d="M892.95,109.5 C912.92,109.5 933.64,109.5 953.82,109.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine1-backto-PharmaceuticalPackagedProduct2" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="892.87,116.5,872.87,109.5,892.87,102.5,892.87,116.5"/></g>  <!-- reverse link PharmaceuticalMedicine2 to PharmaceuticalPackagedProduct3 --><g id="link_PharmaceuticalMedicine2_PharmaceuticalPackagedProduct3"><path codeLine="51" d="M902.47,212.69 C916.35,210.97 930.48,209.22 944.45,207.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine2-backto-PharmaceuticalPackagedProduct3" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="903.09,219.66,882.38,215.17,901.37,205.77,903.09,219.66"/></g>  <!-- reverse link PharmaceuticalMedicine2 to PharmaceuticalPackagedProduct4 --><g id="link_PharmaceuticalMedicine2_PharmaceuticalPackagedProduct4"><path codeLine="52" d="M902.47,246.31 C916.35,248.03 930.48,249.78 944.45,251.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine2-backto-PharmaceuticalPackagedProduct4" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="901.37,253.23,882.38,243.83,903.09,239.34,901.37,253.23"/></g>  <!-- reverse link PharmaceuticalMedicine3 to PharmaceuticalPackagedProduct5 --><g id="link_PharmaceuticalMedicine3_PharmaceuticalPackagedProduct5"><path codeLine="53" d="M899.95,373 C915.24,371.11 930.87,369.18 946.29,367.27 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine3-backto-PharmaceuticalPackagedProduct5" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="900.81,379.95,880.1,375.45,899.09,366.05,900.81,379.95"/></g>  <!-- reverse link PharmaceuticalMedicine3 to PharmaceuticalPackagedProduct6 --><g id="link_PharmaceuticalMedicine3_PharmaceuticalPackagedProduct6"><path codeLine="54" d="M900.02,406.01 C913.79,407.71 927.84,409.45 941.75,411.17 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine3-backto-PharmaceuticalPackagedProduct6" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="899.09,412.95,880.1,403.55,900.81,399.05,899.09,412.95"/></g>  <!-- reverse link PharmaceuticalMedicine4 to PharmaceuticalPackagedProduct7 --><g id="link_PharmaceuticalMedicine4_PharmaceuticalPackagedProduct7"><path codeLine="55" d="M895.78,509.5 C913.94,509.5 932.66,509.5 950.99,509.5 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine4-backto-PharmaceuticalPackagedProduct7" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="895.57,516.5,875.57,509.5,895.57,502.5,895.57,516.5"/></g>  <!-- reverse link PharmaceuticalMedicine4 to PharmaceuticalPackagedProduct8 --><g id="link_PharmaceuticalMedicine4_PharmaceuticalPackagedProduct8"><path codeLine="56" d="M877.51,536.95 C917.07,546.73 961.12,557.63 998.82,566.95 " style="stroke:#181818;stroke-width:1.0;" id="PharmaceuticalMedicine4-backto-PharmaceuticalPackagedProduct8" fill="none"/><polygon style="stroke:#181818;stroke-width:1.0;" fill="none" points="875.64,543.7,857.9,532.1,879,530.11,875.64,543.7"/></g></g></svg>
+</div>
+
+
+
+
+</div>
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2019+ <a style="color: #81BEF7" href="http://hl7belgium.org">HL7 Belgium</a>.  Package hl7.fhir.be.riziv-medicationrecord#0.1.0-test based on <a style="color: #81BEF7" href="http://hl7.org/fhir/R5/">FHIR 4.3.0</a>. Generated <span title="Fri, Jan 26, 2024 14:39+0000">2024-01-26</span>
+          <br/>
+          <span style="color: #FFFF77">
+              <!-- HL7 Belgium -->
+  <!-- draft -->
+
+Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7belgium.org/fhir/riziv-medicationrecord/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: var(--footer-hyperlink-text-color)" href="http://hl7.org/fhir/R5/license.html"><img src="assets/images/cc-by.png" alt="CC-BY" style="border-style: none;" height="17"/></a>
+  <!-- no fitting stylesheet found (status/publisher) -->
+
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

@@ -1,0 +1,54 @@
+@startuml
+
+
+Title Dispense of prescribed medication, and dispense of a product that can be done without a prescription
+
+actor "Pia Peters" as PATIENT
+actor "Dr. Durant" as GP
+participant "Vault" as VAULT
+actor "Pharmacist" as PHARM
+
+    
+    
+    
+    
+    
+group Initial contact
+
+PATIENT -> GP : Goes to appointment\n
+VAULT -> GP : Get Patient's Medication\n[[ExampleScenario-example-4-scenario-resources.html#EB Empty Bundle]]
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-4-scenario-resources.html#4-1-prescription Rosuvastatin prescription]]
+end
+    
+group Treatment resources Creation
+
+VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-4-scenario-resources.html#4-1-treatment New Treatment based on prescription]]
+VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-4-scenario-resources.html#4-1-treatmentLine New Treatment Line based on prescription]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-4-scenario-resources.html#4-1-provenance Link Prescription and treatmentLine]]
+end
+    
+group Dispense
+
+VAULT -> PHARM : Get patient's Prescriptions\n[[ExampleScenario-example-4-scenario-resources.html#EB Empty Bundle]]
+PHARM -> VAULT : Dispense new product\n[[ExampleScenario-example-4-scenario-resources.html#4-1-dispense Rosuvastatin Dispense]]
+end
+    
+group Resource Linking
+
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-4-scenario-resources.html#4-2-provenance Link Dispense and treatmentLine]]
+end
+    
+group Second dispense
+
+PHARM -> VAULT : Additional dispense\n[[ExampleScenario-example-4-scenario-resources.html#4-2-dispense Dafalgan dispense (non-prescription)]]
+end
+    
+group New Treatment resources Creation
+
+VAULT -> VAULT : Additional treatment Creation\n[[ExampleScenario-example-4-scenario-resources.html#4-2-treatment New Treatment based on dispense]]
+VAULT -> VAULT : Additional Treatment Line Creation\n[[ExampleScenario-example-4-scenario-resources.html#4-2-treatmentLine New Treatment Line based on dispense]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-4-scenario-resources.html#4-3-provenance Link second Dispense and treatmentLine]]
+end
+  
+
+@enduml

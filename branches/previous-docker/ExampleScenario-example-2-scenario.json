@@ -1,0 +1,226 @@
+{
+  "resourceType": "ExampleScenario",
+  "id": "example-2-scenario",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example-2-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: ChangedmedicationDifferentVOSScenario</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11T00:00:00+01:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-prescription</p><p><b>resourceType</b>: MedicationRequest</p><p><b>name</b>: New Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: New dispense</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change VOS from prescription on dispense</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed paracetamol 1000 mg cp (TID) for headaches. In the pharmacy, the pharmacist understands the the patient has problems swallowing the pill itself, so it trades the 1000 mg strength, for 500 mg and indicates that the patient should take 2x500 mg every 8h and not 1x1000mg every 8 hours.</p><p><b>postConditions</b>: A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Resources Update</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url": "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario",
+  "version": "0.1.0-test",
+  "name": "ChangedmedicationDifferentVOSScenario",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-09-11T00:00:00.000+01:00",
+  "publisher": "HL7 Belgium",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "BE"
+        }
+      ]
+    }
+  ],
+  "actor": [
+    {
+      "actorId": "PATIENT",
+      "type": "person",
+      "name": "Pia Peters"
+    },
+    {
+      "actorId": "GP",
+      "type": "person",
+      "name": "Dr. Durant"
+    },
+    {
+      "actorId": "VAULT",
+      "type": "entity",
+      "name": "Vault"
+    },
+    {
+      "actorId": "PHARM",
+      "type": "person",
+      "name": "Pharmacist"
+    }
+  ],
+  "instance": [
+    {
+      "resourceId": "2a-prescription",
+      "resourceType": "MedicationRequest",
+      "name": "New Prescription"
+    },
+    {
+      "resourceId": "EB",
+      "resourceType": "Bundle",
+      "name": "Empty Bundle"
+    },
+    {
+      "resourceId": "2a-treatmentLine",
+      "resourceType": "MedicationStatement",
+      "name": "New Treatment Line"
+    },
+    {
+      "resourceId": "2a-treatment",
+      "resourceType": "CarePlan",
+      "name": "New Treatment"
+    },
+    {
+      "resourceId": "2a-dispense",
+      "resourceType": "MedicationDispense",
+      "name": "New dispense"
+    }
+  ],
+  "process": [
+    {
+      "title": "Change VOS from prescription on dispense",
+      "description": "description",
+      "preConditions": "The patient visits their GP and is prescribed paracetamol 1000 mg cp (TID) for headaches. In the pharmacy, the pharmacist understands the the patient has problems swallowing the pill itself, so it trades the 1000 mg strength, for 500 mg and indicates that the patient should take 2x500 mg every 8h and not 1x1000mg every 8 hours.",
+      "postConditions": "A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each",
+      "step": [
+        {
+          "process": [
+            {
+              "title": "Initial Contact",
+              "step": [
+                {
+                  "operation": {
+                    "number": "1",
+                    "name": "Goes to appointment",
+                    "initiator": "PATIENT",
+                    "receiver": "GP"
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "2",
+                    "name": "Get Patient's Medication",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "3",
+                    "name": "Create new prescription",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "response": {
+                      "resourceId": "2a-prescription"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "number": "4",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "2a-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "5",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "2a-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "number": "6",
+                    "name": "Get patient's Prescriptions",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "7",
+                    "name": "Create new dispense",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "2a-dispense"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment Resources Update",
+              "step": [
+                {
+                  "operation": {
+                    "number": "8",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "2a-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "9",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "2a-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

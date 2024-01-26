@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExampleScenario xmlns="http://hl7.org/fhir">
+  <id value="example-13-scenario"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ExampleScenario</b><a name="example-13-scenario"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ExampleScenario &quot;example-13-scenario&quot; </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: MedicationOTC</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 00:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href="http://hl7belgium.org">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-treatmentLine</p><p><b>name</b>: New Treatment Line based on ibuprofen dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-treatment</p><p><b>name</b>: New Treatment based on ibuprofen dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-provenance</p><p><b>name</b>: Link first ibuprofen dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-treatmentLine</p><p><b>name</b>: New Treatment Line based on paracetamol dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-provenance</p><p><b>name</b>: Link paracetamol dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-3-provenance</p><p><b>name</b>: Link second ibuprofen dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-dispense</p><p><b>name</b>: ibruprofen Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-dispense</p><p><b>name</b>: parecetamol Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-3-dispense</p><p><b>name</b>: ibruprofen Dispense</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of OTC medication on the community pharmacy</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen.</p><p><b>postConditions</b>: How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: First Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Second Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: New Resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Third Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Resource Linkage</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario"/>
+  <version value="0.1.0-test"/>
+  <name value="MedicationOTC"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-09-11T00:00:00.000+01:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BE"/>
+    </coding>
+  </jurisdiction>
+  <actor>
+    <actorId value="PATIENT"/>
+    <type value="person"/>
+    <name value="Pia Peters"/>
+  </actor>
+  <actor>
+    <actorId value="PHARM"/>
+    <type value="person"/>
+    <name value="Pharmacist"/>
+  </actor>
+  <actor>
+    <actorId value="VAULT"/>
+    <type value="entity"/>
+    <name value="Vault"/>
+  </actor>
+  <instance>
+    <resourceId value="EB"/>
+    <name value="Empty Bundle"/>
+  </instance>
+  <instance>
+    <resourceId value="13-1-treatmentLine"/>
+    <name value="New Treatment Line based on ibuprofen dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-treatment"/>
+    <name value="New Treatment based on ibuprofen dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-1-provenance"/>
+    <name value="Link first ibuprofen dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="13-2-treatmentLine"/>
+    <name value="New Treatment Line based on paracetamol dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-2-provenance"/>
+    <name value="Link paracetamol dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="13-3-provenance"/>
+    <name value="Link second ibuprofen dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="13-1-dispense"/>
+    <name value="ibruprofen Dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-2-dispense"/>
+    <name value="parecetamol Dispense"/>
+  </instance>
+  <instance>
+    <resourceId value="13-3-dispense"/>
+    <name value="ibruprofen Dispense"/>
+  </instance>
+  <process>
+    <title value="Dispense of OTC medication on the community pharmacy"/>
+    <description value="description"/>
+    <preConditions value="The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen."/>
+    <postConditions value="How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition"/>
+    <step>
+      <process>
+        <title value="Initial Contact"/>
+        <step>
+          <operation>
+            <name value="Goes to Pharmacy"/>
+            <initiator value="PATIENT"/>
+            <receiver value="PHARM"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
+            <response>
+              <resourceId value="EB"/>
+            </response>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="First Dispense"/>
+        <step>
+          <operation>
+            <name value="Dispense a product"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-1-dispense"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Treatment resources Creation"/>
+        <step>
+          <operation>
+            <name value="Create new treatment"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-treatment"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Create new treatment Line"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-1-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-1-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Second Dispense"/>
+        <step>
+          <operation>
+            <name value="Dispense another product"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-2-dispense"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="New Resources Creation"/>
+        <step>
+          <operation>
+            <name value="Create new treatment Line"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-2-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-2-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Third Dispense"/>
+        <step>
+          <operation>
+            <name value="Dispense another product"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-3-dispense"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Resource Linkage"/>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="13-3-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+  </process>
+</ExampleScenario>

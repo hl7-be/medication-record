@@ -1,0 +1,66 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/7-usage> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "7-usage"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage";
+       fhir:index 0;
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"7-usage\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordUsage.html\">MedRecord Usage profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>identifier</b>: id: cc4f91f6-d0f6-479c-b6c0-109177448ed7</p><p><b>status</b>: not-taken</p><p><b>medication</b>: Ciproxine compr. pellic. (séc.) 20x 500mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#1359611)</span></p><p><b>subject</b>: <span></span></p><p><b>dateAsserted</b>: 2021-07-19T13:00:00+02:00</p><p><b>informationSource</b>: <span></span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/event-basedOn" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://treatment-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d" ]
+       ]
+     ]
+  ];
+  fhir:MedicationStatement.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://medicationusage-identifiers.com" ];
+     fhir:Identifier.value [ fhir:value "cc4f91f6-d0f6-479c-b6c0-109177448ed7" ]
+  ];
+  fhir:MedicationStatement.status [ fhir:value "not-taken"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://cnk.apb.be/codings/cnk_product_codes" ];
+       fhir:Coding.code [ fhir:value "1359611" ];
+       fhir:Coding.display [ fhir:value "Ciproxine compr. pellic. (séc.) 20x 500mg" ]
+     ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ];
+  fhir:MedicationStatement.dateAsserted [ fhir:value "2021-07-19T13:00:00+02:00"^^xsd:dateTime];
+  fhir:MedicationStatement.informationSource [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/7-usage.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

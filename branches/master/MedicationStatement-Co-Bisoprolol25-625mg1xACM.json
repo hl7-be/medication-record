@@ -1,0 +1,33 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "Co-Bisoprolol25-625mg1xACM",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"Co-Bisoprolol25-625mg1xACM\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;Co-Bisoprolol25-625mg1xACM&quot; </p></div><p><b>status</b>: active</p><p><b>medication</b>: Co-Bisoprolol EG, 98 x (2,5mg + 6,25mg) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#1609155)</span></p><p><b>subject</b>: <a href=\"Patient1\">Patient1</a></p><p><b>effective</b>: 2021-07-01 --&gt; (ongoing)</p><blockquote><p><b>dosage</b></p><p><b>timing</b>: , before breakfast</p></blockquote></div>"
+  },
+  "status" : "active",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "code" : "1609155",
+      "display" : "Co-Bisoprolol EG, 98 x (2,5mg + 6,25mg)"
+    }]
+  },
+  "subject" : {
+    "reference" : "Patient1"
+  },
+  "effectivePeriod" : {
+    "start" : "2021-07-01"
+  },
+  "dosage" : [{
+    "timing" : {
+      "repeat" : {
+        "when" : ["ACM"]
+      }
+    },
+    "doseAndRate" : [{
+      "doseQuantity" : {
+        "value" : 1
+      }
+    }]
+  }]
+}

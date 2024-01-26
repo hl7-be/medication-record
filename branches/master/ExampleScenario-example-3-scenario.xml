@@ -1,0 +1,271 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ExampleScenario xmlns="http://hl7.org/fhir">
+  <id value="example-3-scenario"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: ExampleScenario</b><a name="example-3-scenario"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource ExampleScenario &quot;example-3-scenario&quot; </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-3-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: DispenseBeforePrescription</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 00:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href="http://hl7belgium.org">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-dispense</p><p><b>name</b>: Diclofenac Dispense </p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-treatmentLine</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-treatment</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-prescription</p><p><b>name</b>: Diclofenac Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-dispense</p><p><b>name</b>: Pantoprazole Dispense [ancilliary product]</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-prescription</p><p><b>name</b>: Pantoprazole Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-1-provenance</p><p><b>name</b>: Link first Prescription and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-provenance</p><p><b>name</b>: Link first dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-3-provenance</p><p><b>name</b>: Link second dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-4-provenance</p><p><b>name</b>: Link second Prescription and treatmentLine</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of medication before a existing prescription</p><p><b>description</b>: description</p><p><b>preConditions</b>: After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP.</p><p><b>postConditions</b>: A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each.</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Line Creation and resource Linking</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Reporting and new dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Linking</p></blockquote></blockquote></blockquote></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-3-scenario"/>
+  <version value="0.1.0-test"/>
+  <name value="DispenseBeforePrescription"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2019-09-11T00:00:00.000+01:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BE"/>
+    </coding>
+  </jurisdiction>
+  <actor>
+    <actorId value="PATIENT"/>
+    <type value="person"/>
+    <name value="Pia Peters"/>
+  </actor>
+  <actor>
+    <actorId value="GP"/>
+    <type value="person"/>
+    <name value="Dr. Durant"/>
+  </actor>
+  <actor>
+    <actorId value="VAULT"/>
+    <type value="entity"/>
+    <name value="Vault"/>
+  </actor>
+  <actor>
+    <actorId value="PHARM"/>
+    <type value="person"/>
+    <name value="Pharmacist"/>
+  </actor>
+  <instance>
+    <resourceId value="3-dispense"/>
+    <name value="Diclofenac Dispense "/>
+  </instance>
+  <instance>
+    <resourceId value="EB"/>
+    <name value="Empty Bundle"/>
+  </instance>
+  <instance>
+    <resourceId value="3-treatmentLine"/>
+    <name value="New Treatment Line"/>
+  </instance>
+  <instance>
+    <resourceId value="3-treatment"/>
+    <name value="New Treatment"/>
+  </instance>
+  <instance>
+    <resourceId value="3-prescription"/>
+    <name value="Diclofenac Prescription"/>
+  </instance>
+  <instance>
+    <resourceId value="3-2-dispense"/>
+    <name value="Pantoprazole Dispense [ancilliary product]"/>
+  </instance>
+  <instance>
+    <resourceId value="3-2-prescription"/>
+    <name value="Pantoprazole Prescription"/>
+  </instance>
+  <instance>
+    <resourceId value="3-1-provenance"/>
+    <name value="Link first Prescription and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-2-provenance"/>
+    <name value="Link first dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-3-provenance"/>
+    <name value="Link second dispense and treatmentLine"/>
+  </instance>
+  <instance>
+    <resourceId value="3-4-provenance"/>
+    <name value="Link second Prescription and treatmentLine"/>
+  </instance>
+  <process>
+    <title value="Dispense of medication before a existing prescription"/>
+    <description value="description"/>
+    <preConditions value="After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP."/>
+    <postConditions value="A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each."/>
+    <step>
+      <process>
+        <title value="Initial Contact"/>
+        <step>
+          <operation>
+            <name value="Goes to appointment"/>
+            <initiator value="PATIENT"/>
+            <receiver value="GP"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Get Patient's Medication"/>
+            <initiator value="VAULT"/>
+            <receiver value="GP"/>
+            <response>
+              <resourceId value="EB"/>
+            </response>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Create new prescription"/>
+            <initiator value="GP"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-prescription"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Treatment resources Creation"/>
+        <step>
+          <operation>
+            <name value="Create new treatment"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-treatment"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Create new treatment Line"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-1-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Dispense"/>
+        <step>
+          <operation>
+            <name value="Get patient's Prescriptions"/>
+            <initiator value="VAULT"/>
+            <receiver value="PHARM"/>
+            <response>
+              <resourceId value="EB"/>
+            </response>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Dispense original dispense"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-dispense"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Dispense ancilliary product"/>
+            <initiator value="PHARM"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-2-dispense"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Treatment Line Creation and resource Linking"/>
+        <step>
+          <operation>
+            <name value="New Treatment Line for anciiliary product"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-treatmentLine"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-2-provenance"/>
+            </request>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-3-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Reporting and new dispense"/>
+        <step>
+          <operation>
+            <name value="Notification of a dispense"/>
+            <initiator value="PHARM"/>
+            <receiver value="GP"/>
+          </operation>
+        </step>
+        <step>
+          <operation>
+            <name value="Create new prescription"/>
+            <initiator value="GP"/>
+            <receiver value="VAULT"/>
+            <response>
+              <resourceId value="3-2-prescription"/>
+            </response>
+          </operation>
+        </step>
+      </process>
+    </step>
+    <step>
+      <process>
+        <title value="Linking"/>
+        <step>
+          <operation>
+            <name value="Resource Linking"/>
+            <initiator value="VAULT"/>
+            <receiver value="VAULT"/>
+            <request>
+              <resourceId value="3-4-provenance"/>
+            </request>
+          </operation>
+        </step>
+      </process>
+    </step>
+  </process>
+</ExampleScenario>

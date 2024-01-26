@@ -1,0 +1,60 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BEMedicationLineDayPeriod",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"BEMedicationLineDayPeriod-IC\"> </a></td><td>Between meals</td><td>Between meals</td></tr><tr><td style=\"white-space:nowrap\">ICM<a name=\"BEMedicationLineDayPeriod-ICM\"> </a></td><td>Between breakfast and lunch</td><td>Between breakfast and lunch</td></tr><tr><td style=\"white-space:nowrap\">ICD<a name=\"BEMedicationLineDayPeriod-ICD\"> </a></td><td>Between lunch and dinner</td><td>Between lunch and dinner</td></tr><tr><td style=\"white-space:nowrap\">ICV<a name=\"BEMedicationLineDayPeriod-ICV\"> </a></td><td>Between dinner and hour of sleep</td><td>Between dinner and hour of sleep</td></tr></table></div>"
+  },
+  "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod",
+  "version" : "1.0.0",
+  "name" : "BEMedicationLineDayPeriod",
+  "title" : "Medication line - times of day ",
+  "status" : "active",
+  "date" : "2023-06-27T09:19:14+00:00",
+  "publisher" : "HL7 Belgium",
+  "contact" : [{
+    "name" : "HL7 Belgium",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7belgium.org"
+    }]
+  },
+  {
+    "name" : "Bob Smith",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "bobsmith@example.com",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Medication line - times of day.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "056",
+      "display" : "Belgium"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 4,
+  "concept" : [{
+    "code" : "IC",
+    "display" : "Between meals",
+    "definition" : "Between meals"
+  },
+  {
+    "code" : "ICM",
+    "display" : "Between breakfast and lunch",
+    "definition" : "Between breakfast and lunch"
+  },
+  {
+    "code" : "ICD",
+    "display" : "Between lunch and dinner",
+    "definition" : "Between lunch and dinner"
+  },
+  {
+    "code" : "ICV",
+    "display" : "Between dinner and hour of sleep",
+    "definition" : "Between dinner and hour of sleep"
+  }]
+}

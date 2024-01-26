@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationRequest xmlns="http://hl7.org/fhir">
+  <id value="15-scheduleAdministration-4"/>
+  <meta>
+    <profile value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationRequest</b><a name="15-scheduleAdministration-4"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationRequest "15-scheduleAdministration-4" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-MedRecordMedicationScheduledAdministration.html">MedRecord Scheduled Administration profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>identifier</b>: id: c2074776-06d5-4705-9715-20d986b82ea3</p><p><b>status</b>: active</p><p><b>intent</b>: instance-order</p><p><b>medication</b>: Aspirine 500 mg (36 effervescent tablets) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (cnk_product_codes#00)</span></p><p><b>subject</b>: <span></span></p><blockquote><p><b>dosageInstruction</b></p><p><b>timing</b>: Events: 2021-08-03 10:00:00+0200</p><p><b>route</b>: Oral Route <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="https://browser.ihtsdotools.org/">SNOMED CT</a>#26643006)</span></p></blockquote></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/event-basedOn">
+    <valueReference>
+      <identifier>
+        <system value="http://treatment-identifiers.com"/>
+        <value value="0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"/>
+      </identifier>
+    </valueReference>
+  </extension>
+  <identifier>
+    <system value="http://takes-identifiers.com"/>
+    <value value="c2074776-06d5-4705-9715-20d986b82ea3"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="instance-order"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://cnk.apb.be/codings/cnk_product_codes"/>
+      <code value="00"/>
+      <display value="Aspirine 500 mg (36 effervescent tablets)"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+      <value value="64110219106"/>
+    </identifier>
+  </subject>
+  <dosageInstruction>
+    <timing>
+      <event value="2021-08-03T10:00:00+02:00"/>
+    </timing>
+    <route>
+      <coding>
+        <system value="http://snomed.info/sct"/>
+        <code value="26643006"/>
+        <display value="Oral Route"/>
+      </coding>
+    </route>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+        <unit value="TAB"/>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm"/>
+        <code value="TAB"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosageInstruction>
+</MedicationRequest>

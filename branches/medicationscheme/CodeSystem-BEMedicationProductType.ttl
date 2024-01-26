@@ -1,0 +1,84 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BEMedicationProductType"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">magistral<a name=\"BEMedicationProductType-magistral\"> </a></td><td>Magistral preparation</td><td>Magistral preparation - see definitions</td></tr><tr><td style=\"white-space:nowrap\">officinal<a name=\"BEMedicationProductType-officinal\"> </a></td><td>Oficinal preparation</td><td>Oficinal preparation - see definitions</td></tr><tr><td style=\"white-space:nowrap\">medicinalproduct<a name=\"BEMedicationProductType-medicinalproduct\"> </a></td><td>Medicinal product</td><td>Medicinal product - an actual 'branded' product</td></tr><tr><td style=\"white-space:nowrap\">idmp-mp<a name=\"BEMedicationProductType-idmp-mp\"> </a></td><td>IDMP Medicinal Product</td><td>IDMP Medicinal Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">pharmaceuticalproduct<a name=\"BEMedicationProductType-pharmaceuticalproduct\"> </a></td><td>medicinal product - see definitions</td><td/></tr><tr><td style=\"white-space:nowrap\">idmp-php<a name=\"BEMedicationProductType-idmp-php\"> </a></td><td>IDMP Pharmaceutical Product</td><td>IDMP Pharmaceutical Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">package<a name=\"BEMedicationProductType-package\"> </a></td><td>product package</td><td>product package - see definitions</td></tr><tr><td style=\"white-space:nowrap\">idmp-pp<a name=\"BEMedicationProductType-idmp-pp\"> </a></td><td>IDMP Packaged Product</td><td>IDMP Packaged Product - see definitions</td></tr><tr><td style=\"white-space:nowrap\">vmp-group<a name=\"BEMedicationProductType-vmp-group\"> </a></td><td>VMP Group</td><td>VMP Group - see definitions</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "BEMedicationProductType"] ; # 
+  fhir:title [ fhir:v "Medication Product Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-06-27T09:19:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Belgium" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Bob Smith" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "bobsmith@example.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Type of medication product."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "056" ] ;
+       fhir:display [ fhir:v "Belgium" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "9"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "magistral" ] ;
+     fhir:display [ fhir:v "Magistral preparation" ] ;
+     fhir:definition [ fhir:v "Magistral preparation - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "officinal" ] ;
+     fhir:display [ fhir:v "Oficinal preparation" ] ;
+     fhir:definition [ fhir:v "Oficinal preparation - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "medicinalproduct" ] ;
+     fhir:display [ fhir:v "Medicinal product" ] ;
+     fhir:definition [ fhir:v "Medicinal product - an actual 'branded' product" ]
+  ] [
+     fhir:code [ fhir:v "idmp-mp" ] ;
+     fhir:display [ fhir:v "IDMP Medicinal Product" ] ;
+     fhir:definition [ fhir:v "IDMP Medicinal Product - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "pharmaceuticalproduct" ] ;
+     fhir:display [ fhir:v "medicinal product - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "idmp-php" ] ;
+     fhir:display [ fhir:v "IDMP Pharmaceutical Product" ] ;
+     fhir:definition [ fhir:v "IDMP Pharmaceutical Product - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "package" ] ;
+     fhir:display [ fhir:v "product package" ] ;
+     fhir:definition [ fhir:v "product package - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "idmp-pp" ] ;
+     fhir:display [ fhir:v "IDMP Packaged Product" ] ;
+     fhir:definition [ fhir:v "IDMP Packaged Product - see definitions" ]
+  ] [
+     fhir:code [ fhir:v "vmp-group" ] ;
+     fhir:display [ fhir:v "VMP Group" ] ;
+     fhir:definition [ fhir:v "VMP Group - see definitions" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

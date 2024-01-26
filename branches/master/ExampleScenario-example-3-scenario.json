@@ -1,0 +1,271 @@
+{
+  "resourceType" : "ExampleScenario",
+  "id" : "example-3-scenario",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"example-3-scenario\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario &quot;example-3-scenario&quot; </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-3-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: DispenseBeforePrescription</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 00:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.0.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-dispense</p><p><b>name</b>: Diclofenac Dispense </p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-treatmentLine</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-treatment</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-prescription</p><p><b>name</b>: Diclofenac Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-dispense</p><p><b>name</b>: Pantoprazole Dispense [ancilliary product]</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-prescription</p><p><b>name</b>: Pantoprazole Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-1-provenance</p><p><b>name</b>: Link first Prescription and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-2-provenance</p><p><b>name</b>: Link first dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-3-provenance</p><p><b>name</b>: Link second dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 3-4-provenance</p><p><b>name</b>: Link second Prescription and treatmentLine</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of medication before a existing prescription</p><p><b>description</b>: description</p><p><b>preConditions</b>: After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP.</p><p><b>postConditions</b>: A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each.</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Line Creation and resource Linking</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Reporting and new dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Linking</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url" : "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-3-scenario",
+  "version" : "0.1.0-test",
+  "name" : "DispenseBeforePrescription",
+  "status" : "draft",
+  "experimental" : false,
+  "date" : "2019-09-11T00:00:00.000+01:00",
+  "publisher" : "HL7 Belgium",
+  "contact" : [{
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7belgium.org"
+    }]
+  }],
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "urn:iso:std:iso:3166",
+      "code" : "BE"
+    }]
+  }],
+  "actor" : [{
+    "actorId" : "PATIENT",
+    "type" : "person",
+    "name" : "Pia Peters"
+  },
+  {
+    "actorId" : "GP",
+    "type" : "person",
+    "name" : "Dr. Durant"
+  },
+  {
+    "actorId" : "VAULT",
+    "type" : "entity",
+    "name" : "Vault"
+  },
+  {
+    "actorId" : "PHARM",
+    "type" : "person",
+    "name" : "Pharmacist"
+  }],
+  "instance" : [{
+    "resourceId" : "3-dispense",
+    "name" : "Diclofenac Dispense "
+  },
+  {
+    "resourceId" : "EB",
+    "name" : "Empty Bundle"
+  },
+  {
+    "resourceId" : "3-treatmentLine",
+    "name" : "New Treatment Line"
+  },
+  {
+    "resourceId" : "3-treatment",
+    "name" : "New Treatment"
+  },
+  {
+    "resourceId" : "3-prescription",
+    "name" : "Diclofenac Prescription"
+  },
+  {
+    "resourceId" : "3-2-dispense",
+    "name" : "Pantoprazole Dispense [ancilliary product]"
+  },
+  {
+    "resourceId" : "3-2-prescription",
+    "name" : "Pantoprazole Prescription"
+  },
+  {
+    "resourceId" : "3-1-provenance",
+    "name" : "Link first Prescription and treatmentLine"
+  },
+  {
+    "resourceId" : "3-2-provenance",
+    "name" : "Link first dispense and treatmentLine"
+  },
+  {
+    "resourceId" : "3-3-provenance",
+    "name" : "Link second dispense and treatmentLine"
+  },
+  {
+    "resourceId" : "3-4-provenance",
+    "name" : "Link second Prescription and treatmentLine"
+  }],
+  "process" : [{
+    "title" : "Dispense of medication before a existing prescription",
+    "description" : "description",
+    "preConditions" : "After a GP visit, the patient Pia Peters (75 years) is prescribed diclofenac for arthritis. While making the dispense, the pharmacist understands that the patient has a history of stomachal ulcers. Since diclofenac creates stomachal irritations, the pharmacy also dispenses a stomach protector to prevent any case of stomach irritation or bleeding and advises to tell the information to the GP.",
+    "postConditions" : "A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each.",
+    "step" : [{
+      "process" : [{
+        "title" : "Initial Contact",
+        "step" : [{
+          "operation" : {
+            "name" : "Goes to appointment",
+            "initiator" : "PATIENT",
+            "receiver" : "GP"
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Get Patient's Medication",
+            "initiator" : "VAULT",
+            "receiver" : "GP",
+            "response" : {
+              "resourceId" : "EB"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Create new prescription",
+            "initiator" : "GP",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-prescription"
+            }
+          }
+        }]
+      }]
+    },
+    {
+      "process" : [{
+        "title" : "Treatment resources Creation",
+        "step" : [{
+          "operation" : {
+            "name" : "Create new treatment",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-treatment"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Create new treatment Line",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-treatmentLine"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Resource Linking",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-1-provenance"
+            }
+          }
+        }]
+      }]
+    },
+    {
+      "process" : [{
+        "title" : "Dispense",
+        "step" : [{
+          "operation" : {
+            "name" : "Get patient's Prescriptions",
+            "initiator" : "VAULT",
+            "receiver" : "PHARM",
+            "response" : {
+              "resourceId" : "EB"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Dispense original dispense",
+            "initiator" : "PHARM",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-dispense"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Dispense ancilliary product",
+            "initiator" : "PHARM",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-2-dispense"
+            }
+          }
+        }]
+      }]
+    },
+    {
+      "process" : [{
+        "title" : "Treatment Line Creation and resource Linking",
+        "step" : [{
+          "operation" : {
+            "name" : "New Treatment Line for anciiliary product",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-treatmentLine"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Resource Linking",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-2-provenance"
+            }
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Resource Linking",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-3-provenance"
+            }
+          }
+        }]
+      }]
+    },
+    {
+      "process" : [{
+        "title" : "Reporting and new dispense",
+        "step" : [{
+          "operation" : {
+            "name" : "Notification of a dispense",
+            "initiator" : "PHARM",
+            "receiver" : "GP"
+          }
+        },
+        {
+          "operation" : {
+            "name" : "Create new prescription",
+            "initiator" : "GP",
+            "receiver" : "VAULT",
+            "response" : {
+              "resourceId" : "3-2-prescription"
+            }
+          }
+        }]
+      }]
+    },
+    {
+      "process" : [{
+        "title" : "Linking",
+        "step" : [{
+          "operation" : {
+            "name" : "Resource Linking",
+            "initiator" : "VAULT",
+            "receiver" : "VAULT",
+            "request" : {
+              "resourceId" : "3-4-provenance"
+            }
+          }
+        }]
+      }]
+    }]
+  }]
+}

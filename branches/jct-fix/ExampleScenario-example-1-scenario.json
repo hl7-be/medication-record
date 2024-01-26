@@ -1,0 +1,299 @@
+{
+  "resourceType": "ExampleScenario",
+  "id": "example-1-scenario",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"example-1-scenario\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario \"example-1-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-1-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: ChangedmedicationSameVOSScenario</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 12:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP2</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Omar</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-prescription</p><p><b>name</b>: Amlor Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-treatmentLine</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-treatment</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-dispense</p><p><b>name</b>: Amlodipin Sandoz dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-1-provenance</p><p><b>name</b>: Link Prescription and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-2-provenance</p><p><b>name</b>: Link Dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-summary-view</p><p><b>name</b>: Summary view for a Physician</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 1-scheduled-view</p><p><b>name</b>: Scheduled Administrations view for a Patient</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change Branded Prescription</p><p><b>description</b>: A different product than the one prescribed does not link a dispense to the same treatment line.</p><p><b>preConditions</b>: The patient visits their GP and is prescribed Amlor for hypertension. The GP prescribes Amlor, but at the pharmacy there is no Amlor and amlodipin Sandoz is dispensed.</p><p><b>postConditions</b>: When the prescription is made, a new treatment and treatment line are created. For linking the prescription to them, a provenance is created. It enables to see which prescriptions and dispenses are associated to each treatment.</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Resource Linkage</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Vizualization Data for physician</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Vizualization Data for patient (scheduled Administrations)</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url": "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-1-scenario",
+  "version": "0.1.0-test",
+  "name": "ChangedmedicationSameVOSScenario",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-09-11T00:00:00.000+01:00",
+  "publisher": "HL7 Belgium",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "BE"
+        }
+      ]
+    }
+  ],
+  "actor": [
+    {
+      "actorId": "PATIENT",
+      "type": "person",
+      "name": "Pia Peters"
+    },
+    {
+      "actorId": "GP",
+      "type": "person",
+      "name": "Dr. Durant"
+    },
+    {
+      "actorId": "VAULT",
+      "type": "entity",
+      "name": "Vault"
+    },
+    {
+      "actorId": "PHARM",
+      "type": "person",
+      "name": "Pharmacist"
+    },
+    {
+      "actorId": "GP2",
+      "type": "person",
+      "name": "Dr. Omar"
+    }
+  ],
+  "instance": [
+    {
+      "resourceId": "1-prescription",
+      "name": "Amlor Prescription"
+    },
+    {
+      "resourceId": "EB",
+      "name": "Empty Bundle"
+    },
+    {
+      "resourceId": "1-treatmentLine",
+      "name": "New Treatment Line"
+    },
+    {
+      "resourceId": "1-treatment",
+      "name": "New Treatment"
+    },
+    {
+      "resourceId": "1-dispense",
+      "name": "Amlodipin Sandoz dispense"
+    },
+    {
+      "resourceId": "1-1-provenance",
+      "name": "Link Prescription and treatmentLine"
+    },
+    {
+      "resourceId": "1-2-provenance",
+      "name": "Link Dispense and treatmentLine"
+    },
+    {
+      "resourceId": "1-summary-view",
+      "name": "Summary view for a Physician"
+    },
+    {
+      "resourceId": "1-scheduled-view",
+      "name": "Scheduled Administrations view for a Patient"
+    }
+  ],
+  "process": [
+    {
+      "title": "Change Branded Prescription",
+      "description": "A different product than the one prescribed does not link a dispense to the same treatment line.",
+      "preConditions": "The patient visits their GP and is prescribed Amlor for hypertension. The GP prescribes Amlor, but at the pharmacy there is no Amlor and amlodipin Sandoz is dispensed.",
+      "postConditions": "When the prescription is made, a new treatment and treatment line are created. For linking the prescription to them, a provenance is created. It enables to see which prescriptions and dispenses are associated to each treatment.",
+      "step": [
+        {
+          "process": [
+            {
+              "title": "Initial Contact",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Goes to appointment",
+                    "initiator": "PATIENT",
+                    "receiver": "GP"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Get Patient's Medication",
+                    "initiator": "VAULT",
+                    "receiver": "GP",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Create new prescription",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-prescription"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-treatmentLine"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Resource Linking",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-1-provenance"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Get patient's Prescriptions",
+                    "initiator": "VAULT",
+                    "receiver": "PHARM",
+                    "request": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Create new dispense",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-dispense"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Resource Linkage",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Resource Linking",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "1-2-provenance"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Vizualization Data for physician",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Requiring Visualization",
+                    "initiator": "GP2",
+                    "receiver": "VAULT"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Creating Visualization",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Displaying Visualization",
+                    "initiator": "VAULT",
+                    "receiver": "GP2",
+                    "request": {
+                      "resourceId": "1-summary-view"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Vizualization Data for patient (scheduled Administrations)",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Requiring Visualization",
+                    "initiator": "PATIENT",
+                    "receiver": "VAULT"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Creating Visualization",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Displaying Visualization",
+                    "initiator": "VAULT",
+                    "receiver": "PATIENT",
+                    "request": {
+                      "resourceId": "1-scheduled-view"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

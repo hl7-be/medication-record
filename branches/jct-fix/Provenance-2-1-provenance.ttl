@@ -1,0 +1,52 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/2-1-provenance> a fhir:Provenance;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "2-1-provenance"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Provenance</b><a name=\"2-1-provenance\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Provenance \"2-1-provenance\" </p></div><p><b>target</b>: <a href=\"MedicationRequest-2a-prescription.html\">MedicationRequest/2a-prescription</a></p><p><b>recorded</b>: Jul 19, 2021, 11:00:00 AM</p><h3>Agents</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>PRIMAUTH <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#PRIMAUTH)</span></td><td><span></span></td></tr></table><h3>Entities</h3><table class=\"grid\"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>source</td><td><a href=\"MedicationStatement-2a-treatmentLine.html\">MedicationStatement/2a-treatmentLine</a></td></tr></table></div>"
+  ];
+  fhir:Provenance.target [
+     fhir:index 0;
+     fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/2a-prescription>;
+     fhir:Reference.reference [ fhir:value "MedicationRequest/2a-prescription" ]
+  ];
+  fhir:Provenance.recorded [ fhir:value "2021-07-19T13:00:00+02:00"^^xsd:dateTime];
+  fhir:Provenance.agent [
+     fhir:index 0;
+     fhir:Provenance.agent.role [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "PRIMAUTH" ]
+       ]
+     ];
+     fhir:Provenance.agent.who [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://physician-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "7c121778-5b2b-442d-9314-0a73995ab3dd" ]
+       ]
+     ]
+  ];
+  fhir:Provenance.entity [
+     fhir:index 0;
+     fhir:Provenance.entity.role [ fhir:value "source" ];
+     fhir:Provenance.entity.what [
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/2a-treatmentLine>;
+       fhir:Reference.reference [ fhir:value "MedicationStatement/2a-treatmentLine" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/2-1-provenance.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

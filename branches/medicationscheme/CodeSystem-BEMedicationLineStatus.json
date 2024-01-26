@@ -1,0 +1,75 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BEMedicationLineStatus",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">planned<a name=\"BEMedicationLineStatus-planned\"> </a></td><td>Planned</td><td>Medication is/was planned to be taken</td></tr><tr><td style=\"white-space:nowrap\">ordered<a name=\"BEMedicationLineStatus-ordered\"> </a></td><td>Ordered</td><td>Medication is prescribed or ordered</td></tr><tr><td style=\"white-space:nowrap\">delivered<a name=\"BEMedicationLineStatus-delivered\"> </a></td><td>Delivered</td><td>Medication is delivered but there's no information that the patient has started to take it</td></tr><tr><td style=\"white-space:nowrap\">ongoing<a name=\"BEMedicationLineStatus-ongoing\"> </a></td><td>Ongoing</td><td>Medication treatment is ongoing</td></tr><tr><td style=\"white-space:nowrap\">suspended<a name=\"BEMedicationLineStatus-suspended\"> </a></td><td>Suspended</td><td>Medication treatment is suspended</td></tr><tr><td style=\"white-space:nowrap\">completed<a name=\"BEMedicationLineStatus-completed\"> </a></td><td>Completed</td><td>Medication treatment is completed</td></tr><tr><td style=\"white-space:nowrap\">stopped<a name=\"BEMedicationLineStatus-stopped\"> </a></td><td>Stopped</td><td>Medication treatment is stopped before being completed</td></tr></table></div>"
+  },
+  "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+  "version" : "1.0.0",
+  "name" : "BEMedicationLineStatus",
+  "title" : "Medication Product Type",
+  "status" : "active",
+  "date" : "2023-06-27T09:19:14+00:00",
+  "publisher" : "HL7 Belgium",
+  "contact" : [{
+    "name" : "HL7 Belgium",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7belgium.org"
+    }]
+  },
+  {
+    "name" : "Bob Smith",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "bobsmith@example.com",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Type of medication product.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "056",
+      "display" : "Belgium"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 7,
+  "concept" : [{
+    "code" : "planned",
+    "display" : "Planned",
+    "definition" : "Medication is/was planned to be taken"
+  },
+  {
+    "code" : "ordered",
+    "display" : "Ordered",
+    "definition" : "Medication is prescribed or ordered"
+  },
+  {
+    "code" : "delivered",
+    "display" : "Delivered",
+    "definition" : "Medication is delivered but there's no information that the patient has started to take it"
+  },
+  {
+    "code" : "ongoing",
+    "display" : "Ongoing",
+    "definition" : "Medication treatment is ongoing"
+  },
+  {
+    "code" : "suspended",
+    "display" : "Suspended",
+    "definition" : "Medication treatment is suspended"
+  },
+  {
+    "code" : "completed",
+    "display" : "Completed",
+    "definition" : "Medication treatment is completed"
+  },
+  {
+    "code" : "stopped",
+    "display" : "Stopped",
+    "definition" : "Medication treatment is stopped before being completed"
+  }]
+}

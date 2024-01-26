@@ -1,0 +1,42 @@
+@startuml
+
+
+Title Refuse the dispense prescribed medication
+
+actor "Pia Peters" as PATIENT
+actor "Dr. Durant" as GP
+participant "Vault" as VAULT
+actor "Pharmacist" as PHARM
+
+    
+    
+    
+    
+    
+group Initial contact
+
+PATIENT -> GP : Goes to appointment\n
+VAULT -> GP : Get Patient's Medication\n[[ExampleScenario-example-6-scenario-resources.html#EB Empty Bundle]]
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-6-scenario-resources.html#6-prescription ibuprofen prescription]]
+end
+    
+group Treatment resources Creation
+
+VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-6-scenario-resources.html#6-treatment New Treatment based on prescription]]
+VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-6-scenario-resources.html#6-treatmentLine New Treatment Line based on prescription]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-6-scenario-resources.html#6-provenance Link Prescription and treatmentLine]]
+end
+    
+group Dispense
+
+VAULT -> PHARM : Get patient's Prescriptions\n[[ExampleScenario-example-6-scenario-resources.html#EB Empty Bundle]]
+PHARM -> VAULT : Refuse Dispense\n[[ExampleScenario-example-6-scenario-resources.html#6-dispense Refused Dispense]]
+end
+    
+group Resource Linking
+
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-6-scenario-resources.html#6-2-provenance Link refused dispense and treatmentLine]]
+end
+  
+
+@enduml

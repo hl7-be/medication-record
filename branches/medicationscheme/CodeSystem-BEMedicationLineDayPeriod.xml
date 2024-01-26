@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BEMedicationLineDayPeriod"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">IC<a name="BEMedicationLineDayPeriod-IC"> </a></td><td>Between meals</td><td>Between meals</td></tr><tr><td style="white-space:nowrap">ICM<a name="BEMedicationLineDayPeriod-ICM"> </a></td><td>Between breakfast and lunch</td><td>Between breakfast and lunch</td></tr><tr><td style="white-space:nowrap">ICD<a name="BEMedicationLineDayPeriod-ICD"> </a></td><td>Between lunch and dinner</td><td>Between lunch and dinner</td></tr><tr><td style="white-space:nowrap">ICV<a name="BEMedicationLineDayPeriod-ICV"> </a></td><td>Between dinner and hour of sleep</td><td>Between dinner and hour of sleep</td></tr></table></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod"/>
+  <version value="1.0.0"/>
+  <name value="BEMedicationLineDayPeriod"/>
+  <title value="Medication line - times of day "/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Medication line - times of day."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="4"/>
+  <concept>
+    <code value="IC"/>
+    <display value="Between meals"/>
+    <definition value="Between meals"/>
+  </concept>
+  <concept>
+    <code value="ICM"/>
+    <display value="Between breakfast and lunch"/>
+    <definition value="Between breakfast and lunch"/>
+  </concept>
+  <concept>
+    <code value="ICD"/>
+    <display value="Between lunch and dinner"/>
+    <definition value="Between lunch and dinner"/>
+  </concept>
+  <concept>
+    <code value="ICV"/>
+    <display value="Between dinner and hour of sleep"/>
+    <definition value="Between dinner and hour of sleep"/>
+  </concept>
+</CodeSystem>

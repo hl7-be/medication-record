@@ -1,0 +1,21 @@
+{
+  "resourceType" : "Condition",
+  "id" : "hypertension-condition",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Condition</b><a name=\"hypertension-condition\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Condition &quot;hypertension-condition&quot; </p></div><p><b>code</b>: Hypertensive disorder <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (snomed.ct#38341003)</span></p><p><b>subject</b>: <span/></p></div>"
+  },
+  "code" : {
+    "coding" : [{
+      "system" : "http://snomed.ct",
+      "code" : "38341003",
+      "display" : "Hypertensive disorder"
+    }]
+  },
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  }
+}

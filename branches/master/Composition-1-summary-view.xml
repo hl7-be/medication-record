@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Composition xmlns="http://hl7.org/fhir">
+  <id value="1-summary-view"/>
+  <meta>
+    <profile value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/med-view-comp"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Composition</b><a name="1-summary-view"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Composition &quot;1-summary-view&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-med-view-comp.html">Medication View profile</a></p></div><p><b>status</b>: final</p><p><b>type</b>: Summary view for a physician <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="CodeSystem-be-cs-medication-summary-types.html">Medication Summary Types CodeSystem</a>#Summary)</span></p><p><b>date</b>: 2021-08-15 13:00:00+0200</p><p><b>author</b>: <a href="BeOrganization">BeOrganization</a> &quot;BeOrganization&quot;</p><p><b>title</b>: Summary View for Patient X</p></div>
+  </text>
+  <status value="final"/>
+  <type>
+    <coding>
+      <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+      <code value="Summary"/>
+    </coding>
+  </type>
+  <date value="2021-08-15T13:00:00+02:00"/>
+  <author>
+    <reference value="BeOrganization"/>
+  </author>
+  <title value="Summary View for Patient X"/>
+  <section>
+    <title value="Treatments"/>
+    <entry>
+      <reference value="CarePlan/1-treatment"/>
+    </entry>
+  </section>
+  <section>
+    <title value="Treatment Lines"/>
+    <entry>
+      <reference value="MedicationStatement/1-treatmentLine"/>
+    </entry>
+  </section>
+  <section>
+    <entry>
+      <reference value="MedicationRequest/1-prescription"/>
+    </entry>
+    <entry>
+      <reference value="MedicationDispense/1-dispense"/>
+    </entry>
+  </section>
+</Composition>

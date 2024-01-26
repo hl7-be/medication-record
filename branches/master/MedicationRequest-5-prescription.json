@@ -1,0 +1,49 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "5-prescription",
+  "meta" : {
+    "profile" : ["http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"5-prescription\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;5-prescription&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordOrder.html\">BeMedRecord Order profile</a></p></div><p><b>Based On</b>: <span/></p><p><b>status</b>: active</p><p><b>intent</b>: order</p><p><b>medication</b>: Dafalgan compr. pellic. (séc.) Forte 16x 1g <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#1799147)</span></p><p><b>subject</b>: <span/></p><p><b>encounter</b>: <span/></p><p><b>authoredOn</b>: 2021-07-19 09:00:00+0200</p><p><b>requester</b>: <span>: GP</span></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "identifier" : {
+        "system" : "http://treatment-identifiers.com",
+        "value" : "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
+      }
+    }
+  }],
+  "status" : "active",
+  "intent" : "order",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+      "code" : "1799147",
+      "display" : "Dafalgan compr. pellic. (séc.) Forte 16x 1g"
+    }]
+  },
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  },
+  "encounter" : {
+    "identifier" : {
+      "system" : "http://encounter-identifiers.com",
+      "value" : "0cf5dc52-28dc-43ce-96d2-3a757526c739"
+    }
+  },
+  "authoredOn" : "2021-07-19T09:00:00+02:00",
+  "requester" : {
+    "identifier" : {
+      "system" : "http://physician-identifiers.com",
+      "value" : "7c121778-5b2b-442d-9314-0a73995ab3dd"
+    },
+    "display" : "GP"
+  }
+}

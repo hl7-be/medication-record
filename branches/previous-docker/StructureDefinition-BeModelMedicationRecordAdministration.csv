@@ -1,0 +1,54 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecordAdministration","","","",0,*,"","","","","Medication Record Administration logical model","A model for representing and reporting an administration of a product.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecordAdministration.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","The business identifier(s) for the medication Administration","The business identifier(s) for the medication Administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.identifier",0,*,"",""
+"BeModelMedicationRecordAdministration.status","","","",1,1,"","","","code {[]} {[]}
+","Status of the medication administration","Status of the medication administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.status",1,1,"",""
+"BeModelMedicationRecordAdministration.statusReason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason supporting the status of the medication administration","Reason supporting the status of the medication administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.statusReason",0,*,"",""
+"BeModelMedicationRecordAdministration.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type of medication administration","Type of medication administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.category",0,*,"",""
+"BeModelMedicationRecordAdministration.product[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medication]]}","What was administered","What was administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.product[x]",1,1,"",""
+"BeModelMedicationRecordAdministration.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","Who received medication","Who received medication","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.subject",1,1,"",""
+"BeModelMedicationRecordAdministration.encounter","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+","Encounter administered as part of","Encounter administered as part of","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.encounter",0,1,"",""
+"BeModelMedicationRecordAdministration.occurence[x]","","","",1,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","Start and end time of administration","Start and end time of administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.occurence[x]",1,1,"",""
+"BeModelMedicationRecordAdministration.recorded","","","",0,1,"","","","dateTime {[]} {[]}
+","When the Medication administration was first captured in the subject's record","When the Medication administration was first captured in the subject's record","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.recorded",0,1,"",""
+"BeModelMedicationRecordAdministration.performer","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Who performed the medication administration and what they did","Who performed the medication administration and what they did","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.performer",0,*,"",""
+"BeModelMedicationRecordAdministration.performer.function","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Function of the actor regarding the medication administration","Function of the actor regarding the medication administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.performer.function",0,1,"",""
+"BeModelMedicationRecordAdministration.performer.actor","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
+","Who performed a function related to the medication administration","Who performed a function related to the medication administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.performer.actor",1,1,"",""
+"BeModelMedicationRecordAdministration.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation], CanonicalType[http://hl7.org/fhir/StructureDefinition/DiagnosticReport]]}","Information that supports why the medication was administered","Information that supports why the medication was administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.reason[x]",0,*,"",""
+"BeModelMedicationRecordAdministration.prescription","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/MedicationRequest]]}
+","Prescription for which the administration was performed against","Prescription for which the administration was performed against","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.prescription",0,1,"",""
+"BeModelMedicationRecordAdministration.device","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Device]]}
+","Device used to administer","Device used to administer","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.device",0,*,"",""
+"BeModelMedicationRecordAdministration.note","","","",0,*,"","","","Annotation {[]} {[]}
+","Further information about the administration","Further information about the administration","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.note",0,*,"",""
+"BeModelMedicationRecordAdministration.dosage","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Details of how medication was administered","Details of how medication was administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.text","","","",0,1,"","","","string {[]} {[]}
+","Free text dosage instructions","Free text dosage instructions","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.text",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.site","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Body site administered to","Body site administered to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.site",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.route","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Route through which the product was administered","Route through which the product was administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.route",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.method","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","How the product was administered","How the product was administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.method",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.dose","","","",0,1,"","","","Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}
+","Amount of product per dose","Amount of product per dose","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.dose",0,1,"",""
+"BeModelMedicationRecordAdministration.dosage.dose.rate[x]","","","",0,1,"","","","Ratio {[]} {[]}
+Quantity {[CanonicalType[http://hl7.org/fhir/StructureDefinition/SimpleQuantity]]} {[]}","Dose quantity per unit of time","Dose quantity per unit of time","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.dosage.dose.rate[x]",0,1,"",""
+"BeModelMedicationRecordAdministration.treatmentPlan","","","",0,1,"","","","Reference {[]} {[]}
+","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.treatmentPlan",0,1,"",""
+"BeModelMedicationRecordAdministration.location","","","",0,1,"","","","string {[]} {[]}
+","Where the administration was performed","Where the administration was performed","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.location",0,1,"",""
+"BeModelMedicationRecordAdministration.basedOn","","","",0,1,"","","","Reference {[]} {[]}
+","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordAdministration.basedOn",0,1,"",""

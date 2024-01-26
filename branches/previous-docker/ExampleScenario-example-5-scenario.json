@@ -1,0 +1,226 @@
+{
+  "resourceType": "ExampleScenario",
+  "id": "example-5-scenario",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example-5-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: DispenseNewBrandOldUnavailable</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11T00:00:00+01:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: Dispense for Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-prescription</p><p><b>resourceType</b>: MedicationRequest</p><p><b>name</b>: New prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment based on prescription</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change brand from prescription on dispense because of out of stock</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead.</p><p><b>postConditions</b>: It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Resources Update</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url": "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario",
+  "version": "0.1.0-test",
+  "name": "DispenseNewBrandOldUnavailable",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-09-11T00:00:00.000+01:00",
+  "publisher": "HL7 Belgium",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "BE"
+        }
+      ]
+    }
+  ],
+  "actor": [
+    {
+      "actorId": "PATIENT",
+      "type": "person",
+      "name": "Pia Peters"
+    },
+    {
+      "actorId": "GP",
+      "type": "person",
+      "name": "Dr. Durant"
+    },
+    {
+      "actorId": "VAULT",
+      "type": "entity",
+      "name": "Vault"
+    },
+    {
+      "actorId": "PHARM",
+      "type": "person",
+      "name": "Pharmacist"
+    }
+  ],
+  "instance": [
+    {
+      "resourceId": "5-dispense",
+      "resourceType": "MedicationDispense",
+      "name": "Dispense for Prescription"
+    },
+    {
+      "resourceId": "5-prescription",
+      "resourceType": "MedicationRequest",
+      "name": "New prescription"
+    },
+    {
+      "resourceId": "EB",
+      "resourceType": "Bundle",
+      "name": "Empty Bundle"
+    },
+    {
+      "resourceId": "5-treatmentLine",
+      "resourceType": "MedicationStatement",
+      "name": "New Treatment Line based on prescription"
+    },
+    {
+      "resourceId": "5-treatment",
+      "resourceType": "CarePlan",
+      "name": "New Treatment based on prescription"
+    }
+  ],
+  "process": [
+    {
+      "title": "Change brand from prescription on dispense because of out of stock",
+      "description": "description",
+      "preConditions": "The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead.",
+      "postConditions": "It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs",
+      "step": [
+        {
+          "process": [
+            {
+              "title": "Initial contact",
+              "step": [
+                {
+                  "operation": {
+                    "number": "1",
+                    "name": "Goes to appointment",
+                    "initiator": "PATIENT",
+                    "receiver": "GP"
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "2",
+                    "name": "Get Patient's Medication",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "3",
+                    "name": "Create new prescription",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-prescription"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "number": "4",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "5",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "number": "6",
+                    "name": "Get patient's Prescriptions",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "7",
+                    "name": "Dispense new product",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-dispense"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment Resources Update",
+              "step": [
+                {
+                  "operation": {
+                    "number": "8",
+                    "name": "Update treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "9",
+                    "name": "Update treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,12 @@
+{
+  "url" : "http://hl7belgium.org/fhir/medicationscheme/ImplementationGuide/hl7.fhir.be.medicationscheme",
+  "name" : "MedicationScheme",
+  "package-id" : "hl7.fhir.be.medicationscheme",
+  "ig-ver" : "1.0.0",
+  "date" : "Tue, 27 Jun, 2023 09:19:14 +0000",
+  "errs" : 225,
+  "warnings" : 902,
+  "hints" : 17,
+  "version" : "4.0.1",
+  "tool" : "5.0.0 (3)"
+}

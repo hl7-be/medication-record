@@ -1,0 +1,537 @@
+{
+  "date" : "Fri, 26 Jan, 2024 14:39:07 +0000",
+  "doco" : "For each file: start is seconds after start activity occurred. Length = milliseconds activity took",
+  "files" : [
+    {
+      "name" : "/input/riziv-medrecord.xml",
+      "size" : 11235,
+      "processes" : [
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 47
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 10
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 94
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 735
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 108
+        },
+        {
+          "activity" : "generate2",
+          "start" : 62,
+          "length" : 102
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 5
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 216,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-1-scenario.json",
+      "size" : 8547,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 20
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 28
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 53,
+          "length" : 91
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 86
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 40
+        },
+        {
+          "activity" : "generate2",
+          "start" : 62,
+          "length" : 457
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-13-scenario.json",
+      "size" : 7677,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 16
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 21
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 27
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 38
+        },
+        {
+          "activity" : "generate2",
+          "start" : 62,
+          "length" : 104
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-2-scenario.json",
+      "size" : 6066,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 17
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 17
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 33
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 29
+        },
+        {
+          "activity" : "generate2",
+          "start" : 62,
+          "length" : 74
+        },
+        {
+          "activity" : "generateExampleZip",
+          "start" : 211,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-3-scenario.json",
+      "size" : 9198,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 20
+        },
+        {
+          "activity" : "validate",
+          "start" : 54,
+          "length" : 1
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 38
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 37
+        },
+        {
+          "activity" : "generate2",
+          "start" : 62,
+          "length" : 127
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-4-scenario.json",
+      "size" : 8441,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 16
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 27
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 19
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 30
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 37
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 76
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-5-scenario.json",
+      "size" : 5915,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 16
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 43
+        },
+        {
+          "activity" : "generate1",
+          "start" : 56,
+          "length" : 29
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 62
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-6-scenario.json",
+      "size" : 5965,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "checkR4R4B",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 16
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 18
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 27
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 56
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-7-scenario.json",
+      "size" : 7449,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 15
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 22
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 20
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 19
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 31
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 66
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/ExampleScenario-example-8-scenario.json",
+      "size" : 8473,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 17
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 19
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 15
+        },
+        {
+          "activity" : "validate",
+          "start" : 55,
+          "length" : 19
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 35
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 66
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 1
+        },
+        {
+          "activity" : "scanExamplesForR5",
+          "start" : 216,
+          "length" : 1
+        }
+      ]
+    },
+    {
+      "name" : "fsh-generated/resources/StructureDefinition-be-model-medication-dispense.json",
+      "size" : 8062,
+      "processes" : [
+        {
+          "activity" : "loadResources",
+          "start" : 53,
+          "length" : 17
+        },
+        {
+          "activity" : "load-configure",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "scan",
+          "start" : 53,
+          "length" : 1
+        },
+        {
+          "activity" : "load",
+          "start" : 53,
+          "length" : 41
+        },
+        {
+          "activity" : "generateSnapshots",
+          "start" : 53,
+          "length" : 57
+        },
+        {
+          "activity" : "generateNarratives",
+          "start" : 54,
+          "length" : 77
+        },
+        {
+          "activity" : "validate",
+          "start" : 54,
+          "length" : 1237
+        },
+        {
+          "activity" : "scanForUsageStats",
+          "start" : 56,
+          "length" : 1
+        },
+        {
+          "activity" : "generate1",
+          "start" : 57,
+          "length" : 195
+        },
+        {
+          "activity" : "generate2",
+          "start" : 63,
+          "length" : 1101
+        },
+        {
+          "activity" : "makeDependencies",
+          "start" : 67,
+          "length" : 1
+        },
+        {
+          "activity" : "generateValidationPack",
+          "start" : 211,
+          "length" : 7
+        }
+      ]
+    }
+  ]
+}

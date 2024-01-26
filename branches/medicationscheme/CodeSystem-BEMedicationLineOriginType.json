@@ -1,0 +1,64 @@
+{
+  "resourceType" : "CodeSystem",
+  "id" : "BEMedicationLineOriginType",
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\">amb-presc<a name=\"BEMedicationLineOriginType-amb-presc\"> </a></td><td>Ambulatory Prescription</td></tr><tr><td style=\"white-space:nowrap\">hosp-presc<a name=\"BEMedicationLineOriginType-hosp-presc\"> </a></td><td>Hospital Prescription</td></tr><tr><td style=\"white-space:nowrap\">self-medication<a name=\"BEMedicationLineOriginType-self-medication\"> </a></td><td>Self-medication</td></tr><tr><td style=\"white-space:nowrap\">pharm-advice<a name=\"BEMedicationLineOriginType-pharm-advice\"> </a></td><td>Upon pharmaceutical advice</td></tr><tr><td style=\"white-space:nowrap\">extra-formulary-prescription<a name=\"BEMedicationLineOriginType-extra-formulary-prescription\"> </a></td><td>Medication not sold in Belgium, with prescription</td></tr><tr><td style=\"white-space:nowrap\">extra-formulary-otc<a name=\"BEMedicationLineOriginType-extra-formulary-otc\"> </a></td><td>Medication not sold in Belgium, without prescription</td></tr></table></div>"
+  },
+  "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+  "version" : "1.0.0",
+  "name" : "BEMedicationLineOriginType",
+  "title" : "Medication Line origin type",
+  "status" : "active",
+  "date" : "2023-06-27T09:19:14+00:00",
+  "publisher" : "HL7 Belgium",
+  "contact" : [{
+    "name" : "HL7 Belgium",
+    "telecom" : [{
+      "system" : "url",
+      "value" : "http://hl7belgium.org"
+    }]
+  },
+  {
+    "name" : "Bob Smith",
+    "telecom" : [{
+      "system" : "email",
+      "value" : "bobsmith@example.com",
+      "use" : "work"
+    }]
+  }],
+  "description" : "Medication Line origin type.",
+  "jurisdiction" : [{
+    "coding" : [{
+      "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+      "code" : "056",
+      "display" : "Belgium"
+    }]
+  }],
+  "content" : "complete",
+  "count" : 6,
+  "concept" : [{
+    "code" : "amb-presc",
+    "display" : "Ambulatory Prescription"
+  },
+  {
+    "code" : "hosp-presc",
+    "display" : "Hospital Prescription"
+  },
+  {
+    "code" : "self-medication",
+    "display" : "Self-medication"
+  },
+  {
+    "code" : "pharm-advice",
+    "display" : "Upon pharmaceutical advice"
+  },
+  {
+    "code" : "extra-formulary-prescription",
+    "display" : "Medication not sold in Belgium, with prescription"
+  },
+  {
+    "code" : "extra-formulary-otc",
+    "display" : "Medication not sold in Belgium, without prescription"
+  }]
+}

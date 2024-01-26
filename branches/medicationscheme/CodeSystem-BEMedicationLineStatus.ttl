@@ -1,0 +1,77 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BEMedicationLineStatus"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">planned<a name=\"BEMedicationLineStatus-planned\"> </a></td><td>Planned</td><td>Medication is/was planned to be taken</td></tr><tr><td style=\"white-space:nowrap\">ordered<a name=\"BEMedicationLineStatus-ordered\"> </a></td><td>Ordered</td><td>Medication is prescribed or ordered</td></tr><tr><td style=\"white-space:nowrap\">delivered<a name=\"BEMedicationLineStatus-delivered\"> </a></td><td>Delivered</td><td>Medication is delivered but there's no information that the patient has started to take it</td></tr><tr><td style=\"white-space:nowrap\">ongoing<a name=\"BEMedicationLineStatus-ongoing\"> </a></td><td>Ongoing</td><td>Medication treatment is ongoing</td></tr><tr><td style=\"white-space:nowrap\">suspended<a name=\"BEMedicationLineStatus-suspended\"> </a></td><td>Suspended</td><td>Medication treatment is suspended</td></tr><tr><td style=\"white-space:nowrap\">completed<a name=\"BEMedicationLineStatus-completed\"> </a></td><td>Completed</td><td>Medication treatment is completed</td></tr><tr><td style=\"white-space:nowrap\">stopped<a name=\"BEMedicationLineStatus-stopped\"> </a></td><td>Stopped</td><td>Medication treatment is stopped before being completed</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "BEMedicationLineStatus"] ; # 
+  fhir:title [ fhir:v "Medication Product Type"] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-06-27T09:19:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Belgium" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Bob Smith" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "bobsmith@example.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Type of medication product."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "056" ] ;
+       fhir:display [ fhir:v "Belgium" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "7"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "planned" ] ;
+     fhir:display [ fhir:v "Planned" ] ;
+     fhir:definition [ fhir:v "Medication is/was planned to be taken" ]
+  ] [
+     fhir:code [ fhir:v "ordered" ] ;
+     fhir:display [ fhir:v "Ordered" ] ;
+     fhir:definition [ fhir:v "Medication is prescribed or ordered" ]
+  ] [
+     fhir:code [ fhir:v "delivered" ] ;
+     fhir:display [ fhir:v "Delivered" ] ;
+     fhir:definition [ fhir:v "Medication is delivered but there's no information that the patient has started to take it" ]
+  ] [
+     fhir:code [ fhir:v "ongoing" ] ;
+     fhir:display [ fhir:v "Ongoing" ] ;
+     fhir:definition [ fhir:v "Medication treatment is ongoing" ]
+  ] [
+     fhir:code [ fhir:v "suspended" ] ;
+     fhir:display [ fhir:v "Suspended" ] ;
+     fhir:definition [ fhir:v "Medication treatment is suspended" ]
+  ] [
+     fhir:code [ fhir:v "completed" ] ;
+     fhir:display [ fhir:v "Completed" ] ;
+     fhir:definition [ fhir:v "Medication treatment is completed" ]
+  ] [
+     fhir:code [ fhir:v "stopped" ] ;
+     fhir:display [ fhir:v "Stopped" ] ;
+     fhir:definition [ fhir:v "Medication treatment is stopped before being completed" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

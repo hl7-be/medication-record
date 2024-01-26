@@ -1,0 +1,94 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mgmix> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Dafalgan500mgmix"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"Dafalgan500mgmix\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;Dafalgan500mgmix&quot; </p></div><p><b>status</b>: active</p><p><b>medication</b>: Paracetamol 500 mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#123123123)</span></p><p><b>subject</b>: <a href=\"Patient1\">Patient1</a></p><p><b>effective</b>: 2022-01-01 --&gt; (ongoing)</p><p><b>derivedFrom</b>: </p><ul><li><a href=\"MedicationStatement-Paracetamol500mg1xCV.html\">MedicationStatement/Paracetamol500mg1xCV</a></li><li><a href=\"MedicationStatement-Dafalgan500mg1xmeal.html\">MedicationStatement/Dafalgan500mg1xmeal</a></li></ul><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at breakfast</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at lunch</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at dinner</p></blockquote></div>"
+  ]; # 
+  fhir:MedicationStatement.status [ fhir:value "active"]; # 
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "123123123" ];
+       fhir:Coding.display [ fhir:value "Paracetamol 500 mg" ]
+     ]
+  ]; # 
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "Patient1" ]
+  ]; # 
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2022-01-01"^^xsd:date ]
+  ]; # 
+  fhir:MedicationStatement.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Paracetamol500mg1xCV>;
+     fhir:Reference.reference [ fhir:value "MedicationStatement/Paracetamol500mg1xCV" ]
+  ], [
+     fhir:index 1;
+     fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mg1xmeal>;
+     fhir:Reference.reference [ fhir:value "MedicationStatement/Dafalgan500mg1xmeal" ]
+  ]; # 
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CM";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CD";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CV";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "2"^^xsd:decimal ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mgmix.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

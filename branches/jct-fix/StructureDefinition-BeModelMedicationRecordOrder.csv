@@ -1,0 +1,34 @@
+"Id","Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecordOrder","BeModelMedicationRecordOrder","","","",0,*,"","","","","Medication Record Prescription logical model","A model for representing a product order.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecordOrder.identifier","BeModelMedicationRecordOrder.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","The business identifier(s) for the medication prescription","The business identifier(s) for the medication prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.identifier",0,1,"",""
+"BeModelMedicationRecordOrder.patient","BeModelMedicationRecordOrder.patient","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","The person for which the medication is prescribed.","The person for which the medication is prescribed.","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.patient",1,1,"",""
+"BeModelMedicationRecordOrder.status","BeModelMedicationRecordOrder.status","","","",1,1,"","","","code {[]} {[]}
+","Status of the prescription","Status of the prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.status",1,1,"",""
+"BeModelMedicationRecordOrder.statusReason","BeModelMedicationRecordOrder.statusReason","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Reason for current prescription status","Reason for current prescription status","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.statusReason",0,*,"",""
+"BeModelMedicationRecordOrder.intent","BeModelMedicationRecordOrder.intent","","","",1,1,"","","","code {[]} {[]}
+","Intent of the prescription","Intent of the prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.intent",1,1,"",""
+"BeModelMedicationRecordOrder.product[x]","BeModelMedicationRecordOrder.product[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medication]]}","Product prescribed","Product prescribed","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.product[x]",1,1,"",""
+"BeModelMedicationRecordOrder.encounter","BeModelMedicationRecordOrder.encounter","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+","Encounter on which the medication was prescribed","Encounter on which the medication was prescribed","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.encounter",0,1,"",""
+"BeModelMedicationRecordOrder.requester","BeModelMedicationRecordOrder.requester","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner]]}
+","Who made the prescription","Who made the prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.requester",0,1,"",""
+"BeModelMedicationRecordOrder.reason","BeModelMedicationRecordOrder.reason","","","",0,*,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation]]}
+","Reason or indication for ordering or not ordering the product","Reason or indication for ordering or not ordering the product","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.reason",0,*,"",""
+"BeModelMedicationRecordOrder.groupIdentifier","BeModelMedicationRecordOrder.groupIdentifier","","","",0,1,"","","","Identifier {[]} {[]}
+","Composite request this is part of","Composite request this is part of","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.groupIdentifier",0,1,"",""
+"BeModelMedicationRecordOrder.dosageInstruction","BeModelMedicationRecordOrder.dosageInstruction","","","",0,*,"","","","Dosage {[]} {[]}
+","How the product should be taken/administered","How the product should be taken/administered","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.dosageInstruction",0,*,"",""
+"BeModelMedicationRecordOrder.note","BeModelMedicationRecordOrder.note","","","",0,*,"","","","Annotation {[]} {[]}
+","Additional Information about the prescription","Additional Information about the prescription","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.note",0,*,"",""
+"BeModelMedicationRecordOrder.date","BeModelMedicationRecordOrder.date","","","",0,1,"","","","dateTime {[]} {[]}
+","When prescription was initially made","When prescription was initially made","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.date",0,1,"",""
+"BeModelMedicationRecordOrder.location","BeModelMedicationRecordOrder.location","","","",0,1,"","","","string {[]} {[]}
+","Where the prescription was initially made","Where the prescription was initially made","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.location",0,1,"",""
+"BeModelMedicationRecordOrder.treatmentPlan","BeModelMedicationRecordOrder.treatmentPlan","","","",0,1,"","","","Reference {[]} {[]}
+","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.treatmentPlan",0,1,"",""
+"BeModelMedicationRecordOrder.basedOn","BeModelMedicationRecordOrder.basedOn","","","",0,1,"","","","Reference {[]} {[]}
+","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordOrder.basedOn",0,1,"",""

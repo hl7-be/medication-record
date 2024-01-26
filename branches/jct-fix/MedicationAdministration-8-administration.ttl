@@ -1,0 +1,93 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationAdministration/8-administration> a fhir:MedicationAdministration;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "8-administration"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration";
+       fhir:index 0;
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationAdministration</b><a name=\"8-administration\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationAdministration \"8-administration\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordAdministration.html\">MedRecord Administration profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>identifier</b>: id: 12a0f790-9931-468a-acd2-00bd696ac3c4</p><p><b>status</b>: stopped</p><p><b>statusReason</b>: Drug declined by patient - side effects <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#182897004)</span></p><p><b>medication</b>: Amoxiclav Sandoz 875/125 compr. (séc.) 20x <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#1715127)</span></p><p><b>subject</b>: <span></span></p><p><b>effective</b>: 2021-05-19 04:00:00+0200</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#performer)</span></td><td><span>: Nurse</span></td></tr></table><p><b>request</b>: <span></span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/event-basedOn" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://treatment-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d" ]
+       ]
+     ]
+  ];
+  fhir:MedicationAdministration.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://administration-identifiers.com" ];
+     fhir:Identifier.value [ fhir:value "12a0f790-9931-468a-acd2-00bd696ac3c4" ]
+  ];
+  fhir:MedicationAdministration.status [ fhir:value "stopped"];
+  fhir:MedicationAdministration.statusReason [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       a sct:182897004;
+       fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+       fhir:Coding.code [ fhir:value "182897004" ];
+       fhir:Coding.display [ fhir:value "Drug declined by patient - side effects" ]
+     ]
+  ];
+  fhir:MedicationAdministration.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://cnk.apb.be/codings/cnk_product_codes" ];
+       fhir:Coding.code [ fhir:value "1715127" ];
+       fhir:Coding.display [ fhir:value "Amoxiclav Sandoz 875/125 compr. (séc.) 20x" ]
+     ]
+  ];
+  fhir:MedicationAdministration.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ];
+  fhir:MedicationAdministration.effectiveDateTime [ fhir:value "2021-05-19T16:00:00+02:00"^^xsd:dateTime];
+  fhir:MedicationAdministration.performer [
+     fhir:index 0;
+     fhir:MedicationAdministration.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "performer" ]
+       ]
+     ];
+     fhir:MedicationAdministration.performer.actor [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://performer-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "e84a4e09-03c4-4ad8-832b-7f5172dc97c1" ]
+       ];
+       fhir:Reference.display [ fhir:value "Nurse" ]
+     ]
+  ];
+  fhir:MedicationAdministration.request [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://prescription-identifiers.com" ];
+       fhir:Identifier.value [ fhir:value "69eb6358-6eb6-40e4-972f-33d22c3392c5" ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationAdministration/8-administration.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

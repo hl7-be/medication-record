@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BEMedicationLineOriginType"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td></tr><tr><td style="white-space:nowrap">amb-presc<a name="BEMedicationLineOriginType-amb-presc"> </a></td><td>Ambulatory Prescription</td></tr><tr><td style="white-space:nowrap">hosp-presc<a name="BEMedicationLineOriginType-hosp-presc"> </a></td><td>Hospital Prescription</td></tr><tr><td style="white-space:nowrap">self-medication<a name="BEMedicationLineOriginType-self-medication"> </a></td><td>Self-medication</td></tr><tr><td style="white-space:nowrap">pharm-advice<a name="BEMedicationLineOriginType-pharm-advice"> </a></td><td>Upon pharmaceutical advice</td></tr><tr><td style="white-space:nowrap">extra-formulary-prescription<a name="BEMedicationLineOriginType-extra-formulary-prescription"> </a></td><td>Medication not sold in Belgium, with prescription</td></tr><tr><td style="white-space:nowrap">extra-formulary-otc<a name="BEMedicationLineOriginType-extra-formulary-otc"> </a></td><td>Medication not sold in Belgium, without prescription</td></tr></table></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType"/>
+  <version value="1.0.0"/>
+  <name value="BEMedicationLineOriginType"/>
+  <title value="Medication Line origin type"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Medication Line origin type."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="6"/>
+  <concept>
+    <code value="amb-presc"/>
+    <display value="Ambulatory Prescription"/>
+  </concept>
+  <concept>
+    <code value="hosp-presc"/>
+    <display value="Hospital Prescription"/>
+  </concept>
+  <concept>
+    <code value="self-medication"/>
+    <display value="Self-medication"/>
+  </concept>
+  <concept>
+    <code value="pharm-advice"/>
+    <display value="Upon pharmaceutical advice"/>
+  </concept>
+  <concept>
+    <code value="extra-formulary-prescription"/>
+    <display value="Medication not sold in Belgium, with prescription"/>
+  </concept>
+  <concept>
+    <code value="extra-formulary-otc"/>
+    <display value="Medication not sold in Belgium, without prescription"/>
+  </concept>
+</CodeSystem>

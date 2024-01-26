@@ -1,0 +1,90 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mg1xmeal> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "Dafalgan500mg1xmeal"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"Dafalgan500mg1xmeal\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement \"Dafalgan500mg1xmeal\" </p></div><p><b>status</b>: active</p><p><b>medication</b>: Dafalgan 500mg Odis 16 tabs <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#1609155)</span></p><p><b>subject</b>: <a href=\"Patient1\">Patient1</a></p><p><b>effective</b>: 2022-01-01 --&gt; (ongoing)</p><p><b>derivedFrom</b>: <a href=\"MedicationDispense-Dafalgan500mgDispense.html\">MedicationDispense/Dafalgan500mgDispense</a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: Do , at breakfast</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: Do , at lunch</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: Do , at dinner</p></blockquote></div>"
+  ];
+  fhir:MedicationStatement.status [ fhir:value "active"];
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.code [ fhir:value "1609155" ];
+       fhir:Coding.display [ fhir:value "Dafalgan 500mg Odis 16 tabs" ]
+     ]
+  ];
+  fhir:MedicationStatement.subject [
+     fhir:Reference.reference [ fhir:value "Patient1" ]
+  ];
+  fhir:MedicationStatement.effectivePeriod [
+     fhir:Period.start [ fhir:value "2022-01-01"^^xsd:date ]
+  ];
+  fhir:MedicationStatement.derivedFrom [
+     fhir:index 0;
+     fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/Dafalgan500mgDispense>;
+     fhir:Reference.reference [ fhir:value "MedicationDispense/Dafalgan500mgDispense" ]
+  ];
+  fhir:MedicationStatement.dosage [
+     fhir:index 0;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CM";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CD";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ]
+     ]
+  ], [
+     fhir:index 2;
+     fhir:Dosage.timing [
+       fhir:Timing.repeat [
+         fhir:Timing.repeat.when [
+           fhir:value "CV";
+           fhir:index 0
+         ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mg1xmeal.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

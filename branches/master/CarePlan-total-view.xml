@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="total-view"/>
+  <meta>
+    <profile value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: CarePlan</b><a name="total-view"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource CarePlan &quot;total-view&quot; </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-MedRecordMedicationSummaryView.html">MedRecord Summary View profile</a></p></div><p><b>identifier</b>: id: ba9efa2a-8b0e-4c64-8a35-3e2c059b1899</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>title</b>: Patient Total Medication</p><p><b>description</b>: Overview of the patient's medication</p><p><b>subject</b>: <span/></p><p><b>created</b>: 2021-08-10 10:00:00+0200</p><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td>-</td><td><b>Kind</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Product[x]</b></td><td><b>DailyAmount</b></td></tr><tr><td>*</td><td>MedicationRequest</td><td>in-progress</td><td>, ?ngen-6?</td><td>Aspirine 500 mg (36 effervescent tablets) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (cnk_product_codes#00)</span></td><td>1 TAB</td></tr></table></blockquote><blockquote><p><b>activity</b></p><h3>Details</h3><table class="grid"><tr><td>-</td><td><b>Kind</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Product[x]</b></td><td><b>DailyAmount</b></td></tr><tr><td>*</td><td>MedicationRequest</td><td>in-progress</td><td>, ?ngen-6?</td><td>Acidine 75 mg (20 pieces) <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (cnk_product_codes#00)</span></td><td>1 TAB</td></tr></table></blockquote></div>
+  </text>
+  <identifier>
+    <system value="http://summaries-identifiers.com"/>
+    <value value="ba9efa2a-8b0e-4c64-8a35-3e2c059b1899"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="plan"/>
+  <title value="Patient Total Medication"/>
+  <description value="Overview of the patient's medication"/>
+  <subject>
+    <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+      <value value="64110219106"/>
+    </identifier>
+  </subject>
+  <created value="2021-08-10T10:00:00+02:00"/>
+  <activity>
+    <detail>
+      <kind value="MedicationRequest"/>
+      <status value="in-progress"/>
+      <scheduledTiming>
+        <repeat>
+          <frequency value="1"/>
+          <period value="1"/>
+          <periodUnit value="d"/>
+          <when value="MORN"/>
+        </repeat>
+      </scheduledTiming>
+      <productCodeableConcept>
+        <coding>
+          <system value="https://cnk.apb.be/codings/cnk_product_codes"/>
+          <code value="00"/>
+          <display value="Aspirine 500 mg (36 effervescent tablets)"/>
+        </coding>
+      </productCodeableConcept>
+      <dailyAmount>
+        <value value="1"/>
+        <unit value="TAB"/>
+      </dailyAmount>
+    </detail>
+  </activity>
+  <activity>
+    <detail>
+      <kind value="MedicationRequest"/>
+      <status value="in-progress"/>
+      <scheduledTiming>
+        <repeat>
+          <frequency value="1"/>
+          <period value="1"/>
+          <periodUnit value="d"/>
+          <dayOfWeek value="wed"/>
+          <dayOfWeek value="thu"/>
+          <when value="MORN"/>
+        </repeat>
+      </scheduledTiming>
+      <productCodeableConcept>
+        <coding>
+          <system value="https://cnk.apb.be/codings/cnk_product_codes"/>
+          <code value="00"/>
+          <display value="Acidine 75 mg (20 pieces)"/>
+        </coding>
+      </productCodeableConcept>
+      <dailyAmount>
+        <value value="1"/>
+        <unit value="TAB"/>
+      </dailyAmount>
+    </detail>
+  </activity>
+</CarePlan>

@@ -1,0 +1,65 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod> a fhir:CodeSystem ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "BEMedicationLineDayPeriod"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod</code> defines the following codes:</p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\">IC<a name=\"BEMedicationLineDayPeriod-IC\"> </a></td><td>Between meals</td><td>Between meals</td></tr><tr><td style=\"white-space:nowrap\">ICM<a name=\"BEMedicationLineDayPeriod-ICM\"> </a></td><td>Between breakfast and lunch</td><td>Between breakfast and lunch</td></tr><tr><td style=\"white-space:nowrap\">ICD<a name=\"BEMedicationLineDayPeriod-ICD\"> </a></td><td>Between lunch and dinner</td><td>Between lunch and dinner</td></tr><tr><td style=\"white-space:nowrap\">ICV<a name=\"BEMedicationLineDayPeriod-ICV\"> </a></td><td>Between dinner and hour of sleep</td><td>Between dinner and hour of sleep</td></tr></table></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "1.0.0"] ; # 
+  fhir:name [ fhir:v "BEMedicationLineDayPeriod"] ; # 
+  fhir:title [ fhir:v "Medication line - times of day "] ; # 
+  fhir:status [ fhir:v "active"] ; # 
+  fhir:date [ fhir:v "2023-06-27T09:19:14+00:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:name [ fhir:v "HL7 Belgium" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] [
+     fhir:name [ fhir:v "Bob Smith" ] ;
+     fhir:telecom ( [
+       fhir:system [ fhir:v "email" ] ;
+       fhir:value [ fhir:v "bobsmith@example.com" ] ;
+       fhir:use [ fhir:v "work" ]
+     ] )
+  ] ) ; # 
+  fhir:description [ fhir:v "Medication line - times of day."] ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "http://unstats.un.org/unsd/methods/m49/m49.htm"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "056" ] ;
+       fhir:display [ fhir:v "Belgium" ]
+     ] )
+  ] ) ; # 
+  fhir:content [ fhir:v "complete"] ; # 
+  fhir:count [ fhir:v "4"^^xsd:nonNegativeInteger] ; # 
+  fhir:concept ( [
+     fhir:code [ fhir:v "IC" ] ;
+     fhir:display [ fhir:v "Between meals" ] ;
+     fhir:definition [ fhir:v "Between meals" ]
+  ] [
+     fhir:code [ fhir:v "ICM" ] ;
+     fhir:display [ fhir:v "Between breakfast and lunch" ] ;
+     fhir:definition [ fhir:v "Between breakfast and lunch" ]
+  ] [
+     fhir:code [ fhir:v "ICD" ] ;
+     fhir:display [ fhir:v "Between lunch and dinner" ] ;
+     fhir:definition [ fhir:v "Between lunch and dinner" ]
+  ] [
+     fhir:code [ fhir:v "ICV" ] ;
+     fhir:display [ fhir:v "Between dinner and hour of sleep" ] ;
+     fhir:definition [ fhir:v "Between dinner and hour of sleep" ]
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

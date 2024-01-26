@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="Paracetamol500mg1xCV"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationStatement</b><a name="Paracetamol500mg1xCV"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationStatement &quot;Paracetamol500mg1xCV&quot; </p></div><p><b>status</b>: active</p><p><b>medication</b>: Dafalgan 500mg Odis 16 tabs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#2544948)</span></p><p><b>subject</b>: <a href="Patient1">Patient1</a></p><p><b>effective</b>: 2021-07-01 --&gt; (ongoing)</p><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at dinner</p></blockquote></div>
+  </text>
+  <status value="active"/>
+  <medicationCodeableConcept>
+    <coding>
+      <code value="2544948"/>
+      <display value="Dafalgan 500mg Odis 16 tabs"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient1"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2021-07-01"/>
+  </effectivePeriod>
+  <dosage>
+    <timing>
+      <repeat>
+        <when value="CV"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+</MedicationStatement>

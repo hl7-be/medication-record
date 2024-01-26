@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Condition xmlns="http://hl7.org/fhir">
+  <id value="hypertension-condition"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Condition</b><a name="hypertension-condition"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Condition &quot;hypertension-condition&quot; </p></div><p><b>code</b>: Hypertensive disorder <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (snomed.ct#38341003)</span></p><p><b>subject</b>: <span/></p></div>
+  </text>
+  <code>
+    <coding>
+      <system value="http://snomed.ct"/>
+      <code value="38341003"/>
+      <display value="Hypertensive disorder"/>
+    </coding>
+  </code>
+  <subject>
+    <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+      <value value="64110219106"/>
+    </identifier>
+  </subject>
+</Condition>

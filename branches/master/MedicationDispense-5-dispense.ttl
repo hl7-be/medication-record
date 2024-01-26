@@ -1,0 +1,111 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/5-dispense> a fhir:MedicationDispense;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "5-dispense"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+       fhir:index 0;
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationDispense</b><a name=\"5-dispense\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationDispense &quot;5-dispense&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordDispense.html\">BeMedRecord Dispense profile</a></p></div><p><b>Based On</b>: <span/></p><p><b>status</b>: completed</p><p><b>medication</b>: Paracetabs compr. pellic. (séc.) Forte 30x 1g <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#3440260)</span></p><p><b>subject</b>: <span/></p><blockquote><p><b>performer</b></p><p><b>function</b>: dispenser <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#dispenser)</span></p><p><b>actor</b>: <span>: Pharmacist</span></p></blockquote><blockquote><p><b>performer</b></p><p><b>function</b>: dispensingOrg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#dispensingOrg)</span></p><p><b>actor</b>: <span>: Pharmacy X</span></p></blockquote><p><b>authorizingPrescription</b>: <span/></p><p><b>quantity</b>: 1 Box<span style=\"background: LightGoldenRodYellow\"> (Details: http://standardterms.edqm.eu/PAC code 30009000 = '30009000')</span></p><p><b>whenHandedOver</b>: 2021-07-19 13:00:00+0200</p><h3>Substitutions</h3><table class=\"grid\"><tr><td>-</td><td><b>WasSubstituted</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>Out of Stock <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/3.1.0/CodeSystem-v3-ActReason.html\">ActReason</a>#OS)</span></td></tr></table></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/event-basedOn" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://treatment-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d" ]
+       ]
+     ]
+  ]; # 
+  fhir:MedicationDispense.status [ fhir:value "completed"]; # 
+  fhir:MedicationDispense.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://cnk.apb.be/codings/cnk_product_codes" ];
+       fhir:Coding.code [ fhir:value "3440260" ];
+       fhir:Coding.display [ fhir:value "Paracetabs compr. pellic. (séc.) Forte 30x 1g" ]
+     ]
+  ]; # 
+  fhir:MedicationDispense.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ]; # 
+  fhir:MedicationDispense.performer [
+     fhir:index 0;
+     fhir:MedicationDispense.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "dispenser" ]
+       ]
+     ];
+     fhir:MedicationDispense.performer.actor [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://dispenser-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "7c3aa173-3185-4001-a661-df36a7492798" ]
+       ];
+       fhir:Reference.display [ fhir:value "Pharmacist" ]
+     ]
+  ], [
+     fhir:index 1;
+     fhir:MedicationDispense.performer.function [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.code [ fhir:value "dispensingOrg" ]
+       ]
+     ];
+     fhir:MedicationDispense.performer.actor [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://dispenser-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "5b2e9903-fba7-4ed3-aa76-52d386012ca0" ]
+       ];
+       fhir:Reference.display [ fhir:value "Pharmacy X" ]
+     ]
+  ]; # 
+  fhir:MedicationDispense.authorizingPrescription [
+     fhir:index 0;
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "http://prescription-identifiers.com" ];
+       fhir:Identifier.value [ fhir:value "69eb6358-6eb6-40e4-972f-33d22c3392c5" ]
+     ]
+  ]; # 
+  fhir:MedicationDispense.quantity [
+     fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+     fhir:Quantity.unit [ fhir:value "Box" ];
+     fhir:Quantity.system [ fhir:value "http://standardterms.edqm.eu/PAC" ];
+     fhir:Quantity.code [ fhir:value "30009000" ]
+  ]; # 
+  fhir:MedicationDispense.whenHandedOver [ fhir:value "2021-07-19T13:00:00+02:00"^^xsd:dateTime]; # 
+  fhir:MedicationDispense.substitution [
+     fhir:MedicationDispense.substitution.wasSubstituted [ fhir:value "true"^^xsd:boolean ];
+     fhir:MedicationDispense.substitution.reason [
+       fhir:index 0;
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         fhir:Coding.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-ActReason" ];
+         fhir:Coding.code [ fhir:value "OS" ];
+         fhir:Coding.display [ fhir:value "Out of Stock" ]
+       ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/5-dispense.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

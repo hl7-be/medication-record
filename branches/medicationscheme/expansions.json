@@ -1,0 +1,379 @@
+{
+  "resourceType" : "Bundle",
+  "id" : "0af0570b-d0c1-44a6-ac0b-75f50c19aa91",
+  "meta" : {
+    "lastUpdated" : "2023-06-27T09:19:14.911+00:00"
+  },
+  "type" : "collection",
+  "entry" : [{
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineConsent",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 2 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-BEMedicationLineConsent.html\">Medication Line consent v1.0.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineConsent-consent\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineConsent.html#BEMedicationLineConsent-consent\">consent</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent</td><td>Consent</td><td><div><p>Patient consents with sharing the information</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineConsent-refuse\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineConsent.html#BEMedicationLineConsent-refuse\">refuse</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent</td><td>Refuse</td><td><div><p>Patient doesn't give consent for sharing the information</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineConsent",
+      "version" : "1.0.0",
+      "name" : "BEVSMedicationLineConsent",
+      "title" : "Medication Line consent",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:1008d963-233d-4e0a-9976-fcee6278010b",
+        "timestamp" : "2023-06-27T09:19:50+00:00",
+        "total" : 2,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent|1.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent",
+          "code" : "consent",
+          "display" : "Consent"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent",
+          "code" : "refuse",
+          "display" : "Refuse"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMMedicationLineStatus",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 7 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-BEMedicationLineStatus.html\">Medication Product Type v1.0.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-planned\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-planned\">planned</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Planned</td><td><div><p>Medication is/was planned to be taken</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-ordered\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-ordered\">ordered</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Ordered</td><td><div><p>Medication is prescribed or ordered</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-delivered\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-delivered\">delivered</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Delivered</td><td><div><p>Medication is delivered but there's no information that the patient has started to take it</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-ongoing\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-ongoing\">ongoing</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Ongoing</td><td><div><p>Medication treatment is ongoing</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-suspended\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-suspended\">suspended</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Suspended</td><td><div><p>Medication treatment is suspended</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-completed\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-completed\">completed</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Completed</td><td><div><p>Medication treatment is completed</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineStatus-stopped\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineStatus.html#BEMedicationLineStatus-stopped\">stopped</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</td><td>Stopped</td><td><div><p>Medication treatment is stopped before being completed</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMMedicationLineStatus",
+      "version" : "1.0.0",
+      "name" : "BEVSMMedicationLineStatus",
+      "title" : "Medication line - Treatment status",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:9ab70722-cf09-4a65-93c7-044d5e35bc97",
+        "timestamp" : "2023-06-27T09:19:51+00:00",
+        "total" : 7,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus|1.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "planned",
+          "display" : "Planned"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "ordered",
+          "display" : "Ordered"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "delivered",
+          "display" : "Delivered"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "ongoing",
+          "display" : "Ongoing"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "suspended",
+          "display" : "Suspended"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "completed",
+          "display" : "Completed"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+          "code" : "stopped",
+          "display" : "Stopped"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationProductType",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 9 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-BEMedicationProductType.html\">Medication Product Type v1.0.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-magistral\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-magistral\">magistral</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>Magistral preparation</td><td><div><p>Magistral preparation - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-officinal\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-officinal\">officinal</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>Oficinal preparation</td><td><div><p>Oficinal preparation - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-medicinalproduct\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-medicinalproduct\">medicinalproduct</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>Medicinal product</td><td><div><p>Medicinal product - an actual 'branded' product</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-idmp-mp\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-idmp-mp\">idmp-mp</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>IDMP Medicinal Product</td><td><div><p>IDMP Medicinal Product - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-pharmaceuticalproduct\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-pharmaceuticalproduct\">pharmaceuticalproduct</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>medicinal product - see definitions</td><td><div></div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-idmp-php\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-idmp-php\">idmp-php</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>IDMP Pharmaceutical Product</td><td><div><p>IDMP Pharmaceutical Product - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-package\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-package\">package</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>product package</td><td><div><p>product package - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-idmp-pp\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-idmp-pp\">idmp-pp</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>IDMP Packaged Product</td><td><div><p>IDMP Packaged Product - see definitions</p>\n</div></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationProductType-vmp-group\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationProductType.html#BEMedicationProductType-vmp-group\">vmp-group</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</td><td>VMP Group</td><td><div><p>VMP Group - see definitions</p>\n</div></td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationProductType",
+      "version" : "1.0.0",
+      "name" : "BEVSMedicationProductType",
+      "title" : "Medication Product Type",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:c906d44b-fc73-45f7-8658-8b9ad8e59386",
+        "timestamp" : "2023-06-27T09:19:52+00:00",
+        "total" : 9,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType|1.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "magistral",
+          "display" : "Magistral preparation"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "officinal",
+          "display" : "Oficinal preparation"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "medicinalproduct",
+          "display" : "Medicinal product"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "idmp-mp",
+          "display" : "IDMP Medicinal Product"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "pharmaceuticalproduct",
+          "display" : "medicinal product - see definitions"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "idmp-php",
+          "display" : "IDMP Pharmaceutical Product"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "package",
+          "display" : "product package"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "idmp-pp",
+          "display" : "IDMP Packaged Product"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+          "code" : "vmp-group",
+          "display" : "VMP Group"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineOriginType",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 6 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-BEMedicationLineOriginType.html\">Medication Line origin type v1.0.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-amb-presc\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-amb-presc\">amb-presc</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Ambulatory Prescription</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-hosp-presc\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-hosp-presc\">hosp-presc</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Hospital Prescription</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-self-medication\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-self-medication\">self-medication</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Self-medication</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-pharm-advice\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-pharm-advice\">pharm-advice</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Upon pharmaceutical advice</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-extra-formulary-prescription\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-extra-formulary-prescription\">extra-formulary-prescription</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Medication not sold in Belgium, with prescription</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"http---hl7belgium.org-fhir-medicationscheme-CodeSystem-BEMedicationLineOriginType-extra-formulary-otc\"> </a>\u00a0\u00a0<a href=\"CodeSystem-BEMedicationLineOriginType.html#BEMedicationLineOriginType-extra-formulary-otc\">extra-formulary-otc</a></td><td>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</td><td>Medication not sold in Belgium, without prescription</td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineOriginType",
+      "version" : "1.0.0",
+      "name" : "BEVSMedicationLineOriginType",
+      "title" : "Medication Line origin type",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:5ff378cf-4518-43ad-98ba-e026c2cfaf76",
+        "timestamp" : "2023-06-27T09:20:05+00:00",
+        "total" : 6,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType|1.0.0"
+        }],
+        "contains" : [{
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "amb-presc",
+          "display" : "Ambulatory Prescription"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "hosp-presc",
+          "display" : "Hospital Prescription"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "self-medication",
+          "display" : "Self-medication"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "pharm-advice",
+          "display" : "Upon pharmaceutical advice"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "extra-formulary-prescription",
+          "display" : "Medication not sold in Belgium, with prescription"
+        },
+        {
+          "system" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+          "code" : "extra-formulary-otc",
+          "display" : "Medication not sold in Belgium, without prescription"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/be-vs-dispenser-types",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 7 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html\">BeCdHcParty v2.0.1 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-deptpharmacy\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-deptpharmacy\">deptpharmacy</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>Pharmacy service or department within an organisation</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacist\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacist\">perspharmacist</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>pharmacist</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-orgpharmacy\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-orgpharmacy\">orgpharmacy</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>Independent pharmacy</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacyassistant\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacyassistant\">perspharmacyassistant</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>pharmacy assistant</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacistclinicalbiologist\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacistclinicalbiologist\">perspharmacistclinicalbiologist</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>pharmacist-clinical biologist</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-persdentist\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-persdentist\">persdentist</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>dentist</td></tr><tr><td style=\"white-space:nowrap\"><a name=\"https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-deptdentistry\"> </a>\u00a0\u00a0<a href=\"https://www.ehealth.fgov.be/standards/fhir/core/2.0.1/CodeSystem-cd-hcparty.html#cd-hcparty-deptdentistry\">deptdentistry</a></td><td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td><td>dentistry</td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/be-vs-dispenser-types",
+      "version" : "1.0.0",
+      "name" : "DispenserTypes",
+      "title" : "Dispenser Types",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:01f77b97-751d-4b1e-b6b0-a91594b7a10a",
+        "timestamp" : "2023-06-27T09:20:05+00:00",
+        "total" : 7,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty|2.0.1"
+        }],
+        "contains" : [{
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "deptpharmacy",
+          "display" : "Pharmacy service or department within an organisation"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "perspharmacist",
+          "display" : "pharmacist"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "orgpharmacy",
+          "display" : "Independent pharmacy"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "perspharmacyassistant",
+          "display" : "pharmacy assistant"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "perspharmacistclinicalbiologist",
+          "display" : "pharmacist-clinical biologist"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "persdentist",
+          "display" : "dentist"
+        },
+        {
+          "system" : "https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty",
+          "code" : "deptdentistry",
+          "display" : "dentistry"
+        }]
+      }
+    }
+  },
+  {
+    "fullUrl" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationAdministrationRoute",
+    "resource" : {
+      "resourceType" : "ValueSet",
+      "text" : {
+        "status" : "generated",
+        "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p>This value set contains 0 concepts</p><p style=\"border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px\">Expansion based on <a href=\"CodeSystem-BEMedicationAdministrationRoute.html\">Medication line - route of administration v1.0.0 (CodeSystem)</a></p><table class=\"codes\"><tr><td style=\"white-space:nowrap\"><b>Code</b></td><td><b>System</b></td><td><b>Display</b></td></tr></table></div>"
+      },
+      "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationAdministrationRoute",
+      "version" : "1.0.0",
+      "name" : "BEVSMedicationAdministrationRoute",
+      "title" : "Medication line - route of administration",
+      "status" : "active",
+      "date" : "2023-06-27T09:19:14+00:00",
+      "jurisdiction" : [{
+        "coding" : [{
+          "system" : "http://unstats.un.org/unsd/methods/m49/m49.htm",
+          "code" : "056",
+          "display" : "Belgium"
+        }]
+      }],
+      "expansion" : {
+        "identifier" : "urn:uuid:5fdc6651-e43c-4f22-83db-c51b473bd43d",
+        "timestamp" : "2023-06-27T09:20:08+00:00",
+        "total" : 0,
+        "parameter" : [{
+          "name" : "excludeNested",
+          "valueBoolean" : false
+        },
+        {
+          "name" : "version",
+          "valueUri" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationAdministrationRoute|1.0.0"
+        }]
+      }
+    }
+  }]
+}

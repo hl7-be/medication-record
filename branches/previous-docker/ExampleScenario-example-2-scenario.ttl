@@ -1,0 +1,224 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario> a fhir:ExampleScenario;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "example-2-scenario"];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "generated" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example-2-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: ChangedmedicationDifferentVOSScenario</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11T00:00:00+01:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-prescription</p><p><b>resourceType</b>: MedicationRequest</p><p><b>name</b>: New Prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 2a-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: New dispense</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change VOS from prescription on dispense</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed paracetamol 1000 mg cp (TID) for headaches. In the pharmacy, the pharmacist understands the the patient has problems swallowing the pill itself, so it trades the 1000 mg strength, for 500 mg and indicates that the patient should take 2x500 mg every 8h and not 1x1000mg every 8 hours.</p><p><b>postConditions</b>: A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment Resources Update</p></blockquote></blockquote></blockquote></div>"
+  ];
+  fhir:ExampleScenario.url [ fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario"];
+  fhir:ExampleScenario.version [ fhir:value "0.1.0-test"];
+  fhir:ExampleScenario.name [ fhir:value "ChangedmedicationDifferentVOSScenario"];
+  fhir:ExampleScenario.status [ fhir:value "draft"];
+  fhir:ExampleScenario.experimental [ fhir:value "false"^^xsd:boolean];
+  fhir:ExampleScenario.date [ fhir:value "2019-09-11T00:00:00.000+01:00"^^xsd:dateTime];
+  fhir:ExampleScenario.publisher [ fhir:value "HL7 Belgium"];
+  fhir:ExampleScenario.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7belgium.org" ]
+     ]
+  ];
+  fhir:ExampleScenario.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "BE" ]
+     ]
+  ];
+  fhir:ExampleScenario.actor [
+     fhir:index 0;
+     fhir:ExampleScenario.actor.actorId [ fhir:value "PATIENT" ];
+     fhir:ExampleScenario.actor.type [ fhir:value "person" ];
+     fhir:ExampleScenario.actor.name [ fhir:value "Pia Peters" ]
+  ], [
+     fhir:index 1;
+     fhir:ExampleScenario.actor.actorId [ fhir:value "GP" ];
+     fhir:ExampleScenario.actor.type [ fhir:value "person" ];
+     fhir:ExampleScenario.actor.name [ fhir:value "Dr. Durant" ]
+  ], [
+     fhir:index 2;
+     fhir:ExampleScenario.actor.actorId [ fhir:value "VAULT" ];
+     fhir:ExampleScenario.actor.type [ fhir:value "entity" ];
+     fhir:ExampleScenario.actor.name [ fhir:value "Vault" ]
+  ], [
+     fhir:index 3;
+     fhir:ExampleScenario.actor.actorId [ fhir:value "PHARM" ];
+     fhir:ExampleScenario.actor.type [ fhir:value "person" ];
+     fhir:ExampleScenario.actor.name [ fhir:value "Pharmacist" ]
+  ];
+  fhir:ExampleScenario.instance [
+     fhir:index 0;
+     fhir:ExampleScenario.instance.resourceId [ fhir:value "2a-prescription" ];
+     fhir:ExampleScenario.instance.resourceType [ fhir:value "MedicationRequest" ];
+     fhir:ExampleScenario.instance.name [ fhir:value "New Prescription" ]
+  ], [
+     fhir:index 1;
+     fhir:ExampleScenario.instance.resourceId [ fhir:value "EB" ];
+     fhir:ExampleScenario.instance.resourceType [ fhir:value "Bundle" ];
+     fhir:ExampleScenario.instance.name [ fhir:value "Empty Bundle" ]
+  ], [
+     fhir:index 2;
+     fhir:ExampleScenario.instance.resourceId [ fhir:value "2a-treatmentLine" ];
+     fhir:ExampleScenario.instance.resourceType [ fhir:value "MedicationStatement" ];
+     fhir:ExampleScenario.instance.name [ fhir:value "New Treatment Line" ]
+  ], [
+     fhir:index 3;
+     fhir:ExampleScenario.instance.resourceId [ fhir:value "2a-treatment" ];
+     fhir:ExampleScenario.instance.resourceType [ fhir:value "CarePlan" ];
+     fhir:ExampleScenario.instance.name [ fhir:value "New Treatment" ]
+  ], [
+     fhir:index 4;
+     fhir:ExampleScenario.instance.resourceId [ fhir:value "2a-dispense" ];
+     fhir:ExampleScenario.instance.resourceType [ fhir:value "MedicationDispense" ];
+     fhir:ExampleScenario.instance.name [ fhir:value "New dispense" ]
+  ];
+  fhir:ExampleScenario.process [
+     fhir:index 0;
+     fhir:ExampleScenario.process.title [ fhir:value "Change VOS from prescription on dispense" ];
+     fhir:ExampleScenario.process.description [ fhir:value "description" ];
+     fhir:ExampleScenario.process.preConditions [ fhir:value "The patient visits their GP and is prescribed paracetamol 1000 mg cp (TID) for headaches. In the pharmacy, the pharmacist understands the the patient has problems swallowing the pill itself, so it trades the 1000 mg strength, for 500 mg and indicates that the patient should take 2x500 mg every 8h and not 1x1000mg every 8 hours." ];
+     fhir:ExampleScenario.process.postConditions [ fhir:value "A new treatment and treatmentLine are created, inside the new treatment line, a prescription and dispense are contained and is possible to see which medication is associated with each" ];
+     fhir:ExampleScenario.process.step [
+       fhir:index 0;
+       fhir:ExampleScenario.process.step.process [
+         fhir:index 0;
+         fhir:ExampleScenario.process.title [ fhir:value "Initial Contact" ];
+         fhir:ExampleScenario.process.step [
+           fhir:index 0;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "1" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Goes to appointment" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "PATIENT" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "GP" ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "2" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Get Patient's Medication" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "GP" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.response [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "EB" ]
+             ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "3" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new prescription" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "GP" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.response [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-prescription" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 1;
+       fhir:ExampleScenario.process.step.process [
+         fhir:index 0;
+         fhir:ExampleScenario.process.title [ fhir:value "Treatment resources Creation" ];
+         fhir:ExampleScenario.process.step [
+           fhir:index 0;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "4" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new treatment" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-treatment" ]
+             ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "5" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new treatment Line" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-treatmentLine" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 2;
+       fhir:ExampleScenario.process.step.process [
+         fhir:index 0;
+         fhir:ExampleScenario.process.title [ fhir:value "Dispense" ];
+         fhir:ExampleScenario.process.step [
+           fhir:index 0;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "6" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Get patient's Prescriptions" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "PHARM" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "EB" ]
+             ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "7" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new dispense" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "PHARM" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-dispense" ]
+             ]
+           ]
+         ]
+       ]
+     ], [
+       fhir:index 3;
+       fhir:ExampleScenario.process.step.process [
+         fhir:index 0;
+         fhir:ExampleScenario.process.title [ fhir:value "Treatment Resources Update" ];
+         fhir:ExampleScenario.process.step [
+           fhir:index 0;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "8" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new treatment" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-treatment" ]
+             ]
+           ]
+         ], [
+           fhir:index 1;
+           fhir:ExampleScenario.process.step.operation [
+             fhir:ExampleScenario.process.step.operation.number [ fhir:value "9" ];
+             fhir:ExampleScenario.process.step.operation.name [ fhir:value "Create new treatment Line" ];
+             fhir:ExampleScenario.process.step.operation.initiator [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.receiver [ fhir:value "VAULT" ];
+             fhir:ExampleScenario.process.step.operation.request [
+               fhir:ExampleScenario.instance.containedInstance.resourceId [ fhir:value "2a-treatmentLine" ]
+             ]
+           ]
+         ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

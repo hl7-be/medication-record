@@ -1,0 +1,56 @@
+@startuml
+
+
+Title Dispense of medication before a existing prescription
+
+actor "Pia Peters" as PATIENT
+actor "Dr. Durant" as GP
+participant "Vault" as VAULT
+actor "Pharmacist" as PHARM
+
+    
+    
+    
+    
+    
+group Initial Contact
+
+PATIENT -> GP : Goes to appointment\n
+VAULT -> GP : Get Patient's Medication\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-prescription Diclofenac Prescription]]
+end
+    
+group Treatment resources Creation
+
+VAULT -> VAULT : Create new treatment\n[[ExampleScenario-example-3-scenario-resources.html#3-treatment New Treatment]]
+VAULT -> VAULT : Create new treatment Line\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-1-provenance Link first Prescription and treatmentLine]]
+end
+    
+group Dispense
+
+VAULT -> PHARM : Get patient's Prescriptions\n[[ExampleScenario-example-3-scenario-resources.html#EB Empty Bundle]]
+PHARM -> VAULT : Dispense original dispense\n[[ExampleScenario-example-3-scenario-resources.html#3-dispense Diclofenac Dispense ]]
+PHARM -> VAULT : Dispense ancilliary product\n[[ExampleScenario-example-3-scenario-resources.html#3-2-dispense Pantoprazole Dispense [ancilliary product]]]
+end
+    
+group Treatment Line Creation and resource Linking
+
+VAULT -> VAULT : New Treatment Line for anciiliary product\n[[ExampleScenario-example-3-scenario-resources.html#3-treatmentLine New Treatment Line]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-2-provenance Link first dispense and treatmentLine]]
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-3-provenance Link second dispense and treatmentLine]]
+end
+    
+group Reporting and new dispense
+
+PHARM -> GP : Notification of a dispense\n
+GP -> VAULT : Create new prescription\n[[ExampleScenario-example-3-scenario-resources.html#3-2-prescription Pantoprazole Prescription]]
+end
+    
+group Linking
+
+VAULT -> VAULT : Resource Linking\n[[ExampleScenario-example-3-scenario-resources.html#3-4-provenance Link second Prescription and treatmentLine]]
+end
+  
+
+@enduml

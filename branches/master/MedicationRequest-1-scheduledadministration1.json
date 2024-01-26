@@ -1,0 +1,36 @@
+{
+  "resourceType" : "MedicationRequest",
+  "id" : "1-scheduledadministration1",
+  "meta" : {
+    "profile" : ["http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationRequest</b><a name=\"1-scheduledadministration1\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationRequest &quot;1-scheduledadministration1&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordMedicationScheduledAdministration.html\">MedRecord Scheduled Administration profile</a></p></div><p><b>identifier</b>: id: f56b6358-6eb6-40e4-972f-33d22c3392768</p><p><b>status</b>: active</p><p><b>intent</b>: instance-order</p><p><b>medication</b>: Amlodipin Sandoz tabl. (deelb.) Besilaat 100x 5mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#2399640)</span></p><p><b>subject</b>: <span/></p><p><b>authoredOn</b>: 2021-07-19 09:00:00+0200</p><h3>DosageInstructions</h3><table class=\"grid\"><tr><td>-</td><td><b>Timing</b></td></tr><tr><td>*</td><td>Events: 2021-07-19 10:00:00+0200</td></tr></table></div>"
+  },
+  "identifier" : [{
+    "system" : "http://prescription-identifiers.com",
+    "value" : "f56b6358-6eb6-40e4-972f-33d22c3392768"
+  }],
+  "status" : "active",
+  "intent" : "instance-order",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+      "code" : "2399640",
+      "display" : "Amlodipin Sandoz tabl. (deelb.) Besilaat 100x 5mg"
+    }]
+  },
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  },
+  "authoredOn" : "2021-07-19T09:00:00+02:00",
+  "dosageInstruction" : [{
+    "timing" : {
+      "event" : ["2021-07-19T10:00:00+02:00"]
+    }
+  }]
+}

@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="ea3f3075-1914-42dc-a06a-aebf776ade8e"/>
+  <meta>
+    <lastUpdated value="2022-01-28T15:30:41.900+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/medication-substitution-dispense-v1"/>
+    <resource>
+      <ValueSet>
+        <id value="medication-substitution-dispense-v1"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 5 concepts</p>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html">ActReason v2.0.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://terminology.hl7.org/3.0.0/ValueSet-v3-SubstanceAdminSubstitutionReason.html">SubstanceAdminSubstitutionReason v2.0.0 (ValueSet)</a>
+                </li>
+              </ul>
+            </div>
+            <p>All codes in this table are from the system 
+              <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html">
+                <code>http://terminology.hl7.org/CodeSystem/v3-ActReason</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-CT"> </a>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-CT">CT</a>
+                </td>
+                <td>continuing therapy</td>
+                <td>Indicates that the decision to substitute or to not substitute was driven by a desire to maintain consistency with a pre-existing therapy. I.e. The performer provided the same item/service as had been previously provided rather than providing exactly what was ordered, or rather than substituting with a lower-cost equivalent.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-FP"> </a>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-FP">FP</a>
+                </td>
+                <td>formulary policy</td>
+                <td>Indicates that the decision to substitute or to not substitute was driven by a policy expressed within the formulary.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-OS"> </a>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-OS">OS</a>
+                </td>
+                <td>out of stock</td>
+                <td>In the case of &#39;substitution&#39;, indicates that the substitution occurred because the ordered item was not in stock. In the case of &#39;no substitution&#39;, indicates that a cheaper equivalent was not substituted because it was not in stock.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-RR"> </a>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-RR">RR</a>
+                </td>
+                <td>regulatory requirement</td>
+                <td>Indicates that the decision to substitute or to not substitute was driven by a jurisdictional regulatory requirement mandating or prohibiting substitution.</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-UNABLE"> </a>
+                  <a href="http://terminology.hl7.org/3.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-UNABLE">UNABLE</a>
+                </td>
+                <td>unable to use</td>
+                <td>**Description:**&lt;The patient is not (or is no longer) able to use the medication in a manner prescribed.
+
+**Example:**CanaTMt swallow.</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/medication-substitution-dispense-v1"/>
+        <version value="0.1.0-test"/>
+        <name value="SubstitutionReason"/>
+        <title value="Medication Substitution Value Set"/>
+        <status value="active"/>
+        <date value="2022-01-28T15:30:41+00:00"/>
+        <publisher value="HL7 Belgium"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7belgium.org"/>
+          </telecom>
+        </contact>
+        <description value="Value set for substituting a medication on dispense."/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:477ddeac-1798-4e25-9343-7e194733d747"/>
+          <timestamp value="2022-01-28T15:31:26+00:00"/>
+          <total value="5"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/ValueSet/v3-SubstanceAdminSubstitutionReason|2.0.0"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-ActReason|2.0.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <abstract value="false"/>
+            <inactive value="false"/>
+            <code value="CT"/>
+            <display value="continuing therapy"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <abstract value="false"/>
+            <inactive value="false"/>
+            <code value="FP"/>
+            <display value="formulary policy"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <abstract value="false"/>
+            <inactive value="false"/>
+            <code value="OS"/>
+            <display value="out of stock"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <abstract value="false"/>
+            <inactive value="false"/>
+            <code value="RR"/>
+            <display value="regulatory requirement"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="UNABLE"/>
+            <display value="unable to use"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-medication-summary-types"/>
+    <resource>
+      <ValueSet>
+        <id value="be-vs-medication-summary-types"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 2 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-be-cs-medication-summary-types.html">Medication Summary Types CodeSystem v0.1.0-test (CodeSystem)</a>
+            </p>
+            <p>All codes in this table are from the system 
+              <a href="CodeSystem-be-cs-medication-summary-types.html">
+                <code>http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types</code>
+              </a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-kmehr-ms-5.6"> </a>
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-kmehr-ms-5.466">kmehr-ms-5.6</a>
+                </td>
+                <td>Belgian Medication Schema v5.6 - 09/2018</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-kmehr-ms-5.5"> </a>
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-kmehr-ms-5.465">kmehr-ms-5.5</a>
+                </td>
+                <td>Belgian Medication Schema v5.5 - 12-2017</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-medication-summary-types"/>
+        <version value="0.1.0-test"/>
+        <name value="BeVSMedicationSummaryTypes"/>
+        <title value="Medication Summary Types Value Set"/>
+        <status value="active"/>
+        <date value="2022-01-28T15:30:41+00:00"/>
+        <publisher value="HL7 Belgium"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7belgium.org"/>
+          </telecom>
+        </contact>
+        <description value="Valueset -  Medication Summary types"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:2ef7a404-c235-4b46-8314-91a2403fe78d"/>
+          <timestamp value="2022-01-28T15:31:41+00:00"/>
+          <total value="2"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types|0.1.0-test"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="kmehr-ms-5.6"/>
+            <display value="Belgian Medication Schema v5.6 - 09/2018"/>
+          </contains>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="kmehr-ms-5.5"/>
+            <display value="Belgian Medication Schema v5.5 - 12-2017"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

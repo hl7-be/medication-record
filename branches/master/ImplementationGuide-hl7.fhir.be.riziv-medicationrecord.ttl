@@ -1,0 +1,3218 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord> a fhir:ImplementationGuide;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "hl7.fhir.be.riziv-medicationrecord"]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><h2>MedicationRecord</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord</pre><div><p>Medication Record</p>\n</div></div>"
+  ]; # 
+  fhir:ImplementationGuide.url [ fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord"]; # 
+  fhir:ImplementationGuide.version [ fhir:value "0.1.0-test"]; # 
+  fhir:ImplementationGuide.name [ fhir:value "MedicationRecord"]; # 
+  fhir:ImplementationGuide.title [ fhir:value "MedicationRecord"]; # 
+  fhir:ImplementationGuide.status [ fhir:value "draft"]; # 
+  fhir:ImplementationGuide.experimental [ fhir:value "false"^^xsd:boolean]; # 
+  fhir:ImplementationGuide.date [ fhir:value "2023-02-03T14:12:27+00:00"^^xsd:dateTime]; # 
+  fhir:ImplementationGuide.publisher [ fhir:value "HL7 Belgium"]; # 
+  fhir:ImplementationGuide.contact [
+     fhir:index 0;
+     fhir:ContactDetail.telecom [
+       fhir:index 0;
+       fhir:ContactPoint.system [ fhir:value "url" ];
+       fhir:ContactPoint.value [ fhir:value "http://hl7belgium.org" ]
+     ]
+  ]; # 
+  fhir:ImplementationGuide.description [ fhir:value "Medication Record"]; # 
+  fhir:ImplementationGuide.jurisdiction [
+     fhir:index 0;
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "urn:iso:std:iso:3166" ];
+       fhir:Coding.code [ fhir:value "BE" ]
+     ]
+  ]; # 
+  fhir:ImplementationGuide.packageId [ fhir:value "hl7.fhir.be.riziv-medicationrecord"]; # 
+  fhir:ImplementationGuide.license [ fhir:value "CC0-1.0"]; # 
+  fhir:ImplementationGuide.fhirVersion [
+     fhir:value "4.3.0";
+     fhir:index 0
+  ]; # 
+  fhir:ImplementationGuide.dependsOn [
+     fhir:index 0;
+     fhir:Element.id [ fhir:value "hl7tx" ];
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/implementationguide-dependency-comment" ];
+       fhir:Extension.valueMarkdown [ fhir:value "Automatically added as a dependency - all IGs depend on HL7 Terminology" ]
+     ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "http://terminology.hl7.org/ImplementationGuide/hl7.terminology";
+       fhir:link <http://terminology.hl7.org/ImplementationGuide/hl7.terminology>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.terminology.r4" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "5.0.0" ]
+  ], [
+     fhir:index 1;
+     fhir:Element.id [ fhir:value "fhir" ];
+     fhir:ImplementationGuide.dependsOn.uri [
+       fhir:value "https://www.ehealth.fgov.be/standards/fhir/core";
+       fhir:link <https://www.ehealth.fgov.be/standards/fhir/core>
+     ];
+     fhir:ImplementationGuide.dependsOn.packageId [ fhir:value "hl7.fhir.be.core" ];
+     fhir:ImplementationGuide.dependsOn.version [ fhir:value "2.0.1" ]
+  ]; # 
+  fhir:ImplementationGuide.definition [
+     fhir:Element.extension [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "CI Build" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-binary" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input\\cql" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludettl" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "copyrightyear" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "2019+" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "releaselabel" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "CI Build" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-binary" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input\\cql" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludettl" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "show-inherited-invariants" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "false" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "autoload-resources" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-liquid" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/liquid" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-qa" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/qa" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-temp" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "temp/pages" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-output" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "output" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-suppressed-warnings" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "input/ignoreWarnings.txt" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "path-history" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/history.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-html" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "template-md" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "template-page-md.html" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-contact" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-context" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-copyright" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-jurisdiction" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-license" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-publisher" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "apply-version" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "active-tables" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "fmm-definition" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "http://hl7.org/fhir/versions.html#maturity" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "propagate-status" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "excludelogbinaryformat" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "code" ];
+         fhir:Extension.valueString [ fhir:value "tabbed-snapshots" ]
+       ], [
+         fhir:index 1;
+         fhir:Extension.url [ fhir:value "value" ];
+         fhir:Extension.valueString [ fhir:value "true" ]
+       ];
+       fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/ig-parameter" ]
+     ];
+     fhir:ImplementationGuide.definition.grouping [
+       fhir:index 0;
+       fhir:Element.id [ fhir:value "medicationrecord-schema" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Medication Record - schema" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Conformance artifacts for Medication Record, to meet the scope of the Medication Schema" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.id [ fhir:value "medicationrecord-models" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Medication Record - models" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Medication Record Models" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.id [ fhir:value "medicationrecord" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Medication Record - future conformance" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Medication Record - artifacts that are related to the more advanced features and scope of the Medication Record, beyond the Medication Schema" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.id [ fhir:value "medicationrecord-validatingexamples" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Medication Record - Validating examples" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Medication Record / Medication Schema examples and scenarios for validation" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.id [ fhir:value "vocabulary" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Vocabulary" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Terminology and Vocabulary" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.id [ fhir:value "medicationdispense" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Medication Dispense" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Medication Dispense" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.id [ fhir:value "supporting" ];
+       fhir:ImplementationGuide.definition.grouping.name [ fhir:value "Supporting Resources" ];
+       fhir:ImplementationGuide.definition.grouping.description [ fhir:value "Supporting resources used in the examples" ]
+     ];
+     fhir:ImplementationGuide.definition.resource [
+       fhir:index 0;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/medication-substitution-dispense-v1>;
+         fhir:Reference.reference [ fhir:value "ValueSet/medication-substitution-dispense-v1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value Set - Medication Substitution" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Value Set - Medication Substitution" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 1;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-medication-summary-types>;
+         fhir:Reference.reference [ fhir:value "ValueSet/be-vs-medication-summary-types" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Value Set - Medication Summary Types" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Value Set - Medication Summary Types" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 2;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CodeSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types>;
+         fhir:Reference.reference [ fhir:value "CodeSystem/be-cs-medication-summary-types" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "VCodeSystem - Medication Summary Types" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "CodeSystem - Medication Summary Types" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 3;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "NamingSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/NamingSystem/be-ns-prescription-ids>;
+         fhir:Reference.reference [ fhir:value "NamingSystem/be-ns-prescription-ids" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Naming System - Prescription Ids" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Naming System - Prescription Ids" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 4;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "NamingSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/NamingSystem/be-ns-cnk-codes>;
+         fhir:Reference.reference [ fhir:value "NamingSystem/be-ns-cnk-codes" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Naming System - be-ns-cnk-codes" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Naming System - be-ns-cnk-codes" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 5;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "NamingSystem" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/NamingSystem/be-ns-product-package-type>;
+         fhir:Reference.reference [ fhir:value "NamingSystem/be-ns-product-package-type" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Naming System - be-ns-product-package-type" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Naming System - be-ns-product-package-type" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "terminology" ]
+     ], [
+       fhir:index 6;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-model-medication-dispense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/be-model-medication-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Logical Model be-model-medication-dispense" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "be-model-medication-dispense" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 7;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/KMEHRv58>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/KMEHRv58" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "KMEHR Medication Schema v5.8 Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "KMEHR Medication Schema v5.8 Logical Model (for reference)" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 8;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecord>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecord" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 9;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordAdministration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Administration detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Administration detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 10;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordDispense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Dispense detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Dispense detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 11;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordOrder>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordOrder" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Prescription detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Prescription detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 12;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordSummaryView>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordSummaryView" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Medication Summary View detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Medication Summary View detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 13;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatment>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordTreatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Medication Treatment detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Medication Treatment detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 14;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatmentLine>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordTreatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Medication Treatment Line detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Medication Treatment Line detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 15;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordUsage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationRecordUsage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Usage Report detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Usage Report detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 16;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationScheduledAdministration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationScheduledAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Logical Model - Scheduled Administration detail" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Logical Model - Scheduled Administration detail Logical Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 17;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:logical" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationView>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeModelMedicationView" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "MedicationView - Global Model" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication View Global Model" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-models" ]
+     ], [
+       fhir:index 18;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecord>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecord" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Bundle Document profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Bundle Document profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-schema" ]
+     ], [
+       fhir:index 19;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecord-comp>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecord-comp" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Composition profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Composition profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-schema" ]
+     ], [
+       fhir:index 20;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordTreatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Treatment profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Treatment profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-schema" ]
+     ], [
+       fhir:index 21;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordTreatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Treatment Line profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Treatment Line profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-schema" ]
+     ], [
+       fhir:index 22;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Administration profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Administration profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 23;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Dispense profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Dispense profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 24;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordMedicationScheduledAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Scheduled Administration profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Scheduled Administration profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 25;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordMedicationSummaryView" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Summary View profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Summary View profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 26;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordOrder" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Prescription profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Prescription profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 27;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/MedRecordUsage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication Record Usage profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication Record Usage profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 28;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:extension" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/related-tl>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/related-tl" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Extension - Related Treatment Line" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Extension - Related Treatment Line" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 29;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/med-view-comp>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/med-view-comp" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication view Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Medication view Profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 30;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/be-medicationdispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "be Medicationdispense Profile" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "be Medicationdispense Profile" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord" ]
+     ], [
+       fhir:index 31;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-1-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-1-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 1 - Changing brand name in the same VOS" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescribed branded medication is changed by another branded medication from the same VOS-cluster" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 32;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-2-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-2-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 2 - Changing by another medication from a different VOS" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescribed medication is changed by another medication from a different VOS-cluster" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 33;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-3-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-3-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 3 - Dispense medication before the prescription is available" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dispense of a medication that is made before an existing prescription" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 34;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-4-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-4-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 4 - Dispense of prescribed medication and of a product without a prescription" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dispense of two products. One that has a prescription and other that does not (and does not need one)." ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 35;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-5-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 5 - Dispense of new brand medication because the old is unavailable" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescription that is made by brand name and the pharmacist changes the brand name for another brand name in the same VOS - Cluster because there is no stock." ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 36;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-6-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-6-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 6 - Refusal to dispense the prescribed medication" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescription that is made by VOS and the pharmacist refuses to dispense the medication due to interaction with previous medication." ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 37;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-7-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-7-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 7 - Dispense of medication that was prescribed to take if needed, but was not taken" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescription that is made by VOS and to take only if needed and the pharmacist dispenses it. Then it is reported that the medication was not taken at all." ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 38;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-8-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-8-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 8 - Dispense of medication that was prescribed, but not taken till the end" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Prescription that is made by VOS and the pharmacist dispenses it. But at the time of administration, the treatment is stopped due to a reaction." ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 39;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ExampleScenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario>;
+         fhir:Reference.reference [ fhir:value "ExampleScenario/example-13-scenario" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "ExampleScenario 13 - Dispense of OTC medication for acute symptons" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dispense of medication OTC and how treatment resources should be handled" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "medicationrecord-validatingexamples" ]
+     ], [
+       fhir:index 40;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BePatient>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BePatient" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Be Patient" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Be Patient" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 41;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BePractitioner>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BePractitioner" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Be Practitioner" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Be Practitioner" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 42;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeOrganization>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/BeOrganization" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Be Organization" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Be Organization" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 43;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/hypertension-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/hypertension-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "hypertension-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hypertension-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 44;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/headache-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/headache-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "headache-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "headache-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 45;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/arthritis-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/arthritis-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "arthritis-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "arthritis-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 46;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/toothache-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/toothache-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "toothache-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "toothache-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 47;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/diarrhea-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/diarrhea-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "diarrhea-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "diarrhea-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 48;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/pharyngitis-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/pharyngitis-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "pharyngitis-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "pharyngitis-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 49;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/reflux-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/reflux-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "reflux-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "reflux-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 50;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Condition/hyperlipidemia-condition>;
+         fhir:Reference.reference [ fhir:value "Condition/hyperlipidemia-condition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "hyperlipidemia-condition" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "hyperlipidemia-condition" ];
+       fhir:ImplementationGuide.definition.resource.groupingId [ fhir:value "supporting" ]
+     ], [
+       fhir:index 51;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/1-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/1-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for Hypertension" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 52;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/3-3-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/3-3-provenance" ]
+       ]
+     ], [
+       fhir:index 53;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/15-treatment-2>;
+         fhir:Reference.reference [ fhir:value "CarePlan/15-treatment-2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for preventing stroke" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 54;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/1-scheduledadministration1>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/1-scheduledadministration1" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 1-scheduledadministration1" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 55;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/13-2-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/13-2-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 13-2-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 56;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/6-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/6-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 6-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 57;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/4-2-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/4-2-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 4-2-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 58;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/2-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/2-2-provenance" ]
+       ]
+     ], [
+       fhir:index 59;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/13-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/13-1-provenance" ]
+       ]
+     ], [
+       fhir:index 60;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/8-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/8-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 8-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 61;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mgmix>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Dafalgan500mgmix" ]
+       ]
+     ], [
+       fhir:index 62;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/4-1-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/4-1-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 4-1-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 63;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/1-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/1-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 1-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 64;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/8-4-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/8-4-provenance" ]
+       ]
+     ], [
+       fhir:index 65;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/7-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/7-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 7-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 66;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/2a-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/2a-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 2a-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 67;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/10-2-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/10-2-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 10-2-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 68;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/3-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/3-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 3-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 69;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-scheduleAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-scheduleAdministration" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 70;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/6-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/6-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 6-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 71;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/13-3-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/13-3-provenance" ]
+       ]
+     ], [
+       fhir:index 72;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/13-1-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/13-1-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 13-1-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 73;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/5-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/5-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 5-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 74;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/3-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/3-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 3-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 75;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/4-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/4-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 4-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 76;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/8-3-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/8-3-provenance" ]
+       ]
+     ], [
+       fhir:index 77;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/2a-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/2a-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for headache" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 78;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/1-scheduledadministration2>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/1-scheduledadministration2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 1-scheduledadministration2" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 79;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/8-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/8-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 8-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 80;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/Dafalgan500mgDispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/Dafalgan500mgDispense" ]
+       ]
+     ], [
+       fhir:index 81;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/13-1-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/13-1-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 13-1-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 82;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/7-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/7-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 7-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 83;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/3-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/3-1-provenance" ]
+       ]
+     ], [
+       fhir:index 84;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/7-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/7-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Diarrhea Prevention" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 85;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/5-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/5-provenance" ]
+       ]
+     ], [
+       fhir:index 86;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/10-1-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/10-1-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 10-1-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 87;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/8-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/8-2-provenance" ]
+       ]
+     ], [
+       fhir:index 88;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/2a-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/2a-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 2a-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 89;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "StructureDefinition:resource" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/sche-view-comp>;
+         fhir:Reference.reference [ fhir:value "StructureDefinition/sche-view-comp" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Medication View profile -second visualization" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "The profile for how to organize the information in a medication View 2" ]
+     ], [
+       fhir:index 90;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/13-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/13-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Headache" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 91;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Co-Bisoprolol25-625mg1xACMd>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Co-Bisoprolol25-625mg1xACMd" ]
+       ]
+     ], [
+       fhir:index 92;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/3-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/3-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 3-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 93;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/6-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/6-2-provenance" ]
+       ]
+     ], [
+       fhir:index 94;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/5-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/5-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 5-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 95;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/6-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/6-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 6-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 96;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/4-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/4-2-provenance" ]
+       ]
+     ], [
+       fhir:index 97;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Bundle" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Bundle/EB>;
+         fhir:Reference.reference [ fhir:value "Bundle/EB" ]
+       ]
+     ], [
+       fhir:index 98;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/2a-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/2a-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 2a-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 99;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/15-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/15-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 15-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 100;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/15-treatmentLine-2>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/15-treatmentLine-2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 15-treatmentLine-2" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 101;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/13-2-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/13-2-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 13-2-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 102;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/4-1-treatmentLine>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/4-1-treatmentLine" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 4-1-treatmentLine" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+       ]
+     ], [
+       fhir:index 103;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/total-view>;
+         fhir:Reference.reference [ fhir:value "CarePlan/total-view" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient Total Medication" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Overview of the patient's medication" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView>
+       ]
+     ], [
+       fhir:index 104;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Co-Bisoprolol25-625mg1xACM>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Co-Bisoprolol25-625mg1xACM" ]
+       ]
+     ], [
+       fhir:index 105;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration-4>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-scheduleAdministration-4" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-scheduleAdministration-4" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 106;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration-3>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-scheduleAdministration-3" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-scheduleAdministration-3" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 107;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Asaflow500mg1xACM>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Asaflow500mg1xACM" ]
+       ]
+     ], [
+       fhir:index 108;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/8-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/8-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 8-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 109;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/3-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/3-2-provenance" ]
+       ]
+     ], [
+       fhir:index 110;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/6-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/6-provenance" ]
+       ]
+     ], [
+       fhir:index 111;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/10-3-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/10-3-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 10-3-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 112;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/5-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/5-2-provenance" ]
+       ]
+     ], [
+       fhir:index 113;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/4-2-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/4-2-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 4-2-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 114;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration-2>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-scheduleAdministration-2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-scheduleAdministration-2" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+       ]
+     ], [
+       fhir:index 115;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/8-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/8-1-provenance" ]
+       ]
+     ], [
+       fhir:index 116;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/5-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/5-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for headache" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 117;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/example-dispense-hospital>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/example-dispense-hospital" ]
+       ]
+     ], [
+       fhir:index 118;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Asaflow500mg1xACMd>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Asaflow500mg1xACMd" ]
+       ]
+     ], [
+       fhir:index 119;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Dafalgan500mg1xmeal>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Dafalgan500mg1xmeal" ]
+       ]
+     ], [
+       fhir:index 120;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "ValueSet" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-dispenser-types>;
+         fhir:Reference.reference [ fhir:value "ValueSet/be-vs-dispenser-types" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Dispenser Types" ];
+       fhir:ImplementationGuide.definition.resource.description [ fhir:value "Dispenser Types - from hcparty" ]
+     ], [
+       fhir:index 121;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/2-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/2-1-provenance" ]
+       ]
+     ], [
+       fhir:index 122;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/7-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/7-2-provenance" ]
+       ]
+     ], [
+       fhir:index 123;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Composition/1-scheduled-view>;
+         fhir:Reference.reference [ fhir:value "Composition/1-scheduled-view" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Scheduled View for Patient X" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/sche-view-comp";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/sche-view-comp>
+       ]
+     ], [
+       fhir:index 124;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 125;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/8-usage>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/8-usage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 8-usage" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage>
+       ]
+     ], [
+       fhir:index 126;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/7-usage>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/7-usage" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationStatement - 7-usage" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage>
+       ]
+     ], [
+       fhir:index 127;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/13-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/13-2-provenance" ]
+       ]
+     ], [
+       fhir:index 128;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/1-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/1-1-provenance" ]
+       ]
+     ], [
+       fhir:index 129;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/5-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/5-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 5-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 130;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/7-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/7-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 7-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 131;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/example-minimal-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/example-minimal-dispense" ]
+       ]
+     ], [
+       fhir:index 132;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/1-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/1-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 1-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 133;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationStatement" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/Paracetamol500mg1xCV>;
+         fhir:Reference.reference [ fhir:value "MedicationStatement/Paracetamol500mg1xCV" ]
+       ]
+     ], [
+       fhir:index 134;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/7-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/7-1-provenance" ]
+       ]
+     ], [
+       fhir:index 135;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/example-dispense-communitypharmacy-1med>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/example-dispense-communitypharmacy-1med" ]
+       ]
+     ], [
+       fhir:index 136;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/3-4-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/3-4-provenance" ]
+       ]
+     ], [
+       fhir:index 137;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/3-2-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/3-2-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 3-2-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 138;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/15-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/15-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for acid reflux" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 139;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/1-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/1-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 1-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 140;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/3-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/3-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for Arthritis" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 141;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/6-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/6-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for Hyperlipidemia" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 142;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/13-3-dispense>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/13-3-dispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationDispense - 13-3-dispense" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense>
+       ]
+     ], [
+       fhir:index 143;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/4-3-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/4-3-provenance" ]
+       ]
+     ], [
+       fhir:index 144;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Composition" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Composition/1-summary-view>;
+         fhir:Reference.reference [ fhir:value "Composition/1-summary-view" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Summary View for Patient X" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/med-view-comp";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/med-view-comp>
+       ]
+     ], [
+       fhir:index 145;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationAdministration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationAdministration/8-administration>;
+         fhir:Reference.reference [ fhir:value "MedicationAdministration/8-administration" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationAdministration - 8-administration" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration>
+       ]
+     ], [
+       fhir:index 146;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/4-1-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/4-1-provenance" ]
+       ]
+     ], [
+       fhir:index 147;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/1-2-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/1-2-provenance" ]
+       ]
+     ], [
+       fhir:index 148;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-prescription-2>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/15-prescription-2" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 15-prescription-2" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 149;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/4-2-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/4-2-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for Toothache" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 150;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationDispense" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationDispense/medication-dispense-example-2>;
+         fhir:Reference.reference [ fhir:value "MedicationDispense/medication-dispense-example-2" ]
+       ]
+     ], [
+       fhir:index 151;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "MedicationRequest" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/3-2-prescription>;
+         fhir:Reference.reference [ fhir:value "MedicationRequest/3-2-prescription" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Example MedicationRequest - 3-2-prescription" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder>
+       ]
+     ], [
+       fhir:index 152;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "Provenance" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/Provenance/7-3-provenance>;
+         fhir:Reference.reference [ fhir:value "Provenance/7-3-provenance" ]
+       ]
+     ], [
+       fhir:index 153;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/week-view>;
+         fhir:Reference.reference [ fhir:value "CarePlan/week-view" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Patient scheduled medication for week x" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView>
+       ]
+     ], [
+       fhir:index 154;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/8-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/8-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treament of pharyngitis" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ], [
+       fhir:index 155;
+       fhir:Element.extension [
+         fhir:index 0;
+         fhir:Extension.url [ fhir:value "http://hl7.org/fhir/tools/StructureDefinition/resource-information" ];
+         fhir:Extension.valueString [ fhir:value "CarePlan" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.reference [
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/CarePlan/4-1-treatment>;
+         fhir:Reference.reference [ fhir:value "CarePlan/4-1-treatment" ]
+       ];
+       fhir:ImplementationGuide.definition.resource.name [ fhir:value "Treatment for Hyperlipidemia" ];
+       fhir:ImplementationGuide.definition.resource.exampleCanonical [
+         fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment";
+         fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment>
+       ]
+     ];
+     fhir:ImplementationGuide.definition.page [
+       fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "toc.html" ];
+       fhir:ImplementationGuide.definition.page.title [ fhir:value "Table of Contents" ];
+       fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ];
+       fhir:ImplementationGuide.definition.page.page [
+         fhir:index 0;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "index.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Home Page" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 1;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "howto.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "How to read this document" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+       ], [
+         fhir:index 2;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "glossary.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Glossary" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+       ], [
+         fhir:index 3;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "functional-description.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Functional Description" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "usecases-dispense.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Use Cases - Dispense" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ]
+       ], [
+         fhir:index 4;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "The Belgian Medication Record" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-privacy-access.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Requirements - Privacy and Access Control" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 1;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-scenarios.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Medication Record Scenarios" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+           fhir:ImplementationGuide.definition.page.page [
+             fhir:index 0;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-scenario-1.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Scenario 1 - concurrent medications" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ], [
+             fhir:index 1;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-scenario-2.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Scenario 2 - medication protocols" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ]
+         ], [
+           fhir:index 2;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-definitions.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Definitions - Medication Record" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 3;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-requirements.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Requirements - Medication Record" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+           fhir:ImplementationGuide.definition.page.page [
+             fhir:index 0;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medication-granularity.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Medication Levels" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ], [
+             fhir:index 1;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medication-class-group.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Medication Classification and grouping" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ]
+         ], [
+           fhir:index 4;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-patterns.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Architectural patterns - Medication Record" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+           fhir:ImplementationGuide.definition.page.page [
+             fhir:index 0;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-pattern-1.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Pattern 1 - Consult a patient's medication record" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ], [
+             fhir:index 1;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-pattern-2.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Pattern 2 - update a patient's medication record" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ], [
+             fhir:index 2;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-pattern-3.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Pattern 3 - Compile a medication record" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ], [
+             fhir:index 3;
+             fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-pattern-4.html" ];
+             fhir:ImplementationGuide.definition.page.title [ fhir:value "Pattern 4 - Creation of Treatments and Treatment Lines" ];
+             fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+           ]
+         ]
+       ], [
+         fhir:index 5;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-usageexamples.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "MedicationRecord - usage examples" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example1.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Prescribed branded medication is changed by another branded medication from the same VOS-cluster" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 1;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example2a.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Prescribed medication is changed by another medication from a different VOS-cluster - different strength" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 2;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example2b.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Prescribed medication is changed by another medication from a different VOS-cluster - Different package size" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 3;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example3.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Dispense medication before the prescription is available" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 4;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example4.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Dispense of prescribed medication and of a product that can be dispensed without a prescription" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 5;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example5.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 6;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example6.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Refusal to dispense the prescribed medication" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 7;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example7.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Dispense of medication that was prescribed to take if needed, but was not taken" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 8;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example8.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Dispense of medication that was prescribed, but not taken till the end" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 9;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example9a.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Recording of anesthetic, contrast and similar medications - Checking possible interactions before surgery" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 10;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example9b.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Recording of anesthetic, contrast and similar medications - Product prescribed (by VOS) and dispense for exam " ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 11;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "example10.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "The recording of non-medication aka pharmaceutical products" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 12;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "logical-models.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Logical Models" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ], [
+           fhir:index 13;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "downloads.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Downloads" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "html" ]
+         ]
+       ], [
+         fhir:index 6;
+         fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "implementation.html" ];
+         fhir:ImplementationGuide.definition.page.title [ fhir:value "Medication Record Implementation" ];
+         fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ];
+         fhir:ImplementationGuide.definition.page.page [
+           fhir:index 0;
+           fhir:ImplementationGuide.definition.page.nameUrl [ fhir:value "medicationrecord-fhir-resources.html" ];
+           fhir:ImplementationGuide.definition.page.title [ fhir:value "Medication Record - FHIR resources" ];
+           fhir:ImplementationGuide.definition.page.generation [ fhir:value "markdown" ]
+         ]
+       ]
+     ];
+     fhir:ImplementationGuide.definition.parameter [
+       fhir:index 0;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/capabilities" ]
+     ], [
+       fhir:index 1;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/examples" ]
+     ], [
+       fhir:index 2;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/extensions" ]
+     ], [
+       fhir:index 3;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/models" ]
+     ], [
+       fhir:index 4;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/operations" ]
+     ], [
+       fhir:index 5;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/profiles" ]
+     ], [
+       fhir:index 6;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/resources" ]
+     ], [
+       fhir:index 7;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/vocabulary" ]
+     ], [
+       fhir:index 8;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/maps" ]
+     ], [
+       fhir:index 9;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/testing" ]
+     ], [
+       fhir:index 10;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/history" ]
+     ], [
+       fhir:index 11;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-resource" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "fsh-generated/resources" ]
+     ], [
+       fhir:index 12;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "template/config" ]
+     ], [
+       fhir:index 13;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-pages" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input/images" ]
+     ], [
+       fhir:index 14;
+       fhir:ImplementationGuide.definition.parameter.code [ fhir:value "path-tx-cache" ];
+       fhir:ImplementationGuide.definition.parameter.value [ fhir:value "input-cache/txcache" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

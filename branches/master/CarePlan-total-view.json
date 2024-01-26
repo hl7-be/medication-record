@@ -1,0 +1,78 @@
+{
+  "resourceType" : "CarePlan",
+  "id" : "total-view",
+  "meta" : {
+    "profile" : ["http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView"]
+  },
+  "text" : {
+    "status" : "generated",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: CarePlan</b><a name=\"total-view\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource CarePlan &quot;total-view&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordMedicationSummaryView.html\">MedRecord Summary View profile</a></p></div><p><b>identifier</b>: id: ba9efa2a-8b0e-4c64-8a35-3e2c059b1899</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>title</b>: Patient Total Medication</p><p><b>description</b>: Overview of the patient's medication</p><p><b>subject</b>: <span/></p><p><b>created</b>: 2021-08-10 10:00:00+0200</p><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td>-</td><td><b>Kind</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Product[x]</b></td><td><b>DailyAmount</b></td></tr><tr><td>*</td><td>MedicationRequest</td><td>in-progress</td><td>, ?ngen-6?</td><td>Aspirine 500 mg (36 effervescent tablets) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#00)</span></td><td>1 TAB</td></tr></table></blockquote><blockquote><p><b>activity</b></p><h3>Details</h3><table class=\"grid\"><tr><td>-</td><td><b>Kind</b></td><td><b>Status</b></td><td><b>Scheduled[x]</b></td><td><b>Product[x]</b></td><td><b>DailyAmount</b></td></tr><tr><td>*</td><td>MedicationRequest</td><td>in-progress</td><td>, ?ngen-6?</td><td>Acidine 75 mg (20 pieces) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#00)</span></td><td>1 TAB</td></tr></table></blockquote></div>"
+  },
+  "identifier" : [{
+    "system" : "http://summaries-identifiers.com",
+    "value" : "ba9efa2a-8b0e-4c64-8a35-3e2c059b1899"
+  }],
+  "status" : "active",
+  "intent" : "plan",
+  "title" : "Patient Total Medication",
+  "description" : "Overview of the patient's medication",
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  },
+  "created" : "2021-08-10T10:00:00+02:00",
+  "activity" : [{
+    "detail" : {
+      "kind" : "MedicationRequest",
+      "status" : "in-progress",
+      "scheduledTiming" : {
+        "repeat" : {
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d",
+          "when" : ["MORN"]
+        }
+      },
+      "productCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+          "code" : "00",
+          "display" : "Aspirine 500 mg (36 effervescent tablets)"
+        }]
+      },
+      "dailyAmount" : {
+        "value" : 1,
+        "unit" : "TAB"
+      }
+    }
+  },
+  {
+    "detail" : {
+      "kind" : "MedicationRequest",
+      "status" : "in-progress",
+      "scheduledTiming" : {
+        "repeat" : {
+          "frequency" : 1,
+          "period" : 1,
+          "periodUnit" : "d",
+          "dayOfWeek" : ["wed",
+          "thu"],
+          "when" : ["MORN"]
+        }
+      },
+      "productCodeableConcept" : {
+        "coding" : [{
+          "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+          "code" : "00",
+          "display" : "Acidine 75 mg (20 pieces)"
+        }]
+      },
+      "dailyAmount" : {
+        "value" : 1,
+        "unit" : "TAB"
+      }
+    }
+  }]
+}

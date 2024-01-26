@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BEMedicationLineStatus"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">planned<a name="BEMedicationLineStatus-planned"> </a></td><td>Planned</td><td>Medication is/was planned to be taken</td></tr><tr><td style="white-space:nowrap">ordered<a name="BEMedicationLineStatus-ordered"> </a></td><td>Ordered</td><td>Medication is prescribed or ordered</td></tr><tr><td style="white-space:nowrap">delivered<a name="BEMedicationLineStatus-delivered"> </a></td><td>Delivered</td><td>Medication is delivered but there's no information that the patient has started to take it</td></tr><tr><td style="white-space:nowrap">ongoing<a name="BEMedicationLineStatus-ongoing"> </a></td><td>Ongoing</td><td>Medication treatment is ongoing</td></tr><tr><td style="white-space:nowrap">suspended<a name="BEMedicationLineStatus-suspended"> </a></td><td>Suspended</td><td>Medication treatment is suspended</td></tr><tr><td style="white-space:nowrap">completed<a name="BEMedicationLineStatus-completed"> </a></td><td>Completed</td><td>Medication treatment is completed</td></tr><tr><td style="white-space:nowrap">stopped<a name="BEMedicationLineStatus-stopped"> </a></td><td>Stopped</td><td>Medication treatment is stopped before being completed</td></tr></table></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus"/>
+  <version value="1.0.0"/>
+  <name value="BEMedicationLineStatus"/>
+  <title value="Medication Product Type"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Type of medication product."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="7"/>
+  <concept>
+    <code value="planned"/>
+    <display value="Planned"/>
+    <definition value="Medication is/was planned to be taken"/>
+  </concept>
+  <concept>
+    <code value="ordered"/>
+    <display value="Ordered"/>
+    <definition value="Medication is prescribed or ordered"/>
+  </concept>
+  <concept>
+    <code value="delivered"/>
+    <display value="Delivered"/>
+    <definition value="Medication is delivered but there's no information that the patient has started to take it"/>
+  </concept>
+  <concept>
+    <code value="ongoing"/>
+    <display value="Ongoing"/>
+    <definition value="Medication treatment is ongoing"/>
+  </concept>
+  <concept>
+    <code value="suspended"/>
+    <display value="Suspended"/>
+    <definition value="Medication treatment is suspended"/>
+  </concept>
+  <concept>
+    <code value="completed"/>
+    <display value="Completed"/>
+    <definition value="Medication treatment is completed"/>
+  </concept>
+  <concept>
+    <code value="stopped"/>
+    <display value="Stopped"/>
+    <definition value="Medication treatment is stopped before being completed"/>
+  </concept>
+</CodeSystem>

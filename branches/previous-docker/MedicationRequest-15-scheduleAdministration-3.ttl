@@ -1,0 +1,88 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix sct: <http://snomed.info/id/> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration-3> a fhir:MedicationRequest;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "15-scheduleAdministration-3"];
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration";
+       fhir:index 0;
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration>
+     ]
+  ];
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"15-scheduleAdministration-3\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordMedicationScheduledAdministration.html\">MedRecord Scheduled Administration profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>identifier</b>: id: e0584b22-74c3-40f3-a5ef-0545fcc50934</p><p><b>status</b>: active</p><p><b>intent</b>: instance-order</p><p><b>medication</b>: Aspirine 500 mg (36 effervescent tablets) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#00)</span></p><p><b>subject</b>: <span></span></p></div>"
+  ];
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/event-basedOn" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://treatment-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d" ]
+       ]
+     ]
+  ];
+  fhir:MedicationRequest.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://takes-identifiers.com" ];
+     fhir:Identifier.value [ fhir:value "e0584b22-74c3-40f3-a5ef-0545fcc50934" ]
+  ];
+  fhir:MedicationRequest.status [ fhir:value "active"];
+  fhir:MedicationRequest.intent [ fhir:value "instance-order"];
+  fhir:MedicationRequest.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://cnk.apb.be/codings/cnk_product_codes" ];
+       fhir:Coding.code [ fhir:value "00" ];
+       fhir:Coding.display [ fhir:value "Aspirine 500 mg (36 effervescent tablets)" ]
+     ]
+  ];
+  fhir:MedicationRequest.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ];
+  fhir:MedicationRequest.dosageInstruction [
+     fhir:index 0;
+     fhir:Dosage.timing [
+       fhir:Timing.event [
+         fhir:value "2021-08-02T10:00:00+02:00"^^xsd:dateTime;
+         fhir:index 0
+       ]
+     ];
+     fhir:Dosage.route [
+       fhir:CodeableConcept.coding [
+         fhir:index 0;
+         a sct:26643006;
+         fhir:Coding.system [ fhir:value "http://snomed.info/sct" ];
+         fhir:Coding.code [ fhir:value "26643006" ];
+         fhir:Coding.display [ fhir:value "Oral Route" ]
+       ]
+     ];
+     fhir:Dosage.doseAndRate [
+       fhir:index 0;
+       fhir:Dosage.doseAndRate.doseQuantity [
+         fhir:Quantity.value [ fhir:value "1"^^xsd:decimal ];
+         fhir:Quantity.unit [ fhir:value "TAB" ];
+         fhir:Quantity.system [ fhir:value "http://terminology.hl7.org/CodeSystem/v3-orderableDrugForm" ];
+         fhir:Quantity.code [ fhir:value "TAB" ]
+       ]
+     ]
+  ] .
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationRequest/15-scheduleAdministration-3.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

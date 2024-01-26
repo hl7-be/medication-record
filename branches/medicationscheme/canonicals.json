@@ -1,0 +1,226 @@
+[
+  {
+    "id" : "BEMedicationAdministrationRoute",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationAdministrationRoute",
+    "version" : "1.0.0",
+    "name" : "BEMedicationAdministrationRoute"
+  },
+  {
+    "id" : "BEMedicationLineConsent",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineConsent",
+    "version" : "1.0.0",
+    "name" : "BEMedicationLineConsent"
+  },
+  {
+    "id" : "BEMedicationLineDayPeriod",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineDayPeriod",
+    "version" : "1.0.0",
+    "name" : "BEMedicationLineDayPeriod"
+  },
+  {
+    "id" : "BEMedicationLineOriginType",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType",
+    "version" : "1.0.0",
+    "name" : "BEMedicationLineOriginType"
+  },
+  {
+    "id" : "BEMedicationLineStatus",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineStatus",
+    "version" : "1.0.0",
+    "name" : "BEMedicationLineStatus"
+  },
+  {
+    "id" : "BEMedicationProductType",
+    "type" : "CodeSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType",
+    "version" : "1.0.0",
+    "name" : "BEMedicationProductType"
+  },
+  {
+    "id" : "hl7.fhir.be.medicationscheme",
+    "type" : "ImplementationGuide",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ImplementationGuide/hl7.fhir.be.medicationscheme",
+    "version" : "1.0.0",
+    "name" : "MedicationScheme"
+  },
+  {
+    "id" : "be-ns-cnk-codes",
+    "type" : "NamingSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/NamingSystem/be-ns-cnk-codes",
+    "version" : "1.0.0",
+    "name" : "BeNSCNK"
+  },
+  {
+    "id" : "be-ns-prescription-ids",
+    "type" : "NamingSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/NamingSystem/be-ns-prescription-ids",
+    "version" : "1.0.0",
+    "name" : "BeNSPrescriptions"
+  },
+  {
+    "id" : "be-ns-product-package-type",
+    "type" : "NamingSystem",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/NamingSystem/be-ns-product-package-type",
+    "version" : "1.0.0",
+    "name" : "BeNSProductPackage"
+  },
+  {
+    "id" : "BEMedicationLine",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/BEMedicationLine",
+    "version" : "1.0.0",
+    "name" : "BEMedicationLine"
+  },
+  {
+    "id" : "CD",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/CD",
+    "version" : "1.0.0",
+    "name" : "CD"
+  },
+  {
+    "id" : "DT",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/DT",
+    "version" : "1.0.0",
+    "name" : "DT"
+  },
+  {
+    "id" : "ExtDosageTime",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/ExtDosageTime",
+    "version" : "1.0.0",
+    "name" : "ExtDosageTime"
+  },
+  {
+    "id" : "II",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/II",
+    "version" : "1.0.0",
+    "name" : "II"
+  },
+  {
+    "id" : "KMEHRMS",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/KMEHRMS",
+    "version" : "1.0.0",
+    "name" : "KMEHRMS"
+  },
+  {
+    "id" : "QT",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/QT",
+    "version" : "1.0.0",
+    "name" : "QT"
+  },
+  {
+    "id" : "ST",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/ST",
+    "version" : "1.0.0",
+    "name" : "ST"
+  },
+  {
+    "id" : "TM",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/TM",
+    "version" : "1.0.0",
+    "name" : "TM"
+  },
+  {
+    "id" : "TS",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/TS",
+    "version" : "1.0.0",
+    "name" : "TS"
+  },
+  {
+    "id" : "VIDISMedicationSchema",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/VIDISMedicationSchema",
+    "version" : "1.0.0",
+    "name" : "VIDISMedicationSchema"
+  },
+  {
+    "id" : "be-medicationdispense",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/be-medicationdispense",
+    "version" : "1.0.0",
+    "name" : "BeMedicationDispense"
+  },
+  {
+    "id" : "be-model-medication-dispense",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/be-model-medication-dispense",
+    "version" : "1.0.0",
+    "name" : "BeModelMedicationDispense"
+  },
+  {
+    "id" : "class",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/class",
+    "version" : "1.0.0",
+    "name" : "class"
+  },
+  {
+    "id" : "unknown",
+    "type" : "StructureDefinition",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/StructureDefinition/unknown",
+    "version" : "1.0.0",
+    "name" : "unknown"
+  },
+  {
+    "id" : "BEVSMMedicationLineDayPeriod",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMMedicationLineDayPeriod",
+    "version" : "1.0.0",
+    "name" : "BEVSMMedicationLineDayPeriod"
+  },
+  {
+    "id" : "BEVSMMedicationLineStatus",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMMedicationLineStatus",
+    "version" : "1.0.0",
+    "name" : "BEVSMMedicationLineStatus"
+  },
+  {
+    "id" : "BEVSMedicationAdministrationRoute",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationAdministrationRoute",
+    "version" : "1.0.0",
+    "name" : "BEVSMedicationAdministrationRoute"
+  },
+  {
+    "id" : "BEVSMedicationLineConsent",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineConsent",
+    "version" : "1.0.0",
+    "name" : "BEVSMedicationLineConsent"
+  },
+  {
+    "id" : "BEVSMedicationLineOriginType",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineOriginType",
+    "version" : "1.0.0",
+    "name" : "BEVSMedicationLineOriginType"
+  },
+  {
+    "id" : "BEVSMedicationProductType",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationProductType",
+    "version" : "1.0.0",
+    "name" : "BEVSMedicationProductType"
+  },
+  {
+    "id" : "be-vs-dispenser-types",
+    "type" : "ValueSet",
+    "url" : "http://hl7belgium.org/fhir/medicationscheme/ValueSet/be-vs-dispenser-types",
+    "version" : "1.0.0",
+    "name" : "DispenserTypes"
+  }
+]

@@ -1,0 +1,38 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "15-treatmentLine-2",
+  "meta" : {
+    "profile" : ["http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"15-treatmentLine-2\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;15-treatmentLine-2&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordTreatmentLine.html\">MedRecord Treatment Line profile</a></p></div><p><b>Based On</b>: <span/></p><p><b>identifier</b>: id: 581998d0-8630-4ec0-8233-1cf5807fca41</p><p><b>status</b>: active</p><p><b>medication</b>: Aspirine 500 mg (36 effervescent tablets) <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#00)</span></p><p><b>subject</b>: <span/></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "identifier" : {
+        "system" : "http://treatment-identifiers.com",
+        "value" : "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
+      }
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://treatmentLines-identifiers.com",
+    "value" : "581998d0-8630-4ec0-8233-1cf5807fca41"
+  }],
+  "status" : "active",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+      "code" : "00",
+      "display" : "Aspirine 500 mg (36 effervescent tablets)"
+    }]
+  },
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  }
+}

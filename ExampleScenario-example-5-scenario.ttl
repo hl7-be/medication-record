@@ -1,0 +1,180 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario> a fhir:ExampleScenario ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-5-scenario"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"example-5-scenario\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario &quot;example-5-scenario&quot; </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: DispenseNewBrandOldUnavailable</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 00:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-dispense</p><p><b>name</b>: Paracetabs Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-prescription</p><p><b>name</b>: dafalgan prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatmentLine</p><p><b>name</b>: New Treatment Line based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatment</p><p><b>name</b>: New Treatment based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-provenance</p><p><b>name</b>: Link Prescription and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-2-provenance</p><p><b>name</b>: Link Dispense and treatmentLine</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change brand from prescription on dispense because of out of stock</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead.</p><p><b>postConditions</b>: It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial contact</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Resource Linkage</p><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-test"] ; # 
+  fhir:name [ fhir:v "DispenseNewBrandOldUnavailable"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2019-09-11T00:00:00.000+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "BE" ]
+     ] )
+  ] ) ; # 
+  fhir:actor ( [
+     fhir:actorId [ fhir:v "PATIENT" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Pia Peters" ]
+  ] [
+     fhir:actorId [ fhir:v "GP" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Dr. Durant" ]
+  ] [
+     fhir:actorId [ fhir:v "VAULT" ] ;
+     fhir:type [ fhir:v "entity" ] ;
+     fhir:name [ fhir:v "Vault" ]
+  ] [
+     fhir:actorId [ fhir:v "PHARM" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Pharmacist" ]
+  ] ) ; # 
+  fhir:instance ( [
+     fhir:resourceId [ fhir:v "5-dispense" ] ;
+     fhir:name [ fhir:v "Paracetabs Dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "5-prescription" ] ;
+     fhir:name [ fhir:v "dafalgan prescription" ]
+  ] [
+     fhir:resourceId [ fhir:v "EB" ] ;
+     fhir:name [ fhir:v "Empty Bundle" ]
+  ] [
+     fhir:resourceId [ fhir:v "5-treatmentLine" ] ;
+     fhir:name [ fhir:v "New Treatment Line based on prescription" ]
+  ] [
+     fhir:resourceId [ fhir:v "5-treatment" ] ;
+     fhir:name [ fhir:v "New Treatment based on prescription" ]
+  ] [
+     fhir:resourceId [ fhir:v "5-provenance" ] ;
+     fhir:name [ fhir:v "Link Prescription and treatmentLine" ]
+  ] [
+     fhir:resourceId [ fhir:v "5-2-provenance" ] ;
+     fhir:name [ fhir:v "Link Dispense and treatmentLine" ]
+  ] ) ; # 
+  fhir:process ( [
+     fhir:title [ fhir:v "Change brand from prescription on dispense because of out of stock" ] ;
+     fhir:description [ fhir:v "description" ] ;
+     fhir:preConditions [ fhir:v "The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead." ] ;
+     fhir:postConditions [ fhir:v "It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs" ] ;
+     fhir:step ( [
+       fhir:process ( [
+         fhir:title [ fhir:v "Initial contact" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Goes to appointment" ] ;
+             fhir:initiator [ fhir:v "PATIENT" ] ;
+             fhir:receiver [ fhir:v "GP" ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Get Patient's Medication" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "GP" ] ;
+             fhir:response [
+               fhir:resourceId [ fhir:v "EB" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new prescription" ] ;
+             fhir:initiator [ fhir:v "GP" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-prescription" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Treatment resources Creation" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new treatment" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-treatment" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new treatment Line" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-treatmentLine" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Resource Linking" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-provenance" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Dispense" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Get patient's Prescriptions" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "PHARM" ] ;
+             fhir:response [
+               fhir:resourceId [ fhir:v "EB" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Dispense new product" ] ;
+             fhir:initiator [ fhir:v "PHARM" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-dispense" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Resource Linkage" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Resource Linking" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "5-2-provenance" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

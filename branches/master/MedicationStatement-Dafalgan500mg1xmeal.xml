@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationStatement xmlns="http://hl7.org/fhir">
+  <id value="Dafalgan500mg1xmeal"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationStatement</b><a name="Dafalgan500mg1xmeal"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationStatement &quot;Dafalgan500mg1xmeal&quot; </p></div><p><b>status</b>: active</p><p><b>medication</b>: Dafalgan 500mg Odis 16 tabs <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#1609155)</span></p><p><b>subject</b>: <a href="Patient1">Patient1</a></p><p><b>effective</b>: 2022-01-01 --&gt; (ongoing)</p><p><b>derivedFrom</b>: <a href="MedicationDispense-Dafalgan500mgDispense.html">MedicationDispense/Dafalgan500mgDispense</a></p><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at breakfast</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at lunch</p></blockquote><blockquote><p><b>dosage</b></p><p><b>timing</b>: , at dinner</p></blockquote></div>
+  </text>
+  <status value="active"/>
+  <medicationCodeableConcept>
+    <coding>
+      <code value="1609155"/>
+      <display value="Dafalgan 500mg Odis 16 tabs"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <reference value="Patient1"/>
+  </subject>
+  <effectivePeriod>
+    <start value="2022-01-01"/>
+  </effectivePeriod>
+  <derivedFrom>
+    <reference value="MedicationDispense/Dafalgan500mgDispense"/>
+  </derivedFrom>
+  <dosage>
+    <timing>
+      <repeat>
+        <when value="CM"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+  <dosage>
+    <timing>
+      <repeat>
+        <when value="CD"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+  <dosage>
+    <timing>
+      <repeat>
+        <when value="CV"/>
+      </repeat>
+    </timing>
+    <doseAndRate>
+      <doseQuantity>
+        <value value="1"/>
+      </doseQuantity>
+    </doseAndRate>
+  </dosage>
+</MedicationStatement>

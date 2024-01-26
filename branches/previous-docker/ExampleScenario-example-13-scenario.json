@@ -1,0 +1,275 @@
+{
+  "resourceType": "ExampleScenario",
+  "id": "example-13-scenario",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"example-13-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: MedicationOTC</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11T00:00:00+01:00</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (unknown#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>resourceType</b>: Bundle</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-treatmentLine</p><p><b>resourceType</b>: MedicationStatement</p><p><b>name</b>: New Treatment Line based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-treatment</p><p><b>resourceType</b>: CarePlan</p><p><b>name</b>: New Treatment based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-dispense</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>: Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-dispense-2</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>:  Dispense 2</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-dispense-3</p><p><b>resourceType</b>: MedicationDispense</p><p><b>name</b>:  Dispense 3</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of OTC medication on the community pharmacy</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen.</p><p><b>postConditions</b>: How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: First Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Second Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: New Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Third Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url": "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario",
+  "version": "0.1.0-test",
+  "name": "MedicationOTC",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-09-11T00:00:00.000+01:00",
+  "publisher": "HL7 Belgium",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "BE"
+        }
+      ]
+    }
+  ],
+  "actor": [
+    {
+      "actorId": "PATIENT",
+      "type": "person",
+      "name": "Pia Peters"
+    },
+    {
+      "actorId": "VAULT",
+      "type": "entity",
+      "name": "Vault"
+    },
+    {
+      "actorId": "PHARM",
+      "type": "person",
+      "name": "Pharmacist"
+    }
+  ],
+  "instance": [
+    {
+      "resourceId": "EB",
+      "resourceType": "Bundle",
+      "name": "Empty Bundle"
+    },
+    {
+      "resourceId": "13-treatmentLine",
+      "resourceType": "MedicationStatement",
+      "name": "New Treatment Line based on prescription"
+    },
+    {
+      "resourceId": "13-treatment",
+      "resourceType": "CarePlan",
+      "name": "New Treatment based on prescription"
+    },
+    {
+      "resourceId": "13-dispense",
+      "resourceType": "MedicationDispense",
+      "name": "Dispense"
+    },
+    {
+      "resourceId": "13-dispense-2",
+      "resourceType": "MedicationDispense",
+      "name": " Dispense 2"
+    },
+    {
+      "resourceId": "13-dispense-3",
+      "resourceType": "MedicationDispense",
+      "name": " Dispense 3"
+    }
+  ],
+  "process": [
+    {
+      "title": "Dispense of OTC medication on the community pharmacy",
+      "description": "description",
+      "preConditions": "The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen.",
+      "postConditions": "How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition",
+      "step": [
+        {
+          "process": [
+            {
+              "title": "Initial Contact",
+              "step": [
+                {
+                  "operation": {
+                    "number": "1",
+                    "name": "Goes to Pharmacy",
+                    "initiator": "PATIENT",
+                    "receiver": "PHARM"
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "2",
+                    "name": "Get Patient's Medication",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "First Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "number": "3",
+                    "name": "Dispense a product",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "13-dispense"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "number": "4",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "5",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Second Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "number": "6",
+                    "name": "Dispense another product",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "13-dispense-2"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "New Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "number": "7",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "8",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Third Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "number": "9",
+                    "name": "Dispense another product",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "13-dispense-3"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "number": "10",
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "number": "11",
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "8-treatmentLine"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

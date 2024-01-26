@@ -1,0 +1,218 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario> a fhir:ExampleScenario ;
+  fhir:nodeRole fhir:treeRoot ;
+  fhir:id [ fhir:v "example-13-scenario"] ; # 
+  fhir:text [
+     fhir:status [ fhir:v "generated" ] ;
+     fhir:div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"example-13-scenario\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario &quot;example-13-scenario&quot; </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: MedicationOTC</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 00:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/5.3.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-treatmentLine</p><p><b>name</b>: New Treatment Line based on ibuprofen dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-treatment</p><p><b>name</b>: New Treatment based on ibuprofen dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-provenance</p><p><b>name</b>: Link first ibuprofen dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-treatmentLine</p><p><b>name</b>: New Treatment Line based on paracetamol dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-provenance</p><p><b>name</b>: Link paracetamol dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-3-provenance</p><p><b>name</b>: Link second ibuprofen dispense and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-1-dispense</p><p><b>name</b>: ibruprofen Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-2-dispense</p><p><b>name</b>: parecetamol Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 13-3-dispense</p><p><b>name</b>: ibruprofen Dispense</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Dispense of OTC medication on the community pharmacy</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen.</p><p><b>postConditions</b>: How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial Contact</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: First Dispense</p><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Second Dispense</p><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: New Resources Creation</p><blockquote><p><b>step</b></p></blockquote><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Third Dispense</p><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Resource Linkage</p><blockquote><p><b>step</b></p></blockquote></blockquote></blockquote></blockquote></div>"
+  ] ; # 
+  fhir:url [ fhir:v "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-13-scenario"^^xsd:anyURI] ; # 
+  fhir:version [ fhir:v "0.1.0-test"] ; # 
+  fhir:name [ fhir:v "MedicationOTC"] ; # 
+  fhir:status [ fhir:v "draft"] ; # 
+  fhir:experimental [ fhir:v "false"^^xsd:boolean] ; # 
+  fhir:date [ fhir:v "2019-09-11T00:00:00.000+01:00"^^xsd:dateTime] ; # 
+  fhir:publisher [ fhir:v "HL7 Belgium"] ; # 
+  fhir:contact ( [
+     fhir:telecom ( [
+       fhir:system [ fhir:v "url" ] ;
+       fhir:value [ fhir:v "http://hl7belgium.org" ]
+     ] )
+  ] ) ; # 
+  fhir:jurisdiction ( [
+     fhir:coding ( [
+       fhir:system [ fhir:v "urn:iso:std:iso:3166"^^xsd:anyURI ] ;
+       fhir:code [ fhir:v "BE" ]
+     ] )
+  ] ) ; # 
+  fhir:actor ( [
+     fhir:actorId [ fhir:v "PATIENT" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Pia Peters" ]
+  ] [
+     fhir:actorId [ fhir:v "PHARM" ] ;
+     fhir:type [ fhir:v "person" ] ;
+     fhir:name [ fhir:v "Pharmacist" ]
+  ] [
+     fhir:actorId [ fhir:v "VAULT" ] ;
+     fhir:type [ fhir:v "entity" ] ;
+     fhir:name [ fhir:v "Vault" ]
+  ] ) ; # 
+  fhir:instance ( [
+     fhir:resourceId [ fhir:v "EB" ] ;
+     fhir:name [ fhir:v "Empty Bundle" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-1-treatmentLine" ] ;
+     fhir:name [ fhir:v "New Treatment Line based on ibuprofen dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-treatment" ] ;
+     fhir:name [ fhir:v "New Treatment based on ibuprofen dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-1-provenance" ] ;
+     fhir:name [ fhir:v "Link first ibuprofen dispense and treatmentLine" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-2-treatmentLine" ] ;
+     fhir:name [ fhir:v "New Treatment Line based on paracetamol dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-2-provenance" ] ;
+     fhir:name [ fhir:v "Link paracetamol dispense and treatmentLine" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-3-provenance" ] ;
+     fhir:name [ fhir:v "Link second ibuprofen dispense and treatmentLine" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-1-dispense" ] ;
+     fhir:name [ fhir:v "ibruprofen Dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-2-dispense" ] ;
+     fhir:name [ fhir:v "parecetamol Dispense" ]
+  ] [
+     fhir:resourceId [ fhir:v "13-3-dispense" ] ;
+     fhir:name [ fhir:v "ibruprofen Dispense" ]
+  ] ) ; # 
+  fhir:process ( [
+     fhir:title [ fhir:v "Dispense of OTC medication on the community pharmacy" ] ;
+     fhir:description [ fhir:v "description" ] ;
+     fhir:preConditions [ fhir:v "The patient Pia Peters goes to the pharmacy with a complaint of headache. The pharmacist, dispenses ibruprofen 200 mg. After a few months, another minor headache appears and the patient repeats the procedure, receveing this time parecetamol 500 mg. The following year, the same situation repeats, receiving this time another ibuprofen." ] ;
+     fhir:postConditions [ fhir:v "How the treatments and treatment line behave with OTC dispenses without prescription and for the same condition" ] ;
+     fhir:step ( [
+       fhir:process ( [
+         fhir:title [ fhir:v "Initial Contact" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Goes to Pharmacy" ] ;
+             fhir:initiator [ fhir:v "PATIENT" ] ;
+             fhir:receiver [ fhir:v "PHARM" ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Get Patient's Medication" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "PHARM" ] ;
+             fhir:response [
+               fhir:resourceId [ fhir:v "EB" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "First Dispense" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Dispense a product" ] ;
+             fhir:initiator [ fhir:v "PHARM" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-1-dispense" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Treatment resources Creation" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new treatment" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-treatment" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new treatment Line" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-1-treatmentLine" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Resource Linking" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-1-provenance" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Second Dispense" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Dispense another product" ] ;
+             fhir:initiator [ fhir:v "PHARM" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-2-dispense" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "New Resources Creation" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Create new treatment Line" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-2-treatmentLine" ]
+             ]
+           ]
+         ] [
+           fhir:operation [
+             fhir:name [ fhir:v "Resource Linking" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-2-provenance" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Third Dispense" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Dispense another product" ] ;
+             fhir:initiator [ fhir:v "PHARM" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-3-dispense" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] [
+       fhir:process ( [
+         fhir:title [ fhir:v "Resource Linkage" ] ;
+         fhir:step ( [
+           fhir:operation [
+             fhir:name [ fhir:v "Resource Linking" ] ;
+             fhir:initiator [ fhir:v "VAULT" ] ;
+             fhir:receiver [ fhir:v "VAULT" ] ;
+             fhir:request [
+               fhir:resourceId [ fhir:v "13-3-provenance" ]
+             ]
+           ]
+         ] )
+       ] )
+     ] )
+  ] ) . # 
+
+# -------------------------------------------------------------------------------------
+

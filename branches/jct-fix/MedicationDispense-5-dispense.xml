@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<MedicationDispense xmlns="http://hl7.org/fhir">
+  <id value="5-dispense"/>
+  <meta>
+    <profile value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+  </meta>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: MedicationDispense</b><a name="5-dispense"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource MedicationDispense "5-dispense" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-MedRecordDispense.html">BeMedRecord Dispense profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>status</b>: completed</p><p><b>medication</b>: Paracetabs compr. pellic. (séc.) Forte 30x 1g <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (cnk_product_codes#3440260)</span></p><p><b>subject</b>: <span></span></p><blockquote><p><b>performer</b></p><p><b>function</b>: dispenser <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#dispenser)</span></p><p><b>actor</b>: <span>: Pharmacist</span></p></blockquote><blockquote><p><b>performer</b></p><p><b>function</b>: dispensingOrg <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#dispensingOrg)</span></p><p><b>actor</b>: <span>: Pharmacy X</span></p></blockquote><p><b>authorizingPrescription</b>: <span></span></p><p><b>quantity</b>: 1 Box<span style="background: LightGoldenRodYellow"> (Details: http://standardterms.edqm.eu/PAC code 30009000 = '30009000')</span></p><p><b>whenHandedOver</b>: 2021-07-19 01:00:00+0200</p><h3>Substitutions</h3><table class="grid"><tr><td>-</td><td><b>WasSubstituted</b></td><td><b>Reason</b></td></tr><tr><td>*</td><td>true</td><td>Out of Stock <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> (<a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason</a>#OS)</span></td></tr></table></div>
+  </text>
+  <extension url="http://hl7.org/fhir/StructureDefinition/event-basedOn">
+    <valueReference>
+      <identifier>
+        <system value="http://treatment-identifiers.com"/>
+        <value value="0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"/>
+      </identifier>
+    </valueReference>
+  </extension>
+  <status value="completed"/>
+  <medicationCodeableConcept>
+    <coding>
+      <system value="https://cnk.apb.be/codings/cnk_product_codes"/>
+      <code value="3440260"/>
+      <display value="Paracetabs compr. pellic. (séc.) Forte 30x 1g"/>
+    </coding>
+  </medicationCodeableConcept>
+  <subject>
+    <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+      <value value="64110219106"/>
+    </identifier>
+  </subject>
+  <performer>
+    <function>
+      <coding>
+        <code value="dispenser"/>
+      </coding>
+    </function>
+    <actor>
+      <identifier>
+        <system value="http://dispenser-identifiers.com"/>
+        <value value="7c3aa173-3185-4001-a661-df36a7492798"/>
+      </identifier>
+      <display value="Pharmacist"/>
+    </actor>
+  </performer>
+  <performer>
+    <function>
+      <coding>
+        <code value="dispensingOrg"/>
+      </coding>
+    </function>
+    <actor>
+      <identifier>
+        <system value="http://dispenser-identifiers.com"/>
+        <value value="5b2e9903-fba7-4ed3-aa76-52d386012ca0"/>
+      </identifier>
+      <display value="Pharmacy X"/>
+    </actor>
+  </performer>
+  <authorizingPrescription>
+    <identifier>
+      <system value="http://prescription-identifiers.com"/>
+      <value value="69eb6358-6eb6-40e4-972f-33d22c3392c5"/>
+    </identifier>
+  </authorizingPrescription>
+  <quantity>
+    <value value="1"/>
+    <unit value="Box"/>
+    <system value="http://standardterms.edqm.eu/PAC"/>
+    <code value="30009000"/>
+  </quantity>
+  <whenHandedOver value="2021-07-19T13:00:00+02:00"/>
+  <substitution>
+    <wasSubstituted value="true"/>
+    <reason>
+      <coding>
+        <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+        <code value="OS"/>
+        <display value="Out of Stock"/>
+      </coding>
+    </reason>
+  </substitution>
+</MedicationDispense>

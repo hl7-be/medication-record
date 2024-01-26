@@ -1,0 +1,82 @@
+{
+  "resourceType": "MedicationAdministration",
+  "id": "8-administration",
+  "meta": {
+    "profile": [
+      "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration"
+    ]
+  },
+  "text": {
+    "status": "extensions",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative</b></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource \"8-administration\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordAdministration.html\">MedRecord Administration profile</a></p></div><p><b>Based On</b>: <span></span></p><p><b>identifier</b>: id: 12a0f790-9931-468a-acd2-00bd696ac3c4</p><p><b>status</b>: stopped</p><p><b>statusReason</b>: Drug declined by patient - side effects <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"https://browser.ihtsdotools.org/\">SNOMED CT</a>#182897004)</span></p><p><b>medication</b>: Amoxiclav Sandoz 875/125 compr. (séc.) 20x <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#1715127)</span></p><p><b>subject</b>: <span></span></p><p><b>effective</b>: 2021-05-19T16:00:00+02:00</p><h3>Performers</h3><table class=\"grid\"><tr><td>-</td><td><b>Function</b></td><td><b>Actor</b></td></tr><tr><td>*</td><td>performer <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> ([not stated]#performer)</span></td><td><span>: Nurse</span></td></tr></table><p><b>request</b>: <span></span></p></div>"
+  },
+  "extension": [
+    {
+      "url": "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+      "valueReference": {
+        "identifier": {
+          "system": "http://treatment-identifiers.com",
+          "value": "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
+        }
+      }
+    }
+  ],
+  "identifier": [
+    {
+      "system": "http://administration-identifiers.com",
+      "value": "12a0f790-9931-468a-acd2-00bd696ac3c4"
+    }
+  ],
+  "status": "stopped",
+  "statusReason": [
+    {
+      "coding": [
+        {
+          "system": "http://snomed.info/sct",
+          "code": "182897004",
+          "display": "Drug declined by patient - side effects"
+        }
+      ]
+    }
+  ],
+  "medicationCodeableConcept": {
+    "coding": [
+      {
+        "system": "https://cnk.apb.be/codings/cnk_product_codes",
+        "code": "1715127",
+        "display": "Amoxiclav Sandoz 875/125 compr. (séc.) 20x"
+      }
+    ]
+  },
+  "subject": {
+    "identifier": {
+      "system": "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value": "64110219106"
+    }
+  },
+  "effectiveDateTime": "2021-05-19T16:00:00+02:00",
+  "performer": [
+    {
+      "function": {
+        "coding": [
+          {
+            "code": "performer"
+          }
+        ]
+      },
+      "actor": {
+        "identifier": {
+          "system": "http://performer-identifiers.com",
+          "value": "e84a4e09-03c4-4ad8-832b-7f5172dc97c1"
+        },
+        "display": "Nurse"
+      }
+    }
+  ],
+  "request": {
+    "identifier": {
+      "system": "http://prescription-identifiers.com",
+      "value": "69eb6358-6eb6-40e4-972f-33d22c3392c5"
+    }
+  }
+}

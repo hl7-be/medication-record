@@ -1,0 +1,59 @@
+@prefix fhir: <http://hl7.org/fhir/> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+
+# - resource -------------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/3-treatmentLine> a fhir:MedicationStatement;
+  fhir:nodeRole fhir:treeRoot;
+  fhir:Resource.id [ fhir:value "3-treatmentLine"]; # 
+  fhir:Resource.meta [
+     fhir:Meta.profile [
+       fhir:value "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine";
+       fhir:index 0;
+       fhir:link <http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine>
+     ]
+  ]; # 
+  fhir:DomainResource.text [
+     fhir:Narrative.status [ fhir:value "extensions" ];
+     fhir:Narrative.div "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"3-treatmentLine\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;3-treatmentLine&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordTreatmentLine.html\">MedRecord Treatment Line profile</a></p></div><p><b>Based On</b>: <span/></p><p><b>identifier</b>: id: 581998d0-8630-4ec0-8233-1cf5807fca41</p><p><b>status</b>: active</p><p><b>medication</b>: diclofenac oral 50 mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (vos_product_codes#9050)</span></p><p><b>subject</b>: <span/></p></div>"
+  ]; # 
+  fhir:DomainResource.extension [
+     fhir:index 0;
+     fhir:Extension.url [ fhir:value "http://hl7.org/fhir/StructureDefinition/event-basedOn" ];
+     fhir:Extension.valueReference [
+       fhir:Reference.identifier [
+         fhir:Identifier.system [ fhir:value "http://treatment-identifiers.com" ];
+         fhir:Identifier.value [ fhir:value "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d" ]
+       ]
+     ]
+  ]; # 
+  fhir:MedicationStatement.identifier [
+     fhir:index 0;
+     fhir:Identifier.system [ fhir:value "http://treatmentLines-identifiers.com" ];
+     fhir:Identifier.value [ fhir:value "581998d0-8630-4ec0-8233-1cf5807fca41" ]
+  ]; # 
+  fhir:MedicationStatement.status [ fhir:value "active"]; # 
+  fhir:MedicationStatement.medicationCodeableConcept [
+     fhir:CodeableConcept.coding [
+       fhir:index 0;
+       fhir:Coding.system [ fhir:value "https://vos-identifier.be/vos_product_codes" ];
+       fhir:Coding.code [ fhir:value "9050" ];
+       fhir:Coding.display [ fhir:value "diclofenac oral 50 mg" ]
+     ]
+  ]; # 
+  fhir:MedicationStatement.subject [
+     fhir:Reference.identifier [
+       fhir:Identifier.system [ fhir:value "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin" ];
+       fhir:Identifier.value [ fhir:value "64110219106" ]
+     ]
+  ] . # 
+
+# - ontology header ------------------------------------------------------------
+
+<http://hl7belgium.org/fhir/riziv-medicationrecord/MedicationStatement/3-treatmentLine.ttl> a owl:Ontology;
+  owl:imports fhir:fhir.ttl .
+
+# -------------------------------------------------------------------------------------
+

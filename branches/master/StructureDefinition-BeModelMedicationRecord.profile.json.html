@@ -1,0 +1,989 @@
+﻿<!-- get modelType --><?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE HTML>
+<html xml:lang="en" xmlns="http://www.w3.org/1999/xhtml" lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html;charset=utf-8"/>
+    <title>HL7.FHIR.BE.RIZIV-MEDICATIONRECORD\Medication Record Logical Model - JSON Representation - FHIR v4.3.0</title>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta name="author" content="http://hl7.org/fhir"/>
+
+    <link rel="stylesheet" href="fhir.css"/>
+
+      <!-- Bootstrap core CSS -->
+    <link rel="stylesheet" href="assets/css/bootstrap-fhir.css"/>
+
+      <!-- Project extras -->
+    <link rel="stylesheet" href="assets/css/project.css"/>
+    <link rel="stylesheet" href="assets/css/pygments-manni.css"/>
+    <link rel="stylesheet" href="assets/css/jquery-ui.css"/>
+  	<link rel="stylesheet" href="assets/css/prism.css"/>
+      <!-- Placeholder for child template CSS declarations -->
+<link rel="stylesheet" href="assets/css/hl7-be.css"/>
+  <!-- Placeholder for child template CSS declarations -->
+  <!-- HL7 Belgium -->
+  <!-- draft -->
+
+<link rel="stylesheet" href="assets/css/colors.css"/>
+
+
+    <script src="fhir-table-scripts.js" type="text/javascript"> </script>
+  <!-- Questionnaire: -->
+    <link rel="stylesheet" href="assets/css/lforms.min.css"/>
+
+
+
+
+      <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+      <!-- [if lt IE 9]>
+    <script src="assets/js/html5shiv.js"></script>
+    <script src="assets/js/respond.min.js"></script>
+    <![endif] -->
+
+      <!-- Favicons -->
+    <link sizes="144x144" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-144-precomposed.png"/>
+    <link sizes="114x114" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-114-precomposed.png"/>
+    <link sizes="72x72" rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-72-precomposed.png"/>
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png"/>
+    <link rel="shortcut icon" href="assets/ico/favicon.png"/>
+  </head>
+  <body onload="document.body.style.opacity='1'">
+
+	  <script src="assets/js/prism.js"></script>
+
+    <style type="text/css">h2{--heading-prefix:"8.7"}
+    h3,h4,h5,h6{--heading-prefix:"8.7"}</style>
+    <div id="segment-header" class="segment">    <!-- segment-header -->
+      <div class="container">    <!-- container -->
+          <!-- Placeholder for child template header declarations -->
+
+        
+  <!-- HL7 Belgium -->
+  <!-- draft -->
+
+<div id="ig-nav">
+  <a no-external="true" id="hl7-logo" href="https://hl7-be.github.io">
+    <img src="assets/images/hl7be-logo-header.png" alt="HL7 Belgium" height="65"/>
+  </a>
+</div>
+<div id="fhir-nav">
+  <a no-external="true" id="fhir-logo" href="http://hl7.org/fhir"><img src="assets/images/fhir-logo-www.png" alt="Visit the FHIR website" height="50"/> </a>
+</div>
+<div id="ig-search">
+  <a no-external="true" id="hl7-search-lnk" href="http://hl7.org/fhir/search.cfm"><img src="assets/images/search.png" alt="Search FHIR"/></a>
+</div>
+
+  <!-- Left logo - typically the publisher's logo - project or affiliate -->
+        <div id="project-nav">
+          <a no-external="true" id="project-logo" href="http://hl7belgium.org">
+            <img src="assets/images/meds.png" alt="Project home" height="71"/>
+          </a>
+        </div>
+
+
+        <div id="ig-status">
+          <p><span style="font-size:12pt;font-weight:bold">MedicationRecord</span><br/>0.1.0-test - CI Build</p>
+        </div>
+      </div>   <!-- /container -->
+    </div>    <!-- /segment-header -->
+
+    <div id="segment-navbar" class="segment">    <!-- segment-navbar -->
+      <div id="stripe"> </div>
+      <div class="container">    <!-- container -->
+          <!-- HEADER CONTENT -->
+
+        <nav class="navbar navbar-inverse">
+            <!-- status-bar -->
+          <div class="container">
+            <button data-target=".navbar-inverse-collapse" data-toggle="collapse" type="button" class="navbar-toggle">
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+              <span class="icon-bar"> </span>
+            </button>
+            <a href="http://build.fhir.org/index.html" class="navbar-brand hidden">FHIR</a>
+            <div class="nav-collapse collapse navbar-inverse-collapse">
+              <ul class="nav navbar-nav">
+	<li>
+		<a href="index.html">IG Home</a>
+	</li>
+	<li>
+		<a href="toc.html">Table of Contents</a>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Background<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="howto.html">How to use this Publication</a>
+			</li>
+			<li>
+				<a href="http://build.fhir.org/index.html" target="_blank">FHIR Spec
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Functional Description<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="functional-description.html">Description</a>
+			</li>
+			<li><a name="l225">​</a>
+				<a href="usecases.html">Use Cases</a>
+			</li>
+			<li>
+				<a href="logical-models.html">Logical Models</a>
+			</li>
+  <!-- <li>
+				<a target="_blank" href="#">Services &amp; Transactions</a>
+			</li> -->
+		</ul>
+
+	</li>
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Detailed Specifications<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="artifacts.html">Artifact Index</a>
+			</li>
+		</ul>
+	</li>
+  <!-- <li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Project-specific
+			<b class="caret"></b>
+		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a href="#">Core Profiles</a>
+			</li>
+			<li class="divider"></li>
+			<li>
+				<a href="#">DZOP</a>
+			</li>
+            <li>
+				<a href="#">EFRO</a>
+			</li>
+		</ul>
+	</li> -->
+	<li class="dropdown">
+		<a data-toggle="dropdown" href="#" class="dropdown-toggle">Implementation<b class="caret"></b></a>
+		<ul class="dropdown-menu">
+  <!-- <li><a target="_blank" href="openapi.html">OpenAPI</a></li>
+			<li><a href="testservers.html">Test Servers</a></li> -->
+			<li><a href="downloads.html">Downloads</a></li>
+		</ul>
+	</li>
+</ul>      
+            </div>    <!-- /.nav-collapse -->
+          </div>    <!-- /.container -->
+        </nav>    <!-- /.navbar -->
+        <!-- /HEADER CONTENT -->
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-navbar -->
+      <!-- status-bar -->
+    
+    <div id="segment-breadcrumb" class="segment">    <!-- segment-breadcrumb -->
+      <div class="container">    <!-- container -->
+        <ul class="breadcrumb">
+          <li><a href="toc.html"><b>Table of Contents</b></a></li><li><a href="artifacts.html"><b>Artifacts Summary</b></a></li><li><b>Medication Record Logical Model</b></li>
+          
+        </ul>
+      </div>    <!-- /container -->
+    </div>    <!-- /segment-breadcrumb -->
+
+    <a name="top"> </a>
+    <div id="segment-content" class="segment">    <!-- segment-content -->
+      <div class="container">    <!-- container -->
+        <div class="row">
+          <div class="inner-wrapper">
+
+<div style="counter-reset: section 8" class="col-12">
+    <!-- ReleaseHeader --><p id="publish-box">MedicationRecord, published by HL7 Belgium. This is not an authorized publication; it is the continuous build for version 0.1.0-test). This version is based on the current content of <a href="https://github.com/hl7-be/medication-record">https://github.com/hl7-be/medication-record</a> and changes regularly. See the <a href="http://hl7belgium.org/fhir/riziv-medicationrecord/history.html">Directory of published versions</a></p>  <!-- EndReleaseHeader -->
+  
+
+
+
+
+
+
+
+
+
+
+
+<ul class="nav nav-tabs">
+
+  <li>
+    <a href="StructureDefinition-BeModelMedicationRecord.html">Content</a>
+  </li>
+
+
+
+  <li>
+    <a href="StructureDefinition-BeModelMedicationRecord-definitions.html">Detailed Descriptions</a>
+  </li>
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-BeModelMedicationRecord-mappings.html">Mappings</a>
+    </li>
+  
+
+
+
+
+
+
+
+  
+    <li>
+      <a href="StructureDefinition-BeModelMedicationRecord.profile.xml.html">XML</a>
+    </li>
+  
+
+
+  
+    <li class="active">
+      <a href="#">JSON</a>
+    </li>
+  
+
+
+
+</ul>
+
+
+<a name="root"> </a>
+<h2 id="root">Logical Model: BeModelMedicationRecord - JSON Profile</h2>
+  <table class="colsi">
+    <tr>
+
+      <td colspan="2">
+        
+          Active
+          
+            as of 2023-02-03
+          
+        
+      </td>
+
+    </tr>
+  </table>
+
+
+<p>JSON representation of the BeModelMedicationRecord logical model.</p>
+
+<p><a href="StructureDefinition-BeModelMedicationRecord.json" no-download="true">Raw json</a> | <a download="null" href="StructureDefinition-BeModelMedicationRecord.json">Download</a></p>
+
+    <!-- insert intro if present -->
+  
+
+
+
+  <pre style="white-space: pre; overflow: hidden" class="json"><code>
+{
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition">resourceType</a>" : "StructureDefinition",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.id">id</a>" : "BeModelMedicationRecord",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.text">text</a>" : {
+    "<a href="http://hl7.org/fhir/R4B/narrative.html#Narrative#Narrative.status">status</a>" : "extensions",
+    "<a href="http://hl7.org/fhir/R4B/narrative.html#Narrative#Narrative.div">div</a>" : "&lt;div xmlns=\"http://www.w3.org/1999/xhtml\"&gt;&lt;table border=\"0\" cellpadding=\"0\" cellspacing=\"0\" style=\"border: 0px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top;\"&gt;&lt;tr style=\"border: 1px #F0F0F0 solid; font-size: 11px; font-family: verdana; vertical-align: top\"&gt;&lt;th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"The logical name of the element\"&gt;Name&lt;/a&gt;&lt;/th&gt;&lt;th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Information about the use of the element\"&gt;Flags&lt;/a&gt;&lt;/th&gt;&lt;th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Minimum and Maximum # of times the the element can appear in the instance\"&gt;Card.&lt;/a&gt;&lt;/th&gt;&lt;th style=\"width: 100px\" class=\"hierarchy\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Reference to the type of the element\"&gt;Type&lt;/a&gt;&lt;/th&gt;&lt;th style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Additional information about the element\"&gt;Description &amp;amp; Constraints&lt;/a&gt;&lt;span style=\"float: right\"&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"&gt;&lt;img src=\"http://build.fhir.org/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/&gt;&lt;/a&gt;&lt;/span&gt;&lt;/th&gt;&lt;/tr&gt;&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck1.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_element.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Element\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord\" title=\"A model for a structure collection of a patient's medication history.\"&gt;BeModelMedicationRecord&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;span style=\"opacity: 0.5\"&gt;0&lt;/span&gt;&lt;span style=\"opacity: 0.5\"&gt;..&lt;/span&gt;&lt;span style=\"opacity: 0.5\"&gt;*&lt;/span&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"http://build.fhir.org/types.html#Base\"&gt;Base&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Medication Record logical model&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.identifier\" title=\"The business identifier(s) for the Medication Record\"&gt;identifier&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.identifier\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..1&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"http://hl7.org/fhir/R4B/datatypes.html#Identifier\"&gt;Identifier&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;The business identifier(s) for the Medication Record&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_reference.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Reference to another Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.patient\" title=\"The subject of the medication record\"&gt;patient&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.patient\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;1..1&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"http://build.fhir.org/references.html\"&gt;Reference&lt;/a&gt;()&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;The subject of the medication record&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.treatments\" title=\"The treaments that are included in this record\"&gt;treatments&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.treatments\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordTreatment.html\"&gt;BeModelMedicationRecordTreatment&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;The treaments that are included in this record&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.treatmentLines\" title=\"The treatment lines that are included in this record\"&gt;treatmentLines&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.treatmentLines\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordTreatmentLine.html\"&gt;BeModelMedicationRecordTreatmentLine&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;The treatment lines that are included in this record&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck10.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.summaryView\" title=\"The summary views that are produced from this record or entered into it\"&gt;summaryView&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.summaryView\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordSummaryView.html\"&gt;BeModelMedicationRecordSummaryView&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;The summary views that are produced from this record or entered into it&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck11.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_datatype.gif\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Data Type\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords\" title=\"Detailed records - the most granular interactions\"&gt;detailedRecords&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"http://hl7.org/fhir/R4B/backboneelement.html#BackboneElement\"&gt;BackboneElement&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Detailed records&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords.orders\" title=\"Explicit or implicit order for medication use or changes\"&gt;orders&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords.orders\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordOrder.html\"&gt;BeModelMedicationRecordOrder&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Explicit or implicit order for medication use or changes&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords.schedule\" title=\"Scheduled administrations of the medication\"&gt;schedule&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords.schedule\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationScheduledAdministration.html\"&gt;BeModelMedicationScheduledAdministration&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Scheduled administrations of the medication&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords.dispenses\" title=\"Registered or reported dispenses\"&gt;dispenses&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords.dispenses\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordDispense.html\"&gt;BeModelMedicationRecordDispense&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Registered or reported dispenses&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck110.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords.administrations\" title=\"Registered or reported single administrations\"&gt;administrations&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords.administrations\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordAdministration.html\"&gt;BeModelMedicationRecordAdministration&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Registered or reported single administrations&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: #F7F7F7\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck100.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vline.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: #F7F7F7; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.detailedRecords.usageReports\" title=\"Reported statements of medication usage\"&gt;usageReports&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.detailedRecords.usageReports\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"StructureDefinition-BeModelMedicationRecordUsage.html\"&gt;BeModelMedicationRecordUsage&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: #F7F7F7; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Reported statements of medication usage&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr style=\"border: 0px #F0F0F0 solid; padding:0px; vertical-align: top; background-color: white\"&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px; white-space: nowrap; background-image: url(tbl_bck00.png)\" class=\"hierarchy\"&gt;&lt;img src=\"tbl_spacer.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"tbl_vjoin_end.png\" alt=\".\" style=\"background-color: inherit\" class=\"hierarchy\"/&gt;&lt;img src=\"icon_resource.png\" alt=\".\" style=\"background-color: white; background-color: inherit\" title=\"Resource\" class=\"hierarchy\"/&gt; &lt;a href=\"StructureDefinition-BeModelMedicationRecord-definitions.html#BeModelMedicationRecord.changeRecord\" title=\"Change records and provenance for the medication record components\"&gt;changeRecord&lt;/a&gt;&lt;a name=\"BeModelMedicationRecord.changeRecord\"&gt; &lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"/&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;0..*&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;&lt;a href=\"http://hl7.org/fhir/R4B/provenance.html\"&gt;Provenance&lt;/a&gt;&lt;/td&gt;&lt;td style=\"vertical-align: top; text-align : left; background-color: white; border: 0px #F0F0F0 solid; padding:0px 4px 0px 4px\" class=\"hierarchy\"&gt;Change records and provenance for the medication record components&lt;br/&gt;&lt;/td&gt;&lt;/tr&gt;\r\n&lt;tr&gt;&lt;td colspan=\"5\" class=\"hierarchy\"&gt;&lt;br/&gt;&lt;a href=\"https://build.fhir.org/ig/FHIR/ig-guidance/readingIgs.html#table-views\" title=\"Legend for this format\"&gt;&lt;img src=\"http://build.fhir.org/help16.png\" alt=\"doco\" style=\"background-color: inherit\"/&gt; Documentation for this format&lt;/a&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;"<a name="end-xhtml"></a>
+  },
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.url">url</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecord",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.version">version</a>" : "0.1.0-test",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.name">name</a>" : "BeModelMedicationRecord",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.title">title</a>" : "Medication Record logical model",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.status">status</a>" : "active",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.date">date</a>" : "2023-02-03T14:12:27+00:00",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.publisher">publisher</a>" : "HL7 Belgium",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.contact">contact</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4B/metadatatypes.html#ContactDetail#ContactDetail.telecom">telecom</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#ContactPoint#ContactPoint.system">system</a>" : "url",
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#ContactPoint#ContactPoint.value">value</a>" : "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.description">description</a>" : "A model for a structure collection of a patient's medication history.",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.jurisdiction">jurisdiction</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4B/datatypes.html#CodeableConcept#CodeableConcept.coding">coding</a>" : [
+        {
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#Coding#Coding.system">system</a>" : "urn:iso:std:iso:3166",
+          "<a href="http://hl7.org/fhir/R4B/datatypes.html#Coding#Coding.code">code</a>" : "BE"
+        }
+      ]
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.fhirVersion">fhirVersion</a>" : "4.3.0",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.mapping">mapping</a>" : [
+    {
+      "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.mapping.identity">identity</a>" : "rim",
+      "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.mapping.uri">uri</a>" : "http://hl7.org/v3",
+      "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.mapping.name">name</a>" : "RIM Mapping"
+    }
+  ],
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.kind">kind</a>" : "logical",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.abstract">abstract</a>" : false,
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.type">type</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecord",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.baseDefinition">baseDefinition</a>" : "http://hl7.org/fhir/StructureDefinition/Base",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.derivation">derivation</a>" : "specialization",
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.snapshot">snapshot</a>" : {
+    "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.snapshot.element">element</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Medication Record logical model",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A model for a structure collection of a patient's medication history.",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Base",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.identifier",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.identifier",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The business identifier(s) for the Medication Record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The business identifier(s) for the Medication Record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.identifier",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.patient",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.patient",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The subject of the medication record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The subject of the medication record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.patient",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 1,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.treatments",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.treatments",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The treaments that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The treaments that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.treatments",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatment"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.treatmentLines",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.treatmentLines",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The treatment lines that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The treatment lines that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.treatmentLines",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatmentLine"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.summaryView",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.summaryView",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The summary views that are produced from this record or entered into it",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The summary views that are produced from this record or entered into it",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.summaryView",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordSummaryView"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Detailed records",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Detailed records - the most granular interactions",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children unless an empty Parameters resource",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count()) or $this is Parameters",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div|self::f:Parameters",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.id",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.id",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.representation">representation</a>" : [
+          "xmlAttr"
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Unique id for inter-element referencing",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Unique id for the element within a resource (for internal references). This may be any string value that does not contain spaces.",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.id",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "1"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.extension">extension</a>" : [
+              {
+                "<a href="http://hl7.org/fhir/R4B/extensibility.html#Extension#Extension.url">url</a>" : "http://hl7.org/fhir/StructureDefinition/structuredefinition-fhir-type",
+                "<a href="http://hl7.org/fhir/R4B/extensibility.html#Extension#Extension.value[x]">valueUrl</a>" : "id"
+              }
+            ],
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7.org/fhirpath/System.String"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.extension",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.extension",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing">slicing</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing.discriminator">discriminator</a>" : [
+            {
+              "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing.discriminator.type">type</a>" : "value",
+              "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing.discriminator.path">path</a>" : "url"
+            }
+          ],
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing.description">description</a>" : "Extensions are always sliced by (at least) url",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.slicing.rules">rules</a>" : "open"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Additional content defined by implementations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element. To make the use of extensions safe and manageable, there is a strict set of governance  applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension.",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content"
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "Element.extension",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : false,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : false,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "n/a"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.modifierExtension",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Extensions that cannot be ignored even if unrecognized",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "May be used to represent additional information that is not part of the basic definition of the element and that modifies the understanding of the element in which it is contained and/or the understanding of the containing element's descendants. Usually modifier elements provide negation or qualification. To make the use of extensions safe and manageable, there is a strict set of governance applied to the definition and use of extensions. Though any implementer can define an extension, there is a set of requirements that SHALL be met as part of the definition of the extension. Applications processing a resource are required to check for modifier extensions.\n\nModifier extensions SHALL NOT change the meaning of any elements on Resource or DomainResource (including cannot change the meaning of modifierExtension itself).",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.comment">comment</a>" : "There can be no stigma associated with the use of extensions by any application, project, or standard - regardless of the institution or jurisdiction that uses or defines the extensions.  The use of extensions is what allows the FHIR specification to retain a core level of simplicity for everyone.",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.requirements">requirements</a>" : "Modifier extensions allow for extensions that *cannot* be safely ignored to be clearly distinguished from the vast majority of extensions which can be safely ignored.  This promotes interoperability by eliminating the need for implementers to prohibit the presence of extensions. For further information, see the [definition of modifier extensions](http://hl7.org/fhir/R4B/extensibility.html#modifierExtension).",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.alias">alias</a>" : [
+          "extensions",
+          "user content",
+          "modifiers"
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BackboneElement.modifierExtension",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint">constraint</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ele-1",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "All FHIR elements must have a @value or children",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "hasValue() or (children().count() &gt; id.count())",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "@value|f:*|h:div",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Element"
+          },
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.key">key</a>" : "ext-1",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.severity">severity</a>" : "error",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.human">human</a>" : "Must have either extensions or value[x], not both",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.expression">expression</a>" : "extension.exists() != value.exists()",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.xpath">xpath</a>" : "exists(f:extension)!=exists(f:*[starts-with(local-name(.), \"value\")])",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.constraint.source">source</a>" : "http://hl7.org/fhir/StructureDefinition/Extension"
+          }
+        ],
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isModifier">isModifier</a>" : true,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isModifierReason">isModifierReason</a>" : "Modifier extensions are expected to modify the meaning or interpretation of the element that contains them",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.isSummary">isSummary</a>" : true,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping">mapping</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.identity">identity</a>" : "rim",
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.mapping.map">map</a>" : "N/A"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.orders",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.orders",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Explicit or implicit order for medication use or changes",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Explicit or implicit order for medication use or changes",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords.orders",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordOrder"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.schedule",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.schedule",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Scheduled administrations of the medication",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Scheduled administrations of the medication",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords.schedule",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationScheduledAdministration"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Registered or reported dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Registered or reported dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords.dispenses",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordDispense"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Registered or reported single administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Registered or reported single administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords.administrations",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordAdministration"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.usageReports",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.usageReports",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Reported statements of medication usage",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Reported statements of medication usage",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.detailedRecords.usageReports",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordUsage"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.changeRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.changeRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Change records and provenance for the medication record components",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Change records and provenance for the medication record components",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base">base</a>" : {
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.path">path</a>" : "BeModelMedicationRecord.changeRecord",
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.min">min</a>" : 0,
+          "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.base.max">max</a>" : "*"
+        },
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Provenance"
+          }
+        ]
+      }
+    ]
+  },
+  "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.differential">differential</a>" : {
+    "<a href="http://hl7.org/fhir/R4B/structuredefinition.html#StructureDefinition.differential.element">element</a>" : [
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Medication Record logical model",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "A model for a structure collection of a patient's medication history."
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.identifier",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.identifier",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The business identifier(s) for the Medication Record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The business identifier(s) for the Medication Record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Identifier"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.patient",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.patient",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The subject of the medication record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The subject of the medication record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 1,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "1",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Reference"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.treatments",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.treatments",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The treaments that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The treaments that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatment"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.treatmentLines",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.treatmentLines",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The treatment lines that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The treatment lines that are included in this record",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatmentLine"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.summaryView",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.summaryView",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "The summary views that are produced from this record or entered into it",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "The summary views that are produced from this record or entered into it",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordSummaryView"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Detailed records",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Detailed records - the most granular interactions",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "BackboneElement"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.orders",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.orders",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Explicit or implicit order for medication use or changes",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Explicit or implicit order for medication use or changes",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordOrder"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.schedule",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.schedule",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Scheduled administrations of the medication",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Scheduled administrations of the medication",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationScheduledAdministration"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Registered or reported dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Registered or reported dispenses",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordDispense"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Registered or reported single administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Registered or reported single administrations",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordAdministration"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.detailedRecords.usageReports",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.detailedRecords.usageReports",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Reported statements of medication usage",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Reported statements of medication usage",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordUsage"
+          }
+        ]
+      },
+      {
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.id">id</a>" : "BeModelMedicationRecord.changeRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.path">path</a>" : "BeModelMedicationRecord.changeRecord",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.short">short</a>" : "Change records and provenance for the medication record components",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.definition">definition</a>" : "Change records and provenance for the medication record components",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.min">min</a>" : 0,
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.max">max</a>" : "*",
+        "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type">type</a>" : [
+          {
+            "<a href="http://hl7.org/fhir/R4B/elementdefinition.html#ElementDefinition#ElementDefinition.type.code">code</a>" : "Provenance"
+          }
+        ]
+      }
+    ]
+  }
+}</code></pre>
+
+
+    <!-- insert notes if present -->
+  
+
+
+
+</div>
+
+        </div>    <!-- /inner-wrapper -->
+      </div>    <!-- /row -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-content -->
+
+  <script src="assets/js/jquery.js" type="text/javascript"> </script>       <!-- note keep space here, otherwise it will be transformed to empty tag -> fails -->
+  <script src="assets/js/jquery-ui.min.js" type="text/javascript"> </script>
+
+  <script type="text/javascript">
+    try {
+      var currentTabIndex = sessionStorage.getItem('fhir-resource-tab-index');
+    } catch(exception) {
+    }
+
+    if (!currentTabIndex)
+      currentTabIndex = '0';
+
+    $( '#tabs' ).tabs({
+      active: currentTabIndex,
+      activate: function( event, ui ) {
+        var active = $('.selector').tabs('option', 'active');
+        currentTabIndex = ui.newTab.index();
+        document.activeElement.blur();
+        try {
+          sessionStorage.setItem('fhir-resource-tab-index', currentTabIndex);
+        } catch(exception) {
+        }
+      }
+    });
+  </script>
+
+  <script type="text/javascript">
+    $(document).ready(function(){
+      if(window.location.hash != "") {
+          $('a[href="' + window.location.hash + '"]').click()
+      }
+    });
+  </script>
+  <div igtool="footer" id="segment-footer" class="segment">    <!-- segment-footer -->
+    <div class="container">    <!-- container -->
+      <div class="inner-wrapper">
+        <p>
+          IG &copy; 2019+ <a style="color: #81BEF7" href="http://hl7belgium.org">HL7 Belgium</a>.  Package hl7.fhir.be.riziv-medicationrecord#0.1.0-test based on <a style="color: #81BEF7" href="http://build.fhir.org/">FHIR 4.3.0</a>. Generated <span title="Fri, Feb 3, 2023 14:12+0000">2023-02-03</span>
+          <br/>
+          <span style="color: #FFFF77">
+              <!-- HL7 Belgium -->
+  <!-- draft -->
+
+Links: <a style="color: var(--footer-hyperlink-text-color)" href="toc.html">Table of Contents</a> |
+                 <a style="color: var(--footer-hyperlink-text-color)" href="qa.html">QA Report</a> |
+                 
+                 <a style="color: var(--footer-hyperlink-text-color)" href="http://hl7belgium.org/fhir/riziv-medicationrecord/history.html" target="_blank">Version History</a> |
+                 <a rel="license" style="color: var(--footer-hyperlink-text-color)" href="http://build.fhir.org/license.html"><img src="assets/images/cc-by.png" alt="CC-BY" style="border-style: none;" height="17"/></a>
+  <!-- no fitting stylesheet found (status/publisher) -->
+
+
+          </span>
+        </p>
+      </div>    <!-- /inner-wrapper -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-footer -->
+  
+  <div id="segment-post-footer" class="segment hidden">    <!-- segment-post-footer -->
+    <div class="container">    <!-- container -->
+    </div>    <!-- /container -->
+  </div>    <!-- /segment-post-footer -->
+  
+    <!-- JS and analytics only. -->
+    <!-- Bootstrap core JavaScript
+  ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+  <script src="assets/js/bootstrap.min.js" type="text/javascript"> </script>
+  <script src="assets/js/respond.min.js" type="text/javascript"> </script>
+  <script src="assets/js/anchor.min.js" type="text/javascript"> </script>
+  <script>anchors.options.visible = 'hover'
+anchors.add()</script>
+  
+  <!-- feedback form - Google forms -->
+  <!-- v0.1, 2021-01-09 -->
+
+
+
+  <!-- / feedback form -->
+
+    <!-- Analytics Below
+  ================================================== -->
+  </body>
+</html>

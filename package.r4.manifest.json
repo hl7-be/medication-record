@@ -1,0 +1,6 @@
+{
+  "version" : "0.1.0-test",
+  "date" : "20240126143813",
+  "notForPublication" : true,
+  "name" : "hl7.fhir.be.riziv-medicationrecord.r4"
+}

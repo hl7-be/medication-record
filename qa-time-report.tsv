@@ -1,0 +1,12 @@
+Source File	Size	loadResources	load-configure	scan	loadDepInfo	loadInfo	load	generateSnapshots	checkR4R4B	generateNarratives	validate	loadLists	checkConformanceResources	checkConformanceResources2	checkConformanceResources3	generateLogicalMaps	validateExpressions	scanForUsageStats	checkURLsUnique	processProvenanceDetails	generate1	generate2	generateLogicals	makeDependencies	generateExampleZip	generateValidationPack	scanProfilesForR5	scanExamplesForR5
+/input/riziv-medrecord.xml	11235	-	0	0	0	0	0	0	10	94	0	0	0	0	0	0	0	1	0	0	108	102	0	0	0	5	0	1
+fsh-generated/resources/ExampleScenario-example-1-scenario.json	8547	20	0	0	0	0	0	0	1	91	0	0	0	0	0	0	0	0	0	0	40	457	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-13-scenario.json	7677	16	0	0	0	0	0	0	1	21	0	0	0	0	0	0	0	0	0	0	38	104	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-2-scenario.json	6066	17	0	0	0	0	0	0	1	17	0	0	0	0	0	0	0	0	0	0	29	74	0	0	1	1	0	0
+fsh-generated/resources/ExampleScenario-example-3-scenario.json	9198	19	0	0	0	0	0	0	0	20	1	0	0	0	0	0	0	1	0	0	37	127	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-4-scenario.json	8441	16	0	0	0	0	0	0	1	19	0	0	0	0	0	0	0	0	0	0	37	76	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-5-scenario.json	5915	16	0	0	0	0	0	0	0	16	0	0	0	0	0	0	0	0	0	0	29	62	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-6-scenario.json	5965	19	0	0	0	0	0	0	1	16	0	0	0	0	0	0	0	0	0	0	27	56	0	0	0	0	0	0
+fsh-generated/resources/ExampleScenario-example-7-scenario.json	7449	15	0	0	0	0	0	0	0	20	0	0	0	0	0	0	0	0	0	0	31	66	0	0	0	1	0	0
+fsh-generated/resources/ExampleScenario-example-8-scenario.json	8473	17	0	0	0	0	0	0	0	15	0	0	0	0	0	0	0	0	0	0	35	66	0	0	0	1	0	1
+fsh-generated/resources/StructureDefinition-be-model-medication-dispense.json	8062	17	1	0	0	0	0	57	0	77	0	0	0	0	0	0	0	1	0	0	195	1101	0	1	0	7	0	0

@@ -1,0 +1,1855 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ImplementationGuide xmlns="http://hl7.org/fhir">
+  <id value="hl7.fhir.be.riziv-medicationrecord"/>
+  <text>
+    <status value="extensions"/><div xmlns="http://www.w3.org/1999/xhtml"><h2>MedicationRecord</h2><p>The official URL for this implementation guide is: </p><pre>http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord</pre><div><p>Medication Record</p>
+</div></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ImplementationGuide/hl7.fhir.be.riziv-medicationrecord"/>
+  <version value="0.1.0-test"/>
+  <name value="MedicationRecord"/>
+  <title value="MedicationRecord"/>
+  <status value="draft"/>
+  <experimental value="false"/>
+  <date value="2022-01-28T15:30:41+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <description value="Medication Record"/>
+  <jurisdiction>
+    <coding>
+      <system value="urn:iso:std:iso:3166"/>
+      <code value="BE"/>
+    </coding>
+  </jurisdiction>
+  <packageId value="hl7.fhir.be.riziv-medicationrecord"/>
+  <license value="CC0-1.0"/>
+  <fhirVersion value="4.0.1"/>
+  <dependsOn id="fedbecore">
+    <uri value="https://www.ehealth.fgov.be/standards/fhir/ImplementationGuide/fed-be-core"/>
+    <packageId value="fed.be.core"/>
+    <version value="dev"/>
+  </dependsOn>
+  <definition>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="copyrightyear"/>
+      </extension>
+      <extension url="value">
+        <valueString value="2019+"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="releaselabel"/>
+      </extension>
+      <extension url="value">
+        <valueString value="CI Build"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-binary"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input\cql"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="excludettl"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="show-inherited-invariants"/>
+      </extension>
+      <extension url="value">
+        <valueString value="false"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="autoload-resources"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-liquid"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/liquid"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-qa"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/qa"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-temp"/>
+      </extension>
+      <extension url="value">
+        <valueString value="temp/pages"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-output"/>
+      </extension>
+      <extension url="value">
+        <valueString value="output"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-suppressed-warnings"/>
+      </extension>
+      <extension url="value">
+        <valueString value="input/ignoreWarnings.txt"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="path-history"/>
+      </extension>
+      <extension url="value">
+        <valueString value="http://hl7belgium.org/fhir/riziv-medicationrecord/history.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-html"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="template-md"/>
+      </extension>
+      <extension url="value">
+        <valueString value="template-page-md.html"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-contact"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-context"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-copyright"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-jurisdiction"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-license"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-publisher"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="apply-version"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <extension url="http://hl7.org/fhir/tools/StructureDefinition/ig-parameter">
+      <extension url="code">
+        <valueString value="active-tables"/>
+      </extension>
+      <extension url="value">
+        <valueString value="true"/>
+      </extension>
+    </extension>
+    <grouping id="medicationrecord-schema">
+      <name value="Medication Record - schema"/>
+      <description value="Conformance artifactsfor Medication Record, to meet the scope of the Medication Schema"/>
+    </grouping>
+    <grouping id="medicationrecord-models">
+      <name value="Medication Record - models"/>
+      <description value="Medication Record Models"/>
+    </grouping>
+    <grouping id="medicationrecord">
+      <name value="Medication Record - future conformance"/>
+      <description value="Medication Record - artifacts that are related to the more advanced features and scope of the Medication Record, beyond the Medication Schema"/>
+    </grouping>
+    <grouping id="medicationrecord-validatingexamples">
+      <name value="Medication Record - Validating examples"/>
+      <description value="Medication Record / Medication Schema examples and scenarios for validation"/>
+    </grouping>
+    <grouping id="vocabulary">
+      <name value="Vocabulary"/>
+      <description value="Terminology and Vocabulary"/>
+    </grouping>
+    <grouping id="medicationdispense">
+      <name value="Medication Dispense"/>
+      <description value="Medication Dispense"/>
+    </grouping>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/be-model-medication-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Logical Model Medication Dispense"/>
+      <description value="Medication Dispense entry - information captured when dispensing medication e.g. in pharmacies and hospitals"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/be-medicationdispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Profile - Medication Dispense"/>
+      <description value="Medication Dispense entry - information captured when dispensing medication e.g. in pharmacies and hospitals"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="NamingSystem"/>
+      </extension>
+      <reference>
+        <reference value="NamingSystem/be-ns-nihdi-organization"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="NamingSystem - NIHDI Organization"/>
+      <description value="NIHDI identifier for care organizations"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="NamingSystem"/>
+      </extension>
+      <reference>
+        <reference value="NamingSystem/be-ns-nihdi-professional"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="NamingSystem - NIHDI Professional"/>
+      <description value="NIHDI identifier for care professionals"/>
+      <groupingId value="terminology"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/medication-dispense-example-1"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Dispense Example 1"/>
+      <description value="Medication Dispense Example 1 - a simple example of a dispensation in a pharmacy"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/medication-dispense-example-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Dispense Example 2"/>
+      <description value="Medication Dispense Example 2 - a simple example of a dispensation in a pharmacy - with a geolocation"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/13-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Dispense Example 2"/>
+      <description value="Medication Dispense Example 2 - a simple example of a dispensation in a pharmacy - with a geolocation"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/13-dispense-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Dispense Example 2"/>
+      <description value="Medication Dispense Example 2 - a simple example of a dispensation in a pharmacy - with a geolocation"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/13-dispense-3"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Dispense Example 2"/>
+      <description value="Medication Dispense Example 2 - a simple example of a dispensation in a pharmacy - with a geolocation"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/be-medicationdispense"/>
+      <groupingId value="medicationdispense"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/KMEHRv58"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="KMEHR Medication Schema v5.8 Logical Model"/>
+      <description value="KMEHR Medication Schema v5.8 Logical Model (for reference)"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecord"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model"/>
+      <description value="Medication Record Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordAdministration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Administration detail"/>
+      <description value="Medication Record Logical Model - Administration detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordDispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Dispense detail"/>
+      <description value="Medication Record Logical Model - Dispense detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordOrder"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Prescription detail"/>
+      <description value="Medication Record Logical Model - Prescription detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordSummaryView"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Medication Summary View detail"/>
+      <description value="Medication Record Logical Model - Medication Summary View detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordTreatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Medication Treatment detail"/>
+      <description value="Medication Record Logical Model - Medication Treatment detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordTreatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Medication Treatment Line detail"/>
+      <description value="Medication Record Logical Model - Medication Treatment Line detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationRecordUsage"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Usage Report detail"/>
+      <description value="Medication Record Logical Model - Usage Report detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:logical"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/BeModelMedicationScheduledAdministration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Logical Model - Scheduled Administration detail"/>
+      <description value="Medication Record Logical Model - Scheduled Administration detail Logical Model"/>
+      <groupingId value="medicationrecord-models"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecord"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Bundle Document profile"/>
+      <description value="Medication Record Bundle Document profile"/>
+      <groupingId value="medicationrecord-schema"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecord-comp"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Composition profile"/>
+      <description value="Medication Record Composition profile"/>
+      <groupingId value="medicationrecord-schema"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordTreatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Treatment profile"/>
+      <description value="Medication Record Treatment profile"/>
+      <groupingId value="medicationrecord-schema"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordTreatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Treatment Line profile"/>
+      <description value="Medication Record Treatment Line profile"/>
+      <groupingId value="medicationrecord-schema"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordAdministration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Administration profile"/>
+      <description value="Medication Record Administration profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordDispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Dispense profile"/>
+      <description value="Medication Record Dispense profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Scheduled Administration profile"/>
+      <description value="Medication Record Scheduled Administration profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordMedicationSummaryView"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Summary View profile"/>
+      <description value="Medication Record Summary View profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordOrder"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Prescription profile"/>
+      <description value="Medication Record Prescription profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:resource"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/MedRecordUsage"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Medication Record Usage profile"/>
+      <description value="Medication Record Usage profile"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="StructureDefinition:extension"/>
+      </extension>
+      <reference>
+        <reference value="StructureDefinition/related-tl"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Extension - Related Treatment Line"/>
+      <description value="Extension - Related Treatment Line"/>
+      <groupingId value="medicationrecord"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/13-treatmentLine-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Logical Model Medication Record"/>
+      <description value="Medication Record Composition profile"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/13-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Logical Model Medication Record"/>
+      <description value="Medication Record Composition profile"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-1-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 1 - Changing brand name in the same VOS"/>
+      <description value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/1-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 1 - Dispense"/>
+      <description value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/1-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 1 - prescription"/>
+      <description value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/1-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 1 - Treatment"/>
+      <description value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/1-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 1 - Treatment Line"/>
+      <description value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-2-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 2 - Changing by another medication from a different VOS"/>
+      <description value="Prescribed medication is changed by another medication from a different VOS-cluster"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/2a-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 2a - Dispense"/>
+      <description value="Prescribed medication is changed by another medication from a different VOS-cluster - Different strength"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/2a-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 2a - prescription"/>
+      <description value="Prescribed medication is changed by another medication from a different VOS-cluster - Different strength"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/2a-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 2a - Treatment"/>
+      <description value="Prescribed medication is changed by another medication from a different VOS-cluster - Different strength"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/2a-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 2a - Treatment Line"/>
+      <description value="Prescribed medication is changed by another medication from a different VOS-cluster - Different strength"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-3-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 3 - Dispense medication before the prescription is available"/>
+      <description value="This example shows a dispense of a medication that is made before an existing prescription"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/3-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - Dispense"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/3-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - prescription"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/3-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - Treatment"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/3-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - Treatment Line"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/3-2-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - Dispense 2"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/3-2-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 3 - prescription 2"/>
+      <description value="Dispense medication before the prescription of the general practitioner"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-4-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 4 - Dispense of prescribed medication and of a product without a prescription"/>
+      <description value="This example shows a dispense of two products. One that has a prescription and other that does not (and does not need one)."/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/4-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - prescription"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/4-1-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Dispense 1"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/4-2-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Dispense 2 (no Prescription)"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/4-1-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Treatment 1"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/4-1-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Treatment Line 1"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/4-2-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Treatment 2"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/4-2-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 4 - Treatment Line 2"/>
+      <description value="Dispense of prescribed medication, and dispense of a product that can be done without a prescription"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-5-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 5 - Dispense of new brand medication because the old is unavailable"/>
+      <description value="This example shows a prescription that is made by brand name and the pharmacist changes the brand name for another brand name in the same VOS - Cluster because there is no stock."/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/5-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 5 - Dispense"/>
+      <description value="Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/5-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 5 - prescription"/>
+      <description value="Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/5-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 5 - Treatment"/>
+      <description value="Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/5-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 5 - Treatment Line"/>
+      <description value="Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-6-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 6 - Refusal to dispense the prescribed medication"/>
+      <description value="This example shows a prescription that is made by VOS and the pharmacist refuses to dispense the medication due to interaction with previous medication."/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/6-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 6 - Dispense"/>
+      <description value="Refuse the dispense prescribed medication"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/6-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 6 - prescription"/>
+      <description value="Refuse the dispense prescribed medication"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/6-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 6 - Treatment"/>
+      <description value="Refuse the dispense prescribed medication"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/6-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 6 - Treatment Line"/>
+      <description value="Refuse the dispense prescribed medication"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-7-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 7 - Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <description value="This example shows a prescription that is made by VOS and to take only if needed and the pharmacist dispenses it. Then it is reported that the medication was not taken at all."/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/7-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 7 - Dispense"/>
+      <description value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/7-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 7 - prescription"/>
+      <description value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/7-usage"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 7 - Usage"/>
+      <description value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/7-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 7 - Treatment"/>
+      <description value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/7-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 7 - Treatment Line"/>
+      <description value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-8-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 8 - Dispense of medication that was prescribed, but not taken till the end"/>
+      <description value="This example shows a prescription that is made by VOS and the pharmacist dispenses it. But at the time of administration, the treatment is stopped due to a reaction."/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/8-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - prescription"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/8-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - Dispense"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationAdministration"/>
+      </extension>
+      <reference>
+        <reference value="MedicationAdministration/8-administration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - Administration"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordAdministration"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/8-usage"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - Usage"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/8-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - Treatment"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/8-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 8 - Treatment Line"/>
+      <description value="Dispense of medication that was prescribed, but not taken till the end"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/10-1-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 10 - Dispense 1"/>
+      <description value="The recording of non-medication aka pharmaceutical products"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/10-2-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 10 - Dispense 2"/>
+      <description value="The recording of non-medication aka pharmaceutical products"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/10-3-dispense"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 10 - Dispense 3"/>
+      <description value="The recording of non-medication aka pharmaceutical products"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordDispense"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ExampleScenario"/>
+      </extension>
+      <reference>
+        <reference value="ExampleScenario/example-13-scenario"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="ExampleScenario 13 - Dispense of OTC medication for acute symptons"/>
+      <description value="This example shows dispense of medication OTC and how treatment resources should be handled"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-prescription"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - prescription 1"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/15-treatment"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Treatment 1"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/15-treatmentLine"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Treatment Line 1"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-scheduleAdministration"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Scheduled Administration 1"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-scheduleAdministration-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Scheduled Administration 2"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-prescription-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - prescription 2"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordOrder"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/15-treatment-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Treatment 2"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationStatement"/>
+      </extension>
+      <reference>
+        <reference value="MedicationStatement/15-treatmentLine-2"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Treatment Line 2"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatmentLine"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-scheduleAdministration-3"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Scheduled Administration 3"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationRequest"/>
+      </extension>
+      <reference>
+        <reference value="MedicationRequest/15-scheduleAdministration-4"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Scheduled Administration 4"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationScheduledAdministration"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/total-view"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Total View of Medication"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/week-view"/>
+      </reference>
+      <fhirVersion value="4.0.1"/>
+      <name value="Example 15 - Week View of Medication"/>
+      <description value="Medication summary"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordMedicationSummaryView"/>
+      <groupingId value="medicationrecord-validatingexamples"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="NamingSystem"/>
+      </extension>
+      <reference>
+        <reference value="NamingSystem/be-ns-product-package-type"/>
+      </reference>
+      <description value="Naming System - Product Package Types"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/example-dispense-communitypharmacy-1med"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/pharyngitis-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="NamingSystem"/>
+      </extension>
+      <reference>
+        <reference value="NamingSystem/be-ns-prescription-ids"/>
+      </reference>
+      <description value="Naming System - Prescription IDs"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CodeSystem"/>
+      </extension>
+      <reference>
+        <reference value="CodeSystem/be-cs-medication-summary-types"/>
+      </reference>
+      <name value="Medication Summary Types CodeSystem"/>
+      <description value="CodeSystem - Medication Summary types"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/arthritis-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Bundle"/>
+      </extension>
+      <reference>
+        <reference value="Bundle/EB"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/medication-substitution-dispense-v1"/>
+      </reference>
+      <name value="Medication Substitution Value Set"/>
+      <description value="Value set for substituting a medication on dispense."/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="CarePlan"/>
+      </extension>
+      <reference>
+        <reference value="CarePlan/13-treatment"/>
+      </reference>
+      <name value="Headache"/>
+      <exampleCanonical value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/example-minimal-dispense"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/toothache-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/headache-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="NamingSystem"/>
+      </extension>
+      <reference>
+        <reference value="NamingSystem/be-ns-cnk-codes"/>
+      </reference>
+      <description value="Naming System - CNK Product Codes"/>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/diarrhea-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/reflux-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="MedicationDispense"/>
+      </extension>
+      <reference>
+        <reference value="MedicationDispense/medication-dispense-hospital"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/hypertension-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="Condition"/>
+      </extension>
+      <reference>
+        <reference value="Condition/hyperlipidemia-condition"/>
+      </reference>
+    </resource>
+    <resource>
+      <extension url="http://hl7.org/fhir/tools/StructureDefinition/resource-information">
+        <valueString value="ValueSet"/>
+      </extension>
+      <reference>
+        <reference value="ValueSet/be-vs-medication-summary-types"/>
+      </reference>
+      <name value="Medication Summary Types Value Set"/>
+      <description value="Valueset -  Medication Summary types"/>
+    </resource>
+    <page>
+      <nameUrl value="toc.html"/>
+      <title value="Table of Contents"/>
+      <generation value="html"/>
+      <page>
+        <nameUrl value="index.html"/>
+        <title value="Home Page"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="howto.html"/>
+        <title value="How to read this document"/>
+        <generation value="html"/>
+      </page>
+      <page>
+        <nameUrl value="usecases-dispense.html"/>
+        <title value="Use Cases - Dispense"/>
+        <generation value="markdown"/>
+      </page>
+      <page>
+        <nameUrl value="medicationrecord.html"/>
+        <title value="The Belgian Medication Record"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="medicationrecord-scenarios.html"/>
+          <title value="Medication Record Scenarios"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="medicationrecord-scenario-1.html"/>
+            <title value="Scenario 1 - concurrent medications"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="medicationrecord-scenario-2.html"/>
+            <title value="Scenario 2 - medication protocols"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <nameUrl value="medicationrecord-definitions.html"/>
+          <title value="Definitions - Medication Record"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="medicationrecord-requirements.html"/>
+          <title value="Requirements - Medication Record"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="medication-granularity.html"/>
+            <title value="Medication Levels"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="medication-class-group.html"/>
+            <title value="Medication Classification and grouping"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+        <page>
+          <nameUrl value="medicationrecord-patterns.html"/>
+          <title value="Architectural patterns - Medication Record"/>
+          <generation value="markdown"/>
+          <page>
+            <nameUrl value="medicationrecord-pattern-1.html"/>
+            <title value="Pattern 1 - Consult a patient&#39;s medication record"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="medicationrecord-pattern-2.html"/>
+            <title value="Pattern 2 - update a patient&#39;s medication record"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="medicationrecord-pattern-3.html"/>
+            <title value="Pattern 3 - Compile a medication record"/>
+            <generation value="markdown"/>
+          </page>
+          <page>
+            <nameUrl value="medicationrecord-pattern-4.html"/>
+            <title value="Pattern 4 - Creation of Treatments and Treatment Lines"/>
+            <generation value="markdown"/>
+          </page>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="medicationrecord-usageexamples.html"/>
+        <title value="MedicationRecord - usage examples"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="example1.html"/>
+          <title value="Prescribed branded medication is changed by another branded medication from the same VOS-cluster"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example2a.html"/>
+          <title value="Prescribed medication is changed by another medication from a different VOS-cluster - different strength"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example2b.html"/>
+          <title value="Prescribed medication is changed by another medication from a different VOS-cluster - Different package size"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example3.html"/>
+          <title value="Dispense medication before the prescription is available"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example4.html"/>
+          <title value="Dispense of prescribed medication and of a product that can be dispensed without a prescription"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example5.html"/>
+          <title value="Dispense of new brand medication that is given because the old is unavailable, so giving to continue the treatment and not to replace it"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example6.html"/>
+          <title value="Refusal to dispense the prescribed medication"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example7.html"/>
+          <title value="Dispense of medication that was prescribed to take if needed, but was not taken"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example8.html"/>
+          <title value="Dispense of medication that was prescribed, but not taken till the end"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example9a.html"/>
+          <title value="Recording of anesthetic, contrast and similar medications - Checking possible interactions before surgery"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example9b.html"/>
+          <title value="Recording of anesthetic, contrast and similar medications - Product prescribed (by VOS) and dispense for exam "/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="example10.html"/>
+          <title value="The recording of non-medication aka pharmaceutical products"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="logical-models.html"/>
+          <title value="Logical Models"/>
+          <generation value="markdown"/>
+        </page>
+        <page>
+          <nameUrl value="downloads.html"/>
+          <title value="Downloads"/>
+          <generation value="html"/>
+        </page>
+      </page>
+      <page>
+        <nameUrl value="implementation.html"/>
+        <title value="Medication Record Implementation"/>
+        <generation value="markdown"/>
+        <page>
+          <nameUrl value="medicationrecord-fhir-resources.html"/>
+          <title value="Medication Record - FHIR resources"/>
+          <generation value="markdown"/>
+        </page>
+      </page>
+    </page>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/capabilities"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/examples"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/extensions"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/models"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/operations"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/profiles"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/vocabulary"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/maps"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/testing"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="input/history"/>
+    </parameter>
+    <parameter>
+      <code value="path-resource"/>
+      <value value="fsh-generated/resources"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="template/config"/>
+    </parameter>
+    <parameter>
+      <code value="path-pages"/>
+      <value value="input/images"/>
+    </parameter>
+    <parameter>
+      <code value="path-tx-cache"/>
+      <value value="input-cache/txcache"/>
+    </parameter>
+  </definition>
+</ImplementationGuide>

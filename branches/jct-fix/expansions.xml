@@ -1,0 +1,659 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Bundle xmlns="http://hl7.org/fhir">
+  <id value="8409d167-e50a-4860-8f15-94b5dde1ec11"/>
+  <meta>
+    <lastUpdated value="2022-11-14T21:47:41.622+00:00"/>
+  </meta>
+  <type value="collection"/>
+  <entry>
+    <fullUrl value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-medication-summary-types"/>
+    <resource>
+      <ValueSet>
+        <id value="be-vs-medication-summary-types"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 4 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="CodeSystem-be-cs-medication-summary-types.html">Medication Summary Types CodeSystem v0.1.0-test (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-kmehr-ms-5.6"> </a>  
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-kmehr-ms-5.466">kmehr-ms-5.6</a>
+                </td>
+                <td>http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types</td>
+                <td>Belgian Medication Schema v5.6 - 09/2018</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-kmehr-ms-5.5"> </a>  
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-kmehr-ms-5.465">kmehr-ms-5.5</a>
+                </td>
+                <td>http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types</td>
+                <td>Belgian Medication Schema v5.5 - 12-2017</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-Scheduled"> </a>  
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-Scheduled">Scheduled</a>
+                </td>
+                <td>http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types</td>
+                <td>Scheduled Takes View</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---hl7belgium.org-fhir-riziv-medicationrecord-CodeSystem-be-cs-medication-summary-types-Summary"> </a>  
+                  <a href="CodeSystem-be-cs-medication-summary-types.html#be-cs-medication-summary-types-Summary">Summary</a>
+                </td>
+                <td>http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types</td>
+                <td>Summary view for a physician</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-medication-summary-types"/>
+        <version value="0.1.0-test"/>
+        <name value="BeVSMedicationSummaryTypes"/>
+        <title value="Medication Summary Types Value Set"/>
+        <status value="active"/>
+        <date value="2022-11-14T21:47:41+00:00"/>
+        <publisher value="HL7 Belgium"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7belgium.org"/>
+          </telecom>
+        </contact>
+        <description value="Valueset -  Medication Summary types"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:4fd9cea8-3131-48f5-a1ee-e9d5181d7825"/>
+          <timestamp value="2022-11-14T21:48:47+00:00"/>
+          <total value="4"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types|0.1.0-test"/>
+          </parameter>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="kmehr-ms-5.6"/>
+            <display value="Belgian Medication Schema v5.6 - 09/2018"/>
+          </contains>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="kmehr-ms-5.5"/>
+            <display value="Belgian Medication Schema v5.5 - 12-2017"/>
+          </contains>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="Scheduled"/>
+            <display value="Scheduled Takes View"/>
+          </contains>
+          <contains>
+            <system value="http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types"/>
+            <code value="Summary"/>
+            <display value="Summary view for a physician"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/medication-substitution-dispense-v1"/>
+    <resource>
+      <ValueSet>
+        <id value="medication-substitution-dispense-v1"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 10 concepts</p>
+            <div style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">
+              <p>Expansion based on: </p>
+              <ul>
+                <li>
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html">Substance Admin Substitution v2.1.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html">ActReason v2.1.0 (CodeSystem)</a>
+                </li>
+                <li>
+                  <a href="http://terminology.hl7.org/4.0.0/ValueSet-v3-ActSubstanceAdminSubstitutionCode.html">ActSubstanceAdminSubstitutionCode v2.0.0 (ValueSet)</a>
+                </li>
+              </ul>
+            </div>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+                <td>
+                  <b>Definition</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-E"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-E">E</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>equivalent</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> Substitution occurred or is permitted with another bioequivalent and therapeutically equivalent product.
+                    </p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-EC"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-EC">EC</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>equivalent composition</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong>
+                    </p>
+
+                    <p>Substitution occurred or is permitted with another product that is a:</p>
+
+                    <ul>
+
+                      <li>pharmaceutical alternative containing the same active ingredient but is formulated with different salt, ester</li>
+
+                      <li>pharmaceutical equivalent that has the same active ingredient, strength, dosage form and route of administration</li>
+
+                    </ul>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>
+                        <em>Pharmaceutical alternative:</em> Erythromycin Ethylsuccinate for Erythromycin Stearate
+                      </li>
+
+                      <li>
+                        <em>Pharmaceutical equivalent:</em> Lisonpril for Zestril
+                      </li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-BC"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-BC">BC</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>brand composition</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong>
+                    </p>
+
+                    <p>Substitution occurred or is permitted between equivalent Brands but not Generics</p>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>Zestril for Prinivil</li>
+
+                      <li>Coumadin for Jantoven</li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-G"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-G">G</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>generic composition</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> Substitution occurred or is permitted between equivalent Generics but not Brands
+                    </p>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>Lisnopril (Lupin Corp) for Lisnopril (Wockhardt Corp)</li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-TE"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-TE">TE</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>therapeutic alternative</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> Substitution occurred or is permitted with another product having the same therapeutic objective and safety profile.
+                    </p>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>ranitidine for Tagamet</li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-TB"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-TB">TB</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>therapeutic brand</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> Substitution occurred or is permitted between therapeutically equivalent Brands but not Generics
+                    </p>
+
+                    <blockquote>
+</blockquote>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>Zantac for Tagamet</li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-TG"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-TG">TG</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>therapeutic generic</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> Substitution occurred or is permitted between therapeutically equivalent Generics but not Brands
+                    </p>
+
+                    <blockquote>
+</blockquote>
+
+                    <p>
+                      <em>Examples:</em>
+                    </p>
+
+                    <ul>
+
+                      <li>Ranitidine for cimetidine</li>
+
+                    </ul>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-F"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-F">F</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>formulary</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong> This substitution was performed or is permitted based on formulary guidelines.
+                    </p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-substanceAdminSubstitution-N"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-substanceAdminSubstitution.html#v3-substanceAdminSubstitution-N">N</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution</td>
+                <td>none</td>
+                <td>
+                  <div>
+                    <p>No substitution occurred or is permitted.</p>
+
+                  </div>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="http---terminology.hl7.org-CodeSystem-v3-ActReason-UNABLE"> </a>  
+                  <a href="http://terminology.hl7.org/4.0.0/CodeSystem-v3-ActReason.html#v3-ActReason-UNABLE">UNABLE</a>
+                </td>
+                <td>http://terminology.hl7.org/CodeSystem/v3-ActReason</td>
+                <td>unable to use</td>
+                <td>
+                  <div>
+                    <p>
+                      <strong>Description:</strong>&lt;The patient is not (or is no longer) able to use the medication in a manner prescribed.
+                    </p>
+
+                    <p>**Example:**CanaTMt swallow.</p>
+
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/medication-substitution-dispense-v1"/>
+        <version value="0.1.0-test"/>
+        <name value="SubstitutionReason"/>
+        <title value="Medication Substitution Value Set"/>
+        <status value="active"/>
+        <date value="2022-11-14T21:47:41+00:00"/>
+        <publisher value="HL7 Belgium"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7belgium.org"/>
+          </telecom>
+        </contact>
+        <description value="Value set for substituting a medication on dispense."/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:2741bf3f-2762-4cbb-bd63-028f752ba850"/>
+          <timestamp value="2022-11-14T21:48:49+00:00"/>
+          <total value="10"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/ValueSet/v3-ActSubstanceAdminSubstitutionCode|2.0.0"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution|2.1.0"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="http://terminology.hl7.org/CodeSystem/v3-ActReason|2.1.0"/>
+          </parameter>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="E"/>
+            <display value="equivalent"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="EC"/>
+            <display value="equivalent composition"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="BC"/>
+            <display value="brand composition"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="G"/>
+            <display value="generic composition"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="TE"/>
+            <display value="therapeutic alternative"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="TB"/>
+            <display value="therapeutic brand"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="TG"/>
+            <display value="therapeutic generic"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="F"/>
+            <display value="formulary"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-substanceAdminSubstitution"/>
+            <code value="N"/>
+            <display value="none"/>
+          </contains>
+          <contains>
+            <system value="http://terminology.hl7.org/CodeSystem/v3-ActReason"/>
+            <code value="UNABLE"/>
+            <display value="unable to use"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+  <entry>
+    <fullUrl value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-dispenser-types"/>
+    <resource>
+      <ValueSet>
+        <id value="be-vs-dispenser-types"/>
+        <text>
+          <status value="generated"/>
+          <div xmlns="http://www.w3.org/1999/xhtml">
+            <p>This value set contains 7 concepts</p>
+            <p style="border: black 1px dotted; background-color: #EEEEEE; padding: 8px; margin-bottom: 8px">Expansion based on 
+              <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html">BeCdHcParty v2.0.1 (CodeSystem)</a>
+            </p>
+            <table class="codes">
+              <tr>
+                <td style="white-space:nowrap">
+                  <b>Code</b>
+                </td>
+                <td>
+                  <b>System</b>
+                </td>
+                <td>
+                  <b>Display</b>
+                </td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-deptpharmacy"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-deptpharmacy">deptpharmacy</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>Pharmacy service or department within an organisation</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacist"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacist">perspharmacist</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>pharmacist</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-orgpharmacy"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-orgpharmacy">orgpharmacy</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>Independent pharmacy</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacyassistant"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacyassistant">perspharmacyassistant</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>pharmacy assistant</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-perspharmacistclinicalbiologist"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-perspharmacistclinicalbiologist">perspharmacistclinicalbiologist</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>pharmacist-clinical biologist</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-persdentist"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-persdentist">persdentist</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>dentist</td>
+              </tr>
+              <tr>
+                <td style="white-space:nowrap">
+                  <a name="https---www.ehealth.fgov.be-standards-fhir-core-CodeSystem-cd-hcparty-deptdentistry"> </a>  
+                  <a href="https://build.fhir.org/ig/hl7-be/core//CodeSystem-cd-hcparty.html#cd-hcparty-deptdentistry">deptdentistry</a>
+                </td>
+                <td>https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty</td>
+                <td>dentistry</td>
+              </tr>
+            </table>
+          </div>
+        </text>
+        <url value="http://hl7belgium.org/fhir/riziv-medicationrecord/ValueSet/be-vs-dispenser-types"/>
+        <version value="0.1.0-test"/>
+        <name value="DispenserTypes"/>
+        <title value="Dispenser Types"/>
+        <status value="active"/>
+        <date value="2022-11-14T21:47:41+00:00"/>
+        <publisher value="HL7 Belgium"/>
+        <contact>
+          <telecom>
+            <system value="url"/>
+            <value value="http://hl7belgium.org"/>
+          </telecom>
+        </contact>
+        <description value="Dispenser Types - from hcparty"/>
+        <jurisdiction>
+          <coding>
+            <system value="urn:iso:std:iso:3166"/>
+            <code value="BE"/>
+          </coding>
+        </jurisdiction>
+        <expansion>
+          <identifier value="urn:uuid:eb51e7c7-6210-4fe4-87a0-739e8efc0da6"/>
+          <timestamp value="2022-11-14T21:48:49+00:00"/>
+          <total value="7"/>
+          <parameter>
+            <name value="excludeNested"/>
+            <valueBoolean value="false"/>
+          </parameter>
+          <parameter>
+            <name value="version"/>
+            <valueUri value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty|2.0.1"/>
+          </parameter>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="deptpharmacy"/>
+            <display value="Pharmacy service or department within an organisation"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="perspharmacist"/>
+            <display value="pharmacist"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="orgpharmacy"/>
+            <display value="Independent pharmacy"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="perspharmacyassistant"/>
+            <display value="pharmacy assistant"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="perspharmacistclinicalbiologist"/>
+            <display value="pharmacist-clinical biologist"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="persdentist"/>
+            <display value="dentist"/>
+          </contains>
+          <contains>
+            <system value="https://www.ehealth.fgov.be/standards/fhir/core/CodeSystem/cd-hcparty"/>
+            <code value="deptdentistry"/>
+            <display value="dentistry"/>
+          </contains>
+        </expansion>
+      </ValueSet>
+    </resource>
+  </entry>
+</Bundle>

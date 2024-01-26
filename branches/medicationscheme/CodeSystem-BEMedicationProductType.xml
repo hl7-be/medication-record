@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CodeSystem xmlns="http://hl7.org/fhir">
+  <id value="BEMedicationProductType"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p>This code system <code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType</code> defines the following codes:</p><table class="codes"><tr><td style="white-space:nowrap"><b>Code</b></td><td><b>Display</b></td><td><b>Definition</b></td></tr><tr><td style="white-space:nowrap">magistral<a name="BEMedicationProductType-magistral"> </a></td><td>Magistral preparation</td><td>Magistral preparation - see definitions</td></tr><tr><td style="white-space:nowrap">officinal<a name="BEMedicationProductType-officinal"> </a></td><td>Oficinal preparation</td><td>Oficinal preparation - see definitions</td></tr><tr><td style="white-space:nowrap">medicinalproduct<a name="BEMedicationProductType-medicinalproduct"> </a></td><td>Medicinal product</td><td>Medicinal product - an actual 'branded' product</td></tr><tr><td style="white-space:nowrap">idmp-mp<a name="BEMedicationProductType-idmp-mp"> </a></td><td>IDMP Medicinal Product</td><td>IDMP Medicinal Product - see definitions</td></tr><tr><td style="white-space:nowrap">pharmaceuticalproduct<a name="BEMedicationProductType-pharmaceuticalproduct"> </a></td><td>medicinal product - see definitions</td><td/></tr><tr><td style="white-space:nowrap">idmp-php<a name="BEMedicationProductType-idmp-php"> </a></td><td>IDMP Pharmaceutical Product</td><td>IDMP Pharmaceutical Product - see definitions</td></tr><tr><td style="white-space:nowrap">package<a name="BEMedicationProductType-package"> </a></td><td>product package</td><td>product package - see definitions</td></tr><tr><td style="white-space:nowrap">idmp-pp<a name="BEMedicationProductType-idmp-pp"> </a></td><td>IDMP Packaged Product</td><td>IDMP Packaged Product - see definitions</td></tr><tr><td style="white-space:nowrap">vmp-group<a name="BEMedicationProductType-vmp-group"> </a></td><td>VMP Group</td><td>VMP Group - see definitions</td></tr></table></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationProductType"/>
+  <version value="1.0.0"/>
+  <name value="BEMedicationProductType"/>
+  <title value="Medication Product Type"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Type of medication product."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <content value="complete"/>
+  <count value="9"/>
+  <concept>
+    <code value="magistral"/>
+    <display value="Magistral preparation"/>
+    <definition value="Magistral preparation - see definitions"/>
+  </concept>
+  <concept>
+    <code value="officinal"/>
+    <display value="Oficinal preparation"/>
+    <definition value="Oficinal preparation - see definitions"/>
+  </concept>
+  <concept>
+    <code value="medicinalproduct"/>
+    <display value="Medicinal product"/>
+    <definition value="Medicinal product - an actual 'branded' product"/>
+  </concept>
+  <concept>
+    <code value="idmp-mp"/>
+    <display value="IDMP Medicinal Product"/>
+    <definition value="IDMP Medicinal Product - see definitions"/>
+  </concept>
+  <concept>
+    <code value="pharmaceuticalproduct"/>
+    <display value="medicinal product - see definitions"/>
+  </concept>
+  <concept>
+    <code value="idmp-php"/>
+    <display value="IDMP Pharmaceutical Product"/>
+    <definition value="IDMP Pharmaceutical Product - see definitions"/>
+  </concept>
+  <concept>
+    <code value="package"/>
+    <display value="product package"/>
+    <definition value="product package - see definitions"/>
+  </concept>
+  <concept>
+    <code value="idmp-pp"/>
+    <display value="IDMP Packaged Product"/>
+    <definition value="IDMP Packaged Product - see definitions"/>
+  </concept>
+  <concept>
+    <code value="vmp-group"/>
+    <display value="VMP Group"/>
+    <definition value="VMP Group - see definitions"/>
+  </concept>
+</CodeSystem>

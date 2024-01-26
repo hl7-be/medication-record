@@ -1,0 +1,45 @@
+{
+  "resourceType" : "MedicationStatement",
+  "id" : "7-usage",
+  "meta" : {
+    "profile" : ["http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordUsage"]
+  },
+  "text" : {
+    "status" : "extensions",
+    "div" : "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: MedicationStatement</b><a name=\"7-usage\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource MedicationStatement &quot;7-usage&quot; </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-MedRecordUsage.html\">MedRecord Usage profile</a></p></div><p><b>Based On</b>: <span/></p><p><b>identifier</b>: id: cc4f91f6-d0f6-479c-b6c0-109177448ed7</p><p><b>status</b>: not-taken</p><p><b>medication</b>: Ciproxine compr. pellic. (séc.) 20x 500mg <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (cnk_product_codes#1359611)</span></p><p><b>subject</b>: <span/></p><p><b>dateAsserted</b>: 2021-07-19 13:00:00+0200</p><p><b>informationSource</b>: <span/></p></div>"
+  },
+  "extension" : [{
+    "url" : "http://hl7.org/fhir/StructureDefinition/event-basedOn",
+    "valueReference" : {
+      "identifier" : {
+        "system" : "http://treatment-identifiers.com",
+        "value" : "0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"
+      }
+    }
+  }],
+  "identifier" : [{
+    "system" : "http://medicationusage-identifiers.com",
+    "value" : "cc4f91f6-d0f6-479c-b6c0-109177448ed7"
+  }],
+  "status" : "not-taken",
+  "medicationCodeableConcept" : {
+    "coding" : [{
+      "system" : "https://cnk.apb.be/codings/cnk_product_codes",
+      "code" : "1359611",
+      "display" : "Ciproxine compr. pellic. (séc.) 20x 500mg"
+    }]
+  },
+  "subject" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  },
+  "dateAsserted" : "2021-07-19T13:00:00+02:00",
+  "informationSource" : {
+    "identifier" : {
+      "system" : "https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin",
+      "value" : "64110219106"
+    }
+  }
+}

@@ -1,0 +1,220 @@
+{
+  "resourceType": "ExampleScenario",
+  "id": "example-5-scenario",
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: ExampleScenario</b><a name=\"example-5-scenario\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource ExampleScenario \"example-5-scenario\" </p></div><p><b>url</b>: <code>http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario</code></p><p><b>version</b>: 0.1.0-test</p><p><b>name</b>: DispenseNewBrandOldUnavailable</p><p><b>status</b>: draft</p><p><b>experimental</b>: false</p><p><b>date</b>: 2019-09-11 12:00:00+0100</p><p><b>publisher</b>: HL7 Belgium</p><p><b>contact</b>: <a href=\"http://hl7belgium.org\">http://hl7belgium.org</a></p><p><b>jurisdiction</b>: Belgium <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"http://terminology.hl7.org/4.0.0/CodeSystem-ISO3166Part1.html\">ISO 3166-1 Codes for the representation of names of countries and their subdivisions — Part 1: Country code</a>#BE)</span></p><blockquote><p><b>actor</b></p><p><b>actorId</b>: PATIENT</p><p><b>type</b>: person</p><p><b>name</b>: Pia Peters</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: GP</p><p><b>type</b>: person</p><p><b>name</b>: Dr. Durant</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: VAULT</p><p><b>type</b>: entity</p><p><b>name</b>: Vault</p></blockquote><blockquote><p><b>actor</b></p><p><b>actorId</b>: PHARM</p><p><b>type</b>: person</p><p><b>name</b>: Pharmacist</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-dispense</p><p><b>name</b>: Paracetabs Dispense</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-prescription</p><p><b>name</b>: dafalgan prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: EB</p><p><b>name</b>: Empty Bundle</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatmentLine</p><p><b>name</b>: New Treatment Line based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-treatment</p><p><b>name</b>: New Treatment based on prescription</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-provenance</p><p><b>name</b>: Link Prescription and treatmentLine</p></blockquote><blockquote><p><b>instance</b></p><p><b>resourceId</b>: 5-2-provenance</p><p><b>name</b>: Link Dispense and treatmentLine</p></blockquote><blockquote><p><b>process</b></p><p><b>title</b>: Change brand from prescription on dispense because of out of stock</p><p><b>description</b>: description</p><p><b>preConditions</b>: The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead.</p><p><b>postConditions</b>: It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs</p><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Initial contact</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Treatment resources Creation</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Dispense</p></blockquote></blockquote><blockquote><p><b>step</b></p><blockquote><p><b>process</b></p><p><b>title</b>: Resource Linkage</p></blockquote></blockquote></blockquote></div>"
+  },
+  "url": "http://hl7belgium.org/fhir/riziv-medicationrecord/ExampleScenario/example-5-scenario",
+  "version": "0.1.0-test",
+  "name": "DispenseNewBrandOldUnavailable",
+  "status": "draft",
+  "experimental": false,
+  "date": "2019-09-11T00:00:00.000+01:00",
+  "publisher": "HL7 Belgium",
+  "contact": [
+    {
+      "telecom": [
+        {
+          "system": "url",
+          "value": "http://hl7belgium.org"
+        }
+      ]
+    }
+  ],
+  "jurisdiction": [
+    {
+      "coding": [
+        {
+          "system": "urn:iso:std:iso:3166",
+          "code": "BE"
+        }
+      ]
+    }
+  ],
+  "actor": [
+    {
+      "actorId": "PATIENT",
+      "type": "person",
+      "name": "Pia Peters"
+    },
+    {
+      "actorId": "GP",
+      "type": "person",
+      "name": "Dr. Durant"
+    },
+    {
+      "actorId": "VAULT",
+      "type": "entity",
+      "name": "Vault"
+    },
+    {
+      "actorId": "PHARM",
+      "type": "person",
+      "name": "Pharmacist"
+    }
+  ],
+  "instance": [
+    {
+      "resourceId": "5-dispense",
+      "name": "Paracetabs Dispense"
+    },
+    {
+      "resourceId": "5-prescription",
+      "name": "dafalgan prescription"
+    },
+    {
+      "resourceId": "EB",
+      "name": "Empty Bundle"
+    },
+    {
+      "resourceId": "5-treatmentLine",
+      "name": "New Treatment Line based on prescription"
+    },
+    {
+      "resourceId": "5-treatment",
+      "name": "New Treatment based on prescription"
+    },
+    {
+      "resourceId": "5-provenance",
+      "name": "Link Prescription and treatmentLine"
+    },
+    {
+      "resourceId": "5-2-provenance",
+      "name": "Link Dispense and treatmentLine"
+    }
+  ],
+  "process": [
+    {
+      "title": "Change brand from prescription on dispense because of out of stock",
+      "description": "description",
+      "preConditions": "The patient visits their GP and is prescribed dafalgan Forte 1000 mg cp (TID) for headaches. When reaching the pharmacy for dispense, the pharmacy does not have dafalgan Forte now but dispenses Paracetabs Forte 1000 mg instead.",
+      "postConditions": "It is possible to capture that the original prescription was dafalgan but the dispense was Paracetabs",
+      "step": [
+        {
+          "process": [
+            {
+              "title": "Initial contact",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Goes to appointment",
+                    "initiator": "PATIENT",
+                    "receiver": "GP"
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Get Patient's Medication",
+                    "initiator": "VAULT",
+                    "receiver": "GP",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Create new prescription",
+                    "initiator": "GP",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-prescription"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Treatment resources Creation",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Create new treatment",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatment"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Create new treatment Line",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-treatmentLine"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Resource Linking",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-provenance"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Dispense",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Get patient's Prescriptions",
+                    "initiator": "VAULT",
+                    "receiver": "PHARM",
+                    "response": {
+                      "resourceId": "EB"
+                    }
+                  }
+                },
+                {
+                  "operation": {
+                    "name": "Dispense new product",
+                    "initiator": "PHARM",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-dispense"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "process": [
+            {
+              "title": "Resource Linkage",
+              "step": [
+                {
+                  "operation": {
+                    "name": "Resource Linking",
+                    "initiator": "VAULT",
+                    "receiver": "VAULT",
+                    "request": {
+                      "resourceId": "5-2-provenance"
+                    }
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

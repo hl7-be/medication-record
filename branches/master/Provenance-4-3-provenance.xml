@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<Provenance xmlns="http://hl7.org/fhir">
+  <id value="4-3-provenance"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: Provenance</b><a name="4-3-provenance"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource Provenance &quot;4-3-provenance&quot; </p></div><p><b>target</b>: <a href="MedicationDispense-4-2-dispense.html">MedicationDispense/4-2-dispense</a></p><p><b>recorded</b>: Jul 19, 2021, 11:00:00 AM</p><h3>Agents</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>Who</b></td></tr><tr><td>*</td><td>PRIMAUTH <span style="background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki"> ([not stated]#PRIMAUTH)</span></td><td><span/></td></tr></table><h3>Entities</h3><table class="grid"><tr><td>-</td><td><b>Role</b></td><td><b>What</b></td></tr><tr><td>*</td><td>source</td><td><a href="MedicationStatement-4-2-treatmentLine.html">MedicationStatement/4-2-treatmentLine</a></td></tr></table></div>
+  </text>
+  <target>
+    <reference value="MedicationDispense/4-2-dispense"/>
+  </target>
+  <recorded value="2021-07-19T13:00:00+02:00"/>
+  <agent>
+    <role>
+      <coding>
+        <code value="PRIMAUTH"/>
+      </coding>
+    </role>
+    <who>
+      <identifier>
+        <system value="http://physician-identifiers.com"/>
+        <value value="7c121778-5b2b-442d-9314-0a73995ab3dd"/>
+      </identifier>
+    </who>
+  </agent>
+  <entity>
+    <role value="source"/>
+    <what>
+      <reference value="MedicationStatement/4-2-treatmentLine"/>
+    </what>
+  </entity>
+</Provenance>

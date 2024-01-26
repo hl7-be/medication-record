@@ -1,0 +1,58 @@
+{
+  "resourceType": "Composition",
+  "id": "1-scheduled-view",
+  "meta": {
+    "profile": [
+      "http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/sche-view-comp"
+    ]
+  },
+  "text": {
+    "status": "generated",
+    "div": "<div xmlns=\"http://www.w3.org/1999/xhtml\"><p><b>Generated Narrative: Composition</b><a name=\"1-scheduled-view\"> </a></p><div style=\"display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%\"><p style=\"margin-bottom: 0px\">Resource Composition \"1-scheduled-view\" </p><p style=\"margin-bottom: 0px\">Profile: <a href=\"StructureDefinition-sche-view-comp.html\">Medication View profile -second visualization</a></p></div><p><b>status</b>: final</p><p><b>type</b>: Scheduled Takes View <span style=\"background: LightGoldenRodYellow; margin: 4px; border: 1px solid khaki\"> (<a href=\"CodeSystem-be-cs-medication-summary-types.html\">Medication Summary Types CodeSystem</a>#Scheduled)</span></p><p><b>date</b>: 2021-08-15 01:00:00+0200</p><p><b>author</b>: <a href=\"BeOrganization\">BeOrganization</a> \"BeOrganization\"</p><p><b>title</b>: Scheduled View for Patient X</p></div>"
+  },
+  "status": "final",
+  "type": {
+    "coding": [
+      {
+        "system": "http://hl7belgium.org/fhir/riziv-medicationrecord/CodeSystem/be-cs-medication-summary-types",
+        "code": "Scheduled"
+      }
+    ]
+  },
+  "date": "2021-08-15T13:00:00+02:00",
+  "author": [
+    {
+      "reference": "BeOrganization"
+    }
+  ],
+  "title": "Scheduled View for Patient X",
+  "section": [
+    {
+      "title": "Treatments",
+      "entry": [
+        {
+          "reference": "CarePlan/1-treatment"
+        }
+      ]
+    },
+    {
+      "title": "Treatment Lines",
+      "entry": [
+        {
+          "reference": "MedicationStatement/1-treatmentLine"
+        }
+      ]
+    },
+    {
+      "title": "Scheduled Takes",
+      "entry": [
+        {
+          "reference": "MedicationRequest/1-scheduledadministration1"
+        },
+        {
+          "reference": "MedicationRequest/1-scheduledadministration2"
+        }
+      ]
+    }
+  ]
+}

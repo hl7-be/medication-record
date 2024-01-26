@@ -1,0 +1,26 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecordTreatment","","","",0,*,"","","","","Medication Record - Medication Treatment","A model for the Medication Treatment.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecordTreatment.identifier","","","",0,1,"","","","BackboneElement {[]} {[]}
+","The business identifier(s) for the medication treatment","The business identifier(s) for the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.identifier",0,1,"",""
+"BeModelMedicationRecordTreatment.identifier.treatmentGuid","","","",0,1,"","","","Identifier {[]} {[]}
+","The Global Unique identifier(s) for the medication treatment","The Global Unique identifier(s) for the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.identifier.treatmentGuid",0,1,"",""
+"BeModelMedicationRecordTreatment.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient]]}
+","The subject of the medication treatment","The subject of the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.subject",1,1,"",""
+"BeModelMedicationRecordTreatment.status","","","",1,1,"","","","code {[]} {[]}
+","Status of the medication treatment","Status of the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.status",1,1,"",""
+"BeModelMedicationRecordTreatment.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Category(ies) of the medication treatment","Category(ies) of the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.category",0,*,"",""
+"BeModelMedicationRecordTreatment.title","","","",0,1,"","","","string {[]} {[]}
+","Short title of the medication treatment","Short title of the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.title",0,1,"",""
+"BeModelMedicationRecordTreatment.description","","","",0,1,"","","","string {[]} {[]}
+","Textual description of the treatment","Textual description of the medication treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.description",0,1,"",""
+"BeModelMedicationRecordTreatment.encounter","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Encounter]]}
+","The encounter in which the medication treatment was created or updated","The encounter in which the medication treatment was created or updated","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.encounter",0,1,"",""
+"BeModelMedicationRecordTreatment.period","","","",0,1,"","","","Period {[]} {[]}
+","The duration of the treatment","The duration of the treatment","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.period",0,1,"",""
+"BeModelMedicationRecordTreatment.created","","","",0,1,"","","","dateTime {[]} {[]}
+","When the treatment record was created","When the treatment record was created","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.created",0,1,"",""
+"BeModelMedicationRecordTreatment.author","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/Device], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization], CanonicalType[http://hl7.org/fhir/StructureDefinition/CareTeam]]}
+","The current author/responsible for the medication treatment plan","The current author/responsible for the medication treatment plan","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.author",0,1,"",""
+"BeModelMedicationRecordTreatment.note","","","",0,*,"","","","Annotation {[]} {[]}
+","Comments about the plan","Comments about the plan","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordTreatment.note",0,*,"",""

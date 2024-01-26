@@ -1,0 +1,36 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecordUsage","","","",0,*,"","","","","Medication Record MedicationUsage Logical Model","A model for representing medication usage.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecordUsage.identifier","","","",0,*,"","","","Identifier {[]} {[]}
+","The business identifier(s) for the medication Usage","The business identifier(s) for the medication Usage","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.identifier",0,*,"",""
+"BeModelMedicationRecordUsage.status","","","",1,1,"","","","code {[]} {[]}
+","Status of the usage","Status of the usage","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.status",1,1,"",""
+"BeModelMedicationRecordUsage.category","","","",0,*,"","","","CodeableConcept {[]} {[]}
+","Type of medication usage","Type of medication usage","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.category",0,*,"",""
+"BeModelMedicationRecordUsage.product[x]","","","",1,1,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Medication]]}","What product this usage relates to","What product this usage relates to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.product[x]",1,1,"",""
+"BeModelMedicationRecordUsage.subject","","","",1,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Group]]}
+","Whom this usage relates to","Whom this usage relates to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.subject",1,1,"",""
+"BeModelMedicationRecordUsage.effective[x]","","","",0,1,"","","","dateTime {[]} {[]}
+Period {[]} {[]}","The date/time or interval when the product is/was/will be taken","The date/time or interval when the product is/was/will be taken","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.effective[x]",0,1,"",""
+"BeModelMedicationRecordUsage.dateAsserted","","","",0,1,"","","","dateTime {[]} {[]}
+","When the usage was asserted?","When the usage was asserted?","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.dateAsserted",0,1,"",""
+"BeModelMedicationRecordUsage.informationSource","","","",0,1,"","","","Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Patient], CanonicalType[http://hl7.org/fhir/StructureDefinition/Practitioner], CanonicalType[http://hl7.org/fhir/StructureDefinition/PractitionerRole], CanonicalType[http://hl7.org/fhir/StructureDefinition/RelatedPerson], CanonicalType[http://hl7.org/fhir/StructureDefinition/Organization]]}
+","Source that provided the information about the usage of the product","Source that provided the information about the usage of the product","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.informationSource",0,1,"",""
+"BeModelMedicationRecordUsage.reason[x]","","","",0,*,"","","","CodeableConcept {[]} {[]}
+Reference {[]} {[CanonicalType[http://hl7.org/fhir/StructureDefinition/Condition], CanonicalType[http://hl7.org/fhir/StructureDefinition/Observation], CanonicalType[http://hl7.org/fhir/StructureDefinition/DiagnosticReport]]}","Reason for why the product is/was being taken","Reason for why the product is/was being taken","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.reason[x]",0,*,"",""
+"BeModelMedicationRecordUsage.note","","","",0,*,"","","","Annotation {[]} {[]}
+","Further information about the usage","Further information about the usage","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.note",0,*,"",""
+"BeModelMedicationRecordUsage.renderedDosageInstruction","","","",0,1,"","","","string {[]} {[]}
+","Full representation of the dosage instructions","Full representation of the dosage instructions","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.renderedDosageInstruction",0,1,"",""
+"BeModelMedicationRecordUsage.dosage","","","",0,*,"","","","Dosage {[]} {[]}
+","Details of how product is/was taken or should be taken","Details of how product is/was taken or should be taken","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.dosage",0,*,"",""
+"BeModelMedicationRecordUsage.adherence","","","",0,1,"","","","BackboneElement {[]} {[]}
+","Indicates if the product is being consumed or administered as instructed","Indicates if the product is being consumed or administered as instructed","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.adherence",0,1,"",""
+"BeModelMedicationRecordUsage.adherence.code","","","",1,1,"","","","CodeableConcept {[]} {[]}
+","Type of adherence","Type of adherence","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.adherence.code",1,1,"",""
+"BeModelMedicationRecordUsage.adherence.reason","","","",0,1,"","","","CodeableConcept {[]} {[]}
+","Details of the reason for the current adherence to the intended usage of the product","Details of the reason for the current adherence to the intended usage of the product","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.adherence.reason",0,1,"",""
+"BeModelMedicationRecordUsage.treatmentPlan","","","",0,1,"","","","Reference {[]} {[]}
+","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","Link to the 'parent' treatment - i.e the treatment that this order is derived from, or contriburing to","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.treatmentPlan",0,1,"",""
+"BeModelMedicationRecordUsage.basedOn","","","",0,1,"","","","Reference {[]} {[]}
+","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","link to the 'parent' treatmentLine - i.e the line that covers all of the same drug for a certain purpose","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecordUsage.basedOn",0,1,"",""

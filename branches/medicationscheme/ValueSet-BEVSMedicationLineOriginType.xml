@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<ValueSet xmlns="http://hl7.org/fhir">
+  <id value="BEVSMedicationLineOriginType"/>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><ul><li>Include all codes defined in <a href="CodeSystem-BEMedicationLineOriginType.html"><code>http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType</code></a></li></ul></div>
+  </text>
+  <url value="http://hl7belgium.org/fhir/medicationscheme/ValueSet/BEVSMedicationLineOriginType"/>
+  <version value="1.0.0"/>
+  <name value="BEVSMedicationLineOriginType"/>
+  <title value="Medication Line origin type"/>
+  <status value="active"/>
+  <date value="2023-06-27T09:19:14+00:00"/>
+  <publisher value="HL7 Belgium"/>
+  <contact>
+    <name value="HL7 Belgium"/>
+    <telecom>
+      <system value="url"/>
+      <value value="http://hl7belgium.org"/>
+    </telecom>
+  </contact>
+  <contact>
+    <name value="Bob Smith"/>
+    <telecom>
+      <system value="email"/>
+      <value value="bobsmith@example.com"/>
+      <use value="work"/>
+    </telecom>
+  </contact>
+  <description value="Medication Line origin type Type."/>
+  <jurisdiction>
+    <coding>
+      <system value="http://unstats.un.org/unsd/methods/m49/m49.htm"/>
+      <code value="056"/>
+      <display value="Belgium"/>
+    </coding>
+  </jurisdiction>
+  <compose>
+    <include>
+      <system value="http://hl7belgium.org/fhir/medicationscheme/CodeSystem/BEMedicationLineOriginType"/>
+    </include>
+  </compose>
+</ValueSet>

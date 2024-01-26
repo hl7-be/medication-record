@@ -1,0 +1,90 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"KMEHRv58","","","",0,*,"","","","","Medication Schema KMEHR V5.8","This model represents the Medication Schema KMEHR V5.8. It is shown for demonstrating the field correspondence/equivalence","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"KMEHRv58.kmehr_header","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_header",0,1,"",""
+"KMEHRv58.kmehr_folder","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder",0,1,"",""
+"KMEHRv58.kmehr_folder.patient","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.patient",0,1,"",""
+"KMEHRv58.kmehr_folder.transaction_medicationscheme","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.transaction_medicationscheme",0,1,"",""
+"KMEHRv58.kmehr_folder.transaction_medicationscheme.parent_transaction","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.transaction_medicationscheme.parent_transaction",0,1,"",""
+"KMEHRv58.kmehr_folder.transaction_medicationscheme.child_transaction","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.transaction_medicationscheme.child_transaction",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.parent_transaction","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.parent_transaction",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE","","","",0,1,"","","","Reference {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.item","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.item",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.medicinalproduct","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.medicinalproduct",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.substanceproduct","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.substanceproduct",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.cd-ean","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.cd-ean",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.compoundprescription","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.medication_information.compoundprescription",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.temporality","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.temporality",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.frequency","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.frequency",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.beginmoment","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.beginmoment",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.endmoment","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.endmoment",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.duration","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.duration",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.regimen","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.regimen",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.posology","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.posology",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.route","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.route",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.instructionforpatient","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.medication.instructionforpatient",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.adaptationflag","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.adaptationflag",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.begincondition","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.begincondition",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.endcondition","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.endcondition",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.medicationtype","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.medicationtype",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.medicationuse","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.medicationuse",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.origin","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.child_MSE.healthcareelement.origin",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.parent_transaction","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.parent_transaction",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.item","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.item",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication","","","",0,1,"","","","BackboneElement {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.medication_information","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.medication_information",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.beginmoment","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.beginmoment",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.endmoment","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.endmoment",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.duration","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.duration",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.lifecycle","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.lifecycle",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.lnk","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.lnk",0,1,"",""
+"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.transactionreason","","","",0,1,"","","","string {[]} {[]}
+","","","","","","","","","","","",,,,,"",,,,"KMEHRv58.kmehr_folder.medicationschemeelement_medicationschemeelement.treatmentsuspension.child_transaction.medication.transactionreason",0,1,"",""

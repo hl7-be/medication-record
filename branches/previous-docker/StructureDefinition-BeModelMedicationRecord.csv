@@ -1,0 +1,26 @@
+"Path","Slice Name","Alias(s)","Label","Min","Max","Must Support?","Is Modifier?","Is Summary?","Type(s)","Short","Definition","Comments","Requirements","Default Value","Meaning When Missing","Fixed Value","Pattern","Example","Minimum Value","Maximum Value","Maximum Length","Binding Strength","Binding Description","Binding Value Set","Code","Slicing Discriminator","Slicing Description","Slicing Ordered","Slicing Rules","Base Path","Base Min","Base Max","Condition(s)","Constraint(s)","Mapping: RIM Mapping"
+"BeModelMedicationRecord","","","",0,*,"","","","","Medication Record logical model","A model for a structure collection of a patient's medication history.","","","","","","","","","",,,,,"",,,,"Base",0,*,"",""
+"BeModelMedicationRecord.identifier","","","",0,1,"","","","Identifier {[]} {[]}
+","The business identifier(s) for the Medication Record","The business identifier(s) for the Medication Record","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.identifier",0,1,"",""
+"BeModelMedicationRecord.patient","","","",1,1,"","","","Reference {[]} {[]}
+","The subject of the medication record","The subject of the medication record","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.patient",1,1,"",""
+"BeModelMedicationRecord.treatments","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatment {[]} {[]}
+","The treaments that are included in this record","The treaments that are included in this record","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.treatments",0,*,"",""
+"BeModelMedicationRecord.treatmentLines","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordTreatmentLine {[]} {[]}
+","The treatment lines that are included in this record","The treatment lines that are included in this record","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.treatmentLines",0,*,"",""
+"BeModelMedicationRecord.summaryView","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordSummaryView {[]} {[]}
+","The summary views that are produced from this record or entered into it","The summary views that are produced from this record or entered into it","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.summaryView",0,*,"",""
+"BeModelMedicationRecord.detailedRecords","","","",0,*,"","","","BackboneElement {[]} {[]}
+","Detailed records","Detailed records - the most granular interactions","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords",0,*,"",""
+"BeModelMedicationRecord.detailedRecords.orders","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordOrder {[]} {[]}
+","Explicit or implicit order for medication use or changes","Explicit or implicit order for medication use or changes","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords.orders",0,*,"",""
+"BeModelMedicationRecord.detailedRecords.schedule","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationScheduledAdministration {[]} {[]}
+","Scheduled administrations of the medication","Scheduled administrations of the medication","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords.schedule",0,*,"",""
+"BeModelMedicationRecord.detailedRecords.dispenses","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordDispense {[]} {[]}
+","Registered or reported dispenses","Registered or reported dispenses","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords.dispenses",0,*,"",""
+"BeModelMedicationRecord.detailedRecords.administrations","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordAdministration {[]} {[]}
+","Registered or reported single administrations","Registered or reported single administrations","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords.administrations",0,*,"",""
+"BeModelMedicationRecord.detailedRecords.usageReports","","","",0,*,"","","","http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/BeModelMedicationRecordUsage {[]} {[]}
+","Reported statements of medication usage","Reported statements of medication usage","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.detailedRecords.usageReports",0,*,"",""
+"BeModelMedicationRecord.changeRecord","","","",0,*,"","","","Provenance {[]} {[]}
+","Change records and provenance for the medication record components","Change records and provenance for the medication record components","","","","","","","","","",,,,,"",,,,"BeModelMedicationRecord.changeRecord",0,*,"",""

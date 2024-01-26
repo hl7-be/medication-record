@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<CarePlan xmlns="http://hl7.org/fhir">
+  <id value="3-treatment"/>
+  <meta>
+    <profile value="http://hl7belgium.org/fhir/riziv-medicationrecord/StructureDefinition/MedRecordTreatment"/>
+  </meta>
+  <text>
+    <status value="generated"/><div xmlns="http://www.w3.org/1999/xhtml"><p><b>Generated Narrative: CarePlan</b><a name="3-treatment"> </a></p><div style="display: inline-block; background-color: #d9e0e7; padding: 6px; margin: 4px; border: 1px solid #8da1b4; border-radius: 5px; line-height: 60%"><p style="margin-bottom: 0px">Resource CarePlan "3-treatment" </p><p style="margin-bottom: 0px">Profile: <a href="StructureDefinition-MedRecordTreatment.html">MedRecord Treatment profile</a></p></div><p><b>identifier</b>: id: 0d462dac-513a-4fb0-a2fe-fb7f53b27c5d</p><p><b>status</b>: active</p><p><b>intent</b>: plan</p><p><b>title</b>: Treatment for Arthritis</p><p><b>subject</b>: <span></span></p><p><b>created</b>: 2021-07-19 01:00:00+0200</p><p><b>addresses</b>: <a href="Condition-arthritis-condition.html">Condition/arthritis-condition</a></p></div>
+  </text>
+  <identifier>
+    <system value="http://treatments-identifiers.com"/>
+    <value value="0d462dac-513a-4fb0-a2fe-fb7f53b27c5d"/>
+  </identifier>
+  <status value="active"/>
+  <intent value="plan"/>
+  <title value="Treatment for Arthritis"/>
+  <subject>
+    <identifier>
+      <system value="https://www.ehealth.fgov.be/standards/fhir/NamingSystem/ssin"/>
+      <value value="64110219106"/>
+    </identifier>
+  </subject>
+  <created value="2021-07-19T13:00:00+02:00"/>
+  <addresses>
+    <reference value="Condition/arthritis-condition"/>
+  </addresses>
+</CarePlan>
