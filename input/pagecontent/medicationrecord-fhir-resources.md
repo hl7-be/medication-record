@@ -25,7 +25,7 @@ Whether as a document or as a collection, the Medication Record can contain any 
 * Medication Treatment Line can be associated with information from different origins: 
   * **Prescriptions**, or any known change to a treatment, with the [MedicationRequest](http://hl7.org/fhir/medicationrequest.html) resource 
   * **Dispenses**, with the [MedicationDispense](http://hl7.org/fhir/medicationdispense.html) resource 
-  * **Administrations**, ttypically informed by the patient or by a nurse or other care giver, with the [MedicationAdministration](http://hl7.org/fhir/medicationadministration.html) resource 
+  * **Administrations**, typically informed by the patient or by a nurse or other care giver, with the [MedicationAdministration](http://hl7.org/fhir/medicationadministration.html) resource 
   * In some cases, a medication information can be obtained by a statement given by a patient (or related person) about the usage of the medication. This is done with the [MedicationStatement](http://hl7.org/fhir/medicationstatement.html) resource 
 
 * A set of examples is provided in this document to show the combinations of these elements in realistic scenarios.
